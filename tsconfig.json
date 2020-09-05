@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@a/*": ["./src/assets/*"],
+      "@c/*": ["./src/components/*"],
+      "@m/*": ["./src/mixins/*"],
+      "@u/*": ["./src/utils/*"],
+      "element-ui": ["node_modules/element-ui-eoi"],
+      "element-ui/*": ["node_modules/element-ui-eoi/*"]
+    },
+    "lib": ["esnext", "scripthost"],
+    "allowJs": true,
+    "noEmit": true,
+    "types": [
+      "@dcloudio/types",
+      "miniprogram-api-typings",
+      "mini-types",
+    ]
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
+}
