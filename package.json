@@ -134,8 +134,7 @@
       "vue-cli-service lint"
     ],
     "./src/**/*.vue": [
-      "eslint lint",
-      "stylelint lint"
+      "vue-cli-service lint"
     ]
   }
 }
