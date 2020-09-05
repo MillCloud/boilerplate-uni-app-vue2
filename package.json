@@ -134,7 +134,8 @@
       "vue-cli-service lint"
     ],
     "./src/**/*.vue": [
-      "vue-cli-service lint"
+      "vue-cli-service lint",
+      "stylelint --fix"
     ]
   }
 }
