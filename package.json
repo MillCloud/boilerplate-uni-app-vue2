@@ -6,9 +6,10 @@
     "check": "ncu",
     "clean": "rimraf dist",
     "commit": "git-ze && git push",
-    "lint": "lint:script && lint:style",
+    "lint": "npm run lint:script && npm run lint:style && npm run lint:ls",
     "lint:script": "vue-cli-service lint",
     "lint:style": "stylelint ./src/**/*.scss --fix",
+    "lint:ls": "ls-lint",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus UNI_OUTPUT_DIR=dist/app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
@@ -136,6 +137,9 @@
     "./src/**/*.vue": [
       "vue-cli-service lint",
       "stylelint --fix"
+    ],
+    ".": [
+      "ls-lint"
     ]
   }
 }

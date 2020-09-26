@@ -1,0 +1,16 @@
+ls:
+  src/**:
+    .js: kebab-case
+    .vue: kebab-case | PascalCase
+    .scss: kebab-case
+    .spec.js: kebab-case
+
+  src/components:
+    .vue: PascalCase
+
+  src/**/components:
+    .vue: PascalCase
+
+ignore:
+  - .git
+  - node_modules
