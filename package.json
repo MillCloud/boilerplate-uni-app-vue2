@@ -59,6 +59,7 @@
     "@dcloudio/uni-quickapp-native": "^2.0.0-28620200814005",
     "@dcloudio/uni-quickapp-webview": "^2.0.0-28920200923001",
     "@dcloudio/uni-stat": "^2.0.0-28920200923001",
+    "@dcloudio/uni-ui": "^1.2.5",
     "@vue/composition-api": "^1.0.0-beta.14",
     "core-js": "^3.6.5",
     "dayjs": "^1.8.36",
