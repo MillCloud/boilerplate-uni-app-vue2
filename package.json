@@ -110,10 +110,6 @@
     "stylelint-webpack-plugin": "^2.1.0",
     "vue-template-compiler": "^2.6.12"
   },
-  "browserslist": [
-    "Android >= 4",
-    "ios >= 8"
-  ],
   "uni-app": {
     "scripts": {}
   },
