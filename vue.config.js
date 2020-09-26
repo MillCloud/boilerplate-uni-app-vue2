@@ -21,11 +21,11 @@ module.exports = {
     },
   },
 
-  // css: {
-  //   loaderOptions: {
-  //     scss: {
-  //       additionalData: '@import "~@/styles/variables.scss";',
-  //     },
-  //   },
-  // },
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: '@import "~@/styles/variables.scss";@import "~@/styles/uni-variables.scss";',
+      },
+    },
+  },
 };
