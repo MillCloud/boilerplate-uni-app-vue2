@@ -6,9 +6,7 @@
       "@a/*": ["./src/assets/*"],
       "@c/*": ["./src/components/*"],
       "@m/*": ["./src/mixins/*"],
-      "@u/*": ["./src/utils/*"],
-      "element-ui": ["node_modules/element-ui-eoi"],
-      "element-ui/*": ["node_modules/element-ui-eoi/*"]
+      "@u/*": ["./src/utils/*"]
     },
     "lib": ["esnext", "scripthost"],
     "allowJs": true,
