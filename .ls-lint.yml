@@ -1,15 +1,12 @@
 ls:
   src/**:
     .js: kebab-case
+    .jsx: kebab-case | PascalCase
+    .ts: kebab-case
+    .tsx: kebab-case | PascalCase
     .vue: kebab-case | PascalCase
     .scss: kebab-case
-    .spec.js: kebab-case
-
-  src/components:
-    .vue: PascalCase
-
-  src/**/components:
-    .vue: PascalCase
+    .less: kebab-case
 
 ignore:
   - .git
