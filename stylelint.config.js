@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@modyqyw/stylelint-config-scss'],
+  extends: ['@modyqyw/stylelint-config/scss'],
 };
