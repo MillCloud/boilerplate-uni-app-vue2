@@ -1,4 +1,4 @@
-# test-uni-app
+# boilerplate-uni-app
 
 [English](./README.md) | 简体中文
 
@@ -33,10 +33,10 @@
 
 ```sh
 # clone
-git clone git@github.com:MillCloud/test-uni-app.git
+git clone git@github.com:MillCloud/boilerplate-uni-app.git
 
 # enter the directory
-cd test-uni-app
+cd boilerplate-uni-app
 
 # install dependency
 yarn
@@ -94,6 +94,7 @@ yarn commit
 - [vue-cli](https://cli.vuejs.org/)
 - [vuex](https://vuex.vuejs.org/)
 - [vue-composition-api](https://composition-api.vuejs.org/)
+- [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
 - [lodash](https://lodash.com/)
@@ -119,4 +120,4 @@ yarn commit
 
 - **Rui Wu** - *最初工作* - [ModyQyW](https://github.com/ModyQyW)
 
-另请参阅参与此项目的 [contributors](https://github.com/ModyQyW/test-uni-app/contributors) 列表。
+另请参阅参与此项目的 [contributors](https://github.com/ModyQyW/boilerplate-uni-app/contributors) 列表。

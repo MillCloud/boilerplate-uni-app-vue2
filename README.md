@@ -1,4 +1,4 @@
-# test-uni-app
+# boilerplate-uni-app
 
 English | [简体中文](./README.zh-Hans.md)
 
@@ -33,10 +33,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```sh
 # clone
-git clone git@github.com:MillCloud/test-uni-app.git
+git clone git@github.com:MillCloud/boilerplate-uni-app.git
 
 # enter the directory
-cd test-uni-app
+cd boilerplate-uni-app
 
 # install dependency
 yarn
@@ -94,6 +94,7 @@ No tests now. Pull requests are welcome.
 - [vue-cli](https://cli.vuejs.org/)
 - [vuex](https://vuex.vuejs.org/)
 - [vue-composition-api](https://composition-api.vuejs.org/)
+- [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
 - [lodash](https://lodash.com/)
@@ -119,4 +120,4 @@ Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on code of conduct,
 
 - **Rui Wu** - *Initial work* - [ModyQyW](https://github.com/ModyQyW)
 
-See also the list of [contributors](https://github.com/MillCloud/test-uni-app/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/MillCloud/boilerplate-uni-app/contributors) who participated in this project.
