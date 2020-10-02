@@ -9,7 +9,7 @@
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app-test",
+    "navigationBarTitleText": "boilerplate-uni-app",
     "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#ffffff"
   }
