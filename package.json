@@ -86,6 +86,7 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-28920200927001",
     "@dcloudio/webpack-uni-mp-loader": "^2.0.0-28920200927001",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-28920200927001",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@intlify/vue-i18n-loader": "^1.0.0",
     "@ls-lint/ls-lint": "^1.9.2",
     "@modyqyw/eslint-config-vue": "^1.8.0",
@@ -119,6 +120,9 @@
   },
   "uni-app": {
     "scripts": {}
+  },
+  "engines": {
+    "node": ">=12 <13"
   },
   "config": {
     "commitizen": {
