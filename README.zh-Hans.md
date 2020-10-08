@@ -84,7 +84,7 @@ yarn commit
 
 ## 部署
 
-- 确认所有和[模式和环境变量]相关的地方已经配置完成。
+- 确认所有和[模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html)相关的地方已经配置完成。
 - 运行`yarn build:platform`，用开发者工具上传对应文件夹的内容。
 - 用 hbuilderx 生成 app，手动部署。
 
