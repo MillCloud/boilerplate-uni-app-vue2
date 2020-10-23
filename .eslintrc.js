@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@modyqyw/vue'],
+  extends: ['@modyqyw/eslint-config/vue2'],
 };
