@@ -13,5 +13,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "uview-ui";
+// @import "uview-ui";
+@import "./styles/common";
 </style>
