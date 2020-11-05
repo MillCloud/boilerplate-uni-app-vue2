@@ -137,6 +137,9 @@
     }
   },
   "lint-staged": {
+    "*.json": [
+      "prettier --write"
+    ],
     "./src/**/*.scss": [
       "prettier --write",
       "stylelint --fix"
