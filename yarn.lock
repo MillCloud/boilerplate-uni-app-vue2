@@ -1666,10 +1666,10 @@
     vue-eslint-parser "~7.1.0"
     vue-property-decorator "~9.0.0"
 
-"@modyqyw/mp-scss@^2.0.0-beta.1":
-  version "2.0.0-beta.1"
-  resolved "https://registry.npm.taobao.org/@modyqyw/mp-scss/download/@modyqyw/mp-scss-2.0.0-beta.1.tgz#45a639363ec99a6b4ad85548d856fe9150b1ee6a"
-  integrity sha1-RaY5Nj7JmmtK2FVI2Fb+kVCx7mo=
+"@modyqyw/mp-scss@^2.0.0-beta.3":
+  version "2.0.0-beta.3"
+  resolved "https://registry.npm.taobao.org/@modyqyw/mp-scss/download/@modyqyw/mp-scss-2.0.0-beta.3.tgz#d4be95d8c9793a4e2ec45ec9c6a975ea1cc83c8a"
+  integrity sha1-1L6V2Ml5Ok4uxF7Jxql16hzIPIo=
 
 "@modyqyw/prettier-config@^1.1.7":
   version "1.1.7"
@@ -4977,10 +4977,10 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-dayjs@^1.9.4:
-  version "1.9.4"
-  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.9.4.tgz?cache=0&sync_timestamp=1603435718806&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.9.4.tgz#fcde984e227f4296f04e7b05720adad2e1071f1b"
-  integrity sha1-/N6YTiJ/QpbwTnsFcgra0uEHHxs=
+dayjs@^1.9.5:
+  version "1.9.5"
+  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.9.5.tgz?cache=0&sync_timestamp=1604555074103&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.9.5.tgz#fd49994ebe71639d2ce9575e97186642dfce9808"
+  integrity sha1-/UmZTr5xY50s6VdelxhmQt/OmAg=
 
 de-indent@^1.0.2:
   version "1.0.2"
