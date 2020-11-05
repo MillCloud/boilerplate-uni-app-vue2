@@ -19,36 +19,32 @@ export default {
       title: 'Hello',
     };
   },
-  onLoad() {
-
-  },
-  methods: {
-
-  },
+  onLoad() {},
+  methods: {},
 };
 </script>
 
-<style>
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+<style lang="scss">
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .logo {
-    width: 200rpx;
-    height: 200rpx;
-    margin: 200rpx auto 50rpx;
-  }
+.logo {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 200rpx auto 50rpx;
+}
 
-  .text-area {
-    display: flex;
-    justify-content: center;
-  }
+.text-area {
+  display: flex;
+  justify-content: center;
+}
 
-  .title {
-    font-size: 36rpx;
-    color: #8f8f94;
-  }
+.title {
+  font-size: 36rpx;
+  color: #8f8f94;
+}
 </style>
