@@ -1,11 +1,11 @@
 import Vue from 'vue';
-// import uView from 'uview-ui';
+import uView from 'uview-ui';
 import '@/plugins';
 import i18n from './i18n';
 import store from './store';
 import App from './App.vue';
 
-// Vue.use(uView);
+Vue.use(uView);
 
 Vue.config.productionTip = false;
 

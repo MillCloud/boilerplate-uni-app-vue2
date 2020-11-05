@@ -24,7 +24,7 @@ module.exports = {
   css: {
     loaderOptions: {
       scss: {
-        additionalData: '@import "~@/styles/uni-variables.scss";@import "~@/styles/variables.scss";',
+        additionalData: '@import "~@/styles/variables.scss";',
       },
     },
   },
