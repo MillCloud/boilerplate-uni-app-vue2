@@ -63,13 +63,14 @@
   "h5": {},
   "quickapp": {},
   "mp-weixin": {
-    "appid": "",
+    "appid": "touristappid",
     "setting": {
       "urlCheck": true
     },
     "usingComponents": true
   },
   "mp-alipay": {
+    "component2": true,
     "usingComponents": true
   },
   "mp-baidu": {
