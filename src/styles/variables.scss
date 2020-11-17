@@ -17,7 +17,7 @@ $uni-text-color-disable: #c0c0c0;
 $uni-bg-color: #fff;
 $uni-bg-color-grey: #f8f8f8;
 $uni-bg-color-hover: #f1f1f1; // 点击状态色
-$uni-bg-color-mask: rgba(0, 0, 0, .4); // 遮罩色
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4); // 遮罩色
 // 边框色
 $uni-border-color: #c8c7cc;
 // 文字尺寸
@@ -42,7 +42,7 @@ $uni-spacing-col-sm: 8rpx;
 $uni-spacing-col-base: 16rpx;
 $uni-spacing-col-lg: 24rpx;
 // 透明度变量
-$uni-opacity-disabled: .3; // 组件禁用态的透明度
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
 // 文章场景变量
 $uni-color-title: #2c405a; // 文章标题色
 $uni-font-size-title: 40rpx;

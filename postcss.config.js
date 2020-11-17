@@ -8,13 +8,13 @@ module.exports = {
     require('postcss-import')({
       resolve(id, basedir, importOptions) {
         if (id.startsWith('~@/')) {
-          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(3));
+          return path.resolve(process.env.UNI_INPUT_DIR, id.slice(3));
         }
         if (id.startsWith('@/')) {
-          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(2));
+          return path.resolve(process.env.UNI_INPUT_DIR, id.slice(2));
         }
         if (id.startsWith('/') && !id.startsWith('//')) {
-          return path.resolve(process.env.UNI_INPUT_DIR, id.substr(1));
+          return path.resolve(process.env.UNI_INPUT_DIR, id.slice(1));
         }
         return id;
       },
