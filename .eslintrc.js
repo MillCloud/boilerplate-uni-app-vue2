@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+const config = require('@modyqyw/fabric/eslint');
+
 module.exports = {
-  extends: ['@modyqyw/eslint-config/vue2'],
+  ...config.vue2,
 };
