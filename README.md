@@ -91,6 +91,7 @@ No tests now. Pull requests are welcome.
 ## Built With
 
 - [vue](https://vuejs.org)
+- [uni-app](https://uniapp.dcloud.io/)
 - [vue-cli](https://cli.vuejs.org/)
 - [vuex](https://vuex.vuejs.org/)
 - [vue-composition-api](https://composition-api.vuejs.org/)
