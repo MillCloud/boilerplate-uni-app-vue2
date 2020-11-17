@@ -142,11 +142,9 @@
       "prettier --write"
     ],
     "./src/**/*.scss": [
-      "prettier --write",
       "stylelint --fix"
     ],
     "./src/**/*.{js,jsx}": [
-      "prettier --write",
       "vue-cli-service lint"
     ],
     "./src/**/*.vue": [
