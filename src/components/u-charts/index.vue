@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import UCharts from './index';
+import UCharts from '.';
 
 const canvases = {};
 
