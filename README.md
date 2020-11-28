@@ -1,35 +1,35 @@
 # boilerplate-uni-app
 
-English | [简体中文](./README.zh-Hans.md)
+[English](./README.md) | 简体中文
 
 ---
 
-A repo for testing uni-app.
+用于测试 uni-app 的仓库。
 
-## Getting Started
+## 起步
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+这些说明将让你得到能在本地启动、运行的项目副本以进行开发和测试。有关如何在实时系统上部署项目，请参阅[部署](#部署)。
 
-### Prerequisites
+## 准备
 
-- Using nvm, node lts, npm lts and yarn is recommended.
-  - Install nvm first
+- 推荐使用 nvm，长期支持版 node，长期支持版 npm 和 yarn。
+  - 首先安装 nvm
     - [nvm for Mac/Linux](https://github.com/nvm-sh/nvm#readme)
-    - [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - [known issue #300](https://github.com/coreybutler/nvm-windows/issues/300)
-  - Install node lts in terminal / command line
-  - Globally update npm to lts and install yarn
+    - [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - [已知问题 #300](https://github.com/coreybutler/nvm-windows/issues/300)
+  - 在终端/命令行安装长期支持版 node
+  - 全局升级 npm 到长期支持版，安装 yarn
 
     ```sh
     npm i -g npm@lts
     npm i -g yarn
     ```
 
-  - Mirrors are set by default for Chinese users
-- Git is also required.
+  - 默认设置了镜像为国内淘宝源
+- Git 也是需要的
   - [git for Windows/Linux](https://git-scm.com/downloads)
-  - It is recommended to use [Homebrew](https://brew.sh/) to install git on Mac
+  - 推荐使用 [Homebrew](https://brew.sh/) 在 Mac 安装 git
 
-### Installing
+### 安装
 
 ```sh
 # clone
@@ -78,17 +78,17 @@ yarn run check
 yarn commit
 ```
 
-## Running the tests
+## 测试
 
-No tests now. Pull requests are welcome.
+目前没有测试。欢迎 PR。
 
-## Deployment
+## 部署
 
-- Make sure everything related to [modes and environment variables](https://cli.vuejs.org/guide/mode-and-env.html) is fine.
-- Run `yarn build:platform` and upload the contents of the corresponding folder with developer tools.
-- Use hbuilderx for app production and deploy by yourself.
+- 确认所有和[模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html)相关的地方已经配置完成。
+- 运行`yarn build:platform`，用开发者工具上传对应文件夹的内容。
+- 用 hbuilderx 生成 app，手动部署。
 
-## Built With
+## 主要依赖
 
 - [vue](https://vuejs.org)
 - [uni-app](https://uniapp.dcloud.io/)
@@ -98,11 +98,12 @@ No tests now. Pull requests are welcome.
 - [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
+- [@modyqyw/mp-scss](https://millcloud.github.io/mp-scss/)
 - [lodash](https://lodash.com/)
 - [xe-utils](https://github.com/x-extends/xe-utils#readme)
 - [dayjs](https://day.js.org)
 - [mock.js](http://mockjs.com/)
-- [sass](https://sass-lang.com/) - using [dart-sass](https://sass-lang.com/dart-sass) here, which may causes icons error, check [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
+- [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
 - [commitlint](https://commitlint.js.org/)
 - [commitizen](http://commitizen.github.io/cz-cli/)
 - [prettier](https://prettier.io/)
@@ -111,14 +112,15 @@ No tests now. Pull requests are welcome.
 - [ls-lint](https://ls-lint.org/)
 - [husky](https://github.com/typicode/husky#readme)
 - [lint-staged](https://github.com/okonet/lint-staged#readme)
+- [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme)
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme)
 
-## Contributing
+## 贡献
 
-Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on code of conduct, and the process for submitting pull requests.
+请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解行为准则以及提交拉取请求的流程的详细信息。
 
-## Authors
+## 作者
 
-- **Rui Wu** - *Initial work* - [ModyQyW](https://github.com/ModyQyW)
+- **Rui Wu** - *最初工作* - [ModyQyW](https://github.com/ModyQyW)
 
-See also the list of [contributors](https://github.com/MillCloud/boilerplate-uni-app/contributors) who participated in this project.
+另请参阅参与此项目的 [contributors](https://github.com/ModyQyW/boilerplate-uni-app/contributors) 列表。
