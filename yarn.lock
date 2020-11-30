@@ -1671,10 +1671,10 @@
     vue-eslint-parser "~7.1.1"
     vue-property-decorator "~9.0.2"
 
-"@modyqyw/fabric@~1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npm.taobao.org/@modyqyw/fabric/download/@modyqyw/fabric-1.2.1.tgz#a4ef6a1aea290e115f91aeb2d066a0f338387511"
-  integrity sha1-pO9qGuopDhFfka6y0Gag8zg4dRE=
+"@modyqyw/fabric@~1.3.10":
+  version "1.3.10"
+  resolved "https://registry.npm.taobao.org/@modyqyw/fabric/download/@modyqyw/fabric-1.3.10.tgz?cache=0&sync_timestamp=1606753663280&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40modyqyw%2Ffabric%2Fdownload%2F%40modyqyw%2Ffabric-1.3.10.tgz#6993894057b2e924f3fecf19652e62d0e47cf0b4"
+  integrity sha1-aZOJQFey6STz/s8ZZS5i0OR88LQ=
   dependencies:
     "@commitlint/config-conventional" "~11.0.0"
     "@typescript-eslint/eslint-plugin" "~4.8.2"
@@ -14831,10 +14831,10 @@ xdg-basedir@^4.0.0:
   resolved "https://registry.npm.taobao.org/xdg-basedir/download/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha1-S8jZmEQDaWIl74OhVzy7y0552xM=
 
-xe-utils@~3.0.2:
-  version "3.0.2"
-  resolved "https://registry.npm.taobao.org/xe-utils/download/xe-utils-3.0.2.tgz#37aab91c1fe6ae7ba49fa130b0797e8577faddfd"
-  integrity sha1-N6q5HB/mrnukn6EwsHl+hXf63f0=
+xe-utils@~3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npm.taobao.org/xe-utils/download/xe-utils-3.0.3.tgz?cache=0&sync_timestamp=1606621737601&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fxe-utils%2Fdownload%2Fxe-utils-3.0.3.tgz#0748c298b32d9577161e5c0d8e315a5485cb3818"
+  integrity sha1-B0jCmLMtlXcWHlwNjjFaVIXLOBg=
 
 xml-name-validator@^3.0.0:
   version "3.0.0"

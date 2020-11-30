@@ -3,15 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "check": "ncu",
-    "clean": "rimraf dist",
-    "commit": "git-ze && git push",
-    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/i18n/locales/*.json'",
-    "lint": "yarn lint:script && yarn lint:style && yarn lint:ls",
-    "lint:script": "vue-cli-service lint --fix",
-    "lint:style": "stylelint ./src/**/*.scss --fix",
-    "lint:ls": "ls-lint",
-    "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus UNI_OUTPUT_DIR=dist/app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
     "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 UNI_OUTPUT_DIR=dist/h5 vue-cli-service uni-build",
@@ -45,7 +36,16 @@
     "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
+    "check": "ncu",
+    "clean": "rimraf dist",
+    "commit": "git-ze && git push",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/i18n/locales/*.json'",
+    "lint": "yarn lint:script && yarn lint:style && yarn lint:ls",
+    "lint:script": "vue-cli-service lint --fix",
+    "lint:style": "stylelint ./src/**/*.scss --fix",
+    "lint:ls": "ls-lint",
+    "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js"
   },
   "dependencies": {
     "@ant-design/colors": "~5.0.0",
@@ -74,7 +74,7 @@
     "vue": "~2.6.12",
     "vue-i18n": "~8.22.2",
     "vuex": "~3.6.0",
-    "xe-utils": "~3.0.2"
+    "xe-utils": "~3.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "~11.0.0",
@@ -92,7 +92,7 @@
     "@intlify/vue-i18n-loader": "~1.0.0",
     "@ls-lint/ls-lint": "~1.9.2",
     "@modyqyw/eslint-config": "~1.9.3",
-    "@modyqyw/fabric": "~1.2.1",
+    "@modyqyw/fabric": "~1.3.10",
     "@modyqyw/prettier-config": "~1.1.8",
     "@modyqyw/stylelint-config": "~1.0.4",
     "@types/lodash-es": "~4.17.3",

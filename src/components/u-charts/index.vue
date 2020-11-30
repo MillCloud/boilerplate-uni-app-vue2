@@ -18,6 +18,7 @@
 </template>
 
 <script>
+/* eslint-disable unicorn/prevent-abbreviations */
 import UCharts from '.';
 
 const canvases = {};

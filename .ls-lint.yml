@@ -1,13 +1,23 @@
 ls:
   src/**:
-    .js: kebab-case
-    .jsx: kebab-case | PascalCase
-    .ts: kebab-case
-    .tsx: kebab-case | PascalCase
+    # useToken.js | remote-search.js | index.config.js
+    .js: camelCase | kebab-case | point.case
+    .ts: camelCase | kebab-case | point.case
+    # index.tsx | FormItem.tsx
+    .jsx: camelCase | PascalCase
+    .tsx: camelCase | PascalCase
+    # auth-redirect.vue | FromItem.vue
     .vue: kebab-case | PascalCase
-    .scss: kebab-case
-    .less: kebab-case
+    # index.css | Index.css | index.module.css
+    .css: kebab-case | PascalCase | point.case
+    .less: kebab-case | PascalCase | point.case
+    .scss: kebab-case | PascalCase | point.case
 
 ignore:
   - .git
   - node_modules
+  - .nuxt
+  - .next
+  - .umi
+  - locales
+

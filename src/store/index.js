@@ -9,7 +9,7 @@ function loadModules() {
   const moduleFiles = require.context('./modules', true, /\.js$/);
   const modules = {};
   moduleFiles.keys().forEach((key) => {
-    const matched = key.match(/([A-Za-z0-9-_]+)\./i);
+    const matched = key.match(/([\w-]+)\./i);
     if (matched && matched.length > 1) {
       const moduleName = matched[1];
       modules[moduleName] = moduleFiles(key).default;
