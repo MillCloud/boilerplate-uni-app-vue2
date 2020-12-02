@@ -153,15 +153,11 @@
     "./src/**/*.json": [
       "prettier --write"
     ],
-    "./src/**/*.scss": [
+    "./src/**/*.{css,less,scss,vue}": [
       "stylelint --fix"
     ],
-    "./src/**/*.{js,jsx}": [
-      "vue-cli-service lint"
-    ],
-    "./src/**/*.vue": [
-      "vue-cli-service lint",
-      "stylelint --fix"
+    "./src/**/*.{js,jsx,ts,tsx,vue}": [
+      "vue-cli-service lint --fix"
     ],
     ".": [
       "ls-lint"
