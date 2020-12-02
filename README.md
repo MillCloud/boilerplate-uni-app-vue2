@@ -75,6 +75,20 @@ yarn dev:quickapp-webview
 yarn dev:quickapp-webview-huawei
 yarn dev:quickapp-webview-union
 
+# build for staging
+# use hbuilderx to build for app production
+yarn staging-build:mp-360
+yarn staging-build:mp-alipay
+yarn staging-build:mp-baidu
+yarn staging-build:mp-kuaishou
+yarn staging-build:mp-qq
+yarn staging-build:mp-toutiao
+yarn staging-build:mp-weixin
+yarn staging-build:quickapp-native
+yarn staging-build:quickapp-webview
+yarn staging-build:quickapp-webview-huawei
+yarn staging-build:quickapp-webview-union
+
 # build for production
 # use hbuilderx to build for app production
 yarn build:mp-360
@@ -131,6 +145,7 @@ yarn run info
 - [xe-utils](https://github.com/x-extends/xe-utils#readme)
 - [dayjs](https://day.js.org)
 - [mock.js](http://mockjs.com/)
+- [vue-use](https://vueuse.js.org/)
 - [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
 - [commitizen](http://commitizen.github.io/cz-cli/)
 - [commitlint](https://commitlint.js.org/)
