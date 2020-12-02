@@ -1,3 +1,4 @@
 last 3 versions
-android >= 4.4
-ios >= 8
+> 1%
+iOS >= 8
+Android >= 4
