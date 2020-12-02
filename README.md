@@ -1,10 +1,8 @@
 # boilerplate-uni-app
 
-[English](./README.md) | 简体中文
-
 ---
 
-用于测试 uni-app 的仓库。
+uni-app 模板。
 
 ## 起步
 
@@ -12,28 +10,50 @@
 
 ## 准备
 
-- 推荐使用 nvm，长期支持版 node，长期支持版 npm 和 yarn。
-  - 首先安装 nvm
-    - [nvm for Mac/Linux](https://github.com/nvm-sh/nvm#readme)
-    - [nvm-windows](https://github.com/coreybutler/nvm-windows#readme) - [已知问题 #300](https://github.com/coreybutler/nvm-windows/issues/300)
-  - 在终端/命令行安装长期支持版 node
-  - 全局升级 npm 到长期支持版，安装 yarn
+请使用梯子或手机 WiFi 完成准备步骤。
 
-    ```sh
-    npm i -g npm@lts
-    npm i -g yarn
-    ```
+### macOS
 
-  - 默认设置了镜像为国内淘宝源
-- Git 也是需要的
-  - [git for Windows/Linux](https://git-scm.com/downloads)
-  - 推荐使用 [Homebrew](https://brew.sh/) 在 Mac 安装 git
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+nvm install 12
+nvm alias default 12
+npm i -g yarn
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
+git -C "$(brew --repo homebrew/cask-fonts)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-fonts.git
+git -C "$(brew --repo homebrew/cask-drivers)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-drivers.git
+brew update
+brew install git
+
+```
+
+- Node 镜像[参考](https://developer.aliyun.com/mirror/NPM)
+- Homebrew 镜像[参考](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+
+### Windows
+
+Install [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) and [Git](https://git-scm.com/downloads) first.
+
+```sh
+nvm node_mirror https://npm.taobao.org/mirrors/node/
+nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+nvm install 12.20.0
+nvm use 12.20.0
+npm i -g yarn
+
+```
 
 ### 安装
 
 ```sh
 # clone
 git clone git@github.com:MillCloud/boilerplate-uni-app.git
+# or gitee
+# git clone git@gitee.com:millcloud/boilerplate-uni-app.git
 
 # enter the directory
 cd boilerplate-uni-app
@@ -46,6 +66,7 @@ yarn
 yarn dev:mp-360
 yarn dev:mp-alipay
 yarn dev:mp-baidu
+yarn dev:mp-kuaishou
 yarn dev:mp-qq
 yarn dev:mp-toutiao
 yarn dev:mp-weixin
@@ -59,6 +80,7 @@ yarn dev:quickapp-webview-union
 yarn build:mp-360
 yarn build:mp-alipay
 yarn build:mp-baidu
+yarn build:mp-kuaishou
 yarn build:mp-qq
 yarn build:mp-toutiao
 yarn build:mp-weixin
@@ -73,9 +95,15 @@ yarn lint
 # check deps
 yarn run check
 
+# clean dist
+yarn clean
+
 # git commit and git push
 # git add should be handled by yourself
 yarn commit
+
+# get uni-app info
+yarn run info
 ```
 
 ## 测试
@@ -85,7 +113,7 @@ yarn commit
 ## 部署
 
 - 确认所有和[模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html)相关的地方已经配置完成。
-- 运行`yarn build:platform`，用开发者工具上传对应文件夹的内容。
+- 运行`yarn build:platform`，然后用开发者工具上传`dist`目录下对应平台的内容。
 - 用 hbuilderx 生成 app，手动部署。
 
 ## 主要依赖
@@ -104,8 +132,8 @@ yarn commit
 - [dayjs](https://day.js.org)
 - [mock.js](http://mockjs.com/)
 - [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
-- [commitlint](https://commitlint.js.org/)
 - [commitizen](http://commitizen.github.io/cz-cli/)
+- [commitlint](https://commitlint.js.org/)
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
 - [stylelint](https://stylelint.io/)
