@@ -12,6 +12,9 @@ uni-app 模板。
 
 请使用梯子或手机 WiFi 完成准备步骤。
 
+- Node 镜像[参考](https://developer.aliyun.com/mirror/NPM)
+- Homebrew 镜像[参考](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+
 ### macOS
 
 ```sh
@@ -30,9 +33,6 @@ brew update
 brew install git
 
 ```
-
-- Node 镜像[参考](https://developer.aliyun.com/mirror/NPM)
-- Homebrew 镜像[参考](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 
 ### Windows
 
