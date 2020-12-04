@@ -53,7 +53,7 @@
     "commit": "git-ze && git push",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/i18n/locales/*.json'",
     "lint": "yarn lint:json && yarn lint:script && yarn lint:style && yarn lint:ls",
-    "lint:json": "prettier ./src/**/*.json --write",
+    "lint:json": "prettier ./**/*.json -w",
     "lint:script": "vue-cli-service lint --fix",
     "lint:style": "stylelint ./src/**/*.scss --fix",
     "lint:ls": "ls-lint",
