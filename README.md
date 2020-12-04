@@ -10,7 +10,7 @@ uni-app 模板。
 
 ## 准备
 
-请使用梯子或手机 WiFi 完成准备步骤。
+你可能需要使用梯子或手机 WiFi 完成准备步骤。
 
 - Node 镜像[参考](https://developer.aliyun.com/mirror/NPM)
 - Homebrew 镜像[参考](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
@@ -53,7 +53,7 @@ npm i -g yarn
 # clone
 git clone git@github.com:MillCloud/boilerplate-uni-app.git
 # or gitee
-# git clone git@gitee.com:millcloud/boilerplate-uni-app.git
+# git clone git@gitee.com:MillCloud/boilerplate-uni-app.git
 
 # enter the directory
 cd boilerplate-uni-app
@@ -103,7 +103,7 @@ yarn build:quickapp-webview
 yarn build:quickapp-webview-huawei
 yarn build:quickapp-webview-union
 
-# lint scripts, styles and ls
+# lint json, scripts, styles and ls
 yarn lint
 
 # check deps
@@ -127,8 +127,9 @@ yarn run info
 ## 部署
 
 - 确认所有和[模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html)相关的地方已经配置完成。
-- 运行`yarn build:platform`，然后用开发者工具上传`dist`目录下对应平台的内容。
-- 用 hbuilderx 生成 app，手动部署。
+- 对于小程序，运行对应的命令，然后用开发者工具上传`dist`目录下对应平台的内容。
+- 对于 app，用 hbuilderx 云打包获取安装包。
+- 默认会生成报告。
 
 ## 主要依赖
 
@@ -137,7 +138,9 @@ yarn run info
 - [vue-cli](https://cli.vuejs.org/)
 - [vuex](https://vuex.vuejs.org/)
 - [vue-composition-api](https://composition-api.vuejs.org/)
+- [vue-use](https://vueuse.js.org/)
 - [vue-i18n](https://kazupon.github.io/vue-i18n/)
+- [uni-ajax](https://uniajax.ponjs.com/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
 - [@modyqyw/mp-scss](https://millcloud.github.io/mp-scss/)
@@ -145,7 +148,6 @@ yarn run info
 - [xe-utils](https://github.com/x-extends/xe-utils#readme)
 - [dayjs](https://day.js.org)
 - [mock.js](http://mockjs.com/)
-- [vue-use](https://vueuse.js.org/)
 - [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
 - [commitizen](http://commitizen.github.io/cz-cli/)
 - [commitlint](https://commitlint.js.org/)
