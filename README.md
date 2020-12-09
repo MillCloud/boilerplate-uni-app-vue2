@@ -128,7 +128,7 @@ yarn run info
 
 - 确认所有和[模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html)相关的地方已经配置完成。
 - 对于小程序，运行对应的命令，然后用开发者工具上传`dist`目录下对应平台的内容。
-- 对于 app，用 hbuilderx 云打包获取安装包。
+- 对于 app，用 hbuilderx 云打包获取安装包，相关资料应从负责人处获取。
 - 默认会生成报告。
 
 ## 主要依赖
