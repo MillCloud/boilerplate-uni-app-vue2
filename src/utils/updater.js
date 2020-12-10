@@ -1,4 +1,6 @@
 /* eslint-disable import/prefer-default-export */
+// 整包更新见 https://ask.dcloud.net.cn/article/34972
+// 热更新见 https://ask.dcloud.net.cn/article/35667
 import request from '../plugins/request';
 import { hideLoading, showLoading } from './loading';
 import { showModal } from './modal';
