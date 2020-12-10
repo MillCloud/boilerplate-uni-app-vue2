@@ -47,6 +47,10 @@ npm i -g yarn
 
 ```
 
+### 开发工具
+
+请把`*.json`的解析器调整为`jsonc`。如果你使用 VSCode，可以参考[这里](https://www.yuque.com/modyqyw/environment/aozv2q)。
+
 ### 安装
 
 ```sh
