@@ -1,13 +1,13 @@
 import { formatYuan2Fen } from './formatter';
 
 /**
- * @param {string} amountYuan
+ * @param {string} amount
  */
-export const validateAmountYuan = (amountYuan) => {
+export const isYuan = (amount) => {
   const reg = /^\d+(\.\d{0,2})?$/;
-  const regResult = reg.test(amountYuan);
-  const amountFen = formatYuan2Fen(amountYuan);
-  return !!amountYuan && regResult && amountFen !== 0;
+  const regResult = reg.test(amount);
+  const amountFen = formatYuan2Fen(amount);
+  return !!amount && regResult && amountFen !== 0;
 };
 
 /**
