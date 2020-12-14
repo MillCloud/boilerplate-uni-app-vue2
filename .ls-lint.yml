@@ -16,4 +16,3 @@ ls:
 ignore:
   - ./src/.umi
   - ./src/locales
-
