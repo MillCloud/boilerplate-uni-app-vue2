@@ -1,6 +1,6 @@
 {
   // 配置文件内容，见 https://uniapp.dcloud.io/collocation/manifest
-  // 应用名称，打包出来后的安装包名
+  // 应用名称，安装后显示的应用名
   "name": "boilerplate-uni-app",
   // DCloud 应用标识，见 https://ask.dcloud.net.cn/article/35907
   "appid": "",
@@ -66,7 +66,16 @@
         },
         "minSdkVersion": 19, // 4.4
         "targetSdkVersion": 23, // 6.0
+        "permissionExternalStorage": {
+          "request": "always",
+          "prompt": "应用保存运行状态等信息，需要获取读写手机存储权限，系统可能提示为访问设备上的照片、媒体内容和文件，请允许。"
+        },
+        "permissionPhoneState": {
+          "request": "always",
+          "prompt": "为保证正常安全使用，需要获取设备识别码使用权限，系统可能提示为获取手机号码，请允许。"
+        },
         "permissions": [
+          // https://ask.dcloud.net.cn/article/34986
           "<uses-feature android:name=\"android.hardware.camera\"/>",
           "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
           "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
@@ -100,27 +109,50 @@
   "quickapp": {},
   // 微信小程序配置
   "mp-weixin": {
-    "appid": "touristappid",
     "setting": {
-      "urlCheck": true
+      // https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html
+      // ES6 不转 ES5
+      "es6": false,
+      // 不增强编译
+      "enhance": false,
+      // 不使用 npm 模块
+      "nodeModules": false,
+      // 上传代码时不补全样式
+      "postcss": false,
+      // 上传代码时不压缩样式
+      "minifyWXSS": false,
+      // 上传时不压缩混淆
+      "minified": false,
+      // 上传时不保护代码
+      "uglifyFileName": false,
+      // 校验合法域名，web-view，TLS 版本和 HTTPS 证书
+      "urlCheck": true,
+      // shadow-root 形式展示自定义组件
+      "showShadowRootInWxmlPanel": true,
+      // 不启用数据预拉取
+      "preloadBackgroundData": false,
+      // 不启用代码自动热重载
+      "compileHotReLoad": false,
+      // 不使用合并编译
+      "bundle": false,
+      // 关闭 sitemap 索引提示
+      "checkSiteMap": false,
+      // 关闭 key 名称提示
+      "checkInvalidKey": false
     },
+    "libVersion": "",
+    "appid": "touristappid",
     "usingComponents": true
   },
   // 阿里小程序配置
   "mp-alipay": {
     "component2": true,
-    "usingComponents": true
+    "enableAppxNg": true
   },
   // 百度小程序配置
-  "mp-baidu": {
-    "usingComponents": true
-  },
+  "mp-baidu": {},
   // 字节跳动小程序配置
-  "mp-toutiao": {
-    "usingComponents": true
-  },
+  "mp-toutiao": {},
   // QQ 小程序配置
-  "mp-qq": {
-    "usingComponents": true
-  }
+  "mp-qq": {}
 }
