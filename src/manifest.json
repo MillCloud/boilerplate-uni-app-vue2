@@ -75,6 +75,7 @@
           "prompt": "为保证正常安全使用，需要获取设备识别码使用权限，系统可能提示为获取手机号码，请允许。"
         },
         "permissions": [
+          // https://ask.dcloud.net.cn/article/36982
           // https://ask.dcloud.net.cn/article/34986
           "<uses-feature android:name=\"android.hardware.camera\"/>",
           "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
