@@ -20,7 +20,6 @@ module.exports = {
       },
     },
   },
-
   css: {
     loaderOptions: {
       scss: {
@@ -28,7 +27,9 @@ module.exports = {
       },
     },
   },
-
+  devServer: {
+    proxy: 'https://fake.url/api',
+  },
   pluginOptions: {
     i18n: {
       locale: 'zh-Hans',
