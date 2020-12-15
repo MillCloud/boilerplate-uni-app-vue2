@@ -55,7 +55,7 @@
     "lint": "yarn lint:json && yarn lint:script && yarn lint:style && yarn lint:ls",
     "lint:json": "prettier ./**/*.json -w",
     "lint:script": "vue-cli-service lint --fix",
-    "lint:style": "stylelint ./src/**/*.scss --fix",
+    "lint:style": "stylelint ./src/**/*.{css,less,scss,vue} --fix",
     "lint:ls": "ls-lint .",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js"
   },
