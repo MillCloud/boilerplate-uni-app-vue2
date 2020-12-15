@@ -1654,10 +1654,10 @@
     vue-eslint-parser "~7.2.0"
     vue-property-decorator "~9.1.2"
 
-"@modyqyw/mp-scss@~2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npm.taobao.org/@modyqyw/mp-scss/download/@modyqyw/mp-scss-2.0.1.tgz#5ec99ba5bf5a596d6c8270cc564bf00df8000871"
-  integrity sha1-Xsmbpb9aWW1sgnDMVkvwDfgACHE=
+"@modyqyw/mp-scss@~2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npm.taobao.org/@modyqyw/mp-scss/download/@modyqyw/mp-scss-2.0.2.tgz#268d113d07ce023122355e7a438a468f69bb595b"
+  integrity sha1-Jo0RPQfOAjEiNV56Q4pGj2m7WVs=
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
