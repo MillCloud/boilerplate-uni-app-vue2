@@ -64,7 +64,7 @@
           "waiting": true,
           "delay": 0
         },
-        "minSdkVersion": 19, // 4.4
+        "minSdkVersion": 21, // 5.0
         "targetSdkVersion": 23, // 6.0
         "permissionExternalStorage": {
           "request": "always",
