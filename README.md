@@ -1,7 +1,5 @@
 # boilerplate-uni-app
 
----
-
 uni-app 模板。
 
 ## 起步
