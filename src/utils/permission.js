@@ -422,6 +422,50 @@ export function requestAndroidPermission(permission) {
 }
 
 /**
+ * @desc 判断 Android 是否开启权限
+ * @param {AndroidPermission[]} permissions
+ * @return {Promise<Array<0 | -1 | 1 | {code: string; message: string>}>}
+ */
+export function requestAndroidPermissions(permissions) {
+  return new Promise((resolve) => {
+    plus.android.requestPermissions(
+      permissions,
+      ({ granted, deniedPresent, deniedAlways }) => {
+        console.log(
+          'granted',
+          granted,
+          'deniedPresent',
+          deniedPresent,
+          'deniedAlways',
+          deniedAlways,
+        );
+        const results = [];
+        const objectPermission = {};
+        for (let i = 0, len = granted.length; i < len; i += 1) {
+          objectPermission[granted[i]] = 1;
+        }
+        for (let i = 0, len = deniedPresent.length; i < len; i += 1) {
+          objectPermission[deniedPresent[i]] = 0;
+        }
+        for (let i = 0, len = deniedAlways.length; i < len; i += 1) {
+          objectPermission[deniedAlways[i]] = -1;
+        }
+        permissions.forEach((permission) => {
+          results.push(objectPermission[permission]);
+        });
+        resolve(results);
+      },
+      (error) => {
+        resolve({
+          code: error.code,
+          message: error.message,
+        });
+      },
+    );
+  });
+}
+
+/**
  * @desc 打开应用权限页面，引导用户授权
  * @link UIApplication https://developer.apple.com/documentation/uikit/uiapplication?language=objc
  * @link sharedApplication https://developer.apple.com/documentation/uikit/uiapplication/1622975-sharedapplication?language=objc
