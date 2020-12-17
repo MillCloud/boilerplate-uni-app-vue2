@@ -1,0 +1,222 @@
+<template>
+  <view class="container align-center">
+    <scroll-view class="h-full" scroll-y>
+      <view class="row p-md justify-center">
+        注意：服务和权限是不同的概念。服务指手机硬件和系统提供的功能，权限指手机给予应用的功能。比如定位，如果手机允许了应用的定位权限，但手机没有开启定位服务，应用可以定位但没办法获取正确的数据，或者直接无法定位。
+      </view>
+      <view class="row p-md justify-center">
+        <button class="btn" @click="handleCheckSystemEnableLocation">
+          Android, iOS - 是否开启定位服务
+        </button>
+      </view>
+      <view class="row p-md justify-center">
+        <button class="btn" @click="handleOpenPermissionSetting">
+          Android, iOS - 打开应用权限页面
+        </button>
+      </view>
+      <view v-if="isIOS" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckIOSLocationPermission">
+          iOS - 是否开启位置权限
+        </button>
+      </view>
+      <view v-if="isIOS" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckIOSPushPermission">
+          iOS - 是否开启推送权限
+        </button>
+      </view>
+      <view v-if="isIOS" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckIOSCameraPermission">
+          iOS - 是否开启摄像头权限
+        </button>
+      </view>
+      <view v-if="isIOS" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckIOSPhotoLibraryPermission">
+          iOS - 是否开启相册权限
+        </button>
+      </view>
+      <view v-if="isIOS" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckIOSRecordPermission">
+          iOS - 是否开启麦克风权限
+        </button>
+      </view>
+      <view v-if="isIOS" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckIOSContactPermission">
+          iOS - 是否开启通讯录权限
+        </button>
+      </view>
+      <view v-if="isIOS" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckIOSCalendarPermission">
+          iOS - 是否开启日历权限
+        </button>
+      </view>
+      <view v-if="isIOS" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckIOSMemoPermission">
+          iOS - 是否开启备忘录权限
+        </button>
+      </view>
+      <view v-if="isAndroid" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckAndroidNotExistPermission">
+          Android - 是否开启不存在权限
+        </button>
+      </view>
+      <view v-if="isAndroid" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckAndroidCameraPermission">
+          Android - 是否开启摄像头权限
+        </button>
+      </view>
+    </scroll-view>
+  </view>
+</template>
+
+<script>
+import {
+  isIOS,
+  judgeIOSPermission,
+  requestAndroidPermission,
+  gotoAppPermissionSetting,
+  checkSystemEnableLocation,
+} from '@u/permission';
+
+export default {
+  data() {
+    return {
+      isIOS,
+    };
+  },
+  computed: {
+    isAndroid() {
+      return !this.isIOS;
+    },
+  },
+  methods: {
+    handleCheckSystemEnableLocation() {
+      const result = checkSystemEnableLocation();
+      uni.showToast({
+        title: `定位服务${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleOpenPermissionSetting() {
+      gotoAppPermissionSetting();
+    },
+    handleCheckIOSLocationPermission() {
+      const result = judgeIOSPermission('location');
+      uni.showToast({
+        title: `位置权限${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleCheckIOSPushPermission() {
+      const result = judgeIOSPermission('push');
+      uni.showToast({
+        title: `推送权限${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleCheckIOSCameraPermission() {
+      const result = judgeIOSPermission('camera');
+      uni.showToast({
+        title: `摄像头权限${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleCheckIOSPhotoLibraryPermission() {
+      const result = judgeIOSPermission('photoLibrary');
+      uni.showToast({
+        title: `相册权限${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleCheckIOSRecordPermission() {
+      const result = judgeIOSPermission('record');
+      uni.showToast({
+        title: `麦克风权限${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleCheckIOSContactPermission() {
+      const result = judgeIOSPermission('contact');
+      uni.showToast({
+        title: `通讯录权限${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleCheckIOSCalendarPermission() {
+      const result = judgeIOSPermission('calendar');
+      uni.showToast({
+        title: `日历权限${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleCheckIOSMemoPermission() {
+      const result = judgeIOSPermission('memo');
+      uni.showToast({
+        title: `备忘录权限${result ? '已' : '未'}开启`,
+        icon: 'none',
+      });
+    },
+    handleCheckAndroidNotExistPermission() {
+      requestAndroidPermission('android.permission.NOT_EXIST').then(
+        (result) => {
+          if (result.message) {
+            uni.showModal({
+              title: '提示',
+              content: `无法确认不存在权限，${result.code} ${result.message}`,
+              showCancel: false,
+            });
+          } else {
+            let text = '不存在权限状态不明';
+            switch (result) {
+              case 1:
+                text = '不存在权限已开启';
+                break;
+              case 0:
+                text = '不存在权限未开启';
+                break;
+              case -1:
+                text = '不存在权限被永久拒绝';
+                break;
+              default:
+                break;
+            }
+            uni.showToast({
+              title: text,
+              icon: 'none',
+            });
+          }
+        },
+      );
+    },
+    handleCheckAndroidCameraPermission() {
+      requestAndroidPermission('android.permission.CAMERA').then((result) => {
+        if (result.message) {
+          uni.showModal({
+            title: '提示',
+            content: `无法确认摄像头权限，${result.code} ${result.message}`,
+            showCancel: false,
+          });
+        } else {
+          let text = '摄像头状态不明';
+          switch (result) {
+            case 1:
+              text = '摄像头权限已开启';
+              break;
+            case 0:
+              text = '摄像头权限未开启';
+              break;
+            case -1:
+              text = '摄像头权限被永久拒绝';
+              break;
+            default:
+              break;
+          }
+          uni.showToast({
+            title: text,
+            icon: 'none',
+          });
+        }
+      });
+    },
+  },
+};
+</script>
