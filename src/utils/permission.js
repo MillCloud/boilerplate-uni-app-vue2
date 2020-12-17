@@ -431,14 +431,6 @@ export function requestAndroidPermissions(permissions) {
     plus.android.requestPermissions(
       permissions,
       ({ granted, deniedPresent, deniedAlways }) => {
-        console.log(
-          'granted',
-          granted,
-          'deniedPresent',
-          deniedPresent,
-          'deniedAlways',
-          deniedAlways,
-        );
         const results = [];
         const objectPermission = {};
         for (let i = 0, len = granted.length; i < len; i += 1) {
@@ -529,6 +521,7 @@ export default {
   isIOS,
   judgeIOSPermission,
   requestAndroidPermission,
+  requestAndroidPermissions,
   gotoAppPermissionSetting,
   checkSystemEnableLocation,
 };
