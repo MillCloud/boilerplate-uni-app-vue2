@@ -64,6 +64,11 @@
           Android - 是否开启摄像头权限
         </button>
       </view>
+      <view v-if="isAndroid" class="row p-md justify-center">
+        <button class="btn" @click="handleCheckAndroidMultiPermissions">
+          Android - 是否开启摄像头、位置和麦克风权限
+        </button>
+      </view>
     </scroll-view>
   </view>
 </template>
@@ -73,6 +78,7 @@ import {
   isIOS,
   judgeIOSPermission,
   requestAndroidPermission,
+  requestAndroidPermissions,
   gotoAppPermissionSetting,
   checkSystemEnableLocation,
 } from '@u/permission';
@@ -196,7 +202,7 @@ export default {
             showCancel: false,
           });
         } else {
-          let text = '摄像头状态不明';
+          let text = '摄像头权限状态不明';
           switch (result) {
             case 1:
               text = '摄像头权限已开启';
@@ -213,6 +219,69 @@ export default {
           uni.showToast({
             title: text,
             icon: 'none',
+          });
+        }
+      });
+    },
+    handleCheckAndroidMultiPermissions() {
+      requestAndroidPermissions([
+        'android.permission.CAMERA',
+        'android.permission.ACCESS_FINE_LOCATION',
+        'android.permission.RECORD_AUDIO',
+      ]).then((results) => {
+        if (results.message) {
+          uni.showModal({
+            title: '提示',
+            content: `无法确认权限，${results.code} ${results.message}`,
+            showCancel: false,
+          });
+        } else {
+          let text1 = `摄像头权限状态不明`;
+          switch (results[0]) {
+            case 1:
+              text1 = '摄像头权限已开启';
+              break;
+            case 0:
+              text1 = '摄像头权限未开启';
+              break;
+            case -1:
+              text1 = '摄像头权限被永久拒绝';
+              break;
+            default:
+              break;
+          }
+          let text2 = `位置权限状态不明`;
+          switch (results[1]) {
+            case 1:
+              text2 = '位置权限已开启';
+              break;
+            case 0:
+              text2 = '位置权限未开启';
+              break;
+            case -1:
+              text2 = '位置权限被永久拒绝';
+              break;
+            default:
+              break;
+          }
+          let text3 = `麦克风权限状态不明`;
+          switch (results[2]) {
+            case 1:
+              text3 = '麦克风权限已开启';
+              break;
+            case 0:
+              text3 = '麦克风权限未开启';
+              break;
+            case -1:
+              text3 = '麦克风权限被永久拒绝';
+              break;
+            default:
+              break;
+          }
+          uni.showModal({
+            title: '提示',
+            content: `${text1}；${text2}；${text3}。`,
+            showCancel: false,
           });
         }
       });
