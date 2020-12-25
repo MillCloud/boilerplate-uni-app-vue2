@@ -137,7 +137,7 @@
     "scripts": {}
   },
   "engines": {
-    "node": ">=12 <13 || >=14 <15"
+    "node": ">=12 <13"
   },
   "config": {
     "commitizen": {
