@@ -114,7 +114,7 @@
       "postcss": false,
       // 上传代码时不压缩样式
       "minifyWXSS": false,
-      // 上传时不压缩混淆
+      // 上传时不压缩
       "minified": false,
       // 上传时不保护代码
       "uglifyFileName": false,
