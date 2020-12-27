@@ -34,7 +34,7 @@ brew install git
 
 ### Windows
 
-Install [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) and [Git](https://git-scm.com/downloads) first.
+首先安装 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) 和 [Git](https://git-scm.com/downloads)。
 
 ```sh
 nvm node_mirror https://npm.taobao.org/mirrors/node/
@@ -145,7 +145,7 @@ yarn run info
 - [uni-ajax](https://uniajax.ponjs.com/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
-- [@modyqyw/mp-scss](https://millcloud.github.io/mp-scss/)
+- [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
 - [lodash](https://lodash.com/)
 - [xe-utils](https://github.com/x-extends/xe-utils#readme)
 - [dayjs](https://day.js.org)
