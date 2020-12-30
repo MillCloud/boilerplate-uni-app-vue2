@@ -2006,6 +2006,11 @@
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.16.tgz#3cc351f8d48101deadfed4c9e4f116048d437b4b"
   integrity sha1-PMNR+NSBAd6t/tTJ5PEWBI1De0s=
 
+"@types/node@~12.19.11":
+  version "12.19.11"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.19.11.tgz#9220ab4b20d91169eb78f456dbfcbabee89dfb50"
+  integrity sha1-kiCrSyDZEWnrePRW2/y6vuid+1A=
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.npm.taobao.org/@types/normalize-package-data/download/@types/normalize-package-data-2.4.0.tgz?cache=0&sync_timestamp=1605054731394&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnormalize-package-data%2Fdownload%2F%40types%2Fnormalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
@@ -12183,10 +12188,10 @@ sass-loader@~10.1.0:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@~1.30.0:
-  version "1.30.0"
-  resolved "https://registry.npm.taobao.org/sass/download/sass-1.30.0.tgz?cache=0&sync_timestamp=1607122825246&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsass%2Fdownload%2Fsass-1.30.0.tgz#60bbbbaf76ba10117e61c6c24f00161c3d60610e"
-  integrity sha1-YLu7r3a6EBF+YcbCTwAWHD1gYQ4=
+sass@~1.32.0:
+  version "1.32.0"
+  resolved "https://registry.npm.taobao.org/sass/download/sass-1.32.0.tgz#10101a026c13080b14e2b374d4e15ee24400a4d3"
+  integrity sha1-EBAaAmwTCAsU4rN01OFe4kQApNM=
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
