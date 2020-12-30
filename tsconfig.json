@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": "dist",
     "paths": {
       "@/*": ["./src/*"],
       "@a/*": ["./src/assets/*"],
@@ -12,10 +13,9 @@
     "allowJs": true,
     "noEmit": true,
     "types": [
-      "webpack-env",
       "@dcloudio/types",
-      "miniprogram-api-typings",
       "mini-types",
+      "miniprogram-api-typings"
     ]
   },
   "exclude": ["node_modules", "unpackage"]
