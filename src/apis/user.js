@@ -1,14 +1,14 @@
 import request from '@/plugins/request';
 
 export function signIn({ username, password }) {
-  return request('/sign-in', {
+  return request('/api/sign-in', {
     username,
     password,
   });
 }
 
 export function signUp({ email, username, nickname, password }) {
-  return request('/sign-up', {
+  return request('/api/sign-up', {
     email,
     username,
     nickname,
