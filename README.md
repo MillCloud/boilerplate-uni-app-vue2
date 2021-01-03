@@ -146,6 +146,7 @@ yarn
 |`yarn build:mp-toutiao`|production 模式打包字节跳动小程序|
 |`yarn build:mp-weixin`|production 模式打包微信小程序|
 |`yarn build:quickapp-webview`|production 模式打包快应用|
+|`yarn run clean`|清理 dist 目录|
 |`yarn run check`|检查项目依赖版本|
 |`yarn commit`|引导填写 git 提交信息并提交，你需要手动 git add 对应部分后执行该命令|
 |`yarn i18n:report`|获取国际化信息|
