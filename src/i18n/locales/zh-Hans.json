@@ -43,5 +43,14 @@
     "REQUEST_ERROR": "请求错误",
     "REQUEST_CANCELLED": "请求已取消",
     "TOKEN_OUTDATED": "登录状态已过期"
+  },
+  "hint": {
+    "OK": "确定",
+    "confirm": "确定",
+    "cancel": "取消",
+    "reset": "重置",
+    "back": "上一页",
+    "home": "主页",
+    "index": "首页"
   }
 }

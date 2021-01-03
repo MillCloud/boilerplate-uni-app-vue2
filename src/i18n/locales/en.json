@@ -43,5 +43,14 @@
     "REQUEST_ERROR": "Request error",
     "REQUEST_CANCELLED": "Request cancelled",
     "TOKEN_OUTDATED": "Token outdated"
+  },
+  "hint": {
+    "OK": "OK",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "reset": "Reset",
+    "back": "Back",
+    "home": "Home",
+    "index": "Index"
   }
 }
