@@ -28,12 +28,12 @@ module.exports = {
     },
   },
   devServer: {
-    proxy: 'https://fake.url/api',
+    proxy: process.env.VUE_APP_BASE_URL || 'https://fake.url',
   },
   pluginOptions: {
     i18n: {
-      locale: 'zh-Hans',
-      fallbackLocale: 'zh-Hans',
+      locale: process.env.VUE_APP_I18N_LOCALE || 'zh-Hans',
+      fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'zh-Hans',
       localeDir: 'i18n/locales',
       enableInSFC: false,
     },
