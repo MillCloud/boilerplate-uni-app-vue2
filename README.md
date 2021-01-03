@@ -1,122 +1,160 @@
 # boilerplate-uni-app
 
-uni-app 模板。
+## 简介
+
+boilerplate-uni-app 是一个面向中国用户的的简单 uni-app (vue2) 模板，目标是帮助你快速搭建小程序/移动应用。当然，也希望能引导你更进一步地了解 uni-app/vue2 生态。
+
+### 主要依赖
+
+- [vue2](https://cn.vuejs.org)
+- [uni-app](https://uniapp.dcloud.io/)
+- [vue-cli](https://cli.vuejs.org/zh/)
+- [vuex](https://vuex.vuejs.org/zh/)
+- [vue-composition-api](https://composition-api.vuejs.org/zh/)
+- [vue-use](https://vueuse.js.org/)
+- [vue-i18n](https://kazupon.github.io/vue-i18n/)
+- [uni-ajax](https://uniajax.ponjs.com/)
+- [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
+- [uview-ui](https://www.uviewui.com/)
+- [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
+- [lodash](https://lodash.com/)
+- [xe-utils](https://github.com/x-extends/xe-utils#readme)
+- [dayjs](https://day.js.org)
+- [mock.js](http://mockjs.com/)
+- [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
+- [commitizen](http://commitizen.github.io/cz-cli/)
+- [commitlint](https://commitlint.js.org/)
+- [prettier](https://prettier.io/)
+- [eslint](https://eslint.org/)
+- [stylelint](https://stylelint.io/)
+- [ls-lint](https://ls-lint.org/)
+- [husky](https://github.com/typicode/husky#readme)
+- [lint-staged](https://github.com/okonet/lint-staged#readme)
+- [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme)
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme)
+
+请先阅读上面的文档，并确保你对 node 和 npm 有基本的理解。
 
 ## 起步
 
-这些说明将让你得到能在本地启动、运行的项目副本以进行开发和测试。有关如何在实时系统上部署项目，请参阅[部署](#部署)。
+这部分说明将让你得到能在本地运行的项目副本以开始开发。有关如何部署项目，请阅读[部署部分](#部署)。
 
 ## 准备
 
 你可能需要使用梯子或手机 WiFi 完成准备步骤。
 
-- Node 镜像[参考](https://developer.aliyun.com/mirror/NPM)
-- Homebrew 镜像[参考](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
-
-### macOS
+对于 macOS 用户，请按照以下指引操作。
 
 ```sh
+# 安装 nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+# 设置 nvm 镜像
 export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+# 安装 node@12
 nvm install 12
+# 设置 node@12 为默认 node
 nvm alias default 12
+# 安装 yarn
 npm i -g yarn
+# 安装 homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# 设置 homebrew 镜像
 git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
 git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
 git -C "$(brew --repo homebrew/cask-fonts)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-fonts.git
 git -C "$(brew --repo homebrew/cask-drivers)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-drivers.git
 brew update
+# 安装 git
 brew install git
 
 ```
 
-### Windows
+对于 Windows 用户，请按照以下指引操作。
 
 首先安装 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) 和 [Git](https://git-scm.com/downloads)。
 
 ```sh
+# 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
-nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+# 安装 node@12
 nvm install 12.20.0
+# 使用 node@12
 nvm use 12.20.0
+# 安装 yarn
 npm i -g yarn
 
 ```
 
+其它系统请根据以上指引自行调整。
+
 ### 安装
 
 ```sh
-# clone
+# clone 项目到本地
 git clone git@github.com:MillCloud/boilerplate-uni-app.git
-# or gitee
 # git clone git@gitee.com:MillCloud/boilerplate-uni-app.git
-
-# enter the directory
+# 进入项目
 cd boilerplate-uni-app
-
-# install dependency
+# 安装依赖
 yarn
 
-# build for development
-# use hbuilderx to build for app development
-yarn dev:mp-360
-yarn dev:mp-alipay
-yarn dev:mp-baidu
-yarn dev:mp-kuaishou
-yarn dev:mp-qq
-yarn dev:mp-toutiao
-yarn dev:mp-weixin
-yarn dev:quickapp-native
-yarn dev:quickapp-webview
-yarn dev:quickapp-webview-huawei
-yarn dev:quickapp-webview-union
-
-# build for staging
-# use hbuilderx to build for app production
-yarn staging-build:mp-360
-yarn staging-build:mp-alipay
-yarn staging-build:mp-baidu
-yarn staging-build:mp-kuaishou
-yarn staging-build:mp-qq
-yarn staging-build:mp-toutiao
-yarn staging-build:mp-weixin
-yarn staging-build:quickapp-native
-yarn staging-build:quickapp-webview
-yarn staging-build:quickapp-webview-huawei
-yarn staging-build:quickapp-webview-union
-
-# build for production
-# use hbuilderx to build for app production
-yarn build:mp-360
-yarn build:mp-alipay
-yarn build:mp-baidu
-yarn build:mp-kuaishou
-yarn build:mp-qq
-yarn build:mp-toutiao
-yarn build:mp-weixin
-yarn build:quickapp-native
-yarn build:quickapp-webview
-yarn build:quickapp-webview-huawei
-yarn build:quickapp-webview-union
-
-# lint json, scripts, styles and ls
-yarn lint
-
-# check deps
-yarn run check
-
-# clean dist
-yarn clean
-
-# git commit and git push
-# git add should be handled by yourself
-yarn commit
-
-# get uni-app info
-yarn run info
 ```
+
+如果一切正常，此时模板已经可以启动了，请参考[命令部分](#命令)正式开始你的开发。但如果你想通过文档了解更多，请先阅读[主要依赖](#主要依赖)内链接对应的文档，再继续阅读下去。
+
+## 使用
+
+这部分说明力求使你能自顶向下地理解这个模板已经替你完成的工作，以及你需要自行完成的工作。
+
+### 特性
+
+- 多模式配置示例，支持 development，staging 和 production
+- 国际化配置示例，支持 en 和 zh-Hans
+- 路由配置示例
+- 状态管理配置示例
+- 请求配置示例
+- 应用信息配置示例
+
+### 命令
+
+模板里内置了比较多的命令，以适应各种不同的情况。更多的命令你可以查看 [package.json](./package.json)。
+
+|命令|含义|
+|-|-|
+|`yarn dev:mp-360`|development 模式启动 360 小程序|
+|`yarn dev:mp-alipay`|development 模式启动支付宝小程序|
+|`yarn dev:mp-baidu`|development 模式启动百度小程序|
+|`yarn dev:mp-kuaishou`|development 模式启动快手小程序|
+|`yarn dev:mp-qq`|development 模式启动 QQ 小程序|
+|`yarn dev:mp-toutiao`|development 模式启动字节跳动小程序|
+|`yarn dev:mp-weixin`|development 模式启动微信小程序|
+|`yarn dev:quickapp-webview`|development 模式启动快应用|
+|`yarn staging-build:mp-360`|staging 模式打包 360 小程序|
+|`yarn staging-build:mp-alipay`|staging 模式打包支付宝小程序|
+|`yarn staging-build:mp-baidu`|staging 模式打包百度小程序|
+|`yarn staging-build:mp-kuaishou`|staging 模式打包快手小程序|
+|`yarn staging-build:mp-qq`|staging 模式打包 QQ 小程序|
+|`yarn staging-build:mp-toutiao`|staging 模式打包字节跳动小程序|
+|`yarn staging-build:mp-weixin`|staging 模式打包微信小程序|
+|`yarn staging-build:quickapp-webview`|staging 模式打包快应用|
+|`yarn build:mp-360`|production 模式打包 360 小程序|
+|`yarn build:mp-alipay`|production 模式打包支付宝小程序|
+|`yarn build:mp-baidu`|production 模式打包百度小程序|
+|`yarn build:mp-kuaishou`|production 模式打包快手小程序|
+|`yarn build:mp-qq`|production 模式打包 QQ 小程序|
+|`yarn build:mp-toutiao`|production 模式打包字节跳动小程序|
+|`yarn build:mp-weixin`|production 模式打包微信小程序|
+|`yarn build:quickapp-webview`|production 模式打包快应用|
+|`yarn run check`|检查项目依赖版本|
+|`yarn commit`|引导填写 git 提交信息并提交，你需要手动 git add 对应部分后执行该命令|
+|`yarn i18n:report`|获取国际化信息|
+|`yarn lint`|检查 json 文件，脚本文件，样式文件和目录|
+|`yarn lint:json`|格式化 json 文件|
+|`yarn lint:script`|检查并自动修复脚本文件|
+|`yarn lint:style`|检查并自动修复样式文件|
+|`yarn lint:ls`|检查目录|
+|`yarn info`|列出环境信息|
 
 ### 项目结构
 
@@ -124,16 +162,11 @@ yarn run info
 .
 ├── public
 ├── src
-│   ├── apis                    # 接口目录，也可以在 store 对应的 module 文件书写接口
+│   ├── apis                    # 接口目录
 │   ├── components              # 全局组件目录
 │   ├── hooks                   # 钩子函数目录
 │   ├── i18n                    # 国际化目录
-│   │   ├── index.js
-│   │   └── locales             # 对应语言文件
 │   ├── plugins                 # 插件目录
-│   │   ├── composition-api.js  # 支持@vue/composition-api
-│   │   ├── index.js
-│   │   ├── request.js          # 支持 uni-ajax
 │   ├── static                  # 资产目录
 │   ├── router                  # 路由目录
 │   ├── store                   # 状态管理目录
@@ -170,9 +203,83 @@ yarn run info
 └── yarn.lock
 ```
 
-## 测试
+### 多模式配置
+
+模板内置了四个环境变量文件。
+
+#### .env
+
+所有模式都会载入这个环境变量文件。
+
+它里面包含了两个国际化变量`VUE_APP_I18N_LOCALE`和`VUE_APP_I18N_FALLBACK_LOCALE`，值都是`zh-Hans`，表示默认使用简体中文。
+
+#### .env.staging
+
+staging 模式下，这个环境变量文件会被载入。
+
+它使用`VUE_APP_MODE`指定当前模式为 staging，`NODE_ENV`指定运行模式为 production。
+
+请区分当前模式和运行模式。当前模式可以由我们任意指定，而运行模式只能是 development，production 和 test 的其中一个，它会影响实际构建的表现和效果。在代码中，你可以根据实际情况，使用它们对代码做差异化处理。
+
+而`VUE_APP_BASE_PATH`指定了请求的前缀地址，值为`https://fake.url`，这是一个假地址，在实际使用时需要修改。
+
+.env.development，.env.production 都和 .env.staging 的内容大同小异，在这里不再赘述。
+
+如果你还需要添加更多的模式，请参考以上的说明添加对应的环境变量文件。另外，也请修改 package.json 内的 scripts，添加对应的构建命令。
+
+### 国际化配置
+
+模板内置了两种语言配置，分别是简体中文和英语。
+
+简体中文文件是 [@/i18n/locales/zh-Hans.json](./src/i18n/locales/zh-Hans.json)，英语文件是 [@/i18n/locales/en.json](./src/i18n/locales/en.json)。
+
+你可以在上面两个文件里加入你需要的字段以支持翻译，务必注意字段需要保持一致，也请注意合理地划分字段。
+
+而要引入和 vue2 强绑定的 npm 库的语言包，你可以在 [@/i18n/index.js](./src/i18n/index.js) 内操作。
+
+引入和 vue2 不强绑定的 npm 库的语言包，请查看它们的文档说明。
+
+### 路由配置
+
+uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看[文档](https://uniapp.dcloud.io/collocation/pages)。
+
+### 状态管理配置
+
+模板把状态管理分成了两类，一类是应用类状态，一类是业务类状态。
+
+#### 应用类状态
+
+应用类状态是应用本身的状态，包括应用是否处于 electron 环境，应用当前语言等。
+
+#### 业务类状态
+
+业务类状态是应用所承载的业务的状态，包括用户信息，页面通用数据等。模板建议把业务类状态分模块放置。
+
+### 请求配置
+
+#### axios 封装
+
+模板封装了 uni-ajax，并将`$request`绑定到 vue 实例上。你可以在修改[封装文件](./src/plugins/request.js)默认的 uni-ajax 配置以匹配业务。
+
+#### proxy
+
+在 development 模式下请求服务器往往会出现跨域问题，因此模板内已经设置了 devServer.proxy，见 [vue.config.js](./vue.config.js) L30。
+
+理论上，devServer.proxy 应该与 production 运行模式下的`VUE_APP_BASE_URL`一致。
+
+### 应用信息配置
+
+uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查看[文档](https://uniapp.dcloud.io/collocation/manifest)。
+
+### VSCode 插件支持
+
+你可以参考[插件](https://www.yuque.com/modyqyw/environment/skhbfr) 和 [settings.json](https://www.yuque.com/modyqyw/environment/aozv2q)。
+
+### 测试
 
 目前没有测试。欢迎 PR。
+
+如果需要添加测试，请查看[文档说明](https://cn.vuejs.org/v2/guide/testing.html)。
 
 ## 部署
 
@@ -180,35 +287,6 @@ yarn run info
 - 对于小程序，运行对应的命令，然后用开发者工具上传`dist`目录下对应平台的内容。
 - 对于 app，用 hbuilderx 云打包获取安装包，相关资料应从负责人处获取。
 - 默认会生成报告。
-
-## 主要依赖
-
-- [vue](https://vuejs.org)
-- [uni-app](https://uniapp.dcloud.io/)
-- [vue-cli](https://cli.vuejs.org/)
-- [vuex](https://vuex.vuejs.org/)
-- [vue-composition-api](https://composition-api.vuejs.org/)
-- [vue-use](https://vueuse.js.org/)
-- [vue-i18n](https://kazupon.github.io/vue-i18n/)
-- [uni-ajax](https://uniajax.ponjs.com/)
-- [uview-ui](https://www.uviewui.com/)
-- [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
-- [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
-- [lodash](https://lodash.com/)
-- [xe-utils](https://github.com/x-extends/xe-utils#readme)
-- [dayjs](https://day.js.org)
-- [mock.js](http://mockjs.com/)
-- [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
-- [commitizen](http://commitizen.github.io/cz-cli/)
-- [commitlint](https://commitlint.js.org/)
-- [prettier](https://prettier.io/)
-- [eslint](https://eslint.org/)
-- [stylelint](https://stylelint.io/)
-- [ls-lint](https://ls-lint.org/)
-- [husky](https://github.com/typicode/husky#readme)
-- [lint-staged](https://github.com/okonet/lint-staged#readme)
-- [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme)
-- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme)
 
 ## 浏览器支持
 
@@ -222,4 +300,4 @@ yarn run info
 
 - **Rui Wu** - *最初工作* - [ModyQyW](https://github.com/ModyQyW)
 
-另请参阅参与此项目的 [contributors](https://github.com/ModyQyW/boilerplate-uni-app/contributors) 列表。
+另请参阅参与此项目的 [contributors](https://github.com/MillCloud/boilerplate-uni-app/contributors) 列表。
