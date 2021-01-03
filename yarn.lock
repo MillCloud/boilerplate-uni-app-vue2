@@ -4547,10 +4547,15 @@ core-js-pure@^3.0.0:
   resolved "https://registry.npm.taobao.org/core-js-pure/download/core-js-pure-3.8.1.tgz?cache=0&sync_timestamp=1607216069177&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js-pure%2Fdownload%2Fcore-js-pure-3.8.1.tgz#23f84048f366fdfcf52d3fd1c68fec349177d119"
   integrity sha1-I/hASPNm/fz1LT/Rxo/sNJF30Rk=
 
-core-js@^3.6.1, core-js@^3.6.5, core-js@~3.8.1:
+core-js@^3.6.1, core-js@^3.6.5:
   version "3.8.1"
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.8.1.tgz?cache=0&sync_timestamp=1607215867411&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.8.1.tgz#f51523668ac8a294d1285c3b9db44025fda66d47"
   integrity sha1-9RUjZorIopTRKFw7nbRAJf2mbUc=
+
+core-js@~3.8.2:
+  version "3.8.2"
+  resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.8.2.tgz?cache=0&sync_timestamp=1609681983160&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.8.2.tgz#0a1fd6709246da9ca8eff5bb0cbd15fba9ac7044"
+  integrity sha1-Ch/WcJJG2pyo7/W7DL0V+6mscEQ=
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -4926,10 +4931,10 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-dayjs@~1.9.8:
-  version "1.9.8"
-  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.9.8.tgz?cache=0&sync_timestamp=1609038949807&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.9.8.tgz#9a65fbdca037e3d5835f98672da6e796f757cd58"
-  integrity sha1-mmX73KA349WDX5hnLabnlvdXzVg=
+dayjs@~1.10.1:
+  version "1.10.1"
+  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.10.1.tgz?cache=0&sync_timestamp=1609677358942&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.10.1.tgz#114f678624842035396667a24eb1436814bc16fd"
+  integrity sha1-EU9nhiSEIDU5ZmeiTrFDaBS8Fv0=
 
 de-indent@^1.0.2:
   version "1.0.2"
