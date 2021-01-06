@@ -8,8 +8,10 @@ import packageInfo from '../../package.json';
 // https://uniajax.ponjs.com/
 // 要取消请求，参考 https://uniajax.ponjs.com/usage.html#requesttask
 
+// 重启应用的代码
 const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
 
+// 状态码对应的国际化键
 const objectStatusCode = {
   400: 'BAD_REQUEST',
   401: 'UNAUTHORIZED',
@@ -50,12 +52,7 @@ const objectStatusCode = {
   511: 'NETWORK_AUTHENTICATION_REQUIRED',
 };
 
-/**
- * @param {number} statusCode
- */
-const handleValidateStatusCode = (statusCode) =>
-  (statusCode >= 200 && statusCode < 300) || statusCode === 304;
-
+// 统一处理错误
 const handleShowError = (response) => {
   if (reLaunchCodes.has(response.code)) {
     uni.clearStorageSync();
@@ -69,12 +66,12 @@ const handleShowError = (response) => {
   }
 };
 
+// 创建实例
 const instance = ajax.create({
   baseURL: process.env.VUE_APP_BASE_URL || '',
   header: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'X-Requested-With': 'XMLHttpRequest',
     'X-Version': `${packageInfo.name}/${packageInfo.version}`,
   },
   withCredentials: false,
@@ -83,27 +80,36 @@ const instance = ajax.create({
   sslVerify: false,
 });
 
+// 请求拦截器，添加 token
 instance.interceptors.request.use((config) => {
-  const token = getToken();
   return {
     ...config,
     header: {
       ...config.header,
-      'X-Token': token || '',
+      'X-Token': getToken() || '',
     },
   };
 });
 
+// 响应拦截器，处理正常响应和错误，返回统一的格式，便于后续处理
+// 这里考虑 Restful API 格式，JSON-RPC 请自行处理，GraphQL 未考虑
 instance.interceptors.response.use(
   (response) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('response', response);
+    }
     const { data } = response;
     if (!data.success) {
       handleShowError(data);
     }
-    return response.data;
+    return data;
   },
   (error) => {
-    if (error.errMsg.toLowerCase().includes('cancel')) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('error', error);
+    }
+    // https://github.com/ponjs/uni-ajax/blob/dev/src/lib/ajax.js#L66
+    if (error.errMsg === 'request:fail abort') {
       return {
         success: false,
         message: i18n.t('error.REQUEST_CANCELLED'),
@@ -115,13 +121,14 @@ instance.interceptors.response.use(
       message: '',
       code: '',
     };
-    if (!handleValidateStatusCode(error.statusCode)) {
-      // 状态码不正常
+    if (error.statusCode && error.statusCode !== 200) {
+      // https://uniajax.ponjs.com/instance/interceptor.html#%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8
       response.message = objectStatusCode[error.statusCode]
         ? i18n.t(`error.${objectStatusCode[error.statusCode]}`)
         : i18n.t('error.ERROR_OCCURRED');
       response.code = error.statusCode;
     } else if (
+      error.errMsg === 'request:fail abort statusCode:-1' ||
       error.errMsg.toUpperCase().includes('TIMEOUT') ||
       error.errMsg.toUpperCase().includes('CONNRESET')
     ) {
