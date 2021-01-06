@@ -4,7 +4,7 @@
     "BAD_REQUEST": "请求语法错误",
     "UNAUTHORIZED": "未认证",
     "FORBIDDEN": "拒绝访问",
-    "NOT_FOUND": "请求的资源未被找到",
+    "NOT_FOUND": "未找到请求的资源",
     "METHOD_NOT_ALLOWED": "请求方法被禁止",
     "NOT_ACCEPTABLE": "请求没有被接受",
     "PROXY_AUTHENTICATION_REQUIRED": "代理未认证",
