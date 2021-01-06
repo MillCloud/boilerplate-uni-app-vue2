@@ -272,7 +272,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看[文档](h
 
 uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查看[文档](https://uniapp.dcloud.io/collocation/manifest)。
 
-### VSCode 插件支持
+### VSCode 支持
 
 你可以参考[插件](https://www.yuque.com/modyqyw/environment/skhbfr) 和 [settings.json](https://www.yuque.com/modyqyw/environment/aozv2q)。
 
