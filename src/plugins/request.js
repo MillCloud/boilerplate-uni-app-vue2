@@ -9,10 +9,10 @@ import packageInfo from '../../package.json';
 // 要取消请求，参考 https://uniajax.ponjs.com/usage.html#requesttask
 
 // 重启应用的代码
-const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
+export const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
 
 // 状态码对应的国际化键
-const objectStatusCode = {
+export const objectStatusCode = {
   400: 'BAD_REQUEST',
   401: 'UNAUTHORIZED',
   403: 'FORBIDDEN',
@@ -53,7 +53,7 @@ const objectStatusCode = {
 };
 
 // 统一处理错误
-const handleShowError = (response) => {
+export const handleShowError = (response) => {
   if (reLaunchCodes.has(response.code)) {
     uni.clearStorageSync();
     uni.reLaunch({
@@ -98,8 +98,8 @@ instance.interceptors.response.use(
     if (process.env.NODE_ENV !== 'production') {
       console.log('response', response);
     }
-    const { data } = response;
-    if (!data.success) {
+    const { data, config } = response;
+    if (!data.success && config.showError !== false) {
       handleShowError(data);
     }
     return data;
@@ -145,7 +145,9 @@ instance.interceptors.response.use(
       response.code = 'REQUEST_ERROR';
     }
     // 处理错误
-    handleShowError(response);
+    if (error.config.showError !== false) {
+      handleShowError(response);
+    }
     return response;
   },
 );
