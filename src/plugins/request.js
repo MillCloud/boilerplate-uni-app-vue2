@@ -8,10 +8,10 @@ import packageInfo from '../../package.json';
 // https://uniajax.ponjs.com/
 // 要取消请求，参考 https://uniajax.ponjs.com/usage.html#requesttask
 
-// 重启应用的代码
+/** @desc 需要重启应用并清空登录信息的响应代码 */
 export const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
 
-// 状态码对应的国际化键
+/** @desc 状态码对应的国际化键 */
 export const objectStatusCode = {
   400: 'BAD_REQUEST',
   401: 'UNAUTHORIZED',
@@ -52,7 +52,7 @@ export const objectStatusCode = {
   511: 'NETWORK_AUTHENTICATION_REQUIRED',
 };
 
-// 统一处理错误
+/** @desc 错误统一处理方法 */
 export const handleShowError = (response) => {
   if (reLaunchCodes.has(response.code)) {
     uni.clearStorageSync();
@@ -66,7 +66,7 @@ export const handleShowError = (response) => {
   }
 };
 
-// 创建实例
+/** @desc 请求实例 */
 const instance = ajax.create({
   baseURL: process.env.VUE_APP_BASE_URL || '',
   header: {
