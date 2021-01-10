@@ -1,15 +1,18 @@
 /* eslint-disable import/prefer-default-export */
 // 整包更新见 https://ask.dcloud.net.cn/article/34972
 // 热更新见 https://ask.dcloud.net.cn/article/35667
-import request from '../plugins/request';
+import request from '@/plugins/request';
 import { hideLoading, showLoading } from './loading';
 import { showModal } from './modal';
 import manifest from '../manifest.json';
 
-export const getUpdate = ({ hasLoading = false, hasModal = false } = {}) => {
+export const getUpdate = ({ hasLoading = false } = {}) => {
   if (hasLoading) {
-    showLoading();
+    showLoading({
+      title: '更新中，请稍候',
+    });
   }
+  const { platform } = uni.getSystemInfoSync();
   plus.runtime.getProperty(plus.runtime.appid, (widgetInfo) => {
     request
       .get('/your-url-here', {
@@ -29,29 +32,25 @@ export const getUpdate = ({ hasLoading = false, hasModal = false } = {}) => {
               // 热更新
               uni.downloadFile({
                 url: response.data.hot_url,
-                success: (result) => {
-                  if (result.statusCode === 200) {
+                success: ({ tempFilePath, statusCode }) => {
+                  if (statusCode === 200) {
                     plus.runtime.install(
-                      result.tempFilePath,
+                      tempFilePath,
                       { force: false },
                       () => {
                         if (hasLoading) {
                           hideLoading();
                         }
-                        if (hasModal) {
-                          showModal({
-                            content: '新版本应用已经准备完毕，请重启应用。',
-                            complete: () => {
-                              plus.runtime.restart();
-                            },
-                          });
-                        }
+                        showModal({
+                          content: '新版本应用已经准备完毕，请重启应用。',
+                          complete: () => {
+                            plus.runtime.restart();
+                          },
+                        });
                       },
                       () => {
                         if (hasLoading) {
                           hideLoading();
-                        }
-                        if (hasModal) {
                           showModal({
                             content: '新版本应用安装失败，请稍候再试。',
                           });
@@ -61,44 +60,62 @@ export const getUpdate = ({ hasLoading = false, hasModal = false } = {}) => {
                   }
                 },
               });
+            } else if (platform === 'ios') {
+              // iOS 整包更新需要打开 AppStore 引导用户更新
+              // 注意填写
+              plus.runtime.openURL('itms-apps://apps.apple.com/cn/app/');
             } else {
-              // 整包更新
-              showModal({
-                content: `新版本需要手动下载，更新信息：${response.data.note}。`,
-                success: (result) => {
-                  if (result.confirm) {
-                    plus.runtime.openURL(response.data.pkg_url);
+              // Android 整包更新可直接获取并安装
+              uni.downloadFile({
+                url: response.data.pkg_url,
+                success: ({ tempFilePath, statusCode }) => {
+                  if (statusCode === 200) {
+                    plus.runtime.install(
+                      tempFilePath,
+                      { force: false },
+                      () => {
+                        if (hasLoading) {
+                          hideLoading();
+                        }
+                        showModal({
+                          content: '新版本应用已经准备完毕，请重启应用。',
+                          complete: () => {
+                            plus.runtime.restart();
+                          },
+                        });
+                      },
+                      () => {
+                        if (hasLoading) {
+                          hideLoading();
+                          showModal({
+                            content: '新版本应用安装失败，请稍候再试。',
+                          });
+                        }
+                      },
+                    );
                   }
                 },
               });
             }
-          } else {
+          } else if (hasLoading) {
             // 没有更新
-            if (hasLoading) {
-              hideLoading();
-            }
-            if (hasModal) {
-              showModal({
-                content: '已经是最新版本。',
-              });
-            }
-          }
-        } else {
-          // 请求失败
-          if (hasLoading) {
             hideLoading();
-          }
-          if (hasModal) {
             showModal({
-              content: `无法检查更新，相关信息：${response.message}，是否重试？`,
-              showCancel: true,
-              success: (result) => {
-                if (result.confirm) {
-                  getUpdate();
-                }
-              },
+              content: '已经是最新版本。',
             });
           }
+        } else if (hasLoading) {
+          // 请求失败
+          hideLoading();
+          showModal({
+            content: `无法检查更新，相关信息：${response.message}，是否重试？`,
+            showCancel: true,
+            success: (result) => {
+              if (result.confirm) {
+                getUpdate();
+              }
+            },
+          });
         }
       });
   });
