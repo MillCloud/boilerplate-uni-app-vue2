@@ -3,7 +3,8 @@ import ajax from 'uni-ajax';
 import i18n from '@/i18n';
 import { getToken } from '@u/storage';
 import { showModal } from '@u/modal';
-import packageInfo from '../../package.json';
+import manifest from '@/manifest.json';
+import packageInfo from '@/../package.json';
 
 // https://uniajax.ponjs.com/
 // 要取消请求，参考 https://uniajax.ponjs.com/usage.html#requesttask
@@ -72,7 +73,7 @@ const instance = ajax.create({
   header: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'X-Version': `${packageInfo.name}/${packageInfo.version}`,
+    'X-Version': `${packageInfo.name}/${manifest.versionName}`,
   },
   withCredentials: false,
   dataType: 'json',
