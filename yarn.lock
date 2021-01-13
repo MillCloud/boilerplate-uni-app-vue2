@@ -1040,10 +1040,10 @@
   resolved "https://registry.npm.taobao.org/@ctrl/tinycolor/download/@ctrl/tinycolor-3.3.1.tgz?cache=0&sync_timestamp=1607911639388&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40ctrl%2Ftinycolor%2Fdownload%2F%40ctrl%2Ftinycolor-3.3.1.tgz#fa0efcf813daa43f8a6aef3ddaa80f7e66f1278e"
   integrity sha1-+g78+BPapD+Kau892qgPfmbxJ44=
 
-"@dcloudio/types@~2.0.20":
-  version "2.0.20"
-  resolved "https://registry.npm.taobao.org/@dcloudio/types/download/@dcloudio/types-2.0.20.tgz#2b1129a398b65b07b7da75d9f331056c55557256"
-  integrity sha1-KxEpo5i2Wwe32nXZ8zEFbFVVclY=
+"@dcloudio/types@~2.0.21":
+  version "2.0.21"
+  resolved "https://registry.npm.taobao.org/@dcloudio/types/download/@dcloudio/types-2.0.21.tgz?cache=0&sync_timestamp=1610520111974&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Ftypes%2Fdownload%2F%40dcloudio%2Ftypes-2.0.21.tgz#ca56f5962ea1d746e325289933461c84261800fe"
+  integrity sha1-ylb1li6h10bjJSiZM0YchCYYAP4=
 
 "@dcloudio/uni-app-plus@2.0.0-30520210106003":
   version "2.0.0-30520210106003"
@@ -1084,10 +1084,10 @@
     pako "^1.0.11"
     safe-area-insets "^1.4.1"
 
-"@dcloudio/uni-helper-json@~1.0.10":
-  version "1.0.10"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-helper-json/download/@dcloudio/uni-helper-json-1.0.10.tgz#4f76a8d83a5b83904395e1a4cdfb904adc16f1f9"
-  integrity sha1-T3ao2Dpbg5BDleGkzfuQStwW8fk=
+"@dcloudio/uni-helper-json@~1.0.11":
+  version "1.0.11"
+  resolved "https://registry.npm.taobao.org/@dcloudio/uni-helper-json/download/@dcloudio/uni-helper-json-1.0.11.tgz?cache=0&sync_timestamp=1610519433438&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-helper-json%2Fdownload%2F%40dcloudio%2Funi-helper-json-1.0.11.tgz#6d4a863f37b29022a4e71b931c26d47b4ca30047"
+  integrity sha1-bUqGPzeykCKk5xuTHCbUe0yjAEc=
 
 "@dcloudio/uni-migration@2.0.0-30520210106003":
   version "2.0.0-30520210106003"
@@ -13651,10 +13651,10 @@ uglify-js@3.4.x:
     commander "~2.19.0"
     source-map "~0.6.1"
 
-uni-ajax@~2.2.1:
-  version "2.2.1"
-  resolved "https://registry.npm.taobao.org/uni-ajax/download/uni-ajax-2.2.1.tgz#fc8f4a64fdc235bcea54b61605315c5e1afe9bc9"
-  integrity sha1-/I9KZP3CNbzqVLYWBTFcXhr+m8k=
+uni-ajax@~2.2.2:
+  version "2.2.2"
+  resolved "https://registry.npm.taobao.org/uni-ajax/download/uni-ajax-2.2.2.tgz#cc3ce24da07f5e9c2c33f10b125cd378b9b0065d"
+  integrity sha1-zDziTaB/XpwsM/ELElzTeLmwBl0=
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
