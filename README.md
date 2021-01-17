@@ -79,9 +79,9 @@ brew install git
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 # 安装 node@12
-nvm install 12.20.0
+nvm install 12.20.1
 # 使用 node@12
-nvm use 12.20.0
+nvm use 12.20.1
 # 安装 yarn
 npm i -g yarn
 
@@ -155,6 +155,7 @@ yarn
 |`yarn i18n:report`|获取国际化信息|
 |`yarn lint`|检查 json 文件，脚本文件，样式文件和目录|
 |`yarn lint:json`|格式化 json 文件|
+|`yarn lint:markdown`|格式化 markdown 文件|
 |`yarn lint:script`|检查并自动修复脚本文件|
 |`yarn lint:style`|检查并自动修复样式文件|
 |`yarn lint:ls`|检查目录|
@@ -187,10 +188,13 @@ yarn
 ├── .env.development            # development 载入的环境变量
 ├── .env.production             # production 载入的环境变量
 ├── .env.staging                # staging 载入的环境变量
+├── .eslintignore               # eslint 配置文件
 ├── .eslintrc.js                # eslint 配置文件
-├── .gitattributes
-├── .gitignore
+├── .gitattributes              # git 配置文件
+├── .gitignore                  # git 配置文件
 ├── .ls-lint.yml                # ls-lint 配置文件
+├── .markdownlint.json          # markdownlint 配置文件
+├── .markdownlintignore         # markdownlint 配置文件
 ├── .npmrc                      # npm 镜像文件
 ├── .prettierignore             # prettier 配置文件
 ├── .yarnrc                     # yarn 镜像文件
