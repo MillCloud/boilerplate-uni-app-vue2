@@ -173,7 +173,6 @@ yarn
 │   ├── i18n                    # 国际化目录
 │   ├── plugins                 # 插件目录
 │   ├── static                  # 资产目录
-│   ├── router                  # 路由目录
 │   ├── store                   # 状态管理目录
 │   ├── styles                  # 全局样式目录
 │   ├── utils                   # 工具类目录
