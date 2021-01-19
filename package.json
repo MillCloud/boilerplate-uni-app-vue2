@@ -50,7 +50,7 @@
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
     "clean": "rimraf dist",
     "check": "ncu",
-    "commit": "git-ze && git push",
+    "commit": "git-cz && git push",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/i18n/locales/*.json'",
     "lint": "yarn lint:json && yarn lint:markdown && yarn lint:script && yarn lint:style && yarn lint:ls",
     "lint:json": "prettier ./**/*.json --write",
