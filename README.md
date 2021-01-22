@@ -76,6 +76,8 @@ brew install git
 首先安装 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) 和 [Git](https://git-scm.com/downloads)。
 
 ```sh
+# 不自动转换换行符
+git config --global core.autocrlf false
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 # 安装 node@12
@@ -233,6 +235,10 @@ staging 模式下，这个环境变量文件会被载入。
 .env.development，.env.production 都和 .env.staging 的内容大同小异，在这里不再赘述。
 
 如果你还需要添加更多的模式，请参考以上的说明添加对应的环境变量文件。另外，也请修改 package.json 内的 scripts，添加对应的构建命令。
+
+#### 开发 APP
+
+开发 APP 时无法控制模式，因此开发 APP 时不需要 .env.staging 文件。类似的，也不再需要`VUE_APP_BASE_PATH`和 devServer.proxy 了。
 
 ### 国际化配置
 
