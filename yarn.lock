@@ -1084,10 +1084,10 @@
     pako "^1.0.11"
     safe-area-insets "^1.4.1"
 
-"@dcloudio/uni-helper-json@~1.0.11":
-  version "1.0.11"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-helper-json/download/@dcloudio/uni-helper-json-1.0.11.tgz#6d4a863f37b29022a4e71b931c26d47b4ca30047"
-  integrity sha1-bUqGPzeykCKk5xuTHCbUe0yjAEc=
+"@dcloudio/uni-helper-json@~1.0.12":
+  version "1.0.12"
+  resolved "https://registry.npm.taobao.org/@dcloudio/uni-helper-json/download/@dcloudio/uni-helper-json-1.0.12.tgz#1cfb6adbf778b36d8716b23fd9ff12f40b4137f0"
+  integrity sha1-HPtq2/d4s22HFrI/2f8S9AtBN/A=
 
 "@dcloudio/uni-migration@2.0.0-30720210122001":
   version "2.0.0-30720210122001"
@@ -1629,10 +1629,10 @@
   resolved "https://registry.npm.taobao.org/@ls-lint/ls-lint/download/@ls-lint/ls-lint-1.9.2.tgz#689f1f4c06072823a726802ba167340efcefe19c"
   integrity sha1-aJ8fTAYHKCOnJoAroWc0Dvzv4Zw=
 
-"@modyqyw/fabric@~1.12.0":
-  version "1.12.0"
-  resolved "https://registry.npm.taobao.org/@modyqyw/fabric/download/@modyqyw/fabric-1.12.0.tgz#1c4160fae5a5c43044180d980828f5aebbb40403"
-  integrity sha1-HEFg+uWlxDBEGA2YCCj1rru0BAM=
+"@modyqyw/fabric@~1.12.1":
+  version "1.12.1"
+  resolved "https://registry.npm.taobao.org/@modyqyw/fabric/download/@modyqyw/fabric-1.12.1.tgz#4828bef9846e35ae38ca5bb35152cc8a22a9c9c7"
+  integrity sha1-SCi++YRuNa44yluzUVLMiiKpycc=
   dependencies:
     "@commitlint/config-conventional" "~11.0.0"
     "@typescript-eslint/eslint-plugin" "~4.14.0"
