@@ -173,16 +173,17 @@ yarn
 │   ├── components              # 全局组件目录
 │   ├── hooks                   # 钩子函数目录
 │   ├── i18n                    # 国际化目录
+│   ├── pages                   # 页面视图目录
 │   ├── plugins                 # 插件目录
 │   ├── static                  # 资产目录
 │   ├── store                   # 状态管理目录
 │   ├── styles                  # 全局样式目录
 │   ├── utils                   # 工具类目录
-│   ├── views                   # 页面视图目录
 │   ├── App.vue
 │   ├── main.js
 │   ├── manifest.json           # 信息配置文件
 │   └── pages.json              # 页面配置文件
+├── unpackage                   # 打包时使用的资产文件夹
 ├── .browserslistrc             # 浏览器支持列表文件
 ├── .editorconfig
 ├── .env                        # 所有环境都载入的环境变量
