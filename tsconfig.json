@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "dist",
     "paths": {
       "@/*": ["./src/*"],
       "@a/*": ["./src/assets/*"],
@@ -13,6 +12,7 @@
     "allowJs": true,
     "noEmit": true,
     "types": [
+      "jest",
       "@dcloudio/types",
       "mini-types",
       "miniprogram-api-typings"
