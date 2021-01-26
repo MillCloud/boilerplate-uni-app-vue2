@@ -12,6 +12,12 @@ ls:
     .css: kebab-case | PascalCase | point.case
     .less: kebab-case | PascalCase | point.case
     .scss: kebab-case | PascalCase | point.case
+  tests/**:
+    .js: camelCase | kebab-case | point.case
+    .ts: camelCase | kebab-case | point.case
+  __tests__:
+    .js: camelCase | kebab-case | point.case
+    .ts: camelCase | kebab-case | point.case
 
 ignore:
   - ./src/.umi
