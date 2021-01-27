@@ -1807,10 +1807,10 @@
     vue-eslint-parser "~7.4.1"
     vue-property-decorator "~9.1.2"
 
-"@modyqyw/mp-scss@~2.0.4":
-  version "2.0.4"
-  resolved "https://registry.npm.taobao.org/@modyqyw/mp-scss/download/@modyqyw/mp-scss-2.0.4.tgz#4fed553b57ba24007ea981eebbb30a7e5d9fe488"
-  integrity sha1-T+1VO1e6JAB+qYHuu7MKfl2f5Ig=
+"@modyqyw/mp-scss@~2.1.0":
+  version "2.1.0"
+  resolved "https://registry.npm.taobao.org/@modyqyw/mp-scss/download/@modyqyw/mp-scss-2.1.0.tgz#55f6d62b0dd2a109f0e79a9c9145e83cd2fa60d8"
+  integrity sha1-VfbWKw3SoQnw55qckUXoPNL6YNg=
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -15059,10 +15059,10 @@ uglify-js@3.4.x:
     commander "~2.19.0"
     source-map "~0.6.1"
 
-uni-ajax@~2.2.2:
-  version "2.2.2"
-  resolved "https://registry.npm.taobao.org/uni-ajax/download/uni-ajax-2.2.2.tgz#cc3ce24da07f5e9c2c33f10b125cd378b9b0065d"
-  integrity sha1-zDziTaB/XpwsM/ELElzTeLmwBl0=
+uni-ajax@~2.2.3:
+  version "2.2.3"
+  resolved "https://registry.npm.taobao.org/uni-ajax/download/uni-ajax-2.2.3.tgz#6dc9866540433eaa6c02c71ceb2255debcbeba9c"
+  integrity sha1-bcmGZUBDPqpsAscc6yJV3ry+upw=
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -15952,10 +15952,10 @@ xdg-basedir@^4.0.0:
   resolved "https://registry.npm.taobao.org/xdg-basedir/download/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha1-S8jZmEQDaWIl74OhVzy7y0552xM=
 
-xe-utils@~3.1.2:
-  version "3.1.2"
-  resolved "https://registry.npm.taobao.org/xe-utils/download/xe-utils-3.1.2.tgz?cache=0&sync_timestamp=1611040235814&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fxe-utils%2Fdownload%2Fxe-utils-3.1.2.tgz#f5bc0829792830312aa23d68a54b6bcc4c0fd169"
-  integrity sha1-9bwIKXkoMDEqoj1opUtrzEwP0Wk=
+xe-utils@~3.1.6:
+  version "3.1.6"
+  resolved "https://registry.npm.taobao.org/xe-utils/download/xe-utils-3.1.6.tgz#821bd5a2b79877c270d17321b46c0a87e46a8cac"
+  integrity sha1-ghvVoreYd8Jw0XMhtGwKh+RqjKw=
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
