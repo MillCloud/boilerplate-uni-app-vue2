@@ -1,24 +1,109 @@
 ls:
-  src/**:
-    # useToken.js | remote-search.js | index.config.js
-    .js: camelCase | kebab-case | point.case
-    .ts: camelCase | kebab-case | point.case
-    # index.tsx | FormItem.tsx
-    .jsx: camelCase | PascalCase
-    .tsx: camelCase | PascalCase
-    # auth-redirect.vue | FromItem.vue
-    .vue: kebab-case | PascalCase
-    # index.css | Index.css | index.module.css
-    .css: kebab-case | PascalCase | point.case
-    .less: kebab-case | PascalCase | point.case
-    .scss: kebab-case | PascalCase | point.case
-  tests/**:
-    .js: camelCase | kebab-case | point.case
-    .ts: camelCase | kebab-case | point.case
+  config:
+    .js: kebab-case | point.case
+    .ts: kebab-case | point.case
+    .config.js: kebab-case
+    .config.ts: kebab-case
+  build:
+    .js: kebab-case
+    .ts: kebab-case
+    .config.js: kebab-case
+    .config.ts: kebab-case
+  mock:
+    .js: kebab-case
+    .ts: kebab-case
+  src:
+    .js: kebab-case
+    .ts: kebab-case
+    .d.ts: kebab-case
+    .config.js: kebab-case
+    .config.ts: kebab-case
+    .jsx: kebab-case
+    .tsx: kebab-case
+    .vue: kebab-case
+    .css: kebab-case
+    .less: kebab-case
+    .sass: kebab-case
+    .scss: kebab-case
+    .module.css: kebab-case
+    .module.less: kebab-case
+    .module.sass: kebab-case
+    .module.scss: kebab-case
+  src/hooks:
+    .js: camelCase
+    .ts: camelCase
+  src/**/components:
+    .jsx: PascalCase | kebab-case
+    .tsx: PascalCase | kebab-case
+    .vue: PascalCase | kebab-case
+  src/**/test:
+    .js: kebab-case
+    .ts: kebab-case
+    .spec.js: kebab-case
+    .spec.ts: kebab-case
+    .test.js: kebab-case
+    .test.ts: kebab-case
+  src/**/__test__:
+    .js: kebab-case
+    .ts: kebab-case
+    .spec.js: kebab-case
+    .spec.ts: kebab-case
+    .test.js: kebab-case
+    .test.ts: kebab-case
+  src/**/tests:
+    .js: kebab-case
+    .ts: kebab-case
+    .spec.js: kebab-case
+    .spec.ts: kebab-case
+    .test.js: kebab-case
+    .test.ts: kebab-case
+  src/**/__tests__:
+    .js: kebab-case
+    .ts: kebab-case
+    .spec.js: kebab-case
+    .spec.ts: kebab-case
+    .test.js: kebab-case
+    .test.ts: kebab-case
+  test:
+    .js: kebab-case
+    .ts: kebab-case
+    .spec.js: kebab-case
+    .spec.ts: kebab-case
+    .test.js: kebab-case
+    .test.ts: kebab-case
+  __test__:
+    .js: kebab-case
+    .ts: kebab-case
+    .spec.js: kebab-case
+    .spec.ts: kebab-case
+    .test.js: kebab-case
+    .test.ts: kebab-case
+  tests:
+    .js: kebab-case
+    .ts: kebab-case
+    .spec.js: kebab-case
+    .spec.ts: kebab-case
+    .test.js: kebab-case
+    .test.ts: kebab-case
   __tests__:
-    .js: camelCase | kebab-case | point.case
-    .ts: camelCase | kebab-case | point.case
+    .js: kebab-case
+    .ts: kebab-case
+    .spec.js: kebab-case
+    .spec.ts: kebab-case
+    .test.js: kebab-case
+    .test.ts: kebab-case
 
 ignore:
+  - ./src/.next
+  - ./src/.nuxt
+  - ./src/.rax
   - ./src/.umi
-  - ./src/locales
+  - ./src/App.js
+  - ./src/App.ts
+  - ./src/App.jsx
+  - ./src/App.tsx
+  - ./src/App.vue
+  - ./src/App.css
+  - ./src/App.less
+  - ./src/App.sass
+  - ./src/App.scss
