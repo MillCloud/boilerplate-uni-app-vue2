@@ -65,9 +65,12 @@ git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna
 git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
 git -C "$(brew --repo homebrew/cask-fonts)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-fonts.git
 git -C "$(brew --repo homebrew/cask-drivers)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-drivers.git
-brew update
+git -C "$(brew --repo homebrew/cask-versions)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-versions.git
+brew update-reset && brew update && brew upgrade && brew cleanup && brew doctor
 # 安装 git
 brew install git
+# 不自动转换换行符
+git config --global core.autocrlf false
 
 ```
 
