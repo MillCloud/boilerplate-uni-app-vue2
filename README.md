@@ -53,20 +53,18 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 # 安装 node@12
 nvm install 12
-# 设置 node@12 为默认 node
+# 设置 node@12 为默认版本
 nvm alias default 12
 # 安装 yarn
 npm i -g yarn
-# 安装 homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# 设置 homebrew 镜像
-git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
-git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
-git -C "$(brew --repo homebrew/cask-fonts)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-fonts.git
-git -C "$(brew --repo homebrew/cask-drivers)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-drivers.git
-git -C "$(brew --repo homebrew/cask-versions)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-versions.git
-brew update-reset && brew update && brew upgrade && brew cleanup && brew doctor
+
+```
+
+接着，请参考[清华大学开源软件镜像站 Homebrew / Linuxbrew 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)安装 Homebrew。
+
+最后，安装 Git 并修改默认配置。
+
+```sh
 # 安装 git
 brew install git
 # 不自动转换换行符
@@ -77,6 +75,15 @@ git config --global core.autocrlf false
 对于 Windows 用户，请按照以下指引操作。
 
 首先安装 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) 和 [Git](https://git-scm.com/downloads)。
+
+如果你正在使用 [Chocolatey](https://chocolatey.org/)，你也可以通过命令安装。
+
+```sh
+choco install nvm
+choco install git
+```
+
+然后配置即可。
 
 ```sh
 # 不自动转换换行符
@@ -124,9 +131,9 @@ yarn
 
 ### 命令
 
-模板里内置了比较多的命令，以适应各种不同的情况。更多的命令你可以查看 [package.json](./package.json)。
+模板里内置了较多命令，以适应各种不同的情况。更多的命令你可以查看 [package.json](./package.json)。
 
-启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并申请一个 appid（DCloud 应用标识）。
+启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并使用 [HBuilderX](https://www.dcloud.io/hbuilderx.html) 3.0.7 申请一个 appid（DCloud 应用标识）。
 
 |命令|含义|
 |-|-|
@@ -166,6 +173,8 @@ yarn
 |`yarn lint:ls`|检查目录|
 |`yarn info`|列出环境信息|
 
+注意；如果要开发移动应用，必须用 HBuilderX 运行到模拟器或真机。同时，多模式配置文件只有 `.env`，`.env.development` 和 `.env.production` 有效。
+
 ### 项目结构
 
 ```sh
@@ -181,11 +190,12 @@ yarn
 │   ├── static                  # 资产目录
 │   ├── store                   # 状态管理目录
 │   ├── styles                  # 全局样式目录
-│   ├── utils                   # 工具类目录
+│   ├── utils                   # 工具方法目录
 │   ├── App.vue
 │   ├── main.js
 │   ├── manifest.json           # 信息配置文件
 │   └── pages.json              # 页面配置文件
+├── tests                       # 测试内容文件夹
 ├── unpackage                   # 打包时使用的资产文件夹
 ├── .browserslistrc             # 浏览器支持列表文件
 ├── .editorconfig
@@ -266,7 +276,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看[文档](h
 
 #### 应用类状态
 
-应用类状态是应用本身的状态，包括应用是否处于 electron 环境，应用当前语言等。
+应用类状态是应用本身的状态，包括应用当前语言等。
 
 #### 业务类状态
 
@@ -302,7 +312,7 @@ uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查�
 
 - 确认所有和[模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html)相关的地方已经配置完成。
 - 对于小程序，运行对应的命令，然后用开发者工具上传`dist`目录下对应平台的内容。
-- 对于 app，用 hbuilderx 云打包获取安装包，相关资料应从负责人处获取。
+- 对于 app，用 HBuilderX 云打包或本地安心打包获取安装包。
 - 默认会生成报告。
 
 ## 浏览器支持
@@ -312,9 +322,3 @@ uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查�
 ## 贡献
 
 请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解行为准则以及提交拉取请求的流程的详细信息。
-
-## 作者
-
-- **Rui Wu** - *最初工作* - [ModyQyW](https://github.com/ModyQyW)
-
-另请参阅参与此项目的 [contributors](https://github.com/MillCloud/boilerplate-uni-app/contributors) 列表。
