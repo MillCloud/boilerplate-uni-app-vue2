@@ -133,7 +133,7 @@ yarn
 
 模板里内置了较多命令，以适应各种不同的情况。更多的命令你可以查看 [package.json](./package.json)。
 
-启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并使用 [HBuilderX](https://www.dcloud.io/hbuilderx.html) 3.0.7 申请一个 appid（DCloud 应用标识）。
+启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并使用 [HBuilderX](https://www.dcloud.io/hbuilderx.html) 3.1.2 申请一个 appid（DCloud 应用标识）。
 
 |命令|含义|
 |-|-|
