@@ -1,70 +1,70 @@
 <template>
   <view class="container align-center">
     <scroll-view class="h-full" scroll-y>
-      <view class="row p-md justify-center">
+      <view class="row">
         注意：服务和权限是不同的概念。服务指手机硬件和系统提供的功能，权限指手机给予应用的功能。比如定位，如果手机允许了应用的定位权限，但手机没有开启定位服务，应用可以定位但没办法获取正确的数据，或者直接无法定位。
       </view>
-      <view class="row p-md justify-center">
+      <view class="row">
         <button class="btn" @click="handleCheckSystemEnableLocation">
           Android, iOS - 是否开启定位服务
         </button>
       </view>
-      <view class="row p-md justify-center">
+      <view class="row">
         <button class="btn" @click="handleOpenPermissionSetting">
           Android, iOS - 打开应用权限页面
         </button>
       </view>
-      <view v-if="isIOS" class="row p-md justify-center">
+      <view v-if="isIOS" class="row">
         <button class="btn" @click="handleCheckIOSLocationPermission">
           iOS - 是否开启位置权限
         </button>
       </view>
-      <view v-if="isIOS" class="row p-md justify-center">
+      <view v-if="isIOS" class="row">
         <button class="btn" @click="handleCheckIOSPushPermission">
           iOS - 是否开启推送权限
         </button>
       </view>
-      <view v-if="isIOS" class="row p-md justify-center">
+      <view v-if="isIOS" class="row">
         <button class="btn" @click="handleCheckIOSCameraPermission">
           iOS - 是否开启摄像头权限
         </button>
       </view>
-      <view v-if="isIOS" class="row p-md justify-center">
+      <view v-if="isIOS" class="row">
         <button class="btn" @click="handleCheckIOSPhotoLibraryPermission">
           iOS - 是否开启相册权限
         </button>
       </view>
-      <view v-if="isIOS" class="row p-md justify-center">
+      <view v-if="isIOS" class="row">
         <button class="btn" @click="handleCheckIOSRecordPermission">
           iOS - 是否开启麦克风权限
         </button>
       </view>
-      <view v-if="isIOS" class="row p-md justify-center">
+      <view v-if="isIOS" class="row">
         <button class="btn" @click="handleCheckIOSContactPermission">
           iOS - 是否开启通讯录权限
         </button>
       </view>
-      <view v-if="isIOS" class="row p-md justify-center">
+      <view v-if="isIOS" class="row">
         <button class="btn" @click="handleCheckIOSCalendarPermission">
           iOS - 是否开启日历权限
         </button>
       </view>
-      <view v-if="isIOS" class="row p-md justify-center">
+      <view v-if="isIOS" class="row">
         <button class="btn" @click="handleCheckIOSMemoPermission">
           iOS - 是否开启备忘录权限
         </button>
       </view>
-      <view v-if="isAndroid" class="row p-md justify-center">
+      <view v-if="isAndroid" class="row">
         <button class="btn" @click="handleCheckAndroidNotExistPermission">
           Android - 是否开启不存在权限
         </button>
       </view>
-      <view v-if="isAndroid" class="row p-md justify-center">
+      <view v-if="isAndroid" class="row">
         <button class="btn" @click="handleCheckAndroidCameraPermission">
           Android - 是否开启摄像头权限
         </button>
       </view>
-      <view v-if="isAndroid" class="row p-md justify-center">
+      <view v-if="isAndroid" class="row">
         <button class="btn" @click="handleCheckAndroidMultiPermissions">
           Android - 是否开启摄像头、位置和麦克风权限
         </button>
@@ -289,3 +289,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.row {
+  justify-content: center;
+  padding: 20rpx;
+}
+</style>
