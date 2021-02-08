@@ -96,7 +96,7 @@ instance.interceptors.request.use((config) => {
 // 这里考虑 Restful API 格式，JSON-RPC 请自行处理，GraphQL 未考虑
 instance.interceptors.response.use(
   (response) => {
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV === 'development') {
       console.log('response', response);
     }
     const { data, config } = response;
@@ -106,7 +106,7 @@ instance.interceptors.response.use(
     return data;
   },
   (error) => {
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV === 'development') {
       console.log('error', error);
     }
     // https://github.com/ponjs/uni-ajax/blob/dev/src/lib/ajax.js#L66

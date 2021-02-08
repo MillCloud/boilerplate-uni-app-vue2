@@ -24,7 +24,7 @@ module.exports = {
     }),
     // https://github.com/FullHuman/purgecss/issues/392
     // require('@fullhuman/postcss-purgecss')(
-    //   process.env.NODE_ENV === 'production'
+    //   process.env.NODE_ENV !== 'development'
     //     ? {
     //       content: [
     //         './src/**/*.html',
