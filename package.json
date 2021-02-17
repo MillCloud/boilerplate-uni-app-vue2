@@ -104,7 +104,7 @@
     "@fullhuman/postcss-purgecss": "~4.0.0",
     "@intlify/vue-i18n-loader": "~1.0.0",
     "@ls-lint/ls-lint": "~1.9.2",
-    "@modyqyw/fabric": "~1.16.0",
+    "@modyqyw/fabric": "~1.16.1",
     "@types/lodash-es": "~4.17.4",
     "@types/node": "~14.14.28",
     "@vue/cli-plugin-babel": "~4.5.11",

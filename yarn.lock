@@ -42,15 +42,6 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/eslint-parser@^7.12.16":
-  version "7.12.16"
-  resolved "https://registry.npm.taobao.org/@babel/eslint-parser/download/@babel/eslint-parser-7.12.16.tgz#e23d5a39869ef7a0d151e11502ab36bc8639e20b"
-  integrity sha1-4j1aOYae96DRUeEVAqs2vIY54gs=
-  dependencies:
-    eslint-scope "5.1.0"
-    eslint-visitor-keys "^1.3.0"
-    semver "^6.3.0"
-
 "@babel/generator@^7.12.13", "@babel/generator@^7.12.15", "@babel/generator@^7.4.0":
   version "7.12.15"
   resolved "https://registry.npm.taobao.org/@babel/generator/download/@babel/generator-7.12.15.tgz?cache=0&sync_timestamp=1612474713971&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fgenerator%2Fdownload%2F%40babel%2Fgenerator-7.12.15.tgz#4617b5d0b25cc572474cc1aafee1edeaf9b5368f"
@@ -1771,10 +1762,10 @@
   resolved "https://registry.npm.taobao.org/@ls-lint/ls-lint/download/@ls-lint/ls-lint-1.9.2.tgz#689f1f4c06072823a726802ba167340efcefe19c"
   integrity sha1-aJ8fTAYHKCOnJoAroWc0Dvzv4Zw=
 
-"@modyqyw/fabric@~1.16.0":
-  version "1.16.0"
-  resolved "https://registry.npm.taobao.org/@modyqyw/fabric/download/@modyqyw/fabric-1.16.0.tgz#bd50b25378c4039fabf781bf1591c9f721f8b267"
-  integrity sha1-vVCyU3jEA5+r94G/FZHJ9yH4smc=
+"@modyqyw/fabric@~1.16.1":
+  version "1.16.1"
+  resolved "https://registry.npm.taobao.org/@modyqyw/fabric/download/@modyqyw/fabric-1.16.1.tgz#d394f8c9ff08b0cd996b1ac49412bc39f7260c00"
+  integrity sha1-05T4yf8IsM2ZaxrElBK8OfcmDAA=
   dependencies:
     "@commitlint/config-conventional" "~11.0.0"
     "@typescript-eslint/eslint-plugin" "~4.15.1"
@@ -1791,7 +1782,6 @@
     eslint-plugin-prettier "~3.3.1"
     eslint-plugin-react "~7.22.0"
     eslint-plugin-react-hooks "~4.2.0"
-    eslint-plugin-unicorn "~28.0.1"
     eslint-plugin-vue "~7.6.0"
     stylelint-config-prettier "~8.0.2"
     stylelint-config-twbs-bootstrap "~2.1.0"
@@ -4306,13 +4296,6 @@ clean-css@4.2.x:
   dependencies:
     source-map "~0.6.0"
 
-clean-regexp@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/clean-regexp/download/clean-regexp-1.0.0.tgz#8df7c7aae51fd36874e8f8d05b9180bc11a3fed7"
-  integrity sha1-jffHquUf02h06PjQW5GAvBGj/tc=
-  dependencies:
-    escape-string-regexp "^1.0.5"
-
 clean-stack@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npm.taobao.org/clean-stack/download/clean-stack-2.2.0.tgz?cache=0&sync_timestamp=1605702401116&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fclean-stack%2Fdownload%2Fclean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
@@ -6167,25 +6150,6 @@ eslint-plugin-react@~7.22.0:
     resolve "^1.18.1"
     string.prototype.matchall "^4.0.2"
 
-eslint-plugin-unicorn@~28.0.1:
-  version "28.0.1"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-unicorn/download/eslint-plugin-unicorn-28.0.1.tgz#a412c2f5ef707444e0147e2994b10ab35f4d812d"
-  integrity sha1-pBLC9e9wdETgFH4plLEKs19NgS0=
-  dependencies:
-    ci-info "^2.0.0"
-    clean-regexp "^1.0.0"
-    eslint-template-visitor "^2.2.2"
-    eslint-utils "^2.1.0"
-    eslint-visitor-keys "^2.0.0"
-    import-modules "^2.1.0"
-    lodash "^4.17.20"
-    pluralize "^8.0.0"
-    read-pkg-up "^7.0.1"
-    regexp-tree "^0.1.22"
-    reserved-words "^0.1.2"
-    safe-regex "^2.1.1"
-    semver "^7.3.4"
-
 eslint-plugin-vue@~7.6.0:
   version "7.6.0"
   resolved "https://registry.npm.taobao.org/eslint-plugin-vue/download/eslint-plugin-vue-7.6.0.tgz?cache=0&sync_timestamp=1613351205369&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-plugin-vue%2Fdownload%2Feslint-plugin-vue-7.6.0.tgz#ea616e6dfd45d545adb16cba628c5a992cc31f0b"
@@ -6195,14 +6159,6 @@ eslint-plugin-vue@~7.6.0:
     natural-compare "^1.4.0"
     semver "^7.3.2"
     vue-eslint-parser "^7.5.0"
-
-eslint-scope@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.npm.taobao.org/eslint-scope/download/eslint-scope-5.1.0.tgz?cache=0&sync_timestamp=1599933651660&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-scope%2Fdownload%2Feslint-scope-5.1.0.tgz#d0f971dfe59c69e0cada684b23d49dbf82600ce5"
-  integrity sha1-0Plx3+WcaeDK2mhLI9Sdv4JgDOU=
-  dependencies:
-    esrecurse "^4.1.0"
-    estraverse "^4.1.1"
 
 eslint-scope@^4.0.3:
   version "4.0.3"
@@ -6219,16 +6175,6 @@ eslint-scope@^5.0.0, eslint-scope@^5.1.1:
   dependencies:
     esrecurse "^4.3.0"
     estraverse "^4.1.1"
-
-eslint-template-visitor@^2.2.2:
-  version "2.3.0"
-  resolved "https://registry.npm.taobao.org/eslint-template-visitor/download/eslint-template-visitor-2.3.0.tgz#6340d98e5e19b5b4446cdc5e0413737aae773548"
-  integrity sha1-Y0DZjl4ZtbREbNxeBBNzeq53NUg=
-  dependencies:
-    "@babel/eslint-parser" "^7.12.16"
-    eslint-visitor-keys "^2.0.0"
-    esquery "^1.3.1"
-    multimap "^1.1.0"
 
 eslint-utils@^2.0.0, eslint-utils@^2.1.0:
   version "2.1.0"
@@ -6318,7 +6264,7 @@ esprima@^4.0.0, esprima@^4.0.1, esprima@~4.0.0:
   resolved "https://registry.npm.taobao.org/esprima/download/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
   integrity sha1-E7BM2z5sXRnfkatph6hpVhmwqnE=
 
-esquery@^1.3.1, esquery@^1.4.0:
+esquery@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/esquery/download/esquery-1.4.0.tgz#2148ffc38b82e8c7057dfed48425b3e61f0f24a5"
   integrity sha1-IUj/w4uC6McFff7UhCWz5h8PJKU=
@@ -7874,11 +7820,6 @@ import-local@^3.0.2:
   dependencies:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
-
-import-modules@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npm.taobao.org/import-modules/download/import-modules-2.1.0.tgz?cache=0&sync_timestamp=1608455330238&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimport-modules%2Fdownload%2Fimport-modules-2.1.0.tgz#abe7df297cb6c1f19b57246eb8b8bd9664b6d8c2"
-  integrity sha1-q+ffKXy2wfGbVyRuuLi9lmS22MI=
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -10781,11 +10722,6 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-multimap@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npm.taobao.org/multimap/download/multimap-1.1.0.tgz#5263febc085a1791c33b59bb3afc6a76a2a10ca8"
-  integrity sha1-UmP+vAhaF5HDO1m7OvxqdqKhDKg=
-
 mustache@^3.1.0:
   version "3.2.1"
   resolved "https://registry.npm.taobao.org/mustache/download/mustache-3.2.1.tgz?cache=0&sync_timestamp=1607210851219&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmustache%2Fdownload%2Fmustache-3.2.1.tgz#89e78a9d207d78f2799b1e95764a25bf71a28322"
@@ -11889,11 +11825,6 @@ please-upgrade-node@^3.2.0:
   dependencies:
     semver-compare "^1.0.0"
 
-pluralize@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.npm.taobao.org/pluralize/download/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
-  integrity sha1-Gm+hajjRKhkB4DIPoBcFHFOc47E=
-
 pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/pn/download/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
@@ -12924,11 +12855,6 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     extend-shallow "^3.0.2"
     safe-regex "^1.1.0"
 
-regexp-tree@^0.1.22, regexp-tree@~0.1.1:
-  version "0.1.23"
-  resolved "https://registry.npm.taobao.org/regexp-tree/download/regexp-tree-0.1.23.tgz?cache=0&sync_timestamp=1611207271804&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fregexp-tree%2Fdownload%2Fregexp-tree-0.1.23.tgz#8a8ce1cc5e971acef62213a7ecdb1f6e18a1f1b2"
-  integrity sha1-iozhzF6XGs72IhOn7Nsfbhih8bI=
-
 regexp.prototype.flags@^1.2.0, regexp.prototype.flags@^1.3.0:
   version "1.3.1"
   resolved "https://registry.npm.taobao.org/regexp.prototype.flags/download/regexp.prototype.flags-1.3.1.tgz?cache=0&sync_timestamp=1610725785919&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fregexp.prototype.flags%2Fdownload%2Fregexp.prototype.flags-1.3.1.tgz#7ef352ae8d159e758c0eadca6f8fcb4eef07be26"
@@ -13115,11 +13041,6 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
-
-reserved-words@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.npm.taobao.org/reserved-words/download/reserved-words-0.1.2.tgz#00a0940f98cd501aeaaac316411d9adc52b31ab1"
-  integrity sha1-AKCUD5jNUBrqqsMWQR2a3FKzGrE=
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -13313,13 +13234,6 @@ safe-regex@^1.1.0:
   integrity sha1-QKNmnzsHfR6UPURinhV91IAjvy4=
   dependencies:
     ret "~0.1.10"
-
-safe-regex@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npm.taobao.org/safe-regex/download/safe-regex-2.1.1.tgz#f7128f00d056e2fe5c11e81a1324dd974aadced2"
-  integrity sha1-9xKPANBW4v5cEegaEyTdl0qtztI=
-  dependencies:
-    regexp-tree "~0.1.1"
 
 "safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0", safer-buffer@^2.0.2, safer-buffer@^2.1.0, safer-buffer@~2.1.0:
   version "2.1.2"
@@ -14910,7 +14824,7 @@ typedarray@^0.0.6:
 
 typescript@~4.1.5:
   version "4.1.5"
-  resolved "https://registry.npm.taobao.org/typescript/download/typescript-4.1.5.tgz?cache=0&sync_timestamp=1613460517498&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72"
+  resolved "https://registry.npm.taobao.org/typescript/download/typescript-4.1.5.tgz?cache=0&sync_timestamp=1613546346962&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72"
   integrity sha1-Ejo7IUqv874ykm8Njx9ucE64mnI=
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
