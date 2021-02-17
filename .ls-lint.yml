@@ -29,6 +29,9 @@ ls:
     .module.less: kebab-case
     .module.sass: kebab-case
     .module.scss: kebab-case
+  src/composables:
+    .js: camelCase
+    .ts: camelCase
   src/hooks:
     .js: camelCase
     .ts: camelCase
