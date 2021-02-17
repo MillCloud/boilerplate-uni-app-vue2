@@ -10,8 +10,6 @@ boilerplate-uni-app 是一个面向中国用户的的简单 uni-app (vue2) 模�
 - [uni-app](https://uniapp.dcloud.io/)
 - [vue-cli](https://cli.vuejs.org/zh/)
 - [vuex](https://vuex.vuejs.org/zh/)
-- [vue-composition-api](https://composition-api.vuejs.org/zh/)
-- [vue-use](https://vueuse.js.org/)
 - [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [uni-ajax](https://uniajax.ponjs.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
