@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
+import { getLanguage } from '@u/storage';
 
 Vue.use(VueI18n);
 
@@ -19,7 +20,7 @@ function loadLocaleMessages() {
 }
 
 export default new VueI18n({
-  locale: process.env.VUE_APP_I18N_LOCALE || 'zh-Hans',
+  locale: getLanguage() || process.env.VUE_APP_I18N_LOCALE || 'zh-Hans',
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'zh-Hans',
   messages: loadLocaleMessages(),
 });
