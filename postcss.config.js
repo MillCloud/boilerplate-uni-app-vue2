@@ -22,22 +22,6 @@ module.exports = {
     require('autoprefixer')({
       remove: process.env.UNI_PLATFORM !== 'h5',
     }),
-    // https://github.com/FullHuman/purgecss/issues/392
-    // require('@fullhuman/postcss-purgecss')(
-    //   process.env.NODE_ENV !== 'development'
-    //     ? {
-    //       content: [
-    //         './src/**/*.html',
-    //         './src/**/*.js',
-    //         './src/**/*.jsx',
-    //         './src/**/*.ts',
-    //         './src/**/*.tsx',
-    //         './src/**/*.vue',
-    //       ],
-    //       defaultExtractor: (content) => content.match(/[A-Za-z0-9-_/:]*[A-Za-z0-9-_/]+/g) || [],
-    //     }
-    //     : {},
-    // ),
     require('@dcloudio/vue-cli-plugin-uni/packages/postcss'),
   ],
 };
