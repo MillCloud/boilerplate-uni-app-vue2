@@ -40,61 +40,61 @@ ls:
     .tsx: PascalCase | kebab-case
     .vue: PascalCase | kebab-case
   src/**/test:
-    .js: kebab-case
-    .ts: kebab-case
-    .spec.js: kebab-case
-    .spec.ts: kebab-case
-    .test.js: kebab-case
-    .test.ts: kebab-case
+    .js: kebab-case | camelCase
+    .ts: kebab-case | camelCase
+    .spec.js: kebab-case | camelCase
+    .spec.ts: kebab-case | camelCase
+    .test.js: kebab-case | camelCase
+    .test.ts: kebab-case | camelCase
   src/**/__test__:
-    .js: kebab-case
-    .ts: kebab-case
-    .spec.js: kebab-case
-    .spec.ts: kebab-case
-    .test.js: kebab-case
-    .test.ts: kebab-case
+    .js: kebab-case | camelCase
+    .ts: kebab-case | camelCase
+    .spec.js: kebab-case | camelCase
+    .spec.ts: kebab-case | camelCase
+    .test.js: kebab-case | camelCase
+    .test.ts: kebab-case | camelCase
   src/**/tests:
-    .js: kebab-case
-    .ts: kebab-case
-    .spec.js: kebab-case
-    .spec.ts: kebab-case
-    .test.js: kebab-case
-    .test.ts: kebab-case
+    .js: kebab-case | camelCase
+    .ts: kebab-case | camelCase
+    .spec.js: kebab-case | camelCase
+    .spec.ts: kebab-case | camelCase
+    .test.js: kebab-case | camelCase
+    .test.ts: kebab-case | camelCase
   src/**/__tests__:
-    .js: kebab-case
-    .ts: kebab-case
-    .spec.js: kebab-case
-    .spec.ts: kebab-case
-    .test.js: kebab-case
-    .test.ts: kebab-case
+    .js: kebab-case | camelCase
+    .ts: kebab-case | camelCase
+    .spec.js: kebab-case | camelCase
+    .spec.ts: kebab-case | camelCase
+    .test.js: kebab-case | camelCase
+    .test.ts: kebab-case | camelCase
   test:
-    .js: kebab-case
-    .ts: kebab-case
-    .spec.js: kebab-case
-    .spec.ts: kebab-case
-    .test.js: kebab-case
-    .test.ts: kebab-case
+    .js: kebab-case | camelCase
+    .ts: kebab-case | camelCase
+    .spec.js: kebab-case | camelCase
+    .spec.ts: kebab-case | camelCase
+    .test.js: kebab-case | camelCase
+    .test.ts: kebab-case | camelCase
   __test__:
-    .js: kebab-case
-    .ts: kebab-case
-    .spec.js: kebab-case
-    .spec.ts: kebab-case
-    .test.js: kebab-case
-    .test.ts: kebab-case
+    .js: kebab-case | camelCase
+    .ts: kebab-case | camelCase
+    .spec.js: kebab-case | camelCase
+    .spec.ts: kebab-case | camelCase
+    .test.js: kebab-case | camelCase
+    .test.ts: kebab-case | camelCase
   tests:
-    .js: kebab-case
-    .ts: kebab-case
-    .spec.js: kebab-case
-    .spec.ts: kebab-case
-    .test.js: kebab-case
-    .test.ts: kebab-case
+    .js: kebab-case | camelCase
+    .ts: kebab-case | camelCase
+    .spec.js: kebab-case | camelCase
+    .spec.ts: kebab-case | camelCase
+    .test.js: kebab-case | camelCase
+    .test.ts: kebab-case | camelCase
   __tests__:
-    .js: kebab-case
-    .ts: kebab-case
-    .spec.js: kebab-case
-    .spec.ts: kebab-case
-    .test.js: kebab-case
-    .test.ts: kebab-case
+    .js: kebab-case | camelCase
+    .ts: kebab-case | camelCase
+    .spec.js: kebab-case | camelCase
+    .spec.ts: kebab-case | camelCase
+    .test.js: kebab-case | camelCase
+    .test.ts: kebab-case | camelCase
 
 ignore:
   - ./src/.next
