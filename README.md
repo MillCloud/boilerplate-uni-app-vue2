@@ -54,7 +54,7 @@ nvm install 12
 # 设置 node@12 为默认版本
 nvm alias default 12
 # 安装 yarn
-npm i -g yarn
+npm i -g yarn --registry=https://registry.npm.taobao.org
 
 ```
 
@@ -89,11 +89,11 @@ git config --global core.autocrlf false
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 # 安装 node@12
-nvm install 12.20.1
+nvm install 12.20.2
 # 使用 node@12
-nvm use 12.20.1
+nvm use 12.20.2
 # 安装 yarn
-npm i -g yarn
+npm i -g yarn --registry=https://registry.npm.taobao.org
 
 ```
 
