@@ -82,15 +82,13 @@ const instance = ajax.create({
 });
 
 // 请求拦截器，添加 token
-instance.interceptors.request.use((config) => {
-  return {
-    ...config,
-    header: {
-      ...config.header,
-      'X-Token': getToken() || '',
-    },
-  };
-});
+instance.interceptors.request.use((config) => ({
+  ...config,
+  header: {
+    ...config.header,
+    'X-Token': getToken() || '',
+  },
+}));
 
 // 响应拦截器，处理正常响应和错误，返回统一的格式，便于后续处理
 // 这里考虑 Restful API 格式，JSON-RPC 请自行处理，GraphQL 未考虑
