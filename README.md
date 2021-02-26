@@ -282,7 +282,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看[文档](h
 
 ### 请求配置
 
-#### axios 封装
+#### uni-ajax 封装
 
 模板封装了 uni-ajax，并将`$request`绑定到 vue 实例上。你可以在修改[封装文件](./src/plugins/request.js)默认的 uni-ajax 配置以匹配业务。
 
@@ -296,15 +296,21 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看[文档](h
 
 uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查看[文档](https://uniapp.dcloud.io/collocation/manifest)。
 
+### 页面信息配置
+
+uni-app 使用 [pages.json](./src/pages.json) 配置应用信息，请查看[文档](https://uniapp.dcloud.io/collocation/pages)。
+
 ### VSCode 支持
 
 你可以参考[插件](https://www.yuque.com/modyqyw/environment/skhbfr) 和 [settings.json](https://www.yuque.com/modyqyw/environment/aozv2q)。
 
 ### 测试
 
-目前没有测试。欢迎 PR。
+目前有单元测试，并提供了对 `@/utils` 下两个文件的单元测试。
 
-如果需要添加测试，请查看[文档说明](https://cn.vuejs.org/v2/guide/testing.html)。
+如果需要添加单元测试，请先学习 [Jest](https://jestjs.io/)。
+
+如果需要添加其它测试，请查看[文档说明](https://cn.vuejs.org/v2/guide/testing.html)。
 
 ## 部署
 
