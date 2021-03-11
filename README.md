@@ -12,9 +12,10 @@ boilerplate-uni-app 是一个面向中国用户的的简单 uni-app (vue2) 模�
 - [vuex](https://vuex.vuejs.org/zh/)
 - [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [uni-ajax](https://uniajax.ponjs.com/)
-- [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
-- [uview-ui](https://www.uviewui.com/)
 - [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
+- [thor-ui](https://www.thorui.cn/doc/)
+- [uview-ui](https://www.uviewui.com/)
+- [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
 - [lodash](https://lodash.com/)
 - [xe-utils](https://github.com/x-extends/xe-utils#readme)
 - [dayjs](https://day.js.org)
@@ -67,6 +68,8 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 brew install git
 # 不自动转换换行符
 git config --global core.autocrlf false
+# 设置默认分支名为 main
+git config --global init.defaultBranch main
 
 ```
 
@@ -86,6 +89,8 @@ choco install git
 ```sh
 # 不自动转换换行符
 git config --global core.autocrlf false
+# 设置默认分支名为 main
+git config --global init.defaultBranch main
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 # 安装 node@12
@@ -131,7 +136,7 @@ yarn
 
 模板里内置了较多命令，以适应各种不同的情况。更多的命令你可以查看 [package.json](./package.json)。
 
-启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并使用 [HBuilderX](https://www.dcloud.io/hbuilderx.html) 3.1.2 申请一个 appid（DCloud 应用标识）。
+启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并使用 [HBuilderX](https://www.dcloud.io/hbuilderx.html) 正式版 APP 开发版 3.1.4 申请一个 appid（DCloud 应用标识）。
 
 |命令|含义|
 |-|-|
