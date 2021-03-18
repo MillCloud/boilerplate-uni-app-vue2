@@ -1,7 +1,7 @@
 <template>
   <view class="container justify-center align-center h-full">
     <image class="logo" src="/static/logo.png" />
-    <text class="text-20 my-20">
+    <text class="text-xl my-xl">
       {{ title }}
     </text>
     <button class="btn is-primary" @click="handleToPermission">测试权限</button>
