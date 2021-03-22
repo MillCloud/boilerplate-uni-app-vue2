@@ -1780,10 +1780,10 @@
   resolved "https://registry.npm.taobao.org/@ls-lint/ls-lint/download/@ls-lint/ls-lint-1.9.2.tgz#689f1f4c06072823a726802ba167340efcefe19c"
   integrity sha1-aJ8fTAYHKCOnJoAroWc0Dvzv4Zw=
 
-"@modyqyw/fabric@~1.22.1":
-  version "1.22.1"
-  resolved "https://registry.npm.taobao.org/@modyqyw/fabric/download/@modyqyw/fabric-1.22.1.tgz#8bfd47dfefeea99af19b80c6e643debc032c7dc2"
-  integrity sha1-i/1H3+/uqZrxm4DG5kPevAMsfcI=
+"@modyqyw/fabric@~1.23.1":
+  version "1.23.1"
+  resolved "https://registry.npm.taobao.org/@modyqyw/fabric/download/@modyqyw/fabric-1.23.1.tgz#64d425e1872ea39d97808c108dbc1712e35b744f"
+  integrity sha1-ZNQl4Ycuo52XgIwQjbwXEuNbdE8=
   dependencies:
     "@commitlint/config-conventional" "~12.0.1"
     "@typescript-eslint/eslint-plugin" "~4.18.0"
@@ -15396,10 +15396,10 @@ uuid@^8.3.0:
   resolved "https://registry.npm.taobao.org/uuid/download/uuid-8.3.2.tgz?cache=0&sync_timestamp=1607458532020&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha1-gNW1ztJxu5r2xEXyGhoExgbO++I=
 
-uview-ui@~1.8.3:
-  version "1.8.3"
-  resolved "https://registry.npm.taobao.org/uview-ui/download/uview-ui-1.8.3.tgz#c2602a6bf7b3eef603fd632959eb3450ad4a0b9b"
-  integrity sha1-wmAqa/ez7vYD/WMpWes0UK1KC5s=
+uview-ui@~1.8.4:
+  version "1.8.4"
+  resolved "https://registry.npm.taobao.org/uview-ui/download/uview-ui-1.8.4.tgz#e32bbf2379421d319022e324e1cb7b5387d3bd44"
+  integrity sha1-4yu/I3lCHTGQIuMk4ct7U4fTvUQ=
 
 v8-compile-cache@^2.0.3, v8-compile-cache@^2.2.0:
   version "2.3.0"
