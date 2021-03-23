@@ -309,6 +309,8 @@ uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查�
 
 uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看[文档](https://uniapp.dcloud.io/collocation/pages)。
 
+默认启用了 [easycom 模式](https://uniapp.dcloud.io/collocation/pages?id=easycom)，支持 `uni-ui`，`uview-ui` 和 `thor-ui`。
+
 ### VSCode 支持
 
 你可以参考 [插件](https://www.yuque.com/modyqyw/environment/skhbfr) 和 [settings.json](https://www.yuque.com/modyqyw/environment/aozv2q)。
