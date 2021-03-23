@@ -76,7 +76,7 @@
     "@dcloudio/uni-quickapp-native": "2.0.0-31420210305001",
     "@dcloudio/uni-quickapp-webview": "2.0.0-31420210305001",
     "@dcloudio/uni-stat": "2.0.0-31420210305001",
-    "@dcloudio/uni-ui": "~1.2.11",
+    "@dcloudio/uni-ui": "~1.2.12",
     "@modyqyw/mp-scss": "~2.3.1",
     "core-js": "~3.9.1",
     "dayjs": "~1.10.4",
@@ -87,9 +87,9 @@
     "uni-ajax": "~2.2.5",
     "uview-ui": "~1.8.4",
     "vue": "~2.6.12",
-    "vue-i18n": "~8.24.1",
+    "vue-i18n": "~8.24.2",
     "vuex": "~3.6.2",
-    "xe-utils": "~3.1.11"
+    "xe-utils": "~3.1.12"
   },
   "devDependencies": {
     "@commitlint/cli": "~12.0.1",
@@ -105,7 +105,7 @@
     "@dcloudio/webpack-uni-pages-loader": "2.0.0-31420210305001",
     "@intlify/vue-i18n-loader": "~1.1.0",
     "@ls-lint/ls-lint": "~1.9.2",
-    "@modyqyw/fabric": "~1.23.1",
+    "@modyqyw/fabric": "~1.24.0",
     "@types/lodash-es": "~4.17.4",
     "@types/node": "~14.14.35",
     "@vue/cli-plugin-babel": "~4.5.12",
