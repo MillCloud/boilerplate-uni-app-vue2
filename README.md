@@ -219,6 +219,7 @@ yarn
 ├── .markdownlintignore         # markdownlint 配置文件
 ├── .npmrc                      # npm 镜像文件
 ├── .prettierignore             # prettier 配置文件
+├── .stylelintignore            # stylelint 配置文件
 ├── .yarnrc                     # yarn 镜像文件
 ├── babel.config.js             # babel 配置文件
 ├── commitlint.config.js        # commitlint 配置文件
@@ -309,7 +310,7 @@ uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查�
 
 uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看[文档](https://uniapp.dcloud.io/collocation/pages)。
 
-默认启用了 [easycom 模式](https://uniapp.dcloud.io/collocation/pages?id=easycom)，支持 `uni-ui`，`uview-ui` 和 `thor-ui`。
+默认启用了 [easycom](https://uniapp.dcloud.io/component/README?id=easycom%e7%bb%84%e4%bb%b6%e8%a7%84%e8%8c%83)，支持 `uni-ui`，`uview-ui` 和 `thor-ui`。
 
 ### VSCode 支持
 
@@ -326,7 +327,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看[文
 ## 部署
 
 - 确认所有和 [模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html) 相关的地方已经配置完成。
-- 对于小程序，运行对应的命令，然后用开发者工具上传`dist`目录下对应平台的内容。
+- 对于小程序，运行对应的命令，然后用开发者工具上传 `dist` 目录下对应平台的内容。
 - 对于 app，用 HBuilderX 云打包或本地安心打包获取安装包。
 - 默认会生成报告。
 
