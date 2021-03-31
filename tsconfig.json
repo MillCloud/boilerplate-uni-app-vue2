@@ -5,7 +5,6 @@
       "@/*": ["./src/*"],
       "@a/*": ["./src/assets/*"],
       "@c/*": ["./src/components/*"],
-      "@h/*": ["./src/hooks/*"],
       "@u/*": ["./src/utils/*"]
     },
     "lib": ["esnext", "scripthost"],
