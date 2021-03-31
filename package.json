@@ -59,7 +59,8 @@
     "lint:script": "vue-cli-service lint --fix",
     "lint:style": "stylelint ./**/*.{css,less,sass,scss,vue} --fix",
     "lint:ls": "ls-lint .",
-    "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js"
+    "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "2.0.0-31720210330003",
@@ -149,17 +150,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "ls-lint . && lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.json": "prettier --write",
-    "*.md": "markdownlint --fix && lint-md --fix",
-    "*.{js,jsx,ts,tsx,vue}": "vue-cli-service lint --fix",
-    "*.{css,less,sass,scss,vue}": "stylelint --fix"
   }
 }
