@@ -6,4 +6,5 @@ module.exports = {
     '@u/(.*)$': '<rootDir>/src/utils/$1',
     '@/(.*)$': '<rootDir>/src/$1',
   },
+  transformIgnorePatterns: ['/node_modules/(?!lodash-es)'],
 };
