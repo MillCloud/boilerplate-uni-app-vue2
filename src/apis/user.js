@@ -9,7 +9,9 @@ export function signIn({ username, password, showError = true } = {}) {
       password,
     },
     showError,
-  });
+  })
+    .then((response) => response)
+    .catch((error) => error);
 }
 
 export function signUp({
@@ -29,7 +31,9 @@ export function signUp({
       password,
     },
     showError,
-  });
+  })
+    .then((response) => response)
+    .catch((error) => error);
 }
 
 export function renew({ showError = true } = {}) {
@@ -37,7 +41,9 @@ export function renew({ showError = true } = {}) {
     method: 'POST',
     url: '/api/renew',
     showError,
-  });
+  })
+    .then((response) => response)
+    .catch((error) => error);
 }
 
 export default {
