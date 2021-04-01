@@ -129,7 +129,8 @@ instance.interceptors.response.use(
     } else if (
       error.errMsg === 'request:fail abort statusCode:-1' ||
       error.errMsg.toUpperCase().includes('TIMEOUT') ||
-      error.errMsg.toUpperCase().includes('CONNRESET')
+      error.errMsg.toUpperCase().includes('CONNRESET') ||
+      error.errMsg.toUpperCase().includes('CONNECTION_RESET')
     ) {
       // 超时
       response.message = i18n.t('error.REQUEST_TIMEOUT');
