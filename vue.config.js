@@ -2,19 +2,19 @@ const path = require('path');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
-  // 不能使用函数
-  configureWebpack: {
-    plugins: [
-      new StylelintPlugin({
+  chainWebpack: (config) => {
+    config.plugin('stylelint').use(StylelintPlugin, [
+      {
         files: ['src/**/*.{css,less,sass,scss,vue}'],
         fix: true,
-      }),
-    ],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, 'src'),
       },
-    },
+    ]);
+    config.when(process.env.NODE_ENV === 'production', (config_) => {
+      config_.optimization.minimizer('terser').tap((args) => {
+        args[0].terserOptions.compress.drop_console = true;
+        return args;
+      });
+    });
   },
   css: {
     loaderOptions: {
