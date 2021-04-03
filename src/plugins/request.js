@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import ajax from 'uni-ajax';
 import i18n from '@/i18n';
-import { getToken } from '@u/storage';
-import { showModal } from '@u/modal';
+import { getToken } from '@/utils/storage';
+import { showModal } from '@/utils/modal';
 import manifest from '@/manifest.json';
 import packageInfo from '@/../package.json';
 

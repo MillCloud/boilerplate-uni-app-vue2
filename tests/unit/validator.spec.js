@@ -1,4 +1,4 @@
-import { isYuan, isMobileNumber } from '@u/validator';
+import { isYuan, isMobileNumber } from '@/utils';
 
 describe('validator', () => {
   it('isYuan', () => {

@@ -1,4 +1,4 @@
-import { getToken, setToken } from '@u/storage';
+import { getToken, setToken } from '@/utils';
 
 export default {
   namespaced: true,

@@ -2,10 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@a/*": ["./src/assets/*"],
-      "@c/*": ["./src/components/*"],
-      "@u/*": ["./src/utils/*"]
+      "@/*": ["./src/*"]
     },
     "lib": ["esnext", "scripthost"],
     "allowJs": true,

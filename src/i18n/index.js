@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
-import { getLanguage } from '@u/storage';
+import { getLanguage } from '@/utils/storage';
 
 Vue.use(VueI18n);
 

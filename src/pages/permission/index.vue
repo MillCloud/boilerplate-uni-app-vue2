@@ -81,7 +81,7 @@ import {
   requestAndroidPermissions,
   gotoAppPermissionSetting,
   checkSystemEnableLocation,
-} from '@u/permission';
+} from '@/utils';
 
 export default {
   data() {

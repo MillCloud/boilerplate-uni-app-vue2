@@ -1,4 +1,4 @@
-import { formatYuan2Fen, formatFen2Yuan } from '@u/formatter';
+import { formatYuan2Fen, formatFen2Yuan } from '@/utils';
 
 describe('formatter', () => {
   it('formatYuan2Fen', () => {
