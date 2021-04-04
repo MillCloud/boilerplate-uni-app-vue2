@@ -24,7 +24,7 @@ module.exports = {
     },
   },
   devServer: {
-    proxy: process.env.VUE_APP_BASE_URL || 'https://fake.url',
+    proxy: process.env.VUE_APP_REQUEST_BASE_URL || 'https://fake.url',
   },
   pluginOptions: {
     i18n: {

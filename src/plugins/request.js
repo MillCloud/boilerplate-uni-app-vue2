@@ -69,7 +69,7 @@ export const handleShowError = (response) => {
 
 /** @desc 请求实例 */
 const instance = ajax.create({
-  baseURL: process.env.VUE_APP_BASE_URL || '',
+  baseURL: process.env.VUE_APP_REQUEST_BASE_URL || '',
   header: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
