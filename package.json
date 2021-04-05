@@ -90,12 +90,12 @@
     "vue": "~2.6.12",
     "vue-i18n": "~8.24.2",
     "vuex": "~3.6.2",
-    "xe-utils": "~3.1.12"
+    "xe-utils": "~3.1.13"
   },
   "devDependencies": {
     "@babel/core": "~7.13.14",
     "@babel/eslint-parser": "~7.13.14",
-    "@commitlint/cli": "~12.0.1",
+    "@commitlint/cli": "~12.1.1",
     "@dcloudio/types": "~2.0.24",
     "@dcloudio/uni-automator": "2.0.0-31720210330003",
     "@dcloudio/uni-cli-shared": "2.0.0-31720210330003",
