@@ -2,7 +2,9 @@
 
 ## 简介
 
-boilerplate-uni-app 是一个面向中国用户的的简单 uni-app (vue2) 模板，目标是帮助你快速搭建小程序/移动应用。当然，也希望能引导你更进一步地了解 uni-app/vue2 生态。
+`boilerplate-uni-app` 是一个面向中国用户的的简单 `uni-app` (`vue2`) 模板，目标是帮助你快速搭建小程序/移动端应用。当然，也希望能引导你更进一步地了解 `uni-app`/`vue2` 生态。
+
+**注意：`uni-app` 并不是一个尽善尽美的方案，在很多细节上还有待提高。如果你只是想要开发移动端应用，你可以考虑使用 `cordova`，`native-script` 或 `capacitor`。**
 
 ### 主要依赖
 
@@ -60,7 +62,10 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 
 ```
 
-接着，请参考 [清华大学开源软件镜像站 Homebrew / Linuxbrew 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/) 安装 Homebrew。
+接着，请参考以下任一帮助安装 Homebrew。
+
+- [清华大学开源软件镜像站 Homebrew / Linuxbrew 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+- [中国科学技术大学开源镜像站 Homebrew 源使用帮助](https://mirrors.ustc.edu.cn/help/brew.git.html)
 
 最后，安装 Git 并修改默认配置。
 
@@ -78,11 +83,17 @@ git config --global init.defaultBranch main
 
 首先安装 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) 和 [Git](https://git-scm.com/downloads)。
 
-如果你正在使用 [Chocolatey](https://chocolatey.org/)，你也可以通过命令安装。
+如果你正在使用 [Chocolatey](https://chocolatey.org/) 或 [Scoop](https://scoop.sh/)，你也可以通过命令安装。
 
 ```sh
+# 使用 Chocolatey
 choco install nvm
 choco install git
+
+# 使用 Scoop
+scoop install nvm
+scoop install git
+
 ```
 
 然后配置即可。
@@ -95,9 +106,9 @@ git config --global init.defaultBranch main
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 # 安装 node@12
-nvm install 12.20.2
+nvm install 12.22.0
 # 使用 node@12
-nvm use 12.20.2
+nvm use 12.22.0
 # 安装 yarn
 npm i -g yarn --registry=https://registry.npm.taobao.org
 
@@ -105,7 +116,7 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 
 其它系统请根据以上指引自行调整。
 
-另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.4，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
+另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.6，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
 
 ### 安装
 
@@ -120,7 +131,7 @@ yarn
 
 ```
 
-如果一切正常，此时模板已经可以启动了，请参考 [命令部分](#命令) 正式开始你的开发。但如果你想通过文档了解更多，请先阅读 [主要依赖](#主要依赖) 内链接对应的文档，再继续阅读下去。
+如果一切正常，此时模板已经可以启动了，请参考 [命令部分](#命令) 正式开始开发。但如果想通过文档了解更多，请先阅读 [主要依赖](#主要依赖) 内链接对应的文档，再继续阅读下去。
 
 ## 使用
 
@@ -128,8 +139,8 @@ yarn
 
 ### 特性
 
-- 多模式配置示例，支持 development，staging 和 production
-- 国际化配置示例，支持 en 和 zh-Hans
+- 多模式配置示例，支持 `development`，`staging` 和 `production`
+- 国际化配置示例，支持 `en` 和 `zh-Hans`
 - 路由配置示例
 - 状态管理配置示例
 - 请求配置示例
@@ -139,37 +150,37 @@ yarn
 
 模板里内置了较多命令，以适应各种不同的情况。更多的命令你可以查看 [package.json](./package.json)。
 
-启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并使用 HBuilderX 申请一个 appid（DCloud 应用标识）。
+启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并使用 `HBuilderX` 申请一个 appid（DCloud 应用标识）。
 
 |命令|含义|
 |-|-|
-|`yarn dev:mp-360`|development 模式启动 360 小程序|
-|`yarn dev:mp-alipay`|development 模式启动支付宝小程序|
-|`yarn dev:mp-baidu`|development 模式启动百度小程序|
-|`yarn dev:mp-kuaishou`|development 模式启动快手小程序|
-|`yarn dev:mp-qq`|development 模式启动 QQ 小程序|
-|`yarn dev:mp-toutiao`|development 模式启动字节跳动小程序|
-|`yarn dev:mp-weixin`|development 模式启动微信小程序|
-|`yarn dev:quickapp-webview`|development 模式启动快应用|
-|`yarn staging-build:mp-360`|staging 模式打包 360 小程序|
-|`yarn staging-build:mp-alipay`|staging 模式打包支付宝小程序|
-|`yarn staging-build:mp-baidu`|staging 模式打包百度小程序|
-|`yarn staging-build:mp-kuaishou`|staging 模式打包快手小程序|
-|`yarn staging-build:mp-qq`|staging 模式打包 QQ 小程序|
-|`yarn staging-build:mp-toutiao`|staging 模式打包字节跳动小程序|
-|`yarn staging-build:mp-weixin`|staging 模式打包微信小程序|
-|`yarn staging-build:quickapp-webview`|staging 模式打包快应用|
-|`yarn build:mp-360`|production 模式打包 360 小程序|
-|`yarn build:mp-alipay`|production 模式打包支付宝小程序|
-|`yarn build:mp-baidu`|production 模式打包百度小程序|
-|`yarn build:mp-kuaishou`|production 模式打包快手小程序|
-|`yarn build:mp-qq`|production 模式打包 QQ 小程序|
-|`yarn build:mp-toutiao`|production 模式打包字节跳动小程序|
-|`yarn build:mp-weixin`|production 模式打包微信小程序|
-|`yarn build:quickapp-webview`|production 模式打包快应用|
-|`yarn run clean`|清理 dist 目录|
+|`yarn dev:mp-360`|`development` 模式启动 360 小程序|
+|`yarn dev:mp-alipay`|`development` 模式启动支付宝小程序|
+|`yarn dev:mp-baidu`|`development` 模式启动百度小程序|
+|`yarn dev:mp-kuaishou`|`development` 模式启动快手小程序|
+|`yarn dev:mp-qq`|`development` 模式启动 QQ 小程序|
+|`yarn dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
+|`yarn dev:mp-weixin`|`development` 模式启动微信小程序|
+|`yarn dev:quickapp-webview`|`development` 模式启动快应用|
+|`yarn staging-build:mp-360`|`staging` 模式打包 360 小程序|
+|`yarn staging-build:mp-alipay`|`staging` 模式打包支付宝小程序|
+|`yarn staging-build:mp-baidu`|`staging` 模式打包百度小程序|
+|`yarn staging-build:mp-kuaishou`|`staging` 模式打包快手小程序|
+|`yarn staging-build:mp-qq`|`staging` 模式打包 QQ 小程序|
+|`yarn staging-build:mp-toutiao`|`staging` 模式打包字节跳动小程序|
+|`yarn staging-build:mp-weixin`|`staging` 模式打包微信小程序|
+|`yarn staging-build:quickapp-webview`|`staging` 模式打包快应用|
+|`yarn build:mp-360`|`production` 模式打包 360 小程序|
+|`yarn build:mp-alipay`|`production` 模式打包支付宝小程序|
+|`yarn build:mp-baidu`|`production` 模式打包百度小程序|
+|`yarn build:mp-kuaishou`|`production` 模式打包快手小程序|
+|`yarn build:mp-qq`|`production` 模式打包 QQ 小程序|
+|`yarn build:mp-toutiao`|`production` 模式打包字节跳动小程序|
+|`yarn build:mp-weixin`|`production` 模式打包微信小程序|
+|`yarn build:quickapp-webview`|`production` 模式打包快应用|
+|`yarn run clean`|清理 `dist` 目录|
 |`yarn run check`|检查项目依赖版本|
-|`yarn commit`|引导填写 git 提交信息并提交，你需要手动 git add 对应部分后执行该命令|
+|`yarn commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
 |`yarn i18n:report`|获取国际化信息|
 |`yarn lint`|检查 json 文件，脚本文件，样式文件和目录|
 |`yarn lint:json`|格式化 json 文件|
@@ -179,17 +190,17 @@ yarn
 |`yarn lint:ls`|检查目录|
 |`yarn info`|列出环境信息|
 
-注意；如果要开发移动应用，必须用 HBuilderX 运行到模拟器或真机。同时，多模式配置文件只有 `.env`，`.env.development` 和 `.env.production` 有效。
+注意；如果要开发移动应用，必须用 `HBuilderX` 运行到模拟器或真机。
 
 ### 项目结构
 
 ```sh
 .
+├── .husky                      # husky 配置目录
 ├── public
 ├── src
 │   ├── apis                    # 接口目录
 │   ├── components              # 全局组件目录
-│   ├── hooks                   # 钩子函数目录
 │   ├── i18n                    # 国际化目录
 │   ├── pages                   # 页面视图目录
 │   ├── plugins                 # 插件目录
@@ -246,21 +257,17 @@ yarn
 
 #### .env.staging
 
-staging 模式下，这个环境变量文件会被载入。
+`staging` 模式下，这个环境变量文件会被载入。
 
-它使用 `VUE_APP_MODE` 指定当前模式为 staging，`NODE_ENV` 指定运行模式为 production。
+它使用 `VUE_APP_MODE` 指定当前模式为 `staging`，`NODE_ENV` 指定运行模式为 `production`。
 
-请区分当前模式和运行模式。当前模式可以由我们任意指定，而运行模式只能是 development，production 和 test 的其中一个，它会影响实际构建的表现和效果。在代码中，你可以根据实际情况，使用它们对代码做差异化处理。
+请区分当前模式和运行模式。当前模式可以由我们任意指定，而运行模式只能是 `development`，`production` 和 `test` 的其中一个，它会影响实际构建的表现和效果。在代码中，你可以根据实际情况，使用它们对代码做差异化处理。
 
-而 `VUE_APP_BASE_PATH` 指定了请求的前缀地址，值为 `https://fake.url`，这是一个假地址，在实际使用时需要修改。
+而 `VUE_APP_REQUEST_BASE_URL` 指定了请求的前缀地址，值为 `https://fake.url`，这是一个假地址，在实际使用时需要修改。
 
 `.env.development`，`.env.production` 都和 `.env.staging` 的内容大同小异，在这里不再赘述。
 
-如果你还需要添加更多的模式，请参考以上的说明添加对应的环境变量文件。另外，也请修改 `package.json` 内的 scripts，添加对应的构建命令。
-
-#### 开发 APP
-
-开发 APP 时无法控制模式，因此开发 APP 时不需要 `.env.staging` 文件。类似的，也不再需要 `VUE_APP_BASE_PATH` 和 `devServer.proxy` 了。
+如果你还需要添加更多的模式，请参考以上的说明添加对应的环境变量文件。另外，还需要修改 `package.json` 内的 `scripts` 字段，以添加对应的构建命令。
 
 ### 国际化配置
 
@@ -270,9 +277,9 @@ staging 模式下，这个环境变量文件会被载入。
 
 你可以在上面两个文件里加入你需要的字段以支持翻译，务必注意字段需要保持一致，也请注意合理地划分字段。
 
-而要引入和 vue2 强绑定的 npm 库的语言包，你可以在 [@/i18n/index.js](./src/i18n/index.js) 内操作。
+而要引入和 `vue2` 强绑定的 `npm` 库的语言包，你可以在 [@/i18n/index.js](./src/i18n/index.js) 内操作。
 
-引入和 vue2 不强绑定的 npm 库的语言包，请查看它们的文档说明。
+引入和 `vue2` 不强绑定的 `npm` 库的语言包，请查看它们的文档说明。
 
 ### 路由配置
 
@@ -294,21 +301,40 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](
 
 #### uni-ajax 封装
 
-模板封装了 uni-ajax，并将 `$request` 绑定到 vue 实例上。你可以在修改 [封装文件](./src/plugins/request.js) 默认的 uni-ajax 配置以匹配业务。
+模板把 `uni-ajax` 封装成 `$request` 并绑定到 `vue` 实例上。你可以调整 [封装文件](./src/plugins/request.js) 默认的配置以匹配业务。
 
 #### proxy
 
-在 development 模式下请求服务器往往会出现跨域问题，因此模板内已经设置了 `devServer.proxy`，见 [vue.config.js](./vue.config.js) L30。
+在 `development` 运行模式下请求服务器往往会出现跨域问题，因此模板内已经设置了只在 `development` 运行模式下生效的 `devServer.proxy`，见 [vue.config.js](./vue.config.js) L26。
 
-理论上，`devServer.proxy` 应该与 production 运行模式下的 `VUE_APP_REQUEST_BASE_URL` 一致。
+同时，需要设置 `uni-ajax` 的 `baseURL` 为空字符串，否则会导致代理失败，见 [@/plugins/request.js](./src/plugins/request.js) L72。
+
+为了向其它 CLI 靠近，你可以调整 `devServer.proxy`，下面是一个示例。
+
+```js
+// vue.config.js
+module.exports = {
+  devServer: {
+    proxy: {
+      '/api': {
+        target: process.env.VUE_APP_REQUEST_BASE_URL || 'https://fake.url',
+        changeOrigin: true,
+      },
+    },
+  },
+};
+
+```
+
+一般情况下，`devServer.proxy` 应该与某个 `production` 运行模式下的 `VUE_APP_REQUEST_BASE_URL` 一致。
 
 ### 应用信息配置
 
-uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查看[文档](https://uniapp.dcloud.io/collocation/manifest)。
+uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查看 [文档](https://uniapp.dcloud.io/collocation/manifest)。
 
 ### 页面信息配置
 
-uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看[文档](https://uniapp.dcloud.io/collocation/pages)。
+uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [文档](https://uniapp.dcloud.io/collocation/pages)。
 
 默认启用了 [easycom](https://uniapp.dcloud.io/component/README?id=easycom%e7%bb%84%e4%bb%b6%e8%a7%84%e8%8c%83)，支持 `uni-ui`，`uview-ui` 和 `thor-ui`。
 
@@ -328,13 +354,9 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看[文
 
 - 确认所有和 [模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html) 相关的地方已经配置完成。
 - 对于小程序，运行对应的命令，然后用开发者工具上传 `dist` 目录下对应平台的内容。
-- 对于 app，用 HBuilderX 云打包或本地安心打包获取安装包。
+- 对于移动端应用，用 `HBuilderX` 云打包或本地安心打包获取安装包。
 - 默认会生成报告。
 
 ## 浏览器支持
 
 请查看 [.browserslistrc](./.browserslistrc)。
-
-## 贡献
-
-请阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解行为准则以及提交拉取请求的流程的详细信息。
