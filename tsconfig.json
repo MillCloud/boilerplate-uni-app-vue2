@@ -7,6 +7,8 @@
     "lib": ["esnext", "scripthost"],
     "allowJs": true,
     "noEmit": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "types": [
       "jest",
       "@dcloudio/types",
