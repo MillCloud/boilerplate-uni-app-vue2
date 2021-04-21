@@ -4,7 +4,7 @@
 
 `boilerplate-uni-app` 是一个面向中国用户的的简单 `uni-app` (`vue2`) 模板，目标是帮助你快速搭建小程序/移动端应用。当然，也希望能引导你更进一步地了解 `uni-app`/`vue2` 生态。
 
-**注意：`uni-app` 并不是一个尽善尽美的方案，在很多细节上还有待提高。如果你只是想要开发移动端应用，你可以考虑使用 `cordova`，`native-script` 或 `capacitor`。**
+**注意：`uni-app` 并不是一个尽善尽美的方案，在很多细节上还有待提高。如果你只是想要开发移动端应用，你可以考虑使用 [boilerplate-vue](https://github.com/MillCloud/boilerplate-vue) 搭配 `cordova`，`native-script` 或 `capacitor`。**
 
 ### 主要依赖
 
@@ -116,7 +116,7 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 
 其它系统请根据以上指引自行调整。
 
-另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.6，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
+另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.9，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
 
 ### 安装
 
