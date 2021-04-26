@@ -2,19 +2,24 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@@/*": ["./*"],
       "@/*": ["./src/*"]
     },
     "lib": ["esnext", "scripthost"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings",
+      "./src/typings",
+      "./node_modules/@dcloudio/types",
+      "./node_modules/mini-types",
+      "./node_modules/miniprogram-api-typings"
+    ],
     "allowJs": true,
     "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "jest",
-      "@dcloudio/types",
-      "mini-types",
-      "miniprogram-api-typings"
-    ]
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "unpackage"]
+  "exclude": ["node_modules", "dist", "dist_electron", "out", "unpackage"]
 }
