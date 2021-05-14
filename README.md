@@ -102,7 +102,7 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 
 其它系统请根据以上指引自行调整。
 
-另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.11，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
+另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.13，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
 
 ### 安装
 
