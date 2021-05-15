@@ -53,7 +53,7 @@
     "check": "ncu",
     "commit": "cz",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/i18n/locales/*.json'",
-    "lint": "yarn lint:json && yarn lint:markdown && yarn lint:script && yarn lint:style && yarn lint:ls",
+    "lint": "yarn lint:json && yarn lint:ls && yarn lint:markdown && yarn lint:script && yarn lint:style",
     "lint:json": "prettier ./**/*.json --write",
     "lint:markdown": "markdownlint . --fix && lint-md . --fix",
     "lint:script": "vue-cli-service lint --fix",
