@@ -1842,10 +1842,10 @@
   resolved "https://registry.npm.taobao.org/@ls-lint/ls-lint/download/@ls-lint/ls-lint-1.9.2.tgz#689f1f4c06072823a726802ba167340efcefe19c"
   integrity sha1-aJ8fTAYHKCOnJoAroWc0Dvzv4Zw=
 
-"@modyqyw/fabric@~2.0.0":
-  version "2.0.0"
-  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-2.0.0.tgz#f6b2160dd732a1b72221fd50362d3765d73fb0c6"
-  integrity sha1-9rIWDdcyobciIf1QNi03Zdc/sMY=
+"@modyqyw/fabric@~2.0.2":
+  version "2.0.2"
+  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-2.0.2.tgz#ae0ebfdc25c7b2b355dbbf38ca588dd25af50004"
+  integrity sha1-rg6/3CXHsrNV2784yliN0lr1AAQ=
   dependencies:
     "@babel/core" "~7.14.2"
     "@babel/eslint-parser" "~7.14.2"

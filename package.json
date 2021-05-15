@@ -111,7 +111,7 @@
     "@dcloudio/webpack-uni-pages-loader": "2.0.0-31920210514002",
     "@intlify/vue-i18n-loader": "~1.1.0",
     "@ls-lint/ls-lint": "~1.9.2",
-    "@modyqyw/fabric": "~2.0.0",
+    "@modyqyw/fabric": "~2.0.2",
     "@types/lodash-es": "~4.17.4",
     "@types/node": "~15.3.0",
     "@vue/cli-plugin-babel": "~4.5.13",
