@@ -2752,7 +2752,7 @@
   resolved "https://registry.npm.taobao.org/@vue/web-component-wrapper/download/@vue/web-component-wrapper-1.3.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fweb-component-wrapper%2Fdownload%2F%40vue%2Fweb-component-wrapper-1.3.0.tgz#b6b40a7625429d2bd7c2281ddba601ed05dc7f1a"
   integrity sha1-trQKdiVCnSvXwigd26YB7QXcfxo=
 
-"@vueuse/core@^4.11.0":
+"@vueuse/core@~4.11.0":
   version "4.11.0"
   resolved "https://registry.nlark.com/@vueuse/core/download/@vueuse/core-4.11.0.tgz#2fbfdbeafe7d0a975a901cb56de76226fc4bdf10"
   integrity sha1-L7/b6v59CpdakBy1bediJvxL3xA=
@@ -2760,7 +2760,7 @@
     "@vueuse/shared" "4.11.0"
     vue-demi "*"
 
-"@vueuse/integrations@^4.11.0":
+"@vueuse/integrations@~4.11.0":
   version "4.11.0"
   resolved "https://registry.nlark.com/@vueuse/integrations/download/@vueuse/integrations-4.11.0.tgz#1b57904a8f101ef686dd67bdca71e685081da32b"
   integrity sha1-G1eQSo8QHvaG3We9ynHmhQgdoys=
