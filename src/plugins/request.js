@@ -29,8 +29,6 @@ export const handleShowError = (response) => {
   }
 };
 
-axiosRetry(ajax, { retryDelay: axiosRetry.exponentialDelay });
-
 /** @desc 请求实例 */
 const instance = ajax.create({
   baseURL: process.env.VUE_APP_REQUEST_BASE_URL || '',
@@ -44,6 +42,8 @@ const instance = ajax.create({
   responseType: 'text',
   sslVerify: false,
 });
+
+axiosRetry(instance, { retryDelay: axiosRetry.exponentialDelay });
 
 // 请求拦截器，添加 token
 instance.interceptors.request.use((config) => ({
