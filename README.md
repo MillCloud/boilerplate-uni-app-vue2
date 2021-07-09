@@ -125,7 +125,6 @@ yarn
 
 ### 特性
 
-- 多模式配置示例，支持 `development`，`staging` 和 `production`
 - 国际化配置示例，支持 `en` 和 `zh-Hans`
 - 路由配置示例
 - 状态管理配置示例
@@ -148,14 +147,6 @@ yarn
 |`yarn dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
 |`yarn dev:mp-weixin`|`development` 模式启动微信小程序|
 |`yarn dev:quickapp-webview`|`development` 模式启动快应用|
-|`yarn staging-build:mp-360`|`staging` 模式打包 360 小程序|
-|`yarn staging-build:mp-alipay`|`staging` 模式打包支付宝小程序|
-|`yarn staging-build:mp-baidu`|`staging` 模式打包百度小程序|
-|`yarn staging-build:mp-kuaishou`|`staging` 模式打包快手小程序|
-|`yarn staging-build:mp-qq`|`staging` 模式打包 QQ 小程序|
-|`yarn staging-build:mp-toutiao`|`staging` 模式打包字节跳动小程序|
-|`yarn staging-build:mp-weixin`|`staging` 模式打包微信小程序|
-|`yarn staging-build:quickapp-webview`|`staging` 模式打包快应用|
 |`yarn build:mp-360`|`production` 模式打包 360 小程序|
 |`yarn build:mp-alipay`|`production` 模式打包支付宝小程序|
 |`yarn build:mp-baidu`|`production` 模式打包百度小程序|
@@ -205,13 +196,10 @@ yarn
 ├── .env                        # 所有环境都载入的环境变量
 ├── .env.development            # development 载入的环境变量
 ├── .env.production             # production 载入的环境变量
-├── .env.staging                # staging 载入的环境变量
 ├── .eslintignore               # eslint 配置文件
 ├── .eslintrc.js                # eslint 配置文件
 ├── .gitattributes              # git 配置文件
 ├── .gitignore                  # git 配置文件
-├── .lintmdrc                   # lint-md 配置文件
-├── .ls-lint.yml                # ls-lint 配置文件
 ├── .markdownlint.json          # markdownlint 配置文件
 ├── .markdownlintignore         # markdownlint 配置文件
 ├── .npmrc                      # npm 镜像文件
@@ -230,30 +218,6 @@ yarn
 ├── vue.config.js               # vue-cli 配置文件
 └── yarn.lock
 ```
-
-### 多模式配置
-
-模板内置了四个环境变量文件。
-
-#### .env
-
-所有模式都会载入这个环境变量文件。
-
-它里面包含了两个国际化变量 `VUE_APP_I18N_LOCALE` 和 `VUE_APP_I18N_FALLBACK_LOCALE`，值都是 `zh-Hans`，表示默认使用简体中文。
-
-#### .env.staging
-
-`staging` 模式下，这个环境变量文件会被载入。
-
-它使用 `VUE_APP_MODE` 指定当前模式为 `staging`，`NODE_ENV` 指定运行模式为 `production`。
-
-请区分当前模式和运行模式。当前模式可以由我们任意指定，而运行模式只能是 `development`，`production` 和 `test` 的其中一个，它会影响实际构建的表现和效果。在代码中，你可以根据实际情况，使用它们对代码做差异化处理。
-
-而 `VUE_APP_REQUEST_BASE_URL` 指定了请求的前缀地址，值为 `https://fake.url`，这是一个假地址，在实际使用时需要修改。
-
-`.env.development`，`.env.production` 都和 `.env.staging` 的内容大同小异，在这里不再赘述。
-
-如果你还需要添加更多的模式，请参考以上的说明添加对应的环境变量文件。另外，还需要修改 `package.json` 内的 `scripts` 字段，以添加对应的构建命令。
 
 ### 国际化配置
 
