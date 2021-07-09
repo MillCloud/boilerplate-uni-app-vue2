@@ -4,7 +4,13 @@
     <text class="text-xl my-xl">
       {{ title }}
     </text>
-    <button class="btn is-primary" @click="handleToPermission">测试权限</button>
+    <button
+      v-if="process.env.UNI_PLATFORM === 'app-plus'"
+      class="btn is-primary"
+      @click="handleToPermission"
+    >
+      测试权限
+    </button>
   </view>
 </template>
 
