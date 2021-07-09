@@ -9,32 +9,37 @@
 ### 主要依赖
 
 - [vue2](https://cn.vuejs.org)
+- [vue-composition-api](https://github.com/vuejs/composition-api/blob/master/README.zh-CN.md)
 - [uni-app](https://uniapp.dcloud.io/)
+- [uni-composition-api](https://github.com/TuiMao233/uni-composition-api)
 - [vue-cli](https://cli.vuejs.org/zh/)
 - [vuex](https://vuex.vuejs.org/zh/)
+- [uni-simple-router](https://hhyang.cn/v2/)
+- [uni-read-pages](https://github.com/SilurianYang/uni-read-pages)
+- [vue-use](https://vueuse.org/)
 - [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [uni-ajax](https://uniajax.ponjs.com/)
+- [axios-retry](https://github.com/softonic/axios-retry)
+- [statuses](https://github.com/jshttp/statuses)
 - [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
+- [@modyqyw/utils](https://github.com/modyqyw/utils)
 - [thor-ui](https://www.thorui.cn/doc/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
-- [lodash](https://lodash.com/)
-- [xe-utils](https://github.com/x-extends/xe-utils#readme)
 - [dayjs](https://day.js.org)
 - [mock.js](http://mockjs.com/)
 - [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
+- [purgecss](https://purgecss.com)
+- [@modyqyw/fabric](https://github.com/MillCloud/fabric)
 - [commitizen](http://commitizen.github.io/cz-cli/)
 - [commitlint](https://commitlint.js.org/)
 - [prettier](https://prettier.io/)
-- [markdownlint](https://github.com/igorshubovych/markdownlint-cli#readme)
-- [lint-md](https://github.com/lint-md/lint-md#readme)
+- [markdownlint](https://github.com/igorshubovych/markdownlint-cli)
 - [eslint](https://eslint.org/)
 - [stylelint](https://stylelint.io/)
-- [ls-lint](https://ls-lint.org/)
-- [husky](https://github.com/typicode/husky#readme)
-- [lint-staged](https://github.com/okonet/lint-staged#readme)
-- [@modyqyw/fabric](https://github.com/MillCloud/fabric#readme)
-- [npm-check-updates](https://github.com/raineorshine/npm-check-updates#readme)
+- [husky](https://github.com/typicode/husky)
+- [lint-staged](https://github.com/okonet/lint-staged)
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 
 请先阅读上面的文档，并确保你对 node 和 npm 有基本的理解。
 
@@ -50,13 +55,13 @@
 
 ```sh
 # 安装 nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 # 设置 nvm 镜像
 export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-# 安装 node@12
-nvm install 12
-# 设置 node@12 为默认版本
-nvm alias default 12
+# 安装 node@14
+nvm install 14
+# 设置 node@14 为默认版本
+nvm alias default 14
 # 安装 yarn
 npm i -g yarn --registry=https://registry.npm.taobao.org
 # 安装 homebrew
@@ -91,10 +96,10 @@ git config --global core.autocrlf false
 git config --global init.defaultBranch main
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
-# 安装 node@12
-nvm install 12.22.1
-# 使用 node@12
-nvm use 12.22.1
+# 安装 node@14
+nvm install 14.17.3
+# 使用 node@14
+nvm use 14.17.3
 # 安装 yarn
 npm i -g yarn --registry=https://registry.npm.taobao.org
 
@@ -102,7 +107,7 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 
 其它系统请根据以上指引自行调整。
 
-另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.13，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
+另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.18，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
 
 ### 安装
 
@@ -251,7 +256,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](
 
 #### uni-ajax 封装
 
-模板把 `uni-ajax` 封装成 `$request` 并绑定到 `vue` 实例上。你可以调整 [封装文件](./src/plugins/request.js) 默认的配置以匹配业务。
+模板把 `uni-ajax` 封装成 `$request` 并绑定到 `vue` 实例上，另外还添加 `axios-retry` 帮助自动多次重试。你可以调整 [封装文件](./src/plugins/request.js) 默认的配置以匹配业务。
 
 #### proxy
 
@@ -291,14 +296,6 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [�
 ### VSCode 支持
 
 你可以参考 [插件](https://www.yuque.com/modyqyw/environment/skhbfr) 和 [settings.json](https://www.yuque.com/modyqyw/environment/aozv2q)。
-
-### 测试
-
-目前有单元测试，并提供了对 `@/utils` 下两个文件的单元测试。
-
-如果需要添加单元测试，请先学习 [Jest](https://jestjs.io/)。
-
-如果需要添加其它测试，请查看 [文档说明](https://cn.vuejs.org/v2/guide/testing.html)。
 
 ## 部署
 
