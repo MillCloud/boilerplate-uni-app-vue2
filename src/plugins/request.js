@@ -4,54 +4,16 @@ import i18n from '@/i18n';
 import { getToken } from '@/utils/storage';
 import { showModal } from '@/utils/modal';
 import manifest from '@/manifest.json';
-import packageInfo from '@/../package.json';
+import pkg from '@@/package.json';
+import status from 'statuses';
+import { constantCase } from '@modyqyw/utils';
+import axiosRetry from 'axios-retry';
 
 // https://uniajax.ponjs.com/
 // 要取消请求，参考 https://uniajax.ponjs.com/usage.html#requesttask
 
 /** @desc 需要重启应用并清空登录信息的响应代码 */
 export const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
-
-/** @desc 状态码对应的国际化键 */
-export const objectStatusCode = {
-  400: 'BAD_REQUEST',
-  401: 'UNAUTHORIZED',
-  403: 'FORBIDDEN',
-  404: 'NOT_FOUND',
-  405: 'METHOD_NOT_ALLOWED',
-  406: 'NOT_ACCEPTABLE',
-  407: 'PROXY_AUTHENTICATION_REQUIRED',
-  408: 'REQUEST_TIMEOUT',
-  409: 'CONFLICT',
-  410: 'GONE',
-  411: 'LENGTH_REQUIRED',
-  412: 'PRECONDITION_FAILED',
-  413: 'PAYLOAD_TOO_LARGE',
-  414: 'URI_TOO_LONG',
-  415: 'UNSUPPORTED_MEDIA_TYPE',
-  416: 'RANGE_NOT_SATISFIABLE',
-  417: 'EXPECTATION_FAILED',
-  421: 'MISDIRECTED_REQUEST',
-  422: 'UNPROCESSABLE_ENTITY',
-  423: 'LOCKED',
-  424: 'FAILED_DEPENDENCY',
-  426: 'UPGRADE_REQUIRED',
-  428: 'PRECONDITION_REQUIRED',
-  429: 'TOO_MANY_REQUESTS',
-  431: 'REQUEST_HEADER_FIELDS_TOO_LARGE',
-  451: 'UNAVAILABLE_FOR_LEGAL_REASONS',
-  500: 'INTERNAL_SERVER_ERROR',
-  501: 'NOT_IMPLEMENTED',
-  502: 'BAD_GATEWAY',
-  503: 'SERVICE_UNAVAILABLE',
-  504: 'GATEWAY_TIMEOUT',
-  505: 'HTTP_VERSION_NOT_SUPPORTED',
-  506: 'VARIANT_ALSO_NEGOTIATES',
-  507: 'INSUFFICIENT_STORAGE',
-  508: 'LOOP_DETECTED',
-  510: 'NOT_EXTENDED',
-  511: 'NETWORK_AUTHENTICATION_REQUIRED',
-};
 
 /** @desc 错误统一处理方法 */
 export const handleShowError = (response) => {
@@ -67,13 +29,15 @@ export const handleShowError = (response) => {
   }
 };
 
+axiosRetry(ajax, { retryDelay: axiosRetry.exponentialDelay });
+
 /** @desc 请求实例 */
 const instance = ajax.create({
   baseURL: process.env.VUE_APP_REQUEST_BASE_URL || '',
   header: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'X-Version': `${packageInfo.name}/${manifest.versionName}`,
+    'X-Version': `${pkg.name}/${manifest.versionName}`,
   },
   withCredentials: false,
   dataType: 'json',
@@ -108,7 +72,7 @@ instance.interceptors.response.use(
       console.log('error', error);
     }
     // https://github.com/ponjs/uni-ajax/blob/dev/src/lib/ajax.js#L66
-    if (error.errMsg === 'request:fail abort') {
+    if (error.errMsg.includes('request:fail abort')) {
       return {
         success: false,
         message: i18n.t('error.REQUEST_CANCELLED'),
@@ -122,8 +86,8 @@ instance.interceptors.response.use(
     };
     if (error.statusCode && error.statusCode !== 200) {
       // https://uniajax.ponjs.com/instance/interceptor.html#%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8
-      response.message = objectStatusCode[error.statusCode]
-        ? i18n.t(`error.${objectStatusCode[error.statusCode]}`)
+      response.message = status(error.statusCode)
+        ? i18n.t(`error.${constantCase(status(error.statusCode))}`)
         : i18n.t('error.ERROR_OCCURRED');
       response.code = error.statusCode;
     } else if (
