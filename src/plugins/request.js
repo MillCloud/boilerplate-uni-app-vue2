@@ -5,7 +5,7 @@ import { getToken } from '@/utils/storage';
 import { showModal } from '@/utils/modal';
 import manifest from '@/manifest.json';
 import pkg from '@@/package.json';
-import status from 'statuses';
+import statuses from 'statuses';
 import { constantCase } from '@modyqyw/utils';
 import axiosRetry from 'axios-retry';
 
@@ -86,8 +86,8 @@ instance.interceptors.response.use(
     };
     if (error.statusCode && error.statusCode !== 200) {
       // https://uniajax.ponjs.com/instance/interceptor.html#%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8
-      response.message = status(error.statusCode)
-        ? i18n.t(`error.${constantCase(status(error.statusCode))}`)
+      response.message = statuses(error.statusCode)
+        ? i18n.t(`error.${constantCase(statuses(error.statusCode))}`)
         : i18n.t('error.ERROR_OCCURRED');
       response.code = error.statusCode;
     } else if (
