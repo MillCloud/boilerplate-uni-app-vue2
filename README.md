@@ -14,8 +14,6 @@
 - [uni-composition-api](https://github.com/TuiMao233/uni-composition-api)
 - [vue-cli](https://cli.vuejs.org/zh/)
 - [vuex](https://vuex.vuejs.org/zh/)
-- [uni-simple-router](https://hhyang.cn/v2/)
-- [uni-read-pages](https://github.com/SilurianYang/uni-read-pages)
 - [vue-use](https://vueuse.org/)
 - [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [uni-ajax](https://uniajax.ponjs.com/)
