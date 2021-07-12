@@ -59,12 +59,16 @@ instance.interceptors.request.use((config) => ({
     'X-Token': getToken() || '',
   },
 }));
-axiosRetry(instance, { retryDelay: axiosRetry.exponentialDelay });
 instance.interceptors.request.use(
   (request) => AxiosLogger.requestLogger(request, { prefixText: false }),
   AxiosLogger.errorLogger,
 );
+axiosRetry(instance, { retryDelay: axiosRetry.exponentialDelay });
 
+instance.interceptors.response.use(
+  (response) => AxiosLogger.responseLogger(response, { prefixText: false }),
+  AxiosLogger.errorLogger,
+);
 instance.interceptors.response.use(
   (response) => {
     const { data, config } = response;
@@ -125,10 +129,6 @@ instance.interceptors.response.use(
     }
     return response;
   },
-);
-instance.interceptors.response.use(
-  (response) => AxiosLogger.responseLogger(response, { prefixText: false }),
-  AxiosLogger.errorLogger,
 );
 
 Vue.prototype.$request = instance;
