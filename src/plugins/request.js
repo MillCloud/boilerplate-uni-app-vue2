@@ -87,12 +87,20 @@ instance.interceptors.response.use(
       message: '',
       code: '',
     };
-    if (error.statusCode && error.statusCode !== 200) {
+    if (
+      error.statusCode &&
+      (error.statusCode < 200 || error.statusCode >= 300)
+    ) {
       // https://uniajax.ponjs.com/instance/interceptor.html#%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8
-      response.message = statuses(error.statusCode)
-        ? i18n.t(`error.${constantCase(statuses(error.statusCode))}`)
-        : i18n.t('error.ERROR_OCCURRED');
-      response.code = error.statusCode;
+      try {
+        response.code = constantCase(statuses(error.statusCode));
+        response.message = i18n.t(
+          `error.${constantCase(statuses(error.statusCode))}`,
+        );
+      } catch {
+        response.code = 'ERROR_OCCURRED';
+        response.message = i18n.t(`error.ERROR_OCCURRED`);
+      }
     } else if (
       error.errMsg === 'request:fail abort statusCode:-1' ||
       error.errMsg.toUpperCase().includes('TIMEOUT') ||
