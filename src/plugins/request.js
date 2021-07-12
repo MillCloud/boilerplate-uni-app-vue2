@@ -7,6 +7,8 @@ import manifest from '@/manifest.json';
 import pkg from '@@/package.json';
 import statuses from 'statuses';
 import { constantCase } from '@modyqyw/utils';
+import { setupCache } from 'axios-cache-adapter';
+import axiosLogger from 'axios-logger';
 import axiosRetry from 'axios-retry';
 
 // https://uniajax.ponjs.com/
@@ -29,6 +31,15 @@ export const handleShowError = (response) => {
   }
 };
 
+const cache = setupCache({
+  maxAge: 15 * 60 * 1000,
+  invalidate: async (config, request) => {
+    if (request.clearCacheEntry) {
+      await config.store.removeItem(config.uuid);
+    }
+  },
+});
+
 /** @desc 请求实例 */
 const instance = ajax.create({
   baseURL: process.env.VUE_APP_REQUEST_BASE_URL || '',
@@ -37,15 +48,10 @@ const instance = ajax.create({
     'Content-Type': 'application/json',
     'X-Version': `${pkg.name}/${manifest.versionName}`,
   },
-  withCredentials: false,
-  dataType: 'json',
-  responseType: 'text',
   sslVerify: false,
+  adapter: cache.adapter,
 });
 
-axiosRetry(instance, { retryDelay: axiosRetry.exponentialDelay });
-
-// 请求拦截器，添加 token
 instance.interceptors.request.use((config) => ({
   ...config,
   header: {
@@ -53,14 +59,14 @@ instance.interceptors.request.use((config) => ({
     'X-Token': getToken() || '',
   },
 }));
+axiosRetry(instance, { retryDelay: axiosRetry.exponentialDelay });
+instance.interceptors.request.use(
+  (request) => axiosLogger.requestLogger(request, { prefixText: false }),
+  axiosLogger.errorLogger,
+);
 
-// 响应拦截器，处理正常响应和错误，返回统一的格式，便于后续处理
-// 这里考虑 Restful API 格式，JSON-RPC 请自行处理，GraphQL 未考虑
 instance.interceptors.response.use(
   (response) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('response', response);
-    }
     const { data, config } = response;
     if (!data.success && config.showError !== false) {
       handleShowError(data);
@@ -68,9 +74,6 @@ instance.interceptors.response.use(
     return data;
   },
   (error) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('error', error);
-    }
     // https://github.com/ponjs/uni-ajax/blob/dev/src/lib/ajax.js#L66
     if (error.errMsg.includes('request:fail abort')) {
       return {
@@ -114,6 +117,10 @@ instance.interceptors.response.use(
     }
     return response;
   },
+);
+instance.interceptors.response.use(
+  (response) => axiosLogger.responseLogger(response, { prefixText: false }),
+  axiosLogger.errorLogger,
 );
 
 Vue.prototype.$request = instance;
