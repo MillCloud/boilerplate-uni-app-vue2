@@ -61,13 +61,13 @@ instance.interceptors.request.use((config) => ({
 }));
 instance.interceptors.request.use(
   (request) => AxiosLogger.requestLogger(request, { prefixText: false }),
-  AxiosLogger.errorLogger,
+  (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
 );
 axiosRetry(instance, { retryDelay: axiosRetry.exponentialDelay });
 
 instance.interceptors.response.use(
   (response) => AxiosLogger.responseLogger(response, { prefixText: false }),
-  AxiosLogger.errorLogger,
+  (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
 );
 instance.interceptors.response.use(
   (response) => {
