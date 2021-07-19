@@ -9,6 +9,11 @@ module.exports = {
         fix: true,
       },
     ]);
+    config
+      .plugin('env')
+      .use(require.resolve('webpack/lib/EnvironmentPlugin'), [
+        { UNI_PLATFORM: process.env.UNI_PLATFORM },
+      ]);
     config.resolve.alias
       .set('@@', path.resolve(''))
       .set('@', path.resolve('src'));
