@@ -21,5 +21,13 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
+  "include": [
+    "./**/*.js",
+    "./**/.*.js",
+    "./**/*.jsx",
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.vue"
+  ],
   "exclude": ["node_modules", "dist", "dist_electron", "out", "unpackage"]
 }
