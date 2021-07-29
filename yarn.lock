@@ -1329,10 +1329,10 @@
   resolved "https://registry.nlark.com/@dcloudio/types/download/@dcloudio/types-2.2.19.tgz#5cde92885aa1dd2383cf64fd38916be1c9f32d50"
   integrity sha1-XN6SiFqh3SODz2T9OJFr4cnzLVA=
 
-"@dcloudio/types@~2.3.6":
-  version "2.3.6"
-  resolved "https://registry.nlark.com/@dcloudio/types/download/@dcloudio/types-2.3.6.tgz#31f6d1cdf5ff152a37892f2fdce34b9f87f01808"
-  integrity sha1-MfbRzfX/FSo3iS8v3ONLn4fwGAg=
+"@dcloudio/types@~2.4.2":
+  version "2.4.2"
+  resolved "https://registry.nlark.com/@dcloudio/types/download/@dcloudio/types-2.4.2.tgz#85b45b9ae0af7ce70fefab9bd6a2a2afcba871b7"
+  integrity sha1-hbRbmuCvfOcP76ub1qKir8uocbc=
 
 "@dcloudio/uni-app-plus@2.0.0-31920210709003":
   version "2.0.0-31920210709003"
@@ -2093,10 +2093,10 @@
   resolved "https://registry.nlark.com/@ls-lint/ls-lint/download/@ls-lint/ls-lint-1.10.0.tgz#cad20085edc010a3e938aa01bb66d05e5e12b3f3"
   integrity sha1-ytIAhe3AEKPpOKoBu2bQXl4Ss/M=
 
-"@modyqyw/fabric@~2.9.0-3":
-  version "2.9.0-3"
-  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-2.9.0-3.tgz?cache=0&sync_timestamp=1627372298688&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40modyqyw%2Ffabric%2Fdownload%2F%40modyqyw%2Ffabric-2.9.0-3.tgz#1ce641be55656d8f4f9ce8eda3391a9623f3fdb0"
-  integrity sha1-HOZBvlVlbY9PnOjtozkaliPz/bA=
+"@modyqyw/fabric@~2.9.0-4":
+  version "2.9.0-4"
+  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-2.9.0-4.tgz#256f3319183d385ef6b26141ec6c4ab19133345d"
+  integrity sha1-JW8zGRg9OF72smFB7GxKsZEzNF0=
   dependencies:
     "@babel/core" "~7.14.8"
     "@babel/eslint-parser" "~7.14.7"
@@ -2104,7 +2104,7 @@
     "@typescript-eslint/eslint-plugin" "~4.28.5"
     "@typescript-eslint/parser" "~4.28.5"
     chalk "~4.1.1"
-    commander "~8.0.0"
+    commander "~8.1.0"
     eslint-config-airbnb "~18.2.1"
     eslint-config-airbnb-base "~14.2.1"
     eslint-config-airbnb-typescript "~12.3.1"
@@ -2128,7 +2128,7 @@
     stylelint-prettier "~1.2.0"
     typescript "~4.3.5"
     vue-class-component "~7.2.6"
-    vue-eslint-parser "~7.9.0"
+    vue-eslint-parser "~7.10.0"
     vue-property-decorator "~9.1.2"
 
 "@modyqyw/mp-scss@~2.5.3":
@@ -2136,16 +2136,16 @@
   resolved "https://registry.nlark.com/@modyqyw/mp-scss/download/@modyqyw/mp-scss-2.5.3.tgz#1db06e61ff3491908a879ada9d86a71f917e15fd"
   integrity sha1-HbBuYf80kZCKh5ranYanH5F+Ff0=
 
-"@modyqyw/utils@~0.6.0":
-  version "0.6.0"
-  resolved "https://registry.nlark.com/@modyqyw/utils/download/@modyqyw/utils-0.6.0.tgz#a53b5c86008e96497e47c385b506badc75c6db64"
-  integrity sha1-pTtchgCOlkl+R8OFtQa63HXG22Q=
+"@modyqyw/utils@~0.7.0":
+  version "0.7.0"
+  resolved "https://registry.nlark.com/@modyqyw/utils/download/@modyqyw/utils-0.7.0.tgz#b31ca4d0eac1c120d8bd9bc5db9dedc7ecc07584"
+  integrity sha1-sxyk0OrBwSDYvZvF253tx+zAdYQ=
   dependencies:
-    "@types/async-retry" "~1.4.2"
+    "@types/async-retry" "~1.4.3"
     "@types/lodash-es" "~4.17.4"
-    "@types/node" "~15.12.5"
-    "@types/uuid" "~8.3.0"
-    "@types/validator" "~13.1.4"
+    "@types/node" "~16.4.4"
+    "@types/uuid" "~8.3.1"
+    "@types/validator" "~13.6.3"
     async-retry "~1.3.1"
     change-case "~4.1.2"
     lodash-es "~4.17.21"
@@ -2311,7 +2311,7 @@
   resolved "https://registry.npm.taobao.org/@tootallnate/once/download/@tootallnate/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha1-zLkURTYBeaBOf+av94wA/8Hur4I=
 
-"@types/async-retry@~1.4.2":
+"@types/async-retry@~1.4.3":
   version "1.4.3"
   resolved "https://registry.nlark.com/@types/async-retry/download/@types/async-retry-1.4.3.tgz#8b78f6ce88d97e568961732cdd9e5325cdc8c246"
   integrity sha1-i3j2zojZflaJYXMs3Z5TJc3IwkY=
@@ -2510,15 +2510,15 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-16.3.0.tgz?cache=0&sync_timestamp=1625796173600&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.3.0.tgz#1836664e4fad13b51b07eb6e882a53925e6543c4"
   integrity sha1-GDZmTk+tE7UbB+tuiCpTkl5lQ8Q=
 
-"@types/node@~15.12.5":
-  version "15.12.5"
-  resolved "https://registry.nlark.com/@types/node/download/@types/node-15.12.5.tgz?cache=0&sync_timestamp=1625796173600&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-15.12.5.tgz#9a78318a45d75c9523d2396131bd3cca54b2d185"
-  integrity sha1-mngxikXXXJUj0jlhMb08ylSy0YU=
-
 "@types/node@~16.4.4":
   version "16.4.4"
   resolved "https://registry.nlark.com/@types/node/download/@types/node-16.4.4.tgz?cache=0&sync_timestamp=1627427039212&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.4.4.tgz#bb0744c1dcc1fc374f51d3fd41d028331a2420d4"
   integrity sha1-uwdEwdzB/DdPUdP9QdAoMxokINQ=
+
+"@types/node@~16.4.6":
+  version "16.4.6"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.4.6.tgz?cache=0&sync_timestamp=1627500912080&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.4.6.tgz#1734d119dfa8fede5606d35ae10f9fc9c84d889b"
+  integrity sha1-FzTRGd+o/t5WBtNa4Q+fychNiJs=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -2618,15 +2618,15 @@
   resolved "https://registry.nlark.com/@types/unist/download/@types/unist-2.0.5.tgz?cache=0&sync_timestamp=1625499262955&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Funist%2Fdownload%2F%40types%2Funist-2.0.5.tgz#fdd299f23205c3455af88ce618dd65c14cb73e22"
   integrity sha1-/dKZ8jIFw0Va+IzmGN1lwUy3PiI=
 
-"@types/uuid@~8.3.0":
+"@types/uuid@~8.3.1":
   version "8.3.1"
-  resolved "https://registry.nlark.com/@types/uuid/download/@types/uuid-8.3.1.tgz#1a32969cf8f0364b3d8c8af9cc3555b7805df14f"
+  resolved "https://registry.nlark.com/@types/uuid/download/@types/uuid-8.3.1.tgz?cache=0&sync_timestamp=1625249983950&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fuuid%2Fdownload%2F%40types%2Fuuid-8.3.1.tgz#1a32969cf8f0364b3d8c8af9cc3555b7805df14f"
   integrity sha1-GjKWnPjwNks9jIr5zDVVt4Bd8U8=
 
-"@types/validator@~13.1.4":
-  version "13.1.4"
-  resolved "https://registry.nlark.com/@types/validator/download/@types/validator-13.1.4.tgz#d2e3c27523ce1b5d9dc13d16cbce65dc4db2adbe"
-  integrity sha1-0uPCdSPOG12dwT0Wy85l3E2yrb4=
+"@types/validator@~13.6.3":
+  version "13.6.3"
+  resolved "https://registry.nlark.com/@types/validator/download/@types/validator-13.6.3.tgz?cache=0&sync_timestamp=1625593067116&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fvalidator%2Fdownload%2F%40types%2Fvalidator-13.6.3.tgz#31ca2e997bf13a0fffca30a25747d5b9f7dbb7de"
+  integrity sha1-McoumXvxOg//yjCiV0fVuffbt94=
 
 "@types/webpack-dev-server@^3.11.0":
   version "3.11.5"
@@ -5216,6 +5216,11 @@ commander@~2.19.0:
   version "2.19.0"
   resolved "https://registry.nlark.com/commander/download/commander-2.19.0.tgz?cache=0&sync_timestamp=1627358203890&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcommander%2Fdownload%2Fcommander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
   integrity sha1-9hmKqE5bg8RgVLlN3tv+1e6f8So=
+
+commander@~8.1.0:
+  version "8.1.0"
+  resolved "https://registry.nlark.com/commander/download/commander-8.1.0.tgz?cache=0&sync_timestamp=1627358203890&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcommander%2Fdownload%2Fcommander-8.1.0.tgz#db36e3e66edf24ff591d639862c6ab2c52664362"
+  integrity sha1-2zbj5m7fJP9ZHWOYYsarLFJmQ2I=
 
 commitizen@^4.0.3, commitizen@~4.2.4:
   version "4.2.4"
@@ -16299,10 +16304,23 @@ vue-eslint-parser@^7.0.0:
     lodash "^4.17.21"
     semver "^6.3.0"
 
-vue-eslint-parser@^7.9.0, vue-eslint-parser@~7.9.0:
+vue-eslint-parser@^7.9.0:
   version "7.9.0"
   resolved "https://registry.nlark.com/vue-eslint-parser/download/vue-eslint-parser-7.9.0.tgz#5eeedc71f22ebc7b18b957d1ab171acf29a41e64"
   integrity sha1-Xu7ccfIuvHsYuVfRqxcazymkHmQ=
+  dependencies:
+    debug "^4.1.1"
+    eslint-scope "^5.1.1"
+    eslint-visitor-keys "^1.1.0"
+    espree "^6.2.1"
+    esquery "^1.4.0"
+    lodash "^4.17.21"
+    semver "^6.3.0"
+
+vue-eslint-parser@~7.10.0:
+  version "7.10.0"
+  resolved "https://registry.nlark.com/vue-eslint-parser/download/vue-eslint-parser-7.10.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-eslint-parser%2Fdownload%2Fvue-eslint-parser-7.10.0.tgz#ea4e4b10fd10aa35c8a79ac783488d8abcd29be8"
+  integrity sha1-6k5LEP0QqjXIp5rHg0iNirzSm+g=
   dependencies:
     debug "^4.1.1"
     eslint-scope "^5.1.1"
