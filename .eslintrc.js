@@ -1,4 +1,4 @@
-const config = require('@modyqyw/fabric/eslint/vue2-typescript');
+const config = require('@modyqyw/fabric/eslint/vue2');
 
 module.exports = {
   ...config,
