@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { RouterMount, createRouter } from 'uni-simple-router';
 
 const router = createRouter({
