@@ -45,7 +45,7 @@ const instance = ajax.create({
   baseURL: process.env.VUE_APP_REQUEST_BASE_URL || '',
   header: {
     Accept: 'application/json',
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json; charset=utf-8',
     'X-Version': `${pkg.name}/${manifest.versionName}`,
   },
   sslVerify: false,
