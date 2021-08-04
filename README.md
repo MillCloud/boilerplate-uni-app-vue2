@@ -31,14 +31,6 @@
 - [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
 - [purgecss](https://purgecss.com)
 - [@modyqyw/fabric](https://github.com/MillCloud/fabric)
-- [commitizen](http://commitizen.github.io/cz-cli/)
-- [commitlint](https://commitlint.js.org/)
-- [prettier](https://prettier.io/)
-- [markdownlint](https://github.com/igorshubovych/markdownlint-cli)
-- [eslint](https://eslint.org/)
-- [stylelint](https://stylelint.io/)
-- [husky](https://github.com/typicode/husky)
-- [lint-staged](https://github.com/okonet/lint-staged)
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 
 请先阅读上面的文档，并确保你对 node 和 npm 有基本的理解。
