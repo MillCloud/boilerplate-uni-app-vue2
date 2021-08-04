@@ -93,7 +93,7 @@
   },
   "devDependencies": {
     "@babel/core": "~7.14.8",
-    "@babel/eslint-parser": "~7.14.7",
+    "@babel/eslint-parser": "~7.14.9",
     "@babel/runtime": "~7.14.8",
     "@commitlint/cli": "~13.1.0",
     "@dcloudio/types": "~2.4.5",
@@ -123,7 +123,7 @@
     "babel-plugin-import": "~1.13.3",
     "commitizen": "~4.2.4",
     "cross-env": "~7.0.3",
-    "eslint": "~7.31.0",
+    "eslint": "~7.32.0",
     "husky": "~7.0.1",
     "is-ci": "~3.0.0",
     "jest": "~27.0.6",
