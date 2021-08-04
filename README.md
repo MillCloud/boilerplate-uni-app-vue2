@@ -89,9 +89,9 @@ git config --global init.defaultBranch main
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 # 安装 node@14
-nvm install 14.17.3
+nvm install 14.17.4
 # 使用 node@14
-nvm use 14.17.3
+nvm use 14.17.4
 # 安装 yarn
 npm i -g yarn --registry=https://registry.npm.taobao.org
 
@@ -99,7 +99,7 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 
 其它系统请根据以上指引自行调整。
 
-另外，你还需要安装 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html) 3.1.18，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
+另外，你还需要安装最新的 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html)，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
 
 ### 安装
 
@@ -233,7 +233,7 @@ yarn
 
 uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](https://uniapp.dcloud.io/collocation/pages)。
 
-模板里使用了 `uni-simple-router` 以获得 vue-router 类似的体验。
+模板里使用了 `uni-simple-router` 以获得和 `vue-router` 类似的体验。
 
 ### 状态管理配置
 
