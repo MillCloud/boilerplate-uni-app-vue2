@@ -106,7 +106,7 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "2.0.0-31920210709003",
     "@dcloudio/webpack-uni-mp-loader": "2.0.0-31920210709003",
     "@dcloudio/webpack-uni-pages-loader": "2.0.0-31920210709003",
-    "@fullhuman/postcss-purgecss": "~4.0.3",
+    "@fullhuman/postcss-purgecss": "~3.1.3",
     "@fullhuman/vue-cli-plugin-purgecss": "~4.0.3",
     "@intlify/vue-i18n-loader": "~1.1.0",
     "@modyqyw/fabric": "~2.9.0",
