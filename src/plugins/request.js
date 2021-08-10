@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import ajax from 'uni-ajax';
-import i18n from '@/i18n';
-import { getToken } from '@/utils/storage';
-import { showModal } from '@/utils/modal';
-import manifest from '@/manifest.json';
 import pkg from '@@/package.json';
 import statuses from 'statuses';
 import { constantCase } from '@modyqyw/utils';
 import { setupCache } from 'axios-cache-adapter';
 import * as AxiosLogger from 'axios-logger';
 import axiosRetry from 'axios-retry';
+import manifest from '@/manifest.json';
+import { showModal } from '@/utils/modal';
+import { getToken } from '@/utils/storage';
+import i18n from '@/i18n';
 
 // https://uniajax.ponjs.com/
 // 要取消请求，参考 https://uniajax.ponjs.com/usage.html#requesttask
@@ -34,7 +34,7 @@ export const handleShowError = (response) => {
 const cache = setupCache({
   maxAge: 15 * 60 * 1000,
   invalidate: async (config, request) => {
-    if (request.clearCacheEntry) {
+    if (request.invalidate === true) {
       await config.store.removeItem(config.uuid);
     }
   },
