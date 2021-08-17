@@ -14,7 +14,6 @@
 - [uni-composition-api](https://github.com/TuiMao233/uni-composition-api)
 - [vue-cli](https://cli.vuejs.org/zh/)
 - [vuex](https://vuex.vuejs.org/zh/)
-- [uni-simple-router](https://hhyang.cn/v2/)
 - [vue-use](https://vueuse.org/)
 - [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [uni-ajax](https://uniajax.ponjs.com/)
@@ -181,7 +180,6 @@ yarn
 │   ├── i18n                    # 国际化目录
 │   ├── pages                   # 页面视图目录
 │   ├── plugins                 # 插件目录
-│   ├── router                  # 路由目录
 │   ├── static                  # 资产目录
 │   ├── store                   # 状态管理目录
 │   ├── styles                  # 全局样式目录
@@ -235,8 +233,6 @@ yarn
 ### 路由配置
 
 uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](https://uniapp.dcloud.io/collocation/pages)。
-
-模板里使用了 `uni-simple-router` 以获得和 `vue-router` 类似的体验。
 
 ### 状态管理配置
 
