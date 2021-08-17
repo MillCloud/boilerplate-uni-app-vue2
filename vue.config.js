@@ -1,8 +1,5 @@
 const path = require('path');
 const StylelintPlugin = require('stylelint-webpack-plugin');
-const TransformPages = require('uni-read-pages');
-
-const { webpack } = new TransformPages();
 
 module.exports = {
   chainWebpack: (config) => {
@@ -27,18 +24,6 @@ module.exports = {
         return args;
       });
     });
-  },
-  configureWebpack: {
-    plugins: [
-      new webpack.DefinePlugin({
-        'process.env.routes': webpack.DefinePlugin.runtimeValue(() => {
-          const tfPages = new TransformPages({
-            includes: ['path', 'name', 'aliasPath'],
-          });
-          return JSON.stringify(tfPages.routes);
-        }, true),
-      }),
-    ],
   },
   css: {
     loaderOptions: {
