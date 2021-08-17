@@ -21,6 +21,9 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
+  "vueCompilerOptions": {
+    "experimentalCompatMode": 2
+  },
   "include": [
     "./**/*.js",
     "./**/.*.js",
