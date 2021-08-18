@@ -20,6 +20,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
+    "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
     "moduleResolution": "node",
     "strict": true
   },
