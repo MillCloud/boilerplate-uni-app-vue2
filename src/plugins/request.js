@@ -59,16 +59,20 @@ instance.interceptors.request.use((config) => ({
     'X-Token': getToken() || '',
   },
 }));
-instance.interceptors.request.use(
-  (request) => AxiosLogger.requestLogger(request, { prefixText: false }),
-  (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
-);
+if (process.env.NODE_ENV === 'development') {
+  instance.interceptors.request.use(
+    (request) => AxiosLogger.requestLogger(request, { prefixText: false }),
+    (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
+  );
+}
 axiosRetry(instance, { retryDelay: axiosRetry.exponentialDelay });
 
-instance.interceptors.response.use(
-  (response) => AxiosLogger.responseLogger(response, { prefixText: false }),
-  (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
-);
+if (process.env.NODE_ENV === 'development') {
+  instance.interceptors.response.use(
+    (response) => AxiosLogger.responseLogger(response, { prefixText: false }),
+    (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
+  );
+}
 instance.interceptors.response.use(
   (response) => {
     const { data, config } = response;
