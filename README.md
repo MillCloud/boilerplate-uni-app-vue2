@@ -56,8 +56,8 @@ export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 nvm install 14
 # 设置 node@14 为默认版本
 nvm alias default 14
-# 安装 yarn
-npm i -g yarn --registry=https://registry.npm.taobao.org
+# 安装 pnpm
+npm i -g pnpm --registry=https://registry.npm.taobao.org
 # 安装 homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # 安装 git
@@ -66,6 +66,14 @@ brew install git
 git config --global core.autocrlf false
 # 设置默认分支名为 main
 git config --global init.defaultBranch main
+
+```
+
+设置 `~/.huskyrc`。
+
+```sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 ```
 
@@ -91,11 +99,11 @@ git config --global init.defaultBranch main
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 # 安装 node@14
-nvm install 14.17.4
+nvm install 14.17.5
 # 使用 node@14
-nvm use 14.17.4
-# 安装 yarn
-npm i -g yarn --registry=https://registry.npm.taobao.org
+nvm use 14.17.5
+# 安装 pnpm
+npm i -g pnpm --registry=https://registry.npm.taobao.org
 
 ```
 
@@ -112,7 +120,7 @@ git clone git@github.com:MillCloud/boilerplate-uni-app.git
 # 进入项目
 cd boilerplate-uni-app
 # 安装依赖
-yarn
+pnpm install
 
 ```
 
@@ -138,33 +146,33 @@ yarn
 
 |命令|含义|
 |-|-|
-|`yarn dev:mp-360`|`development` 模式启动 360 小程序|
-|`yarn dev:mp-alipay`|`development` 模式启动支付宝小程序|
-|`yarn dev:mp-baidu`|`development` 模式启动百度小程序|
-|`yarn dev:mp-kuaishou`|`development` 模式启动快手小程序|
-|`yarn dev:mp-qq`|`development` 模式启动 QQ 小程序|
-|`yarn dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
-|`yarn dev:mp-weixin`|`development` 模式启动微信小程序|
-|`yarn dev:quickapp-webview`|`development` 模式启动快应用|
-|`yarn build:mp-360`|`production` 模式打包 360 小程序|
-|`yarn build:mp-alipay`|`production` 模式打包支付宝小程序|
-|`yarn build:mp-baidu`|`production` 模式打包百度小程序|
-|`yarn build:mp-kuaishou`|`production` 模式打包快手小程序|
-|`yarn build:mp-qq`|`production` 模式打包 QQ 小程序|
-|`yarn build:mp-toutiao`|`production` 模式打包字节跳动小程序|
-|`yarn build:mp-weixin`|`production` 模式打包微信小程序|
-|`yarn build:quickapp-webview`|`production` 模式打包快应用|
-|`yarn run clean`|清理 `dist` 目录|
-|`yarn run check`|检查项目依赖版本|
-|`yarn commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
-|`yarn i18n:report`|获取国际化信息|
-|`yarn lint`|检查 json 文件，脚本文件，样式文件和目录|
-|`yarn lint:json`|格式化 json 文件|
-|`yarn lint:markdown`|格式化 markdown 文件|
-|`yarn lint:script`|检查并自动修复脚本文件|
-|`yarn lint:style`|检查并自动修复样式文件|
-|`yarn lint:ls`|检查目录|
-|`yarn info`|列出环境信息|
+|`pnpm run dev:mp-360`|`development` 模式启动 360 小程序|
+|`pnpm rundev:mp-alipay`|`development` 模式启动支付宝小程序|
+|`pnpm rundev:mp-baidu`|`development` 模式启动百度小程序|
+|`pnpm rundev:mp-kuaishou`|`development` 模式启动快手小程序|
+|`pnpm rundev:mp-qq`|`development` 模式启动 QQ 小程序|
+|`pnpm rundev:mp-toutiao`|`development` 模式启动字节跳动小程序|
+|`pnpm rundev:mp-weixin`|`development` 模式启动微信小程序|
+|`pnpm rundev:quickapp-webview`|`development` 模式启动快应用|
+|`pnpm runbuild:mp-360`|`production` 模式打包 360 小程序|
+|`pnpm runbuild:mp-alipay`|`production` 模式打包支付宝小程序|
+|`pnpm runbuild:mp-baidu`|`production` 模式打包百度小程序|
+|`pnpm runbuild:mp-kuaishou`|`production` 模式打包快手小程序|
+|`pnpm runbuild:mp-qq`|`production` 模式打包 QQ 小程序|
+|`pnpm runbuild:mp-toutiao`|`production` 模式打包字节跳动小程序|
+|`pnpm runbuild:mp-weixin`|`production` 模式打包微信小程序|
+|`pnpm runbuild:quickapp-webview`|`production` 模式打包快应用|
+|`pnpm runrun clean`|清理 `dist` 目录|
+|`pnpm runrun check`|检查项目依赖版本|
+|`pnpm runcommit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
+|`pnpm runi18n:report`|获取国际化信息|
+|`pnpm runlint`|检查 json 文件，脚本文件，样式文件和目录|
+|`pnpm runlint:json`|格式化 json 文件|
+|`pnpm runlint:markdown`|格式化 markdown 文件|
+|`pnpm runlint:script`|检查并自动修复脚本文件|
+|`pnpm runlint:style`|检查并自动修复样式文件|
+|`pnpm runlint:ls`|检查目录|
+|`pnpm runinfo`|列出环境信息|
 
 注意；如果要开发移动应用，必须用 `HBuilderX` 运行到模拟器或真机。
 
@@ -177,7 +185,9 @@ yarn
 ├── src
 │   ├── apis                    # 接口目录
 │   ├── components              # 全局组件目录
+│   ├── composables             # 组合式 API 目录
 │   ├── i18n                    # 国际化目录
+│   ├── mocks                   # 接口模拟数据目录
 │   ├── pages                   # 页面视图目录
 │   ├── plugins                 # 插件目录
 │   ├── static                  # 资产目录
@@ -191,31 +201,28 @@ yarn
 ├── tests                       # 测试内容文件夹
 ├── unpackage                   # 打包时使用的资产文件夹
 ├── .browserslistrc             # 浏览器支持列表文件
+├── .commitlintrc.js            # commitlint 配置文件
 ├── .editorconfig
 ├── .env                        # 所有环境都载入的环境变量
 ├── .env.development            # development 载入的环境变量
 ├── .env.production             # production 载入的环境变量
-├── .eslintignore               # eslint 配置文件
 ├── .eslintrc.js                # eslint 配置文件
 ├── .gitattributes              # git 配置文件
 ├── .gitignore                  # git 配置文件
 ├── .markdownlint.json          # markdownlint 配置文件
-├── .markdownlintignore         # markdownlint 配置文件
-├── .npmrc                      # npm 镜像文件
-├── .prettierignore             # prettier 配置文件
-├── .stylelintignore            # stylelint 配置文件
-├── .yarnrc                     # yarn 镜像文件
+├── .npmrc                      # npm 配置文件
+├── .prettierrc.js              # prettier 配置文件
+├── .release-it.js              # release-it 配置文件
+├── .stylelintrc.js             # stylelint 配置文件
 ├── babel.config.js             # babel 配置文件
-├── commitlint.config.js        # commitlint 配置文件
-├── CONTRIBUTING.md
+├── jest.config.js              # jest 配置文件
 ├── package.json
+├── pnpm-lock.yaml
 ├── postcss.config.js           # postcss 配置文件
-├── prettier.config.js          # prettier 配置文件
 ├── README.md
-├── stylelint.config.js         # stylelint 配置文件
 ├── tsconfig.json               # typescript 配置文件
-├── vue.config.js               # vue-cli 配置文件
-└── yarn.lock
+├── update-manifest.js          # 配置 release-it 自动更新 manifest.json 的文件
+└── vue.config.js               # vue-cli 配置文件
 ```
 
 ### 国际化配置
@@ -296,7 +303,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [�
 - 确认所有和 [模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html) 相关的地方已经配置完成。
 - 对于小程序，运行对应的命令，然后用开发者工具上传 `dist` 目录下对应平台的内容。
 - 对于移动端应用，用 `HBuilderX` 云打包或本地安心打包获取安装包。
-- 默认会生成报告。
+- 默认会生成报告并自动更新 `manifest.json`。
 
 ## 浏览器支持
 
