@@ -22,8 +22,9 @@
 - [axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter)
 - [axios-retry](https://github.com/softonic/axios-retry)
 - [statuses](https://github.com/jshttp/statuses)
-- [@modyqyw/mp-scss](https://modyqyw.github.io/mp-scss/)
 - [@modyqyw/utils](https://github.com/modyqyw/utils)
+- [windicss](https://windicss.org/) - 注意不要使用高级特性，否则不能支持 Android 4.4 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
+- [daisyui](https://daisyui.com/)
 - [thor-ui](https://www.thorui.cn/doc/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
@@ -147,32 +148,32 @@ pnpm install
 |命令|含义|
 |-|-|
 |`pnpm run dev:mp-360`|`development` 模式启动 360 小程序|
-|`pnpm rundev:mp-alipay`|`development` 模式启动支付宝小程序|
-|`pnpm rundev:mp-baidu`|`development` 模式启动百度小程序|
-|`pnpm rundev:mp-kuaishou`|`development` 模式启动快手小程序|
-|`pnpm rundev:mp-qq`|`development` 模式启动 QQ 小程序|
-|`pnpm rundev:mp-toutiao`|`development` 模式启动字节跳动小程序|
-|`pnpm rundev:mp-weixin`|`development` 模式启动微信小程序|
-|`pnpm rundev:quickapp-webview`|`development` 模式启动快应用|
-|`pnpm runbuild:mp-360`|`production` 模式打包 360 小程序|
-|`pnpm runbuild:mp-alipay`|`production` 模式打包支付宝小程序|
-|`pnpm runbuild:mp-baidu`|`production` 模式打包百度小程序|
-|`pnpm runbuild:mp-kuaishou`|`production` 模式打包快手小程序|
-|`pnpm runbuild:mp-qq`|`production` 模式打包 QQ 小程序|
-|`pnpm runbuild:mp-toutiao`|`production` 模式打包字节跳动小程序|
-|`pnpm runbuild:mp-weixin`|`production` 模式打包微信小程序|
-|`pnpm runbuild:quickapp-webview`|`production` 模式打包快应用|
-|`pnpm runrun clean`|清理 `dist` 目录|
-|`pnpm runrun check`|检查项目依赖版本|
-|`pnpm runcommit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
-|`pnpm runi18n:report`|获取国际化信息|
-|`pnpm runlint`|检查 json 文件，脚本文件，样式文件和目录|
-|`pnpm runlint:json`|格式化 json 文件|
-|`pnpm runlint:markdown`|格式化 markdown 文件|
-|`pnpm runlint:script`|检查并自动修复脚本文件|
-|`pnpm runlint:style`|检查并自动修复样式文件|
-|`pnpm runlint:ls`|检查目录|
-|`pnpm runinfo`|列出环境信息|
+|`pnpm run dev:mp-alipay`|`development` 模式启动支付宝小程序|
+|`pnpm run dev:mp-baidu`|`development` 模式启动百度小程序|
+|`pnpm run dev:mp-kuaishou`|`development` 模式启动快手小程序|
+|`pnpm run dev:mp-qq`|`development` 模式启动 QQ 小程序|
+|`pnpm run dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
+|`pnpm run dev:mp-weixin`|`development` 模式启动微信小程序|
+|`pnpm run dev:quickapp-webview`|`development` 模式启动快应用|
+|`pnpm run build:mp-360`|`production` 模式打包 360 小程序|
+|`pnpm run build:mp-alipay`|`production` 模式打包支付宝小程序|
+|`pnpm run build:mp-baidu`|`production` 模式打包百度小程序|
+|`pnpm run build:mp-kuaishou`|`production` 模式打包快手小程序|
+|`pnpm run build:mp-qq`|`production` 模式打包 QQ 小程序|
+|`pnpm run build:mp-toutiao`|`production` 模式打包字节跳动小程序|
+|`pnpm run build:mp-weixin`|`production` 模式打包微信小程序|
+|`pnpm run build:quickapp-webview`|`production` 模式打包快应用|
+|`pnpm run run clean`|清理 `dist` 目录|
+|`pnpm run run check`|检查项目依赖版本|
+|`pnpm run commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
+|`pnpm run i18n:report`|获取国际化信息|
+|`pnpm run lint`|检查 json 文件，脚本文件，样式文件和目录|
+|`pnpm run lint:json`|格式化 json 文件|
+|`pnpm run lint:markdown`|格式化 markdown 文件|
+|`pnpm run lint:script`|检查并自动修复脚本文件|
+|`pnpm run lint:style`|检查并自动修复样式文件|
+|`pnpm run lint:ls`|检查目录|
+|`pnpm run info`|列出环境信息|
 
 注意；如果要开发移动应用，必须用 `HBuilderX` 运行到模拟器或真机。
 
@@ -223,6 +224,7 @@ pnpm install
 ├── README.md
 ├── tsconfig.json               # typescript 配置文件
 ├── update-manifest.js          # 配置 release-it 自动更新 manifest.json 的文件
+├── windicss.config.js          # windicss 配置文件
 └── vue.config.js               # vue-cli 配置文件
 ```
 
