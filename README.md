@@ -57,8 +57,8 @@ export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 nvm install 14
 # 设置 node@14 为默认版本
 nvm alias default 14
-# 安装 pnpm
-npm i -g pnpm --registry=https://registry.npm.taobao.org
+# 安装 yarn
+npm i -g yarn --registry=https://registry.npm.taobao.org
 # 安装 homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # 安装 git
@@ -103,8 +103,8 @@ nvm node_mirror https://npm.taobao.org/mirrors/node/
 nvm install 14.17.5
 # 使用 node@14
 nvm use 14.17.5
-# 安装 pnpm
-npm i -g pnpm --registry=https://registry.npm.taobao.org
+# 安装 yarn
+npm i -g yarn --registry=https://registry.npm.taobao.org
 
 ```
 
@@ -121,7 +121,7 @@ git clone git@github.com:MillCloud/boilerplate-uni-app.git
 # 进入项目
 cd boilerplate-uni-app
 # 安装依赖
-pnpm install
+yarn install
 
 ```
 
@@ -147,33 +147,33 @@ pnpm install
 
 |命令|含义|
 |-|-|
-|`pnpm run dev:mp-360`|`development` 模式启动 360 小程序|
-|`pnpm run dev:mp-alipay`|`development` 模式启动支付宝小程序|
-|`pnpm run dev:mp-baidu`|`development` 模式启动百度小程序|
-|`pnpm run dev:mp-kuaishou`|`development` 模式启动快手小程序|
-|`pnpm run dev:mp-qq`|`development` 模式启动 QQ 小程序|
-|`pnpm run dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
-|`pnpm run dev:mp-weixin`|`development` 模式启动微信小程序|
-|`pnpm run dev:quickapp-webview`|`development` 模式启动快应用|
-|`pnpm run build:mp-360`|`production` 模式打包 360 小程序|
-|`pnpm run build:mp-alipay`|`production` 模式打包支付宝小程序|
-|`pnpm run build:mp-baidu`|`production` 模式打包百度小程序|
-|`pnpm run build:mp-kuaishou`|`production` 模式打包快手小程序|
-|`pnpm run build:mp-qq`|`production` 模式打包 QQ 小程序|
-|`pnpm run build:mp-toutiao`|`production` 模式打包字节跳动小程序|
-|`pnpm run build:mp-weixin`|`production` 模式打包微信小程序|
-|`pnpm run build:quickapp-webview`|`production` 模式打包快应用|
-|`pnpm run run clean`|清理 `dist` 目录|
-|`pnpm run run check`|检查项目依赖版本|
-|`pnpm run commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
-|`pnpm run i18n:report`|获取国际化信息|
-|`pnpm run lint`|检查 json 文件，脚本文件，样式文件和目录|
-|`pnpm run lint:json`|格式化 json 文件|
-|`pnpm run lint:markdown`|格式化 markdown 文件|
-|`pnpm run lint:script`|检查并自动修复脚本文件|
-|`pnpm run lint:style`|检查并自动修复样式文件|
-|`pnpm run lint:ls`|检查目录|
-|`pnpm run info`|列出环境信息|
+|`yarn run dev:mp-360`|`development` 模式启动 360 小程序|
+|`yarn run dev:mp-alipay`|`development` 模式启动支付宝小程序|
+|`yarn run dev:mp-baidu`|`development` 模式启动百度小程序|
+|`yarn run dev:mp-kuaishou`|`development` 模式启动快手小程序|
+|`yarn run dev:mp-qq`|`development` 模式启动 QQ 小程序|
+|`yarn run dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
+|`yarn run dev:mp-weixin`|`development` 模式启动微信小程序|
+|`yarn run dev:quickapp-webview`|`development` 模式启动快应用|
+|`yarn run build:mp-360`|`production` 模式打包 360 小程序|
+|`yarn run build:mp-alipay`|`production` 模式打包支付宝小程序|
+|`yarn run build:mp-baidu`|`production` 模式打包百度小程序|
+|`yarn run build:mp-kuaishou`|`production` 模式打包快手小程序|
+|`yarn run build:mp-qq`|`production` 模式打包 QQ 小程序|
+|`yarn run build:mp-toutiao`|`production` 模式打包字节跳动小程序|
+|`yarn run build:mp-weixin`|`production` 模式打包微信小程序|
+|`yarn run build:quickapp-webview`|`production` 模式打包快应用|
+|`yarn run run clean`|清理 `dist` 目录|
+|`yarn run run check`|检查项目依赖版本|
+|`yarn run commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
+|`yarn run i18n:report`|获取国际化信息|
+|`yarn run lint`|检查 json 文件，脚本文件，样式文件和目录|
+|`yarn run lint:json`|格式化 json 文件|
+|`yarn run lint:markdown`|格式化 markdown 文件|
+|`yarn run lint:script`|检查并自动修复脚本文件|
+|`yarn run lint:style`|检查并自动修复样式文件|
+|`yarn run lint:ls`|检查目录|
+|`yarn run info`|列出环境信息|
 
 注意；如果要开发移动应用，必须用 `HBuilderX` 运行到模拟器或真机。
 
@@ -219,13 +219,13 @@ pnpm install
 ├── babel.config.js             # babel 配置文件
 ├── jest.config.js              # jest 配置文件
 ├── package.json
-├── pnpm-lock.yaml
 ├── postcss.config.js           # postcss 配置文件
 ├── README.md
 ├── tsconfig.json               # typescript 配置文件
 ├── update-manifest.js          # 配置 release-it 自动更新 manifest.json 的文件
 ├── windicss.config.js          # windicss 配置文件
-└── vue.config.js               # vue-cli 配置文件
+├── vue.config.js               # vue-cli 配置文件
+└── yarn.lock
 ```
 
 ### 国际化配置
@@ -304,7 +304,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [�
 ## 部署
 
 - 确认所有和 [模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html) 相关的地方已经配置完成。
-- 运行 `pnpm run release`，更新版本号。
+- 运行 `yarn run release`，更新版本号。
 - 对于小程序，运行对应的命令构建，然后用开发者工具上传 `dist` 目录下对应平台的内容。
 - 对于移动端应用，用 `HBuilderX` 云打包或本地安心打包获取安装包。
 - 默认会生成报告。

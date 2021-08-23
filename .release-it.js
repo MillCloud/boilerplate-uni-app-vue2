@@ -13,7 +13,7 @@ module.exports = {
     release: false,
   },
   hooks: {
-    'before:init': 'pnpm run lint',
+    'before:init': 'yarn run lint',
     'after:bump': 'node update-manifest.js',
   },
 };

@@ -34,7 +34,7 @@
     "dev:quickapp-webview-union": "cross-env UNI_PLATFORM=quickapp-webview-union UNI_OUTPUT_DIR=dist/quickapp-webview-union vue-cli-service uni-build --mode development --watch",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/i18n/locales/*.json'",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
-    "lint": "pnpm run lint:json && pnpm run lint:markdown && pnpm run lint:script && pnpm run lint:style",
+    "lint": "yarn run lint:json && yarn run lint:markdown && yarn run lint:script && yarn run lint:style",
     "lint:json": "prettier ./**/*.json --write --ignore-path=.gitignore",
     "lint:markdown": "markdownlint . --fix --ignore-path=.gitignore",
     "lint:script": "vue-cli-service lint --fix",
