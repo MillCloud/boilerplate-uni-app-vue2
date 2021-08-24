@@ -17384,7 +17384,7 @@ windicss-webpack-plugin@^1.4.3:
     webpack-virtual-modules "^0.4.3"
     windicss "3.1.7"
 
-windicss@3.1.7, windicss@^3.1.6, windicss@^3.1.7:
+windicss@3.1.7, windicss@^3.1.6, windicss@~3.1.7:
   version "3.1.7"
   resolved "https://registry.nlark.com/windicss/download/windicss-3.1.7.tgz#8a3b8a07ed97c2c1354a6e31820d8059da35f724"
   integrity sha1-ijuKB+2XwsE1Sm4xgg2AWdo19yQ=
