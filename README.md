@@ -125,7 +125,7 @@ yarn install
 
 ```
 
-然后打开 `./node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js`，在 L25 添加以下内容并保存。
+然后打开 [./node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js](./node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js)，在 L25 添加以下内容并保存。
 
 ```js
 process.env.UNI_PLATFORM = process.env.UNI_PLATFORM || 'h5'
