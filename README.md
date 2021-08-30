@@ -149,7 +149,7 @@ process.env.UNI_PLATFORM = process.env.UNI_PLATFORM || 'h5'
 
 模板里内置了较多命令，以适应各种不同的情况。更多的命令你可以查看 [package.json](./package.json)。
 
-启动前请移除 [manifest.json](./src/manifest.json) 内的注释，并使用 `HBuilderX` 申请一个 appid（DCloud 应用标识）。
+启动前请使用 `HBuilderX` 申请一个 appid（DCloud 应用标识）。
 
 |命令|含义|
 |-|-|
@@ -322,7 +322,15 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [�
 
 ## 参考链接
 
+- [uni-app appid 说明](https://ask.dcloud.net.cn/article/35907)
 - [uni-app 资源在线升级/热更新](https://ask.dcloud.net.cn/article/35667)
 - [uni-app 整包升级/更新方案](https://ask.dcloud.net.cn/article/34972)
 - [uni-app 中如何打开外部应用](https://ask.dcloud.net.cn/article/35621)
 - [uni-app 运行环境版本和编译器版本不一致的问题](https://ask.dcloud.net.cn/article/35627)
+- [uni-app nvue 编译模式](https://ask.dcloud.net.cn/article/36074)
+- [uni-app nvue 首页启动模式](https://ask.dcloud.net.cn/article/36749)
+- [uni-app Android 云端打包权限配置](https://ask.dcloud.net.cn/article/36982)
+- [微信小程序项目配置文件](https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html)
+- [支付宝小程序配置文件](https://opendocs.alipay.com/mini/framework/project)
+- [百度小程序配置文件](https://smartprogram.baidu.com/docs/develop/devtools/editor_set/)
+- [字节小程序配置文件](https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/framework/basic-reference/catalog-structure/#projectconfigjson-%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D)
