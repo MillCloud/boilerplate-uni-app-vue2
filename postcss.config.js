@@ -20,6 +20,7 @@ module.exports = {
         return id;
       },
     }),
+    require('tailwindcss')(),
     require('autoprefixer')({
       remove: process.env.UNI_PLATFORM !== 'h5',
     }),

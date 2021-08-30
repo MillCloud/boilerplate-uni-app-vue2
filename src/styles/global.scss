@@ -1,4 +1,8 @@
 /* stylelint-disable property-no-vendor-prefix */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 page {
   width: 100%;
   height: 100%;
