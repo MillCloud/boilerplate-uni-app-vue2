@@ -1985,10 +1985,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@modyqyw/fabric@~3.2.1":
-  version "3.2.1"
-  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-3.2.1.tgz#b6acdbd60c4521ee078f1a0d2fbcadd21ad2937a"
-  integrity sha1-tqzb1gxFIe4HjxoNL7yt0hrSk3o=
+"@modyqyw/fabric@~3.2.2":
+  version "3.2.2"
+  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-3.2.2.tgz#03b6f9156901e543bb2b86e09c8225a0fc832960"
+  integrity sha1-A7b5FWkB5UO7K4bgnIIloPyDKWA=
   dependencies:
     "@babel/core" "~7.15.0"
     "@babel/eslint-parser" "~7.15.0"
@@ -2014,7 +2014,6 @@
     eslint-plugin-vue "~7.17.0"
     eslint-plugin-vuejs-accessibility "~0.7.1"
     inquirer "~8.1.2"
-    prettier-plugin-package "~1.3.0"
     shelljs "~0.8.4"
     stylelint-config-prettier "~8.0.2"
     stylelint-config-recess-order "~2.5.0"
@@ -2489,6 +2488,11 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/faker@~5.5.8":
+  version "5.5.8"
+  resolved "https://registry.nlark.com/@types/faker/download/@types/faker-5.5.8.tgz?cache=0&sync_timestamp=1629708158594&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Ffaker%2Fdownload%2F%40types%2Ffaker-5.5.8.tgz#6649adfdfdbb0acf95361fc48f2d0ca6e88bd1cf"
+  integrity sha1-Zkmt/f27Cs+VNh/Ejy0MpuiL0c8=
+
 "@types/formidable@^1.0.31":
   version "1.2.3"
   resolved "https://registry.nlark.com/@types/formidable/download/@types/formidable-1.2.3.tgz?cache=0&sync_timestamp=1625606151964&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fformidable%2Fdownload%2F%40types%2Fformidable-1.2.3.tgz#99ee5fd4eafbaa95448c8b670e5e8e389f2af380"
@@ -2614,6 +2618,11 @@
   version "1.2.2"
   resolved "https://registry.nlark.com/@types/minimist/download/@types/minimist-1.2.2.tgz?cache=0&sync_timestamp=1625616294413&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fminimist%2Fdownload%2F%40types%2Fminimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
   integrity sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=
+
+"@types/mockjs@~1.0.4":
+  version "1.0.4"
+  resolved "https://registry.nlark.com/@types/mockjs/download/@types/mockjs-1.0.4.tgz?cache=0&sync_timestamp=1629708396524&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fmockjs%2Fdownload%2F%40types%2Fmockjs-1.0.4.tgz#e706951d5e33b4f0a4bb73b1f8b124e26f081de0"
+  integrity sha1-5waVHV4ztPCku3Ox+LEk4m8IHeA=
 
 "@types/node@*":
   version "16.7.1"
@@ -7743,6 +7752,11 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/extsprintf/download/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+
+faker@~5.5.3:
+  version "5.5.3"
+  resolved "https://registry.npm.taobao.org/faker/download/faker-5.5.3.tgz#c57974ee484431b25205c2c8dc09fda861e51e0e"
+  integrity sha1-xXl07khEMbJSBcLI3An9qGHlHg4=
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -13938,11 +13952,6 @@ prettier-linter-helpers@^1.0.0:
   integrity sha1-0j1B/hN1ZG3i0BBNNFSjAIgCz3s=
   dependencies:
     fast-diff "^1.1.2"
-
-prettier-plugin-package@~1.3.0:
-  version "1.3.0"
-  resolved "https://registry.nlark.com/prettier-plugin-package/download/prettier-plugin-package-1.3.0.tgz#b42d12eda16b67c9fcf95054d799fe3f542aef54"
-  integrity sha1-tC0S7aFrZ8n8+VBU15n+P1Qq71Q=
 
 prettier@^1.18.2:
   version "1.19.1"
