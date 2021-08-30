@@ -1,16 +1,19 @@
 <template>
-  <view class="container justify-center align-center h-full">
-    <image class="logo" src="/static/logo.png" />
-    <text class="text-xl my-xl">
+  <view
+    class="absolute w-full h-full flex flex-col justify-center items-center"
+  >
+    <image class="w-12 h-12" src="/static/logo.png" />
+    <text class="text-2xl">
       {{ title }}
     </text>
+    <!-- #ifdef APP-PLUS -->
     <button
-      v-if="process.env.UNI_PLATFORM === 'app-plus'"
-      class="btn is-primary"
+      class="bg-blue-6 px-8 text-white text-base leading-loose"
       @click="handleToPermission"
     >
       测试权限
     </button>
+    <!-- #endif -->
   </view>
 </template>
 
@@ -21,6 +24,7 @@ export default {
       title: 'Hello, uni-app!',
     };
   },
+  // #ifdef APP-PLUS
   methods: {
     handleToPermission() {
       uni.navigateTo({
@@ -28,12 +32,6 @@ export default {
       });
     },
   },
+  // #endif
 };
 </script>
-
-<style lang="scss" scoped>
-.logo {
-  width: 492rpx;
-  height: 120rpx;
-}
-</style>
