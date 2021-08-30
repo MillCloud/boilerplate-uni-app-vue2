@@ -29,6 +29,7 @@
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
 - [iconify](https://iconify.design/)
 - [dayjs](https://day.js.org)
+- [faker](https://github.com/marak/Faker.js/)
 - [mock.js](http://mockjs.com/)
 - [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
 - [purgecss](https://purgecss.com)
@@ -318,3 +319,10 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [�
 ## 浏览器支持
 
 请查看 [.browserslistrc](./.browserslistrc)。
+
+## 参考链接
+
+- [uni-app 资源在线升级/热更新](https://ask.dcloud.net.cn/article/35667)
+- [uni-app 整包升级/更新方案](https://ask.dcloud.net.cn/article/34972)
+- [uni-app 中如何打开外部应用](https://ask.dcloud.net.cn/article/35621)
+- [uni-app 运行环境版本和编译器版本不一致的问题](https://ask.dcloud.net.cn/article/35627)
