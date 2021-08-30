@@ -24,7 +24,6 @@
 - [statuses](https://github.com/jshttp/statuses)
 - [@modyqyw/utils](https://github.com/modyqyw/utils)
 - [windicss](https://windicss.org/) - 注意不要使用高级特性，否则不能支持 Android 4.4 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
-- [daisyui](https://daisyui.com/)
 - [thor-ui](https://www.thorui.cn/doc/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
