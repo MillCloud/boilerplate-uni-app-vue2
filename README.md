@@ -23,7 +23,7 @@
 - [axios-retry](https://github.com/softonic/axios-retry)
 - [statuses](https://github.com/jshttp/statuses)
 - [@modyqyw/utils](https://github.com/modyqyw/utils)
-- [windicss](https://windicss.org/) - 注意不要使用高级特性，否则不能支持 Android 4.4 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
+- [tailwindcss](https://tailwindcss.com/) - 注意不要使用高级特性，否则不能支持 Android 4.4 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
 - [thor-ui](https://www.thorui.cn/doc/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
@@ -229,7 +229,7 @@ process.env.UNI_PLATFORM = process.env.UNI_PLATFORM || 'h5'
 ├── README.md
 ├── tsconfig.json               # typescript 配置文件
 ├── update-manifest.js          # 配置 release-it 自动更新 manifest.json 的文件
-├── windicss.config.js          # windicss 配置文件
+├── tailwind.config.js          # windicss 配置文件
 ├── vue.config.js               # vue-cli 配置文件
 └── yarn.lock
 ```
