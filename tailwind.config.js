@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const tailwindDefaultTheme = require('tailwindcss/defaultTheme');
 const antdColors = require('@ant-design/colors');
 
@@ -156,6 +157,7 @@ module.exports = {
       },
     },
   },
+  plugins: [require('@tailwindcss/typography')],
   corePlugins: {
     preflight: false,
     space: false,
