@@ -1,60 +1,38 @@
 {
-  // 配置文件内容，见 https://uniapp.dcloud.io/collocation/manifest
-  // 应用名称，安装后显示的应用名
   "name": "boilerplate-uni-app",
-  // DCloud 应用标识，见 https://ask.dcloud.net.cn/article/35907
   "appid": "",
-  // 应用描述
   "description": "A boilerplate for uni-app.",
-  // 版本名，云打包和生成 wgt 时会使用
-  // 整包更新见 https://ask.dcloud.net.cn/article/34972
-  // 热更新见 https://ask.dcloud.net.cn/article/35667
   "versionName": "0.0.0",
-  // 版本号
   "versionCode": "0",
-  // 不转换项目的 px
   "transformPx": false,
-  // 网络超时时间
   "networkTimeout": {
     "request": 60000,
     "connectSocket": 60000,
     "uploadFile": 60000,
     "downloadFile": 60000
   },
-  // 不开启调试模式
   "debug": false,
-  // 不开启 uni 统计，见 https://uniapp.dcloud.io/collocation/manifest?id=unistatistics
   "uniStatistics": {
     "enable": false
   },
-  // APP 配置，见 https://uniapp.dcloud.io/collocation/manifest?id=app-plus
   "app-plus": {
-    // 忽略版本判断，见 https://ask.dcloud.net.cn/article/35627
     "compatible": {
       "ignoreVersion": true
     },
-    // 启用自定义组件模式，见 https://ask.dcloud.net.cn/article/35843
     "usingComponents": true,
-    // 启动界面信息，见 https://uniapp.dcloud.io/collocation/manifest?id=splashscreen
     "splashscreen": {
       "alwaysShowBeforeRender": true,
       "autoclose": true,
       "waiting": true,
       "delay": 0
     },
-    // 权限模块，见 https://uniapp.dcloud.io/collocation/manifest?id=modules
     "modules": {},
-    // 编译器版本，见 https://ask.dcloud.net.cn/article/36599
     "compilerVersion": 3,
-    // nvue 编译模式，见 https://ask.dcloud.net.cn/article/36074
     "nvueCompiler": "uni-app",
-    // nvuew 首页启动模式，见 https://ask.dcloud.net.cn/article/36749
     "nvueLaunchMode": "normal",
-    // nvue 页面布局初始配置，见 https://uniapp.dcloud.io/collocation/manifest?id=nvue
     "nvue": {
       "flex-direction": "column"
     },
-    // 发布信息，见 https://uniapp.dcloud.io/collocation/manifest?id=modules
     "distribute": {
       "android": {
         "abiFilters": ["armeabi-v7a", "arm64-v8a"],
@@ -64,8 +42,8 @@
           "waiting": true,
           "delay": 0
         },
-        "minSdkVersion": 21, // 5.0
-        "targetSdkVersion": 23, // 6.0
+        "minSdkVersion": 21,
+        "targetSdkVersion": 23,
         "permissionExternalStorage": {
           "request": "always",
           "prompt": "应用保存运行状态等信息，需要获取读写手机存储权限，系统可能提示为访问设备上的照片、媒体内容和文件，请允许。"
@@ -75,8 +53,6 @@
           "prompt": "为保证正常安全使用，需要获取设备识别码使用权限，系统可能提示为获取手机号码，请允许。"
         },
         "permissions": [
-          // https://ask.dcloud.net.cn/article/36982
-          // https://ask.dcloud.net.cn/article/34986
           "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
           "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
           "<uses-permission android:name=\"android.permission.INSTALL_PACKAGES\"/>",
@@ -92,92 +68,60 @@
       "orientation": ["portrait-primary"]
     }
   },
-  // H5 配置
   "h5": {},
-  // 微信小程序配置
   "mp-weixin": {
     "appid": "touristappid",
     "usingComponents": true,
-    // 基础库版本
     "libVersion": "",
-    // 权限
     "permission": {},
     "setting": {
-      // https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html
-      // ES6 不转 ES5
       "es6": false,
-      // 不增强编译
       "enhance": false,
-      // 不使用 npm 模块
       "nodeModules": false,
-      // 上传代码时不补全样式
       "postcss": false,
-      // 上传代码时不压缩样式
       "minifyWXSS": false,
-      // 上传时不压缩
       "minified": false,
-      // 上传时不保护代码
       "uglifyFileName": false,
-      // 校验合法域名，web-view，TLS 版本和 HTTPS 证书
       "urlCheck": true,
-      // shadow-root 形式展示自定义组件
       "showShadowRootInWxmlPanel": true,
-      // 不启用数据预拉取
       "preloadBackgroundData": false,
-      // 不启用代码自动热重载
       "compileHotReLoad": false,
-      // 不使用合并编译
       "bundle": false,
-      // 关闭 sitemap 索引提示
       "checkSiteMap": false,
-      // 关闭 key 名称提示
       "checkInvalidKey": false
     }
   },
-  // 阿里小程序配置
   "mp-alipay": {
     "usingComponents": true,
-    // 启用 component2 编译
     "component2": true,
-    // 关闭 axml 严格语法检查
     "axmlStrictCheck": false,
-    // 启用多进程编译
     "enableParallelLoader": true,
-    // 启用小程序基础库构建
     "enableAppxNg": true
   },
-  // 百度小程序配置
   "mp-baidu": {
     "appid": "",
-    "usingComponents": true
-  },
-  // 字节跳动小程序配置
-  "mp-toutiao": {
-    "appid": "",
     "usingComponents": true,
-    // 权限
-    "permission": {},
     "setting": {
-      // https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/framework/basic-reference/catalog-structure/#projectconfigjson-%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D
-      // ES6 不转 ES5
-      "es6": false,
-      // 上传代码时不补全样式
-      "postcss": false,
-      // 上传时不压缩混淆
-      "minified": false,
-      // 校验合法域名，web-view，TLS 版本和 HTTPS 证书
       "urlCheck": true
     }
   },
-  // QQ 小程序配置
+  "mp-toutiao": {
+    "appid": "",
+    "usingComponents": true,
+    "permission": {},
+    "setting": {
+      "es6": false,
+      "minified": false,
+      "urlCheck": true
+    }
+  },
   "mp-qq": {
     "appid": "",
     "permission": {}
   },
-  // 快应用配置
   "quickapp-webview": {
     "icon": "/static/logo.png",
-    "package": "io.github.modyqyw",
+    "package": "cn.millcloud",
     "versionName": "0.0.0",
     "versionCode": 0
   },
