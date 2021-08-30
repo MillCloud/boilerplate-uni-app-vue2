@@ -1,12 +1,11 @@
-/* eslint-disable global-require */
-const tailwindColors = require('tailwindcss/colors');
+const tailwindDefaultTheme = require('tailwindcss/defaultTheme');
 const antdColors = require('@ant-design/colors');
 
+const tailwindColors = tailwindDefaultTheme.colors;
+
 module.exports = {
-  mode: 'jit',
-  purge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
-  darkMode: 'class',
-  separator: '_',
+  purge: false,
+  separator: '--',
   theme: {
     screens: {},
     extend: {
@@ -76,7 +75,6 @@ module.exports = {
             {},
           ),
         },
-        lightBlue: tailwindColors.lightBlue,
         blue: {
           ...tailwindColors.blue,
           ...antdColors.blue.reduce(
@@ -158,13 +156,12 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/line-clamp'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
   corePlugins: {
     preflight: false,
+    space: false,
+    divideWidth: false,
+    divideColor: false,
+    divideOpacity: false,
+    divideStyle: false,
   },
 };

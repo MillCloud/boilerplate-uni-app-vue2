@@ -21,6 +21,12 @@ module.exports = {
       },
     }),
     require('tailwindcss')(),
+    require('postcss-class-rename')({
+      /* eslint-disable prettier/prettier, no-useless-escape */
+      '\\\\/': '-',
+      '\\\\.': '_',
+      /* eslint-enable prettier/prettier, no-useless-escape */
+    }),
     require('autoprefixer')({
       remove: process.env.UNI_PLATFORM !== 'h5',
     }),
