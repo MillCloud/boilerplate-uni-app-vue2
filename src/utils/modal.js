@@ -1,10 +1,9 @@
-/* eslint-disable import/prefer-default-export */
 export function showModal({
   title = '提示',
   content = '',
   showCancel = false,
   cancelText = '取消',
-  confirmColor = '#d30a0a',
+  confirmColor,
   confirmText = '确定',
   success = () => {},
   fail = () => {},

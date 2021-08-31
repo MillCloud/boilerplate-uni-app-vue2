@@ -2,7 +2,7 @@ export function showToast({
   title = '',
   icon = 'none',
   image = '',
-  mask = true,
+  mask = false,
   duration = 1500,
   success = () => {},
   fail = () => {},
