@@ -1,0 +1,12 @@
+diff --git a/node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js b/node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js
+index e720fbf..db72a1d 100644
+--- a/node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js
++++ b/node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js
+@@ -22,6 +22,7 @@ const manifestJsonObj = require('@dcloudio/uni-cli-shared/lib/manifest').getMani
+ 
+ process.env.UNI_APP_ID = manifestJsonObj.appid || ''
+ process.env.UNI_APP_NAME = manifestJsonObj.name || ''
++process.env.UNI_PLATFORM = process.env.UNI_PLATFORM || 'h5'
+ 
+ // 小程序 vue3 标记
+ if (process.env.UNI_PLATFORM.indexOf('mp-') === 0) {
