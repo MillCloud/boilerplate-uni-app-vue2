@@ -125,12 +125,6 @@ yarn install
 
 ```
 
-然后打开 [./node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js](./node_modules/@dcloudio/vue-cli-plugin-uni/lib/env.js)，在 L25 添加以下内容并保存。
-
-```js
-process.env.UNI_PLATFORM = process.env.UNI_PLATFORM || 'h5'
-```
-
 如果一切正常，此时模板已经可以启动了，请参考 [命令部分](#命令) 正式开始开发。但如果想通过文档了解更多，请先阅读 [主要依赖](#主要依赖) 内链接对应的文档，再继续阅读下去。
 
 ## 使用
