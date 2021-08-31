@@ -140,6 +140,7 @@
     "npm-check-updates": "~11.8.3",
     "postcss-class-rename": "~1.0.1",
     "postcss-comment": "~2.0.0",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "~2.3.2",
     "release-it": "~14.11.5",
     "rimraf": "~3.0.2",
