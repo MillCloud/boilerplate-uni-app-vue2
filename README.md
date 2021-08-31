@@ -1,8 +1,8 @@
-# boilerplate-uni-app
+# boilerplate-uni-app-vue2
 
 ## 简介
 
-`boilerplate-uni-app` 是一个面向中国用户的的简单 `uni-app` (`vue2`) 模板，目标是帮助你快速搭建小程序/移动端应用。当然，也希望能引导你更进一步地了解 `uni-app`/`vue2` 生态。
+`boilerplate-uni-app-vue2` 是一个面向中国用户的的简单 `uni-app` (`vue2`) 模板，目标是帮助你快速搭建小程序/移动端应用。当然，也希望能引导你更进一步地了解 `uni-app`/`vue2` 生态。
 
 **注意：`uni-app` 并不是一个尽善尽美的方案，在很多细节上还有待提高。如果你只是想要开发移动端应用，你可以考虑使用 [boilerplate-vue](https://github.com/MillCloud/boilerplate-vue) 搭配 `cordova`，`native-script` 或 `capacitor`。**
 
@@ -116,10 +116,10 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 
 ```sh
 # clone 项目到本地
-git clone git@github.com:MillCloud/boilerplate-uni-app.git
-# git clone git@gitee.com:MillCloud/boilerplate-uni-app.git
+git clone git@github.com:MillCloud/boilerplate-uni-app-vue2.git
+# git clone git@gitee.com:MillCloud/boilerplate-uni-app-vue2.git
 # 进入项目
-cd boilerplate-uni-app
+cd boilerplate-uni-app-vue2
 # 安装依赖
 yarn install
 

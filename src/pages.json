@@ -17,7 +17,7 @@
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "boilerplate-uni-app",
+    "navigationBarTitleText": "boilerplate-uni-app-vue2",
     "navigationBarBackgroundColor": "#ffffff",
     "backgroundColor": "#ffffff"
   }
