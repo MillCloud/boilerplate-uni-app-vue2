@@ -27,9 +27,13 @@ module.exports = {
       '\\\\.': '_',
       /* eslint-enable prettier/prettier, no-useless-escape */
     }),
-    require('autoprefixer')({
-      remove: process.env.UNI_PLATFORM !== 'h5',
-    }),
+    require('postcss-preset-env')(
+      process.env.UNI_PLATFORM === 'h5'
+        ? {}
+        : {
+            autoprefixer: false,
+          },
+    ),
     require('@dcloudio/vue-cli-plugin-uni/packages/postcss'),
     process.env.NODE_ENV === 'production' &&
       require('@fullhuman/postcss-purgecss')({
