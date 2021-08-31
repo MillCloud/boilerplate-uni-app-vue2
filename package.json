@@ -81,6 +81,7 @@
     "core-js": "~3.16.4",
     "dayjs": "~1.10.6",
     "faker": "~5.5.3",
+    "immer": "~9.0.5",
     "mockjs": "~1.1.0",
     "regenerator-runtime": "~0.13.9",
     "statuses": "~2.0.1",
