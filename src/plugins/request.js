@@ -26,7 +26,7 @@ export const handleShowError = (response) => {
     });
   } else {
     showModal({
-      content: response.message,
+      content: `发生了错误，错误代码：${response.code}，错误信息：${response.message}。`,
     });
   }
 };
