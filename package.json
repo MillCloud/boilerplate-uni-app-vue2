@@ -68,7 +68,6 @@
     "@dcloudio/uni-quickapp-webview": "2.0.0-32320210825001",
     "@dcloudio/uni-stat": "2.0.0-32320210825001",
     "@dcloudio/uni-ui": "~1.4.2",
-    "@iconify/vue2": "~1.0.0",
     "@modyqyw/utils": "~0.7.0",
     "@tailwindcss/typography": "~0.2.0",
     "@vue/composition-api": "~1.1.3",

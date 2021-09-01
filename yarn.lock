@@ -1577,11 +1577,6 @@
   resolved "https://registry.npm.taobao.org/@iarna/toml/download/@iarna/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha1-syNmyJtDxvjO+976x3i5yCjjuow=
 
-"@iconify/vue2@~1.0.0":
-  version "1.0.0"
-  resolved "https://registry.nlark.com/@iconify/vue2/download/@iconify/vue2-1.0.0.tgz#a3488266ff1a8c5cf9b36f785bda3d1ea45ac44d"
-  integrity sha1-o0iCZv8ajFz5s294W9o9HqRaxE0=
-
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
   resolved "https://registry.npm.taobao.org/@intervolga/optimize-cssnano-plugin/download/@intervolga/optimize-cssnano-plugin-1.0.6.tgz#be7c7846128b88f6a9b1d1261a0ad06eb5c0fdf8"
