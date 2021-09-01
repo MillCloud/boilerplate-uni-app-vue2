@@ -1991,10 +1991,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@modyqyw/fabric@~3.3.0":
-  version "3.3.0"
-  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-3.3.0.tgz?cache=0&sync_timestamp=1630473990348&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40modyqyw%2Ffabric%2Fdownload%2F%40modyqyw%2Ffabric-3.3.0.tgz#60f72e8c3cb24936d514a0108f8bc19105f9e7d4"
-  integrity sha1-YPcujDyySTbVFKAQj4vBkQX559Q=
+"@modyqyw/fabric@~3.3.1":
+  version "3.3.1"
+  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-3.3.1.tgz#afc163c52910cc8889e5257ea8e2784e1347978a"
+  integrity sha1-r8FjxSkQzIiJ5SV+qOJ4ThNHl4o=
   dependencies:
     "@babel/core" "~7.15.0"
     "@babel/eslint-parser" "~7.15.0"
