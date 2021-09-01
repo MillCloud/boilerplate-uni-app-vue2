@@ -143,7 +143,7 @@
     "postcss-class-rename": "~1.0.1",
     "postcss-comment": "~2.0.0",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "~2.3.2",
+    "prettier": "~2.2.1",
     "release-it": "~14.11.5",
     "rimraf": "~3.0.2",
     "sass": "~1.38.2",
