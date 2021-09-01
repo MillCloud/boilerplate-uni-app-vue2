@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.expand-click-area {
+.expanded {
   position: relative;
 
   &::after {
@@ -27,4 +27,10 @@
     background-color: transparent;
     border-color: transparent;
   }
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
