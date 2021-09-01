@@ -165,6 +165,51 @@ module.exports = {
           {},
         ),
       },
+      primary: {
+        ...antdColors.blue.reduce(
+          (acc, cur, idx) => ({
+            ...acc,
+            [idx + 1]: cur,
+          }),
+          {},
+        ),
+      },
+      success: {
+        ...antdColors.green.reduce(
+          (acc, cur, idx) => ({
+            ...acc,
+            [idx + 1]: cur,
+          }),
+          {},
+        ),
+      },
+      warning: {
+        ...antdColors.gold.reduce(
+          (acc, cur, idx) => ({
+            ...acc,
+            [idx + 1]: cur,
+          }),
+          {},
+        ),
+      },
+      danger: {
+        ...antdColors.red.reduce(
+          (acc, cur, idx) => ({
+            ...acc,
+            [idx + 1]: cur,
+          }),
+          {},
+        ),
+      },
+      info: {
+        ...antdColors.blue.reduce(
+          (acc, cur, idx) => ({
+            ...acc,
+            [idx + 1]: cur,
+          }),
+          {},
+        ),
+      },
     },
     spacing: {
       px: '1px',
