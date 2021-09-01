@@ -257,6 +257,7 @@ module.exports = {
       none: '0',
       sm: '4px',
       DEFAULT: '8px',
+      default: '8px',
       md: '12px',
       lg: '16px',
       xl: '24px',
@@ -279,12 +280,14 @@ module.exports = {
     borderColor: (theme) => ({
       ...theme('colors'),
       DEFAULT: theme('colors.gray.200', 'currentColor'),
+      default: theme('colors.gray.200', 'currentColor'),
     }),
     borderOpacity: (theme) => theme('opacity'),
     borderRadius: {
       none: '0px',
       sm: '0.125rem',
       DEFAULT: '0.25rem',
+      default: '0.25rem',
       md: '0.375rem',
       lg: '0.5rem',
       xl: '0.75rem',
@@ -294,6 +297,7 @@ module.exports = {
     },
     borderWidth: {
       DEFAULT: '1px',
+      default: '1px',
       0: '0px',
       2: '2px',
       4: '4px',
@@ -302,6 +306,8 @@ module.exports = {
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
       DEFAULT:
+        '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+      default:
         '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
@@ -343,6 +349,10 @@ module.exports = {
         '0 1px 2px rgba(0, 0, 0, 0.1)',
         '0 1px 1px rgba(0, 0, 0, 0.06)',
       ],
+      default: [
+        '0 1px 2px rgba(0, 0, 0, 0.1)',
+        '0 1px 1px rgba(0, 0, 0, 0.06)',
+      ],
       md: ['0 4px 3px rgba(0, 0, 0, 0.07)', '0 2px 2px rgba(0, 0, 0, 0.06)'],
       lg: ['0 10px 8px rgba(0, 0, 0, 0.04)', '0 4px 3px rgba(0, 0, 0, 0.1)'],
       xl: ['0 20px 13px rgba(0, 0, 0, 0.03)', '0 8px 5px rgba(0, 0, 0, 0.08)'],
@@ -353,6 +363,7 @@ module.exports = {
     grayscale: {
       0: '0',
       DEFAULT: '100%',
+      default: '100%',
     },
     hueRotate: {
       '-180': '-180deg',
@@ -370,6 +381,7 @@ module.exports = {
     invert: {
       0: '0',
       DEFAULT: '100%',
+      default: '100%',
     },
     flex: {
       1: '1 1 0%',
@@ -380,10 +392,12 @@ module.exports = {
     flexGrow: {
       0: '0',
       DEFAULT: '1',
+      default: '1',
     },
     flexShrink: {
       0: '0',
       DEFAULT: '1',
+      default: '1',
     },
     fontFamily: {
       sans: [
@@ -756,6 +770,7 @@ module.exports = {
     placeholderOpacity: (theme) => theme('opacity'),
     ringColor: (theme) => ({
       DEFAULT: theme('colors.blue.500', '#3b82f6'),
+      default: theme('colors.blue.500', '#3b82f6'),
       ...theme('colors'),
     }),
     ringOffsetColor: (theme) => theme('colors'),
@@ -768,10 +783,12 @@ module.exports = {
     },
     ringOpacity: (theme) => ({
       DEFAULT: '0.5',
+      default: '0.5',
       ...theme('opacity'),
     }),
     ringWidth: {
       DEFAULT: '3px',
+      default: '3px',
       0: '0px',
       1: '1px',
       2: '2px',
@@ -819,6 +836,7 @@ module.exports = {
     sepia: {
       0: '0',
       DEFAULT: '100%',
+      default: '100%',
     },
     skew: {
       '-12': '-12deg',
@@ -870,6 +888,7 @@ module.exports = {
     },
     transitionDuration: {
       DEFAULT: '150ms',
+      default: '150ms',
       75: '75ms',
       100: '100ms',
       150: '150ms',
@@ -884,6 +903,8 @@ module.exports = {
       all: 'all',
       DEFAULT:
         'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter',
+      default:
+        'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter',
       colors: 'background-color, border-color, color, fill, stroke',
       opacity: 'opacity',
       shadow: 'box-shadow',
@@ -891,6 +912,7 @@ module.exports = {
     },
     transitionTimingFunction: {
       DEFAULT: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      default: 'cubic-bezier(0.4, 0, 0.2, 1)',
       linear: 'linear',
       in: 'cubic-bezier(0.4, 0, 1, 1)',
       out: 'cubic-bezier(0, 0, 0.2, 1)',
