@@ -12,3 +12,19 @@
   flex-direction: row;
   width: 100%;
 }
+
+.expand-click-area {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: -1rem;
+    color: transparent;
+    content: "";
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
