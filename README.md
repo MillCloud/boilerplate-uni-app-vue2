@@ -27,7 +27,7 @@
 - [thor-ui](https://www.thorui.cn/doc/)
 - [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
-- [iconify](https://iconify.design/)
+- [remix-icon](https://remixicon.com/) - uni-app 不支持 SVG，所以不能使用 iconify
 - [dayjs](https://day.js.org)
 - [faker](https://github.com/marak/Faker.js/)
 - [mock.js](http://mockjs.com/)
