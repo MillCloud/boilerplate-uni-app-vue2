@@ -11,5 +11,6 @@ export default {
 @import './styles/preflight';
 @import '~uview-ui';
 @import './styles/tailwind';
+@import './styles/remixicon';
 @import './styles/global';
 </style>
