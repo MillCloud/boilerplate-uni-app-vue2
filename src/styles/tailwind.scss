@@ -1,3 +1,58 @@
+/* stylelint-disable declaration-no-important */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font {
+  font-weight: 400;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.leading {
+  line-height: 1.5;
+}
+
+.border {
+  border-color: #d9d9d9;
+}
+
+.ordinal {
+  font-variant-numeric: ordinal !important;
+}
+
+.slashed-zero {
+  font-variant-numeric: slashed-zero !important;
+}
+
+.lining-nums {
+  font-variant-numeric: lining-nums !important;
+}
+
+.oldstyle-nums {
+  font-variant-numeric: oldstyle-nums !important;
+}
+
+.proportional-nums {
+  font-variant-numeric: proportional-nums !important;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums !important;
+}
+
+.diagonal-fractions {
+  font-variant-numeric: diagonal-fractions !important;
+}
+
+.stacked-fractions {
+  font-variant-numeric: stacked-fractions !important;
+}
+
+.transition {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
