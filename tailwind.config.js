@@ -11,7 +11,7 @@ module.exports = {
   purge: false,
   target: 'relaxed',
   prefix: '',
-  // important: true,
+  important: true,
   separator: '--',
   presets: [],
   theme: {
