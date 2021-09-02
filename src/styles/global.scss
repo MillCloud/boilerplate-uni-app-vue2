@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.expanded {
+.expansion {
   position: relative;
 
   &::after {
@@ -29,10 +29,27 @@
   }
 }
 
-.centered {
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.font {
+  font-weight: 400;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.leading {
+  line-height: 1.5;
+}
+
+.border {
+  border-color: #d9d9d9;
 }
 
 .transition {
