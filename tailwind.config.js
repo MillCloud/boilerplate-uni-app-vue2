@@ -930,6 +930,8 @@ module.exports = {
       ],
     },
     fontSize: {
+      DEFAULT: ['1rem', { lineHeight: '1.5rem' }],
+      default: ['1rem', { lineHeight: '1.5rem' }],
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
       base: ['1rem', { lineHeight: '1.5rem' }],
@@ -945,6 +947,8 @@ module.exports = {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     fontWeight: {
+      DEFAULT: 400,
+      default: 400,
       thin: '100',
       extralight: '200',
       light: '300',
@@ -1148,6 +1152,8 @@ module.exports = {
       widest: '0.1em',
     },
     lineHeight: {
+      DEFAULT: '1.5',
+      default: '1.5',
       none: '1',
       tight: '1.25',
       snug: '1.375',
