@@ -24,9 +24,10 @@
 - [statuses](https://github.com/jshttp/statuses)
 - [@modyqyw/utils](https://github.com/modyqyw/utils)
 - [tailwindcss](https://tailwindcss.com/) - 注意不要使用高级特性，否则不能支持 Android 4.4 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
-- [thor-ui](https://www.thorui.cn/doc/)
-- [uview-ui](https://www.uviewui.com/)
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
+- [cl-uni](https://docs.cool-js.com/)
+- [uview-ui](https://www.uviewui.com/)
+- [thor-ui](https://www.thorui.cn/doc/)
 - [remix-icon](https://remixicon.com/) - uni-app 不支持 SVG，所以不能使用 iconify
 - [dayjs](https://day.js.org)
 - [faker](https://github.com/marak/Faker.js/)
@@ -295,7 +296,7 @@ uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查�
 
 uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [文档](https://uniapp.dcloud.io/collocation/pages)。
 
-默认启用了 [easycom](https://uniapp.dcloud.io/component/README?id=easycom%e7%bb%84%e4%bb%b6%e8%a7%84%e8%8c%83)，支持 `uni-ui`，`uview-ui` 和 `thor-ui`。
+默认启用了 [easycom](https://uniapp.dcloud.io/component/README?id=easycom%e7%bb%84%e4%bb%b6%e8%a7%84%e8%8c%83)，支持 `uni-ui`，`cl-uni`，`uview-ui` 和 `thor-ui`。
 
 ### VSCode 支持
 
