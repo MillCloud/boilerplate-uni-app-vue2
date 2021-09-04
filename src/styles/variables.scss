@@ -51,6 +51,18 @@ $uni-font-size-subtitle: 36rpx;
 $uni-color-paragraph: #3f536e; // 文章段落色
 $uni-font-size-paragraph: 30rpx;
 
+/**
+ * cl-uni theme.scss 内容，可直接修改
+ * 参考 https://docs.cool-js.com/uni/#%E8%BF%90%E8%A1%8C
+ */
+$cl-color-primary: #409eff;
+$cl-color-default: #dcdfe6;
+$cl-color-success: #67c23a;
+$cl-color-warning: #e6a23c;
+$cl-color-error: #dd524d;
+$cl-color-info: #909399;
+$cl-color-disabled: #c0c4cc;
+
 /*
  * uview-ui theme.scss 内容，可直接修改
  * 参考 https://uviewui.com/guide/theme.html
