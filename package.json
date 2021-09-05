@@ -120,6 +120,7 @@
     "@types/statuses": "~2.0.0",
     "@typescript-eslint/eslint-plugin": "~4.30.0",
     "@typescript-eslint/parser": "~4.30.0",
+    "@vue/babel-preset-app": "~4.5.13",
     "@vue/cli-plugin-babel": "~4.5.13",
     "@vue/cli-plugin-eslint": "~4.5.13",
     "@vue/cli-plugin-unit-jest": "~4.5.13",

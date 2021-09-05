@@ -3175,7 +3175,7 @@
     lodash.kebabcase "^4.1.1"
     svg-tags "^1.0.0"
 
-"@vue/babel-preset-app@^4.5.13":
+"@vue/babel-preset-app@^4.5.13", "@vue/babel-preset-app@~4.5.13":
   version "4.5.13"
   resolved "https://registry.nlark.com/@vue/babel-preset-app/download/@vue/babel-preset-app-4.5.13.tgz#cb475321e4c73f7f110dac29a48c2a9cb80afeb6"
   integrity sha1-y0dTIeTHP38RDawppIwqnLgK/rY=
