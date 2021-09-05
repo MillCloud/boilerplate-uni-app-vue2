@@ -43,4 +43,5 @@ module.exports = {
       enableInSFC: false,
     },
   },
+  transpileDependencies: ['@dcloudio/uni-ui'],
 };
