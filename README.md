@@ -23,7 +23,7 @@
 - [axios-retry](https://github.com/softonic/axios-retry)
 - [statuses](https://github.com/jshttp/statuses)
 - [@modyqyw/utils](https://github.com/modyqyw/utils)
-- [tailwindcss](https://v1.tailwindcss.com/) - 支持了大部分 v2 类值、支持大部分类渐进增强，但仍然不要使用高级特性，否则不能支持 Android 5 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
+- [tailwindcss](https://v1.tailwindcss.com/) - 支持了大部分 v2 类值、支持大部分类渐进增强、`0.5` 将会被替换成 `0_5`、`1/2` 将会被替换成 `1-2`，但仍然不要使用高级特性，否则不能支持 Android 5 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui) - 如果想要使用，请先阅读文档并参考文档配置
 - [cl-uni](https://docs.cool-js.com/) - 如果想要使用，请先阅读文档并参考文档配置
 - [uview-ui](https://www.uviewui.com/) - 如果想要使用，请先阅读文档并参考文档配置
