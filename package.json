@@ -142,7 +142,6 @@
     "miniprogram-api-typings": "~3.4.3",
     "npm-check-updates": "~11.8.5",
     "patch-package": "~6.4.7",
-    "postcss-class-rename": "~1.0.1",
     "postcss-comment": "~2.0.0",
     "postcss-preset-env": "~6.7.0",
     "prettier": "~2.2.1",

@@ -13702,11 +13702,6 @@ postcss-calc@^7.0.1:
     postcss-selector-parser "^6.0.2"
     postcss-value-parser "^4.0.2"
 
-postcss-class-rename@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.nlark.com/postcss-class-rename/download/postcss-class-rename-1.0.1.tgz#5ff90cc78f6800b5971bed23d25db929a7b40b02"
-  integrity sha1-X/kMx49oALWXG+0j0l25Kae0CwI=
-
 postcss-color-functional-notation@^2.0.1:
   version "2.0.1"
   resolved "https://registry.nlark.com/postcss-color-functional-notation/download/postcss-color-functional-notation-2.0.1.tgz#5efd37a88fbabeb00a2966d1e53d98ced93f74e0"
