@@ -23,11 +23,11 @@
 - [axios-retry](https://github.com/softonic/axios-retry)
 - [statuses](https://github.com/jshttp/statuses)
 - [@modyqyw/utils](https://github.com/modyqyw/utils)
-- [tailwindcss](https://tailwindcss.com/) - 注意不要使用高级特性，否则不能支持 Android 4.4 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
-- [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui)
-- [cl-uni](https://docs.cool-js.com/)
-- [uview-ui](https://www.uviewui.com/)
-- [thor-ui](https://www.thorui.cn/doc/)
+- [tailwindcss](https://v1.tailwindcss.com/) - 支持了大部分 v2 类值、支持大部分类渐进增强，但仍然不要使用高级特性，否则不能支持 Android 5 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
+- [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui) - 如果想要使用，请先阅读文档并参考文档配置
+- [cl-uni](https://docs.cool-js.com/) - 如果想要使用，请先阅读文档并参考文档配置
+- [uview-ui](https://www.uviewui.com/) - 如果想要使用，请先阅读文档并参考文档配置
+- [thor-ui](https://www.thorui.cn/doc/) - 如果想要使用，请先阅读文档并参考文档配置
 - [remix-icon](https://remixicon.com/) - uni-app 不支持 SVG，所以不能使用 iconify
 - [dayjs](https://day.js.org)
 - [faker](https://github.com/marak/Faker.js/)
@@ -222,9 +222,9 @@ yarn install
 ├── package.json
 ├── postcss.config.js           # postcss 配置文件
 ├── README.md
+├── tailwind.config.js          # tailwindcss 配置文件
 ├── tsconfig.json               # typescript 配置文件
 ├── update-manifest.js          # 配置 release-it 自动更新 manifest.json 的文件
-├── tailwind.config.js          # windicss 配置文件
 ├── vue.config.js               # vue-cli 配置文件
 └── yarn.lock
 ```
