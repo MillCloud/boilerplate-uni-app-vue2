@@ -10,6 +10,6 @@ export default {
 @import './styles/variables';
 @import './styles/preflight';
 @import './styles/tailwind';
-@import './styles/remixicon';
+@import url('https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css');
 @import './styles/global';
 </style>
