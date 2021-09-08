@@ -65,7 +65,14 @@
           "<uses-permission android:name=\"com.huawei.android.launcher.permission.CHANGE_BADGE\"/>"
         ]
       },
-      "orientation": ["portrait-primary"]
+      "ios": {},
+      "orientation": ["portrait-primary"],
+      "splashscreen": {
+        "useOriginalMsgbox": true
+      },
+      "sdkConfigs": {
+        "ad": {}
+      }
     }
   },
   "h5": {},
