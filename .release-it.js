@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 module.exports = {
   git: {
     commitMessage: 'chore(release): v${version}',
@@ -17,3 +18,4 @@ module.exports = {
     'after:bump': 'node update-manifest.js',
   },
 };
+/* eslint-enable no-template-curly-in-string */

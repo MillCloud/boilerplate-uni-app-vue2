@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable global-require */
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-unused-vars, global-require, import/no-extraneous-dependencies */
 const path = require('path');
 
 module.exports = {
@@ -34,14 +32,18 @@ module.exports = {
         content: [`./public/**/*.html`, `./src/**/*.vue`],
         defaultExtractor(content) {
           const contentWithoutStyleBlocks = content.replace(
+            // eslint-disable-next-line regexp/match-any
             /<style[^]+?<\/style>/gi,
             '',
           );
+          // eslint-disable-next-line regexp/optimal-quantifier-concatenation
           return contentWithoutStyleBlocks.match(/[\w/:-]*[\w/-]+/g) || [];
         },
         safelist: [
           /-(leave|enter|appear)(|-(to|from|active))$/,
+          // eslint-disable-next-line regexp/no-empty-alternative
           /^(?!(|.*?:)cursor-move).+-move$/,
+          // eslint-disable-next-line regexp/no-empty-alternative
           /^router-link(|-exact)-active$/,
           /data-v-.*/,
           /^uni-.*/,
@@ -52,3 +54,4 @@ module.exports = {
       }),
   ],
 };
+/* eslint-enable no-unused-vars, global-require, import/no-extraneous-dependencies */

@@ -1833,3 +1833,5 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/typography')],
 };
+
+/* eslint-enable global-require */

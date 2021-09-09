@@ -1,4 +1,4 @@
-/* eslint-disable unicorn/no-abusive-eslint-disable */
+/* eslint-disable eslint-comments/no-unlimited-disable, unicorn/no-abusive-eslint-disable */
 /* eslint-disable */
 const plugins = [];
 
@@ -59,3 +59,4 @@ module.exports = {
   ],
   plugins,
 };
+/* eslint-enable */
