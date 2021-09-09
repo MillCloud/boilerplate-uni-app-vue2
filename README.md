@@ -328,6 +328,8 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [�
 - [uni-app 收集信息和权限问题解决](https://uniapp.dcloud.io/app/android-store)
 - [uni-app Android 平台隐私与政策提示框配置方法](https://ask.dcloud.net.cn/article/36937)
 - [uni-app iOS 平台隐私与政策提示框实现注意问题](https://ask.dcloud.net.cn/article/36955)
+- [uni-app Chrome 调试 Android 应用](https://ask.dcloud.net.cn/article/69)
+- [uni-app Safari 调试 iOS 应用](https://ask.dcloud.net.cn/article/143)
 - [微信小程序项目配置文件](https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html)
 - [支付宝小程序配置文件](https://opendocs.alipay.com/mini/framework/project)
 - [百度小程序配置文件](https://smartprogram.baidu.com/docs/develop/devtools/editor_set/)
