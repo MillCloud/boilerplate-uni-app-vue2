@@ -40,6 +40,7 @@ module.exports = {
           return contentWithoutStyleBlocks.match(/[\w/:-]*[\w/-]+/g) || [];
         },
         safelist: [
+          // eslint-disable-next-line regexp/no-empty-alternative
           /-(leave|enter|appear)(|-(to|from|active))$/,
           // eslint-disable-next-line regexp/no-empty-alternative
           /^(?!(|.*?:)cursor-move).+-move$/,
