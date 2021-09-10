@@ -2,6 +2,7 @@
   "name": "boilerplate-uni-app-vue2",
   "version": "0.0.0",
   "private": true,
+  "description": "A boilerplate for vue-cli and uni-app (vue2).",
   "scripts": {
     "build:app-plus": "cross-env UNI_PLATFORM=app-plus UNI_OUTPUT_DIR=dist/app-plus vue-cli-service uni-build --report --mode production",
     "build:h5": "cross-env UNI_PLATFORM=h5 UNI_OUTPUT_DIR=dist/h5 vue-cli-service uni-build --report --mode production",
@@ -48,6 +49,11 @@
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
     "test:unit": "vue-cli-service test:unit --coverage"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "@ant-design/colors": "~6.0.0",
@@ -151,13 +157,9 @@
     "stylelint": "~13.13.1",
     "stylelint-webpack-plugin": "~2.2.2",
     "typescript": "~4.4.2",
+    "unplugin-vue2-script-setup": "~0.6.1",
     "vue-cli-plugin-i18n": "~2.1.3",
     "vue-template-compiler": "~2.6.14"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   },
   "engines": {
     "node": "^12.22.6 || ^14.17.6 || ^16.6.2",
