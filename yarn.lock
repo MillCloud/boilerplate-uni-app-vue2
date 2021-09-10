@@ -2180,10 +2180,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@modyqyw/fabric@~3.4.0":
-  version "3.4.0"
-  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-3.4.0.tgz#70b7308aeeca8e1ee12e79ab095d528dcf3fab3d"
-  integrity sha1-cLcwiu7Kjh7hLnmrCV1Sjc8/qz0=
+"@modyqyw/fabric@~3.4.2":
+  version "3.4.2"
+  resolved "https://registry.nlark.com/@modyqyw/fabric/download/@modyqyw/fabric-3.4.2.tgz#2aaa1cb491793a85d96b0854cea9cb0f4cd9057a"
+  integrity sha1-KqoctJF5OoXZawhUzqnLD0zZBXo=
   dependencies:
     "@babel/core" "~7.15.5"
     "@babel/eslint-parser" "~7.15.4"
@@ -2867,10 +2867,10 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-16.4.14.tgz?cache=0&sync_timestamp=1630253006705&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.4.14.tgz#e27705ec2278b2355bd59f1952de23a152b9f208"
   integrity sha1-4ncF7CJ4sjVb1Z8ZUt4joVK58gg=
 
-"@types/node@~16.9.0":
-  version "16.9.0"
-  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.9.0.tgz#d9512fe037472dcb58931ce19f837348db828a62"
-  integrity sha1-2VEv4DdHLctYkxzhn4NzSNuCimI=
+"@types/node@~16.9.1":
+  version "16.9.1"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.9.1.tgz?cache=0&sync_timestamp=1631217813487&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.9.1.tgz#0611b37db4246c937feef529ddcc018cf8e35708"
+  integrity sha1-BhGzfbQkbJN/7vUp3cwBjPjjVwg=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -3451,10 +3451,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@vue/composition-api@~1.1.4":
-  version "1.1.4"
-  resolved "https://registry.nlark.com/@vue/composition-api/download/@vue/composition-api-1.1.4.tgz?cache=0&sync_timestamp=1630402258030&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Fcomposition-api%2Fdownload%2F%40vue%2Fcomposition-api-1.1.4.tgz#b4cd566e575350b86c22fa02632e4a356ac2e26e"
-  integrity sha1-tM1WbldTULhsIvoCYy5KNWrC4m4=
+"@vue/composition-api@~1.1.5":
+  version "1.1.5"
+  resolved "https://registry.nlark.com/@vue/composition-api/download/@vue/composition-api-1.1.5.tgz#dec72423d2a41a49ddae87d107a6694b68003c33"
+  integrity sha1-3sckI9KkGkndrofRB6ZpS2gAPDM=
   dependencies:
     tslib "^2.3.0"
 
@@ -15646,10 +15646,10 @@ sass-loader@~10.2.0:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@~1.39.0:
-  version "1.39.0"
-  resolved "https://registry.nlark.com/sass/download/sass-1.39.0.tgz?cache=0&sync_timestamp=1630545006336&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsass%2Fdownload%2Fsass-1.39.0.tgz#6c64695d1c437767c8f1a4e471288e831f81d035"
-  integrity sha1-bGRpXRxDd2fI8aTkcSiOgx+B0DU=
+sass@~1.39.2:
+  version "1.39.2"
+  resolved "https://registry.nlark.com/sass/download/sass-1.39.2.tgz?cache=0&sync_timestamp=1631232791563&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsass%2Fdownload%2Fsass-1.39.2.tgz#1681964378f58d76fc64a6a502619bd5ac99f660"
+  integrity sha1-FoGWQ3j1jXb8ZKalAmGb1ayZ9mA=
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 
