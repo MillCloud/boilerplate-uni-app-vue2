@@ -1,5 +1,6 @@
 const path = require('path');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const UnpluginVue2ScriptSetupPlugin = require('unplugin-vue2-script-setup/webpack');
 
 module.exports = {
   chainWebpack: (config) => {
@@ -9,6 +10,9 @@ module.exports = {
         fix: true,
       },
     ]);
+    config
+      .plugin('unplugin-vue2-script-setup')
+      .use(UnpluginVue2ScriptSetupPlugin({}));
     // use process.env.VUE_APP_PLATFORM directly
     // config
     //   .plugin('env')

@@ -14,6 +14,7 @@
       "./node_modules/mini-types",
       "./node_modules/miniprogram-api-typings"
     ],
+    "types": ["unplugin-vue2-script-setup/types"],
     "allowJs": true,
     "noEmit": true,
     "esModuleInterop": true,
