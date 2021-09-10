@@ -35,7 +35,7 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/i18n/locales/*.json'",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "lint": "yarn run lint:eslint && yarn run lint:markdownlint && yarn run lint:stylelint",
-    "lint:eslint": "vue-cli-service lint --fix",
+    "lint:eslint": "vue-cli-service lint . --fix --ext=.js,.jsx,.ts,.tsx,.vue,.json,.jsonc,.json5 --ignore-path=.gitignore",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
     "lint:stylelint": "stylelint ./**/*.{css,less,scss,vue} --fix --allow-empty-input --ignore-path=.gitignore",
     "postinstall": "patch-package",
