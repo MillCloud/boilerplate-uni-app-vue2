@@ -4,5 +4,7 @@ module.exports = {
     '@/(.*)$': '<rootDir>/src/$1',
     '@@/(.*)$': '<rootDir>/$1',
   },
-  transformIgnorePatterns: ['/node_modules/(?!lodash-es)'],
+  transform: {
+    '.*\\.(vue)$': 'unplugin-vue2-script-setup/jest',
+  },
 };
