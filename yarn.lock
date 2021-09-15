@@ -1324,6 +1324,25 @@
     merge "^1.2.1"
     strip-json-comments "^2.0.1"
 
+"@emmetio/abbreviation@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.nlark.com/@emmetio/abbreviation/download/@emmetio/abbreviation-2.2.2.tgz#746762fd9e7a8c2ea604f580c62e3cfe250e6989"
+  integrity sha1-dGdi/Z56jC6mBPWAxi48/iUOaYk=
+  dependencies:
+    "@emmetio/scanner" "^1.0.0"
+
+"@emmetio/css-abbreviation@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.nlark.com/@emmetio/css-abbreviation/download/@emmetio/css-abbreviation-2.1.4.tgz#90362e8a1122ce3b76f6c3157907d30182f53f54"
+  integrity sha1-kDYuihEizjt29sMVeQfTAYL1P1Q=
+  dependencies:
+    "@emmetio/scanner" "^1.0.0"
+
+"@emmetio/scanner@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/@emmetio/scanner/download/@emmetio/scanner-1.0.0.tgz#065b2af6233fe7474d44823e3deb89724af42b5f"
+  integrity sha1-Blsq9iM/50dNRII+PeuJckr0K18=
+
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://registry.nlark.com/@eslint/eslintrc/download/@eslint/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
@@ -2740,6 +2759,60 @@
     "@typescript-eslint/types" "4.31.1"
     eslint-visitor-keys "^2.0.0"
 
+"@volar/code-gen@^0.27.14":
+  version "0.27.14"
+  resolved "https://registry.nlark.com/@volar/code-gen/download/@volar/code-gen-0.27.14.tgz#fea4bde0c05b81f22e16185e01ecb6fedd842e05"
+  integrity sha1-/qS94MBbgfIuFhheAey2/t2ELgU=
+  dependencies:
+    "@volar/shared" "^0.27.14"
+    "@volar/source-map" "^0.27.14"
+
+"@volar/html2pug@^0.27.13":
+  version "0.27.13"
+  resolved "https://registry.nlark.com/@volar/html2pug/download/@volar/html2pug-0.27.13.tgz#48dfa73ecf1ef1955a02a046d0c88845950fac85"
+  integrity sha1-SN+nPs8e8ZVaAqBG0MiIRZUPrIU=
+  dependencies:
+    domelementtype "^2.2.0"
+    domhandler "^4.2.0"
+    htmlparser2 "^6.1.0"
+    pug "^3.0.2"
+
+"@volar/shared@^0.27.14":
+  version "0.27.14"
+  resolved "https://registry.nlark.com/@volar/shared/download/@volar/shared-0.27.14.tgz#d98f2b0b890e315cc20b4edb5e1ffbe8aad2297a"
+  integrity sha1-2Y8rC4kOMVzCC07bXh/76KrSKXo=
+  dependencies:
+    upath "^2.0.1"
+    vscode-jsonrpc "^8.0.0-next.2"
+    vscode-uri "^3.0.2"
+
+"@volar/source-map@^0.27.14":
+  version "0.27.14"
+  resolved "https://registry.nlark.com/@volar/source-map/download/@volar/source-map-0.27.14.tgz#0b5656f74b5a85887efec97ea112caad9cc52a97"
+  integrity sha1-C1ZW90tahYh+/sl+oRLKrZzFKpc=
+  dependencies:
+    "@volar/shared" "^0.27.14"
+
+"@volar/transforms@^0.27.14":
+  version "0.27.14"
+  resolved "https://registry.nlark.com/@volar/transforms/download/@volar/transforms-0.27.14.tgz#b796ddb844b6f9f5301f5941092f9ed95a2db12d"
+  integrity sha1-t5bduES2+fUwH1lBCS+e2VotsS0=
+  dependencies:
+    "@volar/shared" "^0.27.14"
+    vscode-languageserver "^8.0.0-next.2"
+
+"@vscode/emmet-helper@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.nlark.com/@vscode/emmet-helper/download/@vscode/emmet-helper-2.7.0.tgz#3db485f6a650196ff8bbd38ba1b9e468ec8d22f8"
+  integrity sha1-PbSF9qZQGW/4u9OLobnkaOyNIvg=
+  dependencies:
+    emmet "^2.3.0"
+    jsonc-parser "^2.3.0"
+    vscode-languageserver-textdocument "^1.0.1"
+    vscode-languageserver-types "^3.15.1"
+    vscode-nls "^5.0.0"
+    vscode-uri "^2.1.2"
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
   resolved "https://registry.npm.taobao.org/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.2.1.tgz?cache=0&sync_timestamp=1602851122331&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fbabel-helper-vue-jsx-merge-props%2Fdownload%2F%40vue%2Fbabel-helper-vue-jsx-merge-props-1.2.1.tgz#31624a7a505fb14da1d58023725a4c5f270e6a81"
@@ -3035,6 +3108,14 @@
     estree-walker "^2.0.2"
     source-map "^0.6.1"
 
+"@vue/compiler-dom@^3.2.6":
+  version "3.2.11"
+  resolved "https://registry.nlark.com/@vue/compiler-dom/download/@vue/compiler-dom-3.2.11.tgz#d066f8e1f1812b4e881593819ade0fe6d654c776"
+  integrity sha1-0Gb44fGBK06IFZOBmt4P5tZUx3Y=
+  dependencies:
+    "@vue/compiler-core" "3.2.11"
+    "@vue/shared" "3.2.11"
+
 "@vue/component-compiler-utils@^3.1.0", "@vue/component-compiler-utils@^3.1.2":
   version "3.2.2"
   resolved "https://registry.nlark.com/@vue/component-compiler-utils/download/@vue/component-compiler-utils-3.2.2.tgz#2f7ed5feed82ff7f0284acc11d525ee7eff22460"
@@ -3063,7 +3144,7 @@
   resolved "https://registry.nlark.com/@vue/preload-webpack-plugin/download/@vue/preload-webpack-plugin-1.1.2.tgz#ceb924b4ecb3b9c43871c7a429a02f8423e621ab"
   integrity sha1-zrkktOyzucQ4ccekKaAvhCPmIas=
 
-"@vue/reactivity@3.2.11":
+"@vue/reactivity@3.2.11", "@vue/reactivity@^3.2.6":
   version "3.2.11"
   resolved "https://registry.nlark.com/@vue/reactivity/download/@vue/reactivity-3.2.11.tgz?cache=0&sync_timestamp=1631141978411&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vue%2Freactivity%2Fdownload%2F%40vue%2Freactivity-3.2.11.tgz#ec04d33acaf2b92cca2960535bec81b26cc5772b"
   integrity sha1-7ATTOsryuSzKKWBTW+yBsmzFdys=
@@ -6708,6 +6789,14 @@ emittery@^0.8.1:
   version "0.8.1"
   resolved "https://registry.nlark.com/emittery/download/emittery-0.8.1.tgz?cache=0&sync_timestamp=1631379353966&other_urls=https%3A%2F%2Fregistry.nlark.com%2Femittery%2Fdownload%2Femittery-0.8.1.tgz#bb23cc86d03b30aa75a7f734819dee2e1ba70860"
   integrity sha1-uyPMhtA7MKp1p/c0gZ3uLhunCGA=
+
+emmet@^2.3.0:
+  version "2.3.4"
+  resolved "https://registry.npm.taobao.org/emmet/download/emmet-2.3.4.tgz#5ba0d7a5569a68c7697dfa890c772e4f3179d123"
+  integrity sha1-W6DXpVaaaMdpffqJDHcuTzF50SM=
+  dependencies:
+    "@emmetio/abbreviation" "^2.2.2"
+    "@emmetio/css-abbreviation" "^2.1.4"
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -10933,7 +11022,12 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-jsonc-parser@~3.0.0:
+jsonc-parser@^2.3.0:
+  version "2.3.1"
+  resolved "https://registry.npm.taobao.org/jsonc-parser/download/jsonc-parser-2.3.1.tgz?cache=0&sync_timestamp=1605281904422&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonc-parser%2Fdownload%2Fjsonc-parser-2.3.1.tgz#59549150b133f2efacca48fe9ce1ec0659af2342"
+  integrity sha1-WVSRULEz8u+sykj+nOHsBlmvI0I=
+
+jsonc-parser@^3.0.0, jsonc-parser@~3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/jsonc-parser/download/jsonc-parser-3.0.0.tgz?cache=0&sync_timestamp=1605281904422&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonc-parser%2Fdownload%2Fjsonc-parser-3.0.0.tgz#abdd785701c7e7eaca8a9ec8cf070ca51a745a22"
   integrity sha1-q914VwHH5+rKip7IzwcMpRp0WiI=
@@ -14502,7 +14596,7 @@ pug-walk@^2.0.0:
   resolved "https://registry.npm.taobao.org/pug-walk/download/pug-walk-2.0.0.tgz#417aabc29232bb4499b5b5069a2b2d2a24d5f5fe"
   integrity sha1-QXqrwpIyu0SZtbUGmistKiTV9f4=
 
-pug@^3.0.0:
+pug@^3.0.0, pug@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/pug/download/pug-3.0.2.tgz#f35c7107343454e43bc27ae0ff76c731b78ea535"
   integrity sha1-81xxBzQ0VOQ7wnrg/3bHMbeOpTU=
@@ -15118,6 +15212,11 @@ repeat-string@^1.0.0, repeat-string@^1.6.1:
   version "1.6.1"
   resolved "https://registry.nlark.com/repeat-string/download/repeat-string-1.6.1.tgz#8dcae470e1c88abc2d600fff4a776286da75e637"
   integrity sha1-jcrkcOHIirwtYA//Sndihtp15jc=
+
+request-light@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.nlark.com/request-light/download/request-light-0.5.4.tgz#497a98c6d8ae49536417a5e2d7f383b934f3e38c"
+  integrity sha1-SXqYxtiuSVNkF6Xi1/ODuTTz44w=
 
 request-promise-core@1.1.4:
   version "1.1.4"
@@ -17650,6 +17749,135 @@ void-elements@^3.1.0:
   resolved "https://registry.npm.taobao.org/void-elements/download/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
   integrity sha1-YU9/v42AHwu18GYfWy9XhXUOTwk=
 
+vscode-css-languageservice@^5.1.4:
+  version "5.1.5"
+  resolved "https://registry.nlark.com/vscode-css-languageservice/download/vscode-css-languageservice-5.1.5.tgz?cache=0&sync_timestamp=1631172695827&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvscode-css-languageservice%2Fdownload%2Fvscode-css-languageservice-5.1.5.tgz#400b2f63a4f73c60f5b0afc48c478c1b326b27c6"
+  integrity sha1-QAsvY6T3PGD1sK/EjEeMGzJrJ8Y=
+  dependencies:
+    vscode-languageserver-textdocument "^1.0.1"
+    vscode-languageserver-types "^3.16.0"
+    vscode-nls "^5.0.0"
+    vscode-uri "^3.0.2"
+
+vscode-html-languageservice@^4.0.7:
+  version "4.0.8"
+  resolved "https://registry.nlark.com/vscode-html-languageservice/download/vscode-html-languageservice-4.0.8.tgz?cache=0&sync_timestamp=1631172713888&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvscode-html-languageservice%2Fdownload%2Fvscode-html-languageservice-4.0.8.tgz#9429bacce3244dcfcb3a7172903f33b6f418db3b"
+  integrity sha1-lCm6zOMkTc/LOnFykD8ztvQY2zs=
+  dependencies:
+    vscode-languageserver-textdocument "^1.0.1"
+    vscode-languageserver-types "^3.16.0"
+    vscode-nls "^5.0.0"
+    vscode-uri "^3.0.2"
+
+vscode-json-languageservice@^4.1.7:
+  version "4.1.7"
+  resolved "https://registry.nlark.com/vscode-json-languageservice/download/vscode-json-languageservice-4.1.7.tgz?cache=0&sync_timestamp=1629123156907&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvscode-json-languageservice%2Fdownload%2Fvscode-json-languageservice-4.1.7.tgz#18244d62b115a5818c7526ef4339438b7175dfaa"
+  integrity sha1-GCRNYrEVpYGMdSbvQzlDi3F136o=
+  dependencies:
+    jsonc-parser "^3.0.0"
+    vscode-languageserver-textdocument "^1.0.1"
+    vscode-languageserver-types "^3.16.0"
+    vscode-nls "^5.0.0"
+    vscode-uri "^3.0.2"
+
+vscode-jsonrpc@8.0.0-next.2, vscode-jsonrpc@^8.0.0-next.2:
+  version "8.0.0-next.2"
+  resolved "https://registry.nlark.com/vscode-jsonrpc/download/vscode-jsonrpc-8.0.0-next.2.tgz#285fc294be586e4768acd67e5a42efc738a5cac0"
+  integrity sha1-KF/ClL5YbkdorNZ+WkLvxzilysA=
+
+vscode-languageserver-protocol@3.17.0-next.8:
+  version "3.17.0-next.8"
+  resolved "https://registry.nlark.com/vscode-languageserver-protocol/download/vscode-languageserver-protocol-3.17.0-next.8.tgz#ef2eb7423b474cccd11384239de24488e7fe818c"
+  integrity sha1-7y63QjtHTMzRE4QjneJEiOf+gYw=
+  dependencies:
+    vscode-jsonrpc "8.0.0-next.2"
+    vscode-languageserver-types "3.17.0-next.3"
+
+vscode-languageserver-textdocument@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/vscode-languageserver-textdocument/download/vscode-languageserver-textdocument-1.0.1.tgz#178168e87efad6171b372add1dea34f53e5d330f"
+  integrity sha1-F4Fo6H761hcbNyrdHeo09T5dMw8=
+
+vscode-languageserver-types@3.17.0-next.3:
+  version "3.17.0-next.3"
+  resolved "https://registry.nlark.com/vscode-languageserver-types/download/vscode-languageserver-types-3.17.0-next.3.tgz#e1f4311e08ea3193e81126154b6a342fc1c3dba3"
+  integrity sha1-4fQxHgjqMZPoESYVS2o0L8HD26M=
+
+vscode-languageserver-types@^3.15.1, vscode-languageserver-types@^3.16.0:
+  version "3.16.0"
+  resolved "https://registry.nlark.com/vscode-languageserver-types/download/vscode-languageserver-types-3.16.0.tgz#ecf393fc121ec6974b2da3efb3155644c514e247"
+  integrity sha1-7POT/BIexpdLLaPvsxVWRMUU4kc=
+
+vscode-languageserver@^8.0.0-next.2:
+  version "8.0.0-next.2"
+  resolved "https://registry.nlark.com/vscode-languageserver/download/vscode-languageserver-8.0.0-next.2.tgz#3a3daf79ff10350ea9cec5c73b5302901a955117"
+  integrity sha1-Oj2vef8QNQ6pzsXHO1MCkBqVURc=
+  dependencies:
+    vscode-languageserver-protocol "3.17.0-next.8"
+
+vscode-nls@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/vscode-nls/download/vscode-nls-5.0.0.tgz#99f0da0bd9ea7cda44e565a74c54b1f2bc257840"
+  integrity sha1-mfDaC9nqfNpE5WWnTFSx8rwleEA=
+
+vscode-pug-languageservice@^0.27.14:
+  version "0.27.14"
+  resolved "https://registry.nlark.com/vscode-pug-languageservice/download/vscode-pug-languageservice-0.27.14.tgz#3426f05a178264f22191d5fdd9fea80889ead464"
+  integrity sha1-NCbwWheCZPIhkdX92f6oCInq1GQ=
+  dependencies:
+    "@volar/code-gen" "^0.27.14"
+    "@volar/shared" "^0.27.14"
+    "@volar/source-map" "^0.27.14"
+    "@volar/transforms" "^0.27.14"
+    pug-lexer "^5.0.1"
+    pug-parser "^6.0.0"
+    vscode-languageserver "^8.0.0-next.2"
+
+vscode-typescript-languageservice@^0.27.20:
+  version "0.27.20"
+  resolved "https://registry.nlark.com/vscode-typescript-languageservice/download/vscode-typescript-languageservice-0.27.20.tgz?cache=0&sync_timestamp=1631596180199&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvscode-typescript-languageservice%2Fdownload%2Fvscode-typescript-languageservice-0.27.20.tgz#491838da6394e57d54bc254e1fb77cf7b3e0818f"
+  integrity sha1-SRg42mOU5X1UvCVOH7d897PggY8=
+  dependencies:
+    "@volar/shared" "^0.27.14"
+    semver "^7.3.5"
+    upath "^2.0.1"
+    vscode-languageserver "^8.0.0-next.2"
+    vscode-languageserver-textdocument "^1.0.1"
+
+vscode-uri@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npm.taobao.org/vscode-uri/download/vscode-uri-2.1.2.tgz#c8d40de93eb57af31f3c715dd650e2ca2c096f1c"
+  integrity sha1-yNQN6T61evMfPHFd1lDiyiwJbxw=
+
+vscode-uri@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npm.taobao.org/vscode-uri/download/vscode-uri-3.0.2.tgz#ecfd1d066cb8ef4c3a208decdbab9a8c23d055d0"
+  integrity sha1-7P0dBmy470w6II3s26uajCPQVdA=
+
+vscode-vue-languageservice@^0.27.0:
+  version "0.27.20"
+  resolved "https://registry.nlark.com/vscode-vue-languageservice/download/vscode-vue-languageservice-0.27.20.tgz?cache=0&sync_timestamp=1631596208208&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvscode-vue-languageservice%2Fdownload%2Fvscode-vue-languageservice-0.27.20.tgz#3f57ef93e87af571a3293e9effb1d3ba12e82fc8"
+  integrity sha1-P1fvk+h69XGjKT6e/7HTuhLoL8g=
+  dependencies:
+    "@volar/code-gen" "^0.27.14"
+    "@volar/html2pug" "^0.27.13"
+    "@volar/shared" "^0.27.14"
+    "@volar/source-map" "^0.27.14"
+    "@volar/transforms" "^0.27.14"
+    "@vscode/emmet-helper" "^2.7.0"
+    "@vue/compiler-dom" "^3.2.6"
+    "@vue/reactivity" "^3.2.6"
+    "@vue/shared" "^3.2.6"
+    request-light "^0.5.4"
+    upath "^2.0.1"
+    vscode-css-languageservice "^5.1.4"
+    vscode-html-languageservice "^4.0.7"
+    vscode-json-languageservice "^4.1.7"
+    vscode-languageserver "^8.0.0-next.2"
+    vscode-languageserver-textdocument "^1.0.1"
+    vscode-pug-languageservice "^0.27.14"
+    vscode-typescript-languageservice "^0.27.20"
+
 vue-class-component@~7.2.6:
   version "7.2.6"
   resolved "https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.2.6.tgz#8471e037b8e4762f5a464686e19e5afc708502e4"
@@ -17785,6 +18013,13 @@ vue-template-es2015-compiler@^1.6.0, vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha1-HuO8mhbsv1EYvjNLsV+cRvgvWCU=
+
+vue-tsc@~0.3.0:
+  version "0.3.0"
+  resolved "https://registry.nlark.com/vue-tsc/download/vue-tsc-0.3.0.tgz#3b3872bf4f1d2e4409b57adbd826032e253db406"
+  integrity sha1-Ozhyv08dLkQJtXrb2CYDLiU9tAY=
+  dependencies:
+    vscode-vue-languageservice "^0.27.0"
 
 vue@^2.6.11, vue@^2.6.12, vue@~2.6.14:
   version "2.6.14"
