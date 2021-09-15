@@ -1,6 +1,6 @@
 // 整包更新见 https://ask.dcloud.net.cn/article/34972
 // 热更新见 https://ask.dcloud.net.cn/article/35667
-import request from '@/plugins/request';
+import { request } from './request';
 import { hideLoading, showLoading } from './loading';
 import { showModal } from './modal';
 import manifest from '../manifest.json';

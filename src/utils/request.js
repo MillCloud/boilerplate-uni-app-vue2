@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import ajax from 'uni-ajax';
 import pkg from '@@/package.json';
 import statuses from 'statuses';
@@ -34,7 +33,7 @@ export const handleShowError = (response) => {
 const cache = setupCache({
   maxAge: 15 * 60 * 1000,
   invalidate: async (config, request) => {
-    if (request.invalidate === true) {
+    if (request.clearCacheEntry === true) {
       await config.store.removeItem(config.uuid);
     }
   },
@@ -135,6 +134,4 @@ instance.interceptors.response.use(
   },
 );
 
-Vue.prototype.$request = instance;
-
-export default instance;
+export { instance as request };
