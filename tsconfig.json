@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@@/*": ["./*"]
+      "@/*": ["./src/*"]
     },
     "lib": ["esnext", "scripthost"],
     "typeRoots": [

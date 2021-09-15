@@ -1,10 +1,10 @@
 import ajax from 'uni-ajax';
-import pkg from '@@/package.json';
 import statuses from 'statuses';
 import { constantCase } from '@modyqyw/utils';
 import { setupCache } from 'axios-cache-adapter';
 import * as AxiosLogger from 'axios-logger';
 import axiosRetry from 'axios-retry';
+import pkg from '@/../package.json';
 import manifest from '@/manifest.json';
 import { showModal } from '@/utils/modal';
 import { getToken } from '@/utils/storage';

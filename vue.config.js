@@ -19,9 +19,8 @@ module.exports = {
     //   .use(require.resolve('webpack/lib/EnvironmentPlugin'), [
     //     { UNI_PLATFORM: process.env.UNI_PLATFORM },
     //   ]);
-    config.resolve.alias
-      .set('@@', path.resolve(''))
-      .set('@', path.resolve('src'));
+    // alias
+    config.resolve.alias.set('@', path.resolve('src'));
     config.when(process.env.NODE_ENV === 'production', (config_) => {
       config_.optimization.minimizer('terser').tap((args) => {
         args[0].terserOptions.compress.drop_console = true;
