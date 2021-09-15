@@ -260,7 +260,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](
 
 #### uni-ajax 封装
 
-模板把 `uni-ajax` 封装成 `$request` 并绑定到 `vue` 实例上，另外还添加了拦截器和适配器以实现自动日志、缓存、重试。你可以调整 [封装文件](./src/plugins/request.js) 默认的配置以匹配业务。
+模板把 `uni-ajax` 封装成 `request`，另外还添加了拦截器和适配器以实现自动日志、自动重试。你可以调整 [封装文件](./src/utils/request.js) 默认的配置以匹配业务。
 
 #### proxy
 
