@@ -12,13 +12,14 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
     });
   }
   const { platform } = uni.getSystemInfoSync();
-  plus.runtime.getProperty(plus.runtime.appid, (widgetInfo) => {
+  plus.runtime.getProperty(plus.runtime.appid || '', (widgetInfo) => {
     request
-      .get('/your-url-here', {
+      .get<IResponse, IResponse>('/your-url-here', {
         platform: uni.getSystemInfoSync().platform,
-        app_id: widgetInfo.appid.includes('HBuilder')
-          ? manifest.appid
-          : widgetInfo.appid,
+        app_id:
+          widgetInfo.appid && widgetInfo.appid.includes('HBuilder')
+            ? manifest.appid
+            : widgetInfo.appid,
         version: widgetInfo.version,
       })
       .then((response) => {

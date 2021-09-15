@@ -8,23 +8,10 @@ import { showModal } from '@/utils/modal';
 import { getToken } from '@/utils/storage';
 import i18n from '@/i18n';
 
-interface Response {
-  success: boolean;
-  code: string;
-  message: string;
-  [propName: string]: any;
-}
-
-declare module 'uni-ajax' {
-  export interface AjaxRequestConfig {
-    showError?: boolean;
-  }
-}
-
 export const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
 
 /** @desc 错误统一处理方法 */
-export const handleShowError = (response: Response) => {
+export const handleShowError = (response: IResponse) => {
   if (reLaunchCodes.has(response.code)) {
     showModal({
       content: '请重新登录',
@@ -94,7 +81,7 @@ instance.interceptors.response.use(
         code: 'REQUEST_CANCELLED',
       };
     }
-    const response: Response = {
+    const response: IResponse = {
       success: false,
       message: '',
       code: '',
