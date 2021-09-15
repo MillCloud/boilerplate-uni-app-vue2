@@ -21,7 +21,6 @@
     "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
     "resolveJsonModule": true,
-    "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
     "moduleResolution": "node",
     "strict": true
   },
