@@ -1,20 +1,12 @@
 import ajax from 'uni-ajax';
-import type { AjaxRequestConfig, AjaxResponse } from 'uni-ajax';
-import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import statuses from 'statuses';
 import { constantCase } from '@modyqyw/utils';
 import * as AxiosLogger from 'axios-logger';
 import axiosRetry from 'axios-retry';
 import pkg from '@/../package.json';
-import manifest from '@/manifest.json';
 import { showModal } from '@/utils/modal';
 import { getToken } from '@/utils/storage';
 import i18n from '@/i18n';
-
-interface AdvancedRequestConfig extends AjaxRequestConfig {
-  clearCacheEntry?: boolean;
-  showError?: boolean;
-}
 
 interface Response {
   success: boolean;
@@ -23,8 +15,10 @@ interface Response {
   [propName: string]: any;
 }
 
-interface AdvancedResponse extends AjaxResponse<Response> {
-  config: AdvancedRequestConfig;
+declare module 'uni-ajax' {
+  export interface AjaxRequestConfig {
+    showError?: boolean;
+  }
 }
 
 export const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
@@ -32,9 +26,14 @@ export const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
 /** @desc 错误统一处理方法 */
 export const handleShowError = (response: Response) => {
   if (reLaunchCodes.has(response.code)) {
-    uni.clearStorageSync();
-    uni.reLaunch({
-      url: '/pages/index/index',
+    showModal({
+      content: '请重新登录',
+      success: () => {
+        uni.clearStorageSync();
+        uni.reLaunch({
+          url: '/pages/index',
+        });
+      },
     });
   } else {
     showModal({
@@ -49,7 +48,7 @@ const instance = ajax.create({
   header: {
     Accept: 'application/json',
     'Content-Type': 'application/json; charset=utf-8',
-    'X-Version': `${pkg.name}/${manifest.versionName}`,
+    'X-Version': `${pkg.name}/${pkg.version.replace('-', '')}`,
   },
   sslVerify: false,
 });
@@ -63,33 +62,25 @@ instance.interceptors.request.use((config) => ({
 }));
 if (process.env.NODE_ENV === 'development') {
   instance.interceptors.request.use(
-    (request) =>
-      AxiosLogger.requestLogger(request as AxiosRequestConfig, {
-        prefixText: false,
-      }) as AjaxRequestConfig,
+    // @ts-ignore
+    (request) => AxiosLogger.requestLogger(request, { prefixText: false }),
     (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
   );
 }
-axiosRetry((instance as unknown) as AxiosInstance, {
-  retryDelay: axiosRetry.exponentialDelay,
-});
+// @ts-ignore
+axiosRetry(instance, { retryDelay: axiosRetry.exponentialDelay });
 
 if (process.env.NODE_ENV === 'development') {
   instance.interceptors.response.use(
-    (response: AdvancedResponse) =>
-      (AxiosLogger.responseLogger((response as unknown) as AxiosResponse, {
-        prefixText: false,
-      }) as unknown) as AjaxResponse,
+    // @ts-ignore
+    (response) => AxiosLogger.responseLogger(response, { prefixText: false }),
     (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
   );
 }
 instance.interceptors.response.use(
   (response) => {
     const { data, config } = response;
-    if (
-      !data.success &&
-      (config as AdvancedRequestConfig).showError !== false
-    ) {
+    if (!data.success && config.showError !== false) {
       handleShowError(data);
     }
     return data;
