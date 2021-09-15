@@ -1,6 +1,6 @@
 <template>
   <view
-    class="absolute w-full h-full flex flex-col justify-center items-center"
+    class="absolute flex flex-col items-center justify-center w-full h-full"
   >
     <image class="w-12 h-12" src="/static/logo.png" />
     <text class="text-2xl">
@@ -8,7 +8,7 @@
     </text>
     <!-- #ifdef APP-PLUS -->
     <button
-      class="bg-blue-6 px-8 text-white text-base leading-loose"
+      class="px-8 text-base leading-loose text-white bg-blue-6"
       @click="handleToPermission"
     >
       测试权限
@@ -17,7 +17,7 @@
   </view>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   data() {
     return {

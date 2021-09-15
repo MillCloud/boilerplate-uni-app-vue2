@@ -1,28 +1,36 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "lib": ["esnext", "scripthost"],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./typings",
-      "./src/typings",
-      "./node_modules/@dcloudio/types",
-      "./node_modules/mini-types",
-      "./node_modules/miniprogram-api-typings"
-    ],
-    "types": ["unplugin-vue2-script-setup/types"],
-    "allowJs": true,
-    "noEmit": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "strict": true
+    "noUnusedLocals": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "checkJs": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "types": [
+      "@dcloudio/types",
+      "mini-types",
+      "miniprogram-api-typings",
+      "webpack-env",
+      "unplugin-vue2-script-setup/types"
+    ],
+    "typeRoots": ["./node_modules/@types", "./typings", "./src/typings"],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "lib": ["esnext", "dom", "scripthost"]
   },
   "vueCompilerOptions": {
     "experimentalCompatMode": 2

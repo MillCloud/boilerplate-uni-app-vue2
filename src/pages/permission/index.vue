@@ -6,7 +6,7 @@
       </view>
       <view class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckSystemEnableLocation"
         >
           Android, iOS - 是否开启定位服务
@@ -14,7 +14,7 @@
       </view>
       <view class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleOpenPermissionSetting"
         >
           Android, iOS - 打开应用权限页面
@@ -22,7 +22,7 @@
       </view>
       <view v-if="isIOS" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckIOSLocationPermission"
         >
           iOS - 是否开启位置权限
@@ -30,7 +30,7 @@
       </view>
       <view v-if="isIOS" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckIOSPushPermission"
         >
           iOS - 是否开启推送权限
@@ -38,7 +38,7 @@
       </view>
       <view v-if="isIOS" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckIOSCameraPermission"
         >
           iOS - 是否开启摄像头权限
@@ -46,7 +46,7 @@
       </view>
       <view v-if="isIOS" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckIOSPhotoLibraryPermission"
         >
           iOS - 是否开启相册权限
@@ -54,7 +54,7 @@
       </view>
       <view v-if="isIOS" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckIOSRecordPermission"
         >
           iOS - 是否开启麦克风权限
@@ -62,7 +62,7 @@
       </view>
       <view v-if="isIOS" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckIOSContactPermission"
         >
           iOS - 是否开启通讯录权限
@@ -70,7 +70,7 @@
       </view>
       <view v-if="isIOS" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckIOSCalendarPermission"
         >
           iOS - 是否开启日历权限
@@ -78,7 +78,7 @@
       </view>
       <view v-if="isIOS" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckIOSMemoPermission"
         >
           iOS - 是否开启备忘录权限
@@ -86,7 +86,7 @@
       </view>
       <view v-if="isAndroid" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckAndroidNotExistPermission"
         >
           Android - 是否开启不存在权限
@@ -94,7 +94,7 @@
       </view>
       <view v-if="isAndroid" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckAndroidCameraPermission"
         >
           Android - 是否开启摄像头权限
@@ -102,7 +102,7 @@
       </view>
       <view v-if="isAndroid" class="row">
         <button
-          class="bg-blue-6 px-8 text-white text-base leading-loose"
+          class="px-8 text-base leading-loose text-white bg-blue-6"
           @click="handleCheckAndroidMultiPermissions"
         >
           Android - 是否开启摄像头、位置和麦克风权限
@@ -112,7 +112,7 @@
   </view>
 </template>
 
-<script>
+<script lang="ts">
 import {
   isIOS,
   judgeIOSPermission,

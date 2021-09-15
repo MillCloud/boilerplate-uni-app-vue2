@@ -9,6 +9,7 @@ enableAllPlugins();
 
 Vue.config.productionTip = false;
 
+// @ts-ignore
 App.mpType = 'app';
 
 const app = new Vue({

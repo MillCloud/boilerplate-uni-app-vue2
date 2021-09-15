@@ -1,27 +1,23 @@
 const keyToken = 'token';
 
-/** @return {string} token */
-export function getToken() {
+export function getToken(): string {
   return uni.getStorageSync(keyToken) || '';
 }
 
-/** @param {string} token */
-export function setToken(token) {
+export function setToken(token: string) {
   return uni.setStorageSync(keyToken, token);
 }
 
-export function clear() {
+export function clearStorage() {
   return uni.clearStorageSync();
 }
 
 const keyLanguage = 'language';
 
-/** @return {string} language */
-export function getLanguage() {
+export function getLanguage(): string {
   return uni.getStorageSync(keyLanguage) || process.env.VUE_APP_I18N_LOCALE;
 }
 
-/** @param {string} language */
 export function setLanguage(language = process.env.VUE_APP_I18N_LOCALE) {
   return uni.setStorageSync(keyLanguage, language);
 }

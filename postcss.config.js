@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars, global-require, import/no-extraneous-dependencies */
+/* eslint-disable no-unused-vars, @typescript-eslint/no-unused-vars, global-require, import/no-extraneous-dependencies */
 const path = require('path');
 
 module.exports = {
@@ -55,4 +55,4 @@ module.exports = {
       }),
   ],
 };
-/* eslint-enable no-unused-vars, global-require, import/no-extraneous-dependencies */
+/* eslint-enable no-unused-vars, @typescript-eslint/no-unused-vars, global-require, import/no-extraneous-dependencies */

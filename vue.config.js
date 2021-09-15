@@ -1,7 +1,12 @@
+/**
+ * @typedef { import("@vue/cli-service").ProjectOptions } Options
+ */
+
 const path = require('path');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const UnpluginVue2ScriptSetupPlugin = require('unplugin-vue2-script-setup/webpack');
 
+/** @type {Options} */
 module.exports = {
   chainWebpack: (config) => {
     // stylelint
