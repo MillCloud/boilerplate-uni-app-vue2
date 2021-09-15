@@ -79,7 +79,6 @@
     "@vue/shared": "~3.2.11",
     "@vueuse/core": "~6.3.3",
     "@vueuse/integrations": "~6.3.3",
-    "axios": "~0.21.4",
     "axios-cache-adapter": "~2.7.3",
     "axios-logger": "~2.5.0",
     "axios-mock-adapter": "~1.20.0",

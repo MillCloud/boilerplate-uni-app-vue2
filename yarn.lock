@@ -1995,7 +1995,7 @@
 
 "@next/eslint-plugin-next@11.1.2":
   version "11.1.2"
-  resolved "https://registry.nlark.com/@next/eslint-plugin-next/download/@next/eslint-plugin-next-11.1.2.tgz#f26cf90bcb6cd2e4645e2ba253bbc9aaaa43a170"
+  resolved "https://registry.nlark.com/@next/eslint-plugin-next/download/@next/eslint-plugin-next-11.1.2.tgz?cache=0&sync_timestamp=1631694041753&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40next%2Feslint-plugin-next%2Fdownload%2F%40next%2Feslint-plugin-next-11.1.2.tgz#f26cf90bcb6cd2e4645e2ba253bbc9aaaa43a170"
   integrity sha1-8mz5C8ts0uRkXiuiU7vJqqpDoXA=
   dependencies:
     glob "7.1.7"
@@ -17269,7 +17269,7 @@ typedarray@^0.0.6:
 
 typescript@~4.4.3:
   version "4.4.3"
-  resolved "https://registry.nlark.com/typescript/download/typescript-4.4.3.tgz?cache=0&sync_timestamp=1631604120890&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
+  resolved "https://registry.nlark.com/typescript/download/typescript-4.4.3.tgz?cache=0&sync_timestamp=1631690110768&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
   integrity sha1-vcVAfKorEJ79T4L+EwZW+XeikyQ=
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
