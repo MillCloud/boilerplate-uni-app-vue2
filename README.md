@@ -9,26 +9,26 @@
 ### 主要依赖
 
 - [vue2](https://cn.vuejs.org)
-- [vue-composition-api](https://github.com/vuejs/composition-api/blob/master/README.zh-CN.md)
-- [uni-app](https://uniapp.dcloud.io/)
-- [uni-composition-api](https://github.com/TuiMao233/uni-composition-api)
 - [vue-cli](https://cli.vuejs.org/zh/)
+- [unplugin-vue2-script-setup](https://github.com/antfu/unplugin-vue2-script-setup)
+- [uni-app](https://uniapp.dcloud.io/)
 - [vuex](https://vuex.vuejs.org/zh/)
+- [@vue/composition-api](https://github.com/vuejs/composition-api/blob/main/README.zh-CN.md)
+- [uni-composition-api](https://github.com/TuiMao233/uni-composition-api)
 - [vue-use](https://vueuse.org/)
 - [vue-i18n](https://kazupon.github.io/vue-i18n/)
+- [typescript](https://www.typescriptlang.org/zh/)
 - [uni-ajax](https://uniajax.ponjs.com/)
-- [axios-cache-adapter](https://github.com/RasCarlito/axios-cache-adapter)
-- [axios-logger](https://github.com/hg-pyun/axios-logger)
-- [axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter)
-- [axios-retry](https://github.com/softonic/axios-retry)
+- [vue-query](https://vue-query.vercel.app/)
 - [statuses](https://github.com/jshttp/statuses)
-- [@modyqyw/utils](https://github.com/modyqyw/utils)
 - [tailwindcss](https://v1.tailwindcss.com/) - 支持了大部分 v2 类值、支持大部分类渐进增强、`0.5` 将会被替换成 `0_5`、`1/2` 将会被替换成 `1-2`，但仍然不要使用高级特性，否则不能支持 Android 5 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui) - 如果想要使用，请先阅读文档并参考文档配置
 - [cl-uni](https://docs.cool-js.com/) - 如果想要使用，请先阅读文档并参考文档配置
 - [uview-ui](https://www.uviewui.com/) - 如果想要使用，请先阅读文档并参考文档配置
 - [thor-ui](https://www.thorui.cn/doc/) - 如果想要使用，请先阅读文档并参考文档配置
 - [remix-icon](https://remixicon.com/) - uni-app 不支持 SVG，所以不能使用 iconify
+- [@modyqyw/utils](https://github.com/modyqyw/utils)
+- [immer](https://immerjs.github.io/immer/)
 - [dayjs](https://day.js.org)
 - [faker](https://github.com/marak/Faker.js/)
 - [mock.js](http://mockjs.com/)
@@ -101,9 +101,9 @@ git config --global init.defaultBranch main
 # 设置 nvm 镜像
 nvm node_mirror https://npm.taobao.org/mirrors/node/
 # 安装 node@14
-nvm install 14.17.5
+nvm install 14.17.6
 # 使用 node@14
-nvm use 14.17.5
+nvm use 14.17.6
 # 安装 yarn
 npm i -g yarn --registry=https://registry.npm.taobao.org
 
@@ -196,11 +196,11 @@ yarn install
 │   ├── store                   # 状态管理目录
 │   ├── styles                  # 全局样式目录
 │   ├── utils                   # 工具方法目录
+│   ├── androidPrivacy.json     # Android 隐私政策配置
 │   ├── App.vue
 │   ├── main.js
 │   ├── manifest.json           # 信息配置文件
 │   └── pages.json              # 页面配置文件
-├── tests                       # 测试内容文件夹
 ├── unpackage                   # 打包时使用的资产文件夹
 ├── .browserslistrc             # 浏览器支持列表文件
 ├── .commitlintrc.js            # commitlint 配置文件
