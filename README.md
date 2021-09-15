@@ -185,7 +185,6 @@ yarn install
 ├── .husky                      # husky 配置目录
 ├── public
 ├── src
-│   ├── apis                    # 接口目录
 │   ├── components              # 全局组件目录
 │   ├── composables             # 组合式 API 目录
 │   ├── i18n                    # 国际化目录
