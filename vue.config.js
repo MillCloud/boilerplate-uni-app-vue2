@@ -17,9 +17,11 @@ module.exports = {
       },
     ]);
     // unplugin-vue2-script-setup
-    config
-      .plugin('unplugin-vue2-script-setup')
-      .use(UnpluginVue2ScriptSetupPlugin({}));
+    config.plugin('unplugin-vue2-script-setup').use(
+      UnpluginVue2ScriptSetupPlugin({
+        refTransform: true,
+      }),
+    );
     // use process.env.VUE_APP_PLATFORM directly
     // config
     //   .plugin('env')

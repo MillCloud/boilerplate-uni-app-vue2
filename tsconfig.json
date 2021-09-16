@@ -24,7 +24,8 @@
       "mini-types",
       "miniprogram-api-typings",
       "webpack-env",
-      "unplugin-vue2-script-setup/types"
+      "unplugin-vue2-script-setup/types",
+      "unplugin-vue2-script-setup/ref-macros"
     ],
     "typeRoots": ["./node_modules/@types", "./typings", "./src/typings"],
     "paths": {
