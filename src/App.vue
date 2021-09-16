@@ -1,10 +1,22 @@
 <script lang="ts">
-export default {
+import { defineComponent } from '@vue/composition-api';
+
+export default defineComponent({
   onLaunch() {},
   onShow() {},
   onHide() {},
-};
+});
 </script>
+
+<!-- <script setup lang="ts">
+import { onLaunch, onShow, onHide } from 'uni-composition-api';
+
+onLaunch(() => {});
+
+onShow(() => {});
+
+onHide(() => {});
+</script> -->
 
 <style lang="scss">
 @import './styles/variables';
