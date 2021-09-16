@@ -45,11 +45,11 @@
         "minSdkVersion": 21,
         "targetSdkVersion": 23,
         "permissionExternalStorage": {
-          "request": "always",
+          "request": "once",
           "prompt": "应用保存运行状态等信息，需要获取读写手机存储权限，系统可能提示为访问设备上的照片、媒体内容和文件，请允许。"
         },
         "permissionPhoneState": {
-          "request": "always",
+          "request": "once",
           "prompt": "为保证正常安全使用，需要获取设备识别码使用权限，系统可能提示为获取手机号码，请允许。"
         },
         "permissions": [
