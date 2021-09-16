@@ -12,4 +12,7 @@ if (manifest['quickapp-webview']) {
   manifest['quickapp-webview'].versionCode = manifest.versionCode;
 }
 
-fs.writeFileSync('./src/manifest.json', `${JSON.stringify(manifest)}\n`);
+fs.writeFileSync(
+  './src/manifest.json',
+  `${JSON.stringify(manifest, null, 2)}\n`,
+);
