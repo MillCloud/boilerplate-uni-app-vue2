@@ -187,6 +187,7 @@ yarn install
 ├── src
 │   ├── components              # 全局组件目录
 │   ├── composables             # 组合式 API 目录
+│   ├── data                    # 固定数据目录
 │   ├── i18n                    # 国际化目录
 │   ├── mocks                   # 接口模拟目录
 │   ├── pages                   # 页面视图目录
@@ -197,9 +198,13 @@ yarn install
 │   ├── utils                   # 工具方法目录
 │   ├── androidPrivacy.json     # Android 隐私政策配置
 │   ├── App.vue
-│   ├── main.js
+│   ├── global.d.ts
+│   ├── main.ts
 │   ├── manifest.json           # 信息配置文件
-│   └── pages.json              # 页面配置文件
+│   ├── pages.json              # 页面配置文件
+│   ├── shims-tsx.d.ts
+│   ├── shims-uni-ajax.d.ts
+│   └── shims-vue.d.ts
 ├── unpackage                   # 打包时使用的资产文件夹
 ├── .browserslistrc             # 浏览器支持列表文件
 ├── .commitlintrc.js            # commitlint 配置文件
