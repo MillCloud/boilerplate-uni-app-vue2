@@ -35,7 +35,9 @@ const instance = ajax.create({
   header: {
     Accept: 'application/json',
     'Content-Type': 'application/json; charset=utf-8',
-    'X-Version': `${pkg.name}/${pkg.version.replace('-', '')}`,
+    'X-Version': `${pkg.name}-${process.env.VUE_APP_PLATFORM}-${
+      process.env.NODE_ENV
+    }/${pkg.version.replace('-', '')}`,
   },
   sslVerify: false,
 });
