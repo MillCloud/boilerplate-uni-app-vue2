@@ -1,11 +1,29 @@
+// 小程序更新见 https://uniapp.dcloud.io/api/other/update?id=getupdatemanager
 // 整包更新见 https://ask.dcloud.net.cn/article/34972
 // 热更新见 https://ask.dcloud.net.cn/article/35667
 import { request } from './request';
+import manifest from '@/manifest.json';
 import { hideLoading, showLoading } from './loading';
 import { showModal } from './modal';
-import manifest from '../manifest.json';
 
 export const getUpdate = ({ hasLoading = false } = {}) => {
+  /* #ifdef MP */
+  const updater = uni.getUpdateManager();
+  updater.onCheckForUpdate((result) => {
+    if (!result.hasUpdate) {
+      return;
+    }
+    updater.onUpdateReady(() => {
+      showModal({
+        content: '新版本应用已经准备完毕，请重启应用。',
+        complete: () => {
+          updater.applyUpdate();
+        },
+      });
+    });
+  });
+  /* #endif */
+  /* #ifdef APP-PLUS */
   if (hasLoading) {
     showLoading({
       title: '更新中，请稍候',
@@ -14,13 +32,17 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
   const { platform } = uni.getSystemInfoSync();
   plus.runtime.getProperty(plus.runtime.appid || '', (widgetInfo) => {
     request
-      .get<IResponse, IResponse>('/your-url-here', {
-        platform: uni.getSystemInfoSync().platform,
-        app_id:
-          widgetInfo.appid && widgetInfo.appid.includes('HBuilder')
-            ? manifest.appid
-            : widgetInfo.appid,
-        version: widgetInfo.version,
+      .get<IResponse, IResponse>({
+        url: '/version-update',
+        data: {
+          platform,
+          app_id:
+            widgetInfo.appid && widgetInfo.appid.includes('HBuilder')
+              ? manifest.appid
+              : widgetInfo.appid,
+          version: widgetInfo.version,
+        },
+        showError: false,
       })
       .then((response) => {
         if (response.success) {
@@ -108,7 +130,7 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
           // 请求失败
           hideLoading();
           showModal({
-            content: `无法检查更新，相关信息：${response.message}，是否重试？`,
+            content: `无法检查更新，错误代码：${response.code}，错误信息：${response.message}，是否重试？`,
             showCancel: true,
             success: (result) => {
               if (result.confirm) {
@@ -119,4 +141,5 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
         }
       });
   });
+  /* #endif */
 };
