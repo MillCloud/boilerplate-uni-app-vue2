@@ -11,5 +11,5 @@ export default {
 @import './styles/preflight';
 @import './styles/tailwind';
 @import './styles/global';
-@import './styles/remixicon';
+@import './styles/remixicon.css';
 </style>
