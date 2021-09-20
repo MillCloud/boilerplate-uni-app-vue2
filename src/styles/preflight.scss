@@ -90,7 +90,7 @@ scroll-view {
 }
 
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 input {
