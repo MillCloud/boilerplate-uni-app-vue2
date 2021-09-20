@@ -32,8 +32,8 @@
 - [dayjs](https://day.js.org)
 - [faker](https://github.com/marak/Faker.js/)
 - [mock.js](http://mockjs.com/)
-- [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344)
-- [purgecss](https://purgecss.com)
+- [sass](https://sass-lang.com/) - 使用了 [dart-sass](https://sass-lang.com/dart-sass)，可能会导致图标问题，见 [vue-element-admin issue#3344](https://github.com/PanJiaChen/vue-element-admin/issues/3344) 和 [sass-loader issue#695](https://github.com/webpack-contrib/sass-loader/issues/695)
+- [purgecss](https://purgecss.com) - 注意目前使用的是没有修复 [issue#392](https://github.com/FullHuman/purgecss/issues/392) 的版本，写类的时候需要注意
 - [@modyqyw/fabric](https://github.com/MillCloud/fabric)
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 
