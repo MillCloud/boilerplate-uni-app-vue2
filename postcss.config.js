@@ -47,6 +47,7 @@ module.exports = {
           // eslint-disable-next-line regexp/no-empty-alternative
           /^router-link(|-exact)-active$/,
           /data-v-.*/,
+          /^ri-.*/,
           /^uni-.*/,
           /^cl-.*/,
           /^u-.*/,
