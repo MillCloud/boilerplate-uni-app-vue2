@@ -8,7 +8,9 @@ module.exports = {
     defaultLineHeights: true,
     standardFontWeights: true,
   },
-  purge: false,
+  purge: {
+    content: [`./public/**/*.html`, `./src/**/*.vue`],
+  },
   target: 'relaxed',
   prefix: '',
   important: true,
