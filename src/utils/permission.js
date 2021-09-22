@@ -204,13 +204,14 @@ function judgeIOSLocationPermission() {
   // 3 kCLAuthorizationStatusAuthorized
   // 4 kCLAuthorizationStatusAuthorizedAlways
   // 5 kCLAuthorizationStatusAuthorizedWhenInUse
-  const result = clLocationManger.authorizationStatus() !== 2;
+  const status = clLocationManger.authorizationStatus();
+  const result = [0, 3, 4, 5].includes(status);
   plus.ios.deleteObject(clLocationManger);
   return result;
 }
 
 /**
- * @desc 判断 iOS 是否开启推送权限，疑似不支持 ios 10.0+
+ * @desc 判断 iOS 是否开启推送权限
  * @link UIApplication https://developer.apple.com/documentation/uikit/uiapplication?language=objc
  * @link sharedApplication https://developer.apple.com/documentation/uikit/uiapplication/1622975-sharedapplication?language=objc
  * @link currentUserNotificationSettings https://developer.apple.com/documentation/uikit/uiapplication/1623092-currentusernotificationsettings?language=objc
@@ -229,17 +230,17 @@ function judgeIOSPushPermission() {
     // 1 UIUserNotificationTypeBadge
     // 2 UIUserNotificationTypeSound
     // 3 UIUserNotificationTypeAlert
-    if (settings.plusGetAttribute('types') !== 0) {
-      result = true;
-    }
+    const status = settings.plusGetAttribute('types');
+    result = status !== 0;
     plus.ios.deleteObject(settings);
-  } else if (application.enabledRemoteNotificationTypes() !== 0) {
+  } else {
     // 0 UIRemoteNotificationTypeNone
     // 1 UIRemoteNotificationTypeBadge
     // 2 UIRemoteNotificationTypeSound
     // 3 UIRemoteNotificationTypeAlert
     // 4 UIRemoteNotificationTypeNewsstandContentAvailability
-    result = true;
+    const status = application.enabledRemoteNotificationTypes();
+    result = status !== 0;
   }
   plus.ios.deleteObject(application);
   plus.ios.deleteObject(uiApplication);
@@ -259,7 +260,8 @@ function judgeIOSCameraPermission() {
   // 1 AVAuthorizationStatusRestricted
   // 2 AVAuthorizationStatusDenied
   // 3 AVAuthorizationStatusAuthorized
-  const result = avCaptureDevice.authorizationStatusForMediaType('vide') === 3;
+  const status = avCaptureDevice.authorizationStatusForMediaType('vide');
+  const result = [0, 3].includes(status);
   plus.ios.deleteObject(avCaptureDevice);
   return result;
 }
@@ -277,7 +279,8 @@ function judgeIOSPhotoLibraryPermission() {
   // 2 PHAuthorizationStatusDenied
   // 3 PHAuthorizationStatusAuthorized
   // 4 PHAuthorizationStatusLimited
-  const result = phPhotoLibrary.authorizationStatus() === 3;
+  const status = phPhotoLibrary.authorizationStatus();
+  const result = [0, 3, 4].includes(status);
   plus.ios.deleteObject(phPhotoLibrary);
   return result;
 }
@@ -291,17 +294,14 @@ function judgeIOSPhotoLibraryPermission() {
  * @link AVAudioSessionRecordPermission Enum https://docs.microsoft.com/en-us/dotnet/api/avfoundation.avaudiosessionrecordpermission?view=xamarin-ios-sdk-12
  */
 function judgeIOSRecordPermission() {
-  let result = false;
   const avAudioSession = plus.ios.import('AVAudioSession');
   const instance = avAudioSession.sharedInstance();
-  const permissionStatus = instance.recordPermission();
+  const status = instance.recordPermission();
   // 没有在 iOS 官方文档找到对应状态码，使用的是微软对应的状态码
   // 1684369017 Denied
   // 1735552628 Granted
   // 1970168948 Undetermined
-  if (permissionStatus !== 1684369017 && permissionStatus !== 1970168948) {
-    result = true;
-  }
+  const result = status !== 1684369017;
   // 文件本身没有释放对象
   // plus.ios.deleteObject(instance);
   plus.ios.deleteObject(avAudioSession);
@@ -321,7 +321,8 @@ function judgeIOSContactPermission() {
   // 1 CNAuthorizationStatusRestricted
   // 2 CNAuthorizationStatusDenied
   // 3 CNAuthorizationStatusAuthorized
-  const result = cnContactStore.authorizationStatusForEntityType(0) === 3;
+  const status = cnContactStore.authorizationStatusForEntityType(0);
+  const result = [0, 3].includes(status);
   plus.ios.deleteObject(cnContactStore);
   return result;
 }
@@ -339,7 +340,8 @@ function judgeIOSCalendarPermission() {
   // 1 EKAuthorizationStatusRestricted
   // 2 EKAuthorizationStatusDenied
   // 3 EKAuthorizationStatusAuthorized
-  const result = ekEventStore.authorizationStatusForEntityType(0) === 3;
+  const status = ekEventStore.authorizationStatusForEntityType(0);
+  const result = [0, 3].includes(status);
   plus.ios.deleteObject(ekEventStore);
   return result;
 }
@@ -357,7 +359,8 @@ function judgeIOSMemoPermission() {
   // 1 EKAuthorizationStatusRestricted
   // 2 EKAuthorizationStatusDenied
   // 3 EKAuthorizationStatusAuthorized
-  const result = ekEventStore.authorizationStatusForEntityType(1) === 3;
+  const status = ekEventStore.authorizationStatusForEntityType(1);
+  const result = [0, 3].includes(status);
   plus.ios.deleteObject(ekEventStore);
   return result;
 }
