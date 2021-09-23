@@ -7,7 +7,7 @@
     "build:app-plus": "vue-tsc && cross-env UNI_PLATFORM=app-plus UNI_OUTPUT_DIR=dist/app-plus vue-cli-service uni-build --report --mode production",
     "build:h5": "vue-tsc && cross-env UNI_PLATFORM=h5 UNI_OUTPUT_DIR=dist/h5 vue-cli-service uni-build --report --mode production",
     "build:mp-360": "vue-tsc && cross-env UNI_PLATFORM=mp-360 UNI_OUTPUT_DIR=dist/mp-360 vue-cli-service uni-build --report --mode production",
-    "build:mp-alipay": "vue-tsc && cross-env UNI_PLATFORM=mp-alipay UNI_OUTPUT_DIR=dist/mp-alipay vue-cli-service uni-build --report --mode production",
+    "build:mp-alipay": "vue-tsc && cross-env UNI_PLATFORM=mp-alipay UNI_OUTPUT_DIR=dist/mp-alipay vue-cli-service uni-build --report --mode production && node patch-mp-alipay.js",
     "build:mp-baidu": "vue-tsc && cross-env UNI_PLATFORM=mp-baidu UNI_OUTPUT_DIR=dist/mp-baidu vue-cli-service uni-build --report --mode production",
     "build:mp-kuaishou": "vue-tsc && cross-env UNI_PLATFORM=mp-kuaishou UNI_OUTPUT_DIR=dist/mp-kuaishou vue-cli-service uni-build --report --mode production",
     "build:mp-qq": "vue-tsc && cross-env UNI_PLATFORM=mp-qq UNI_OUTPUT_DIR=dist/mp-qq vue-cli-service uni-build --report --mode production",
@@ -48,7 +48,8 @@
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
-    "test:unit": "vue-cli-service test:unit --coverage"
+    "test:unit": "vue-cli-service test:unit --coverage",
+    "watch:mp-alipay": "nodemon --watch dist/mp-alipay/pages --ext axml patch-mp-alipay.js"
   },
   "config": {
     "commitizen": {
