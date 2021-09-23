@@ -144,6 +144,7 @@
     "markdownlint-cli": "~0.28.1",
     "mini-types": "~0.1.7",
     "miniprogram-api-typings": "~3.4.3",
+    "nodemon": "~2.0.12",
     "npm-check-updates": "~11.8.5",
     "patch-package": "~6.4.7",
     "postcss-comment": "~2.0.0",
