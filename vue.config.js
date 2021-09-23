@@ -63,5 +63,13 @@ module.exports = {
       enableInSFC: false,
     },
   },
-  transpileDependencies: ['@dcloudio/uni-ui'],
+  transpileDependencies: [
+    '@dcloudio/uni-ui',
+    'axios-cache-adapter',
+    'axios-logger',
+    'axios-mock-adapter',
+    'axios-retry',
+    'chalk',
+    'uni-ajax',
+  ],
 };
