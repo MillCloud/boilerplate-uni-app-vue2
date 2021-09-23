@@ -113,7 +113,7 @@ npm i -g yarn --registry=https://registry.npm.taobao.org
 
 另外，你还需要安装最新的 [HBuilderX 正式版](https://www.dcloud.io/hbuilderx.html)，用于申请一个 appid（DCloud 应用标识，也可以在 [网页](https://dev.dcloud.net.cn/) 上申请），以及把项目运行到真机或模拟器上。
 
-### 安装
+### 安装和运行
 
 ```sh
 # clone 项目到本地
@@ -149,7 +149,8 @@ yarn install
 |命令|含义|
 |-|-|
 |`yarn run dev:mp-360`|`development` 模式启动 360 小程序|
-|`yarn run dev:mp-alipay`|`development` 模式启动支付宝小程序|
+|`yarn run dev:mp-alipay`|`development` 模式启动支付宝小程序，需要和 `yarn run watch:mp-alipay` 一起使用|
+|`yarn run watch:mp-alipay`|为生成的支付宝小程序 axml 文件添加 `<page-meta>` 指定根元素字体大小，需要和 `yarn run dev:mp-alipay` 一起使用|
 |`yarn run dev:mp-baidu`|`development` 模式启动百度小程序|
 |`yarn run dev:mp-kuaishou`|`development` 模式启动快手小程序|
 |`yarn run dev:mp-qq`|`development` 模式启动 QQ 小程序|
@@ -168,12 +169,10 @@ yarn install
 |`yarn run run check`|检查项目依赖版本|
 |`yarn run commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
 |`yarn run i18n:report`|获取国际化信息|
-|`yarn run lint`|检查 json 文件，脚本文件，样式文件和目录|
-|`yarn run lint:json`|格式化 json 文件|
-|`yarn run lint:markdown`|格式化 markdown 文件|
-|`yarn run lint:script`|检查并自动修复脚本文件|
-|`yarn run lint:style`|检查并自动修复样式文件|
-|`yarn run lint:ls`|检查目录|
+|`yarn run lint`|检查脚本文件，markdown 文件和样式文件|
+|`yarn run lint:eslint`|检查并自动修复脚本文件|
+|`yarn run lint:markdownlint`|格式化 markdown 文件|
+|`yarn run lint:stylelint`|检查并自动修复样式文件|
 |`yarn run info`|列出环境信息|
 
 注意；如果要开发移动应用，必须用 `HBuilderX` 运行到模拟器或真机。
