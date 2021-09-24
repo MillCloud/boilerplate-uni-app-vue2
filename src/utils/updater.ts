@@ -16,7 +16,7 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
     updater.onUpdateReady(() => {
       showModal({
         content: '新版本应用已经准备完毕，请重启应用。',
-        complete: () => {
+        success: () => {
           updater.applyUpdate();
         },
       });
@@ -65,7 +65,7 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
                         }
                         showModal({
                           content: '新版本应用已经准备完毕，请重启应用。',
-                          complete: () => {
+                          success: () => {
                             plus.runtime.restart();
                           },
                         });
@@ -101,7 +101,7 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
                         }
                         showModal({
                           content: '新版本应用已经准备完毕，请重启应用。',
-                          complete: () => {
+                          success: () => {
                             plus.runtime.restart();
                           },
                         });
