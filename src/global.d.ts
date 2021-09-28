@@ -6,3 +6,5 @@ declare global {
     [propName: string]: any;
   }
 }
+
+export {};
