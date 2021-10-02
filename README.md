@@ -221,7 +221,6 @@ yarn install
 ├── .release-it.js              # release-it 配置文件
 ├── .stylelintrc.js             # stylelint 配置文件
 ├── babel.config.js             # babel 配置文件
-├── jest.config.js              # jest 配置文件
 ├── package.json
 ├── postcss.config.js           # postcss 配置文件
 ├── README.md
