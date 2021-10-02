@@ -1,8 +1,4 @@
 /* stylelint-disable declaration-no-important */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .font {
   font-weight: 400;
 }
@@ -52,7 +48,12 @@
   font-variant-numeric: stacked-fractions !important;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .transition {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  transition-property: all;
 }
