@@ -509,13 +509,9 @@ export function checkSystemEnableLocation() {
     return result;
   }
   const Context = plus.android.importClass('android.content.Context');
-  const LocationManager = plus.android.importClass(
-    'android.location.LocationManager',
-  );
+  const LocationManager = plus.android.importClass('android.location.LocationManager');
   const mainActivity = plus.android.runtimeMainActivity();
-  const locationService = mainActivity.getSystemService(
-    Context.LOCATION_SERVICE,
-  );
+  const locationService = mainActivity.getSystemService(Context.LOCATION_SERVICE);
   result = locationService.isProviderEnabled(LocationManager.GPS_PROVIDER);
   return result;
 }

@@ -201,36 +201,34 @@ export default {
       });
     },
     handleCheckAndroidNotExistPermission() {
-      requestAndroidPermission('android.permission.NOT_EXIST').then(
-        (result) => {
-          if (result.message) {
-            uni.showModal({
-              title: '提示',
-              content: `无法确认不存在权限，${result.code} ${result.message}`,
-              showCancel: false,
-            });
-          } else {
-            let text = '不存在权限状态不明';
-            switch (result) {
-              case 1:
-                text = '不存在权限已开启';
-                break;
-              case 0:
-                text = '不存在权限未开启';
-                break;
-              case -1:
-                text = '不存在权限被永久拒绝';
-                break;
-              default:
-                break;
-            }
-            uni.showToast({
-              title: text,
-              icon: 'none',
-            });
+      requestAndroidPermission('android.permission.NOT_EXIST').then((result) => {
+        if (result.message) {
+          uni.showModal({
+            title: '提示',
+            content: `无法确认不存在权限，${result.code} ${result.message}`,
+            showCancel: false,
+          });
+        } else {
+          let text = '不存在权限状态不明';
+          switch (result) {
+            case 1:
+              text = '不存在权限已开启';
+              break;
+            case 0:
+              text = '不存在权限未开启';
+              break;
+            case -1:
+              text = '不存在权限被永久拒绝';
+              break;
+            default:
+              break;
           }
-        },
-      );
+          uni.showToast({
+            title: text,
+            icon: 'none',
+          });
+        }
+      });
     },
     handleCheckAndroidCameraPermission() {
       requestAndroidPermission('android.permission.CAMERA').then((result) => {

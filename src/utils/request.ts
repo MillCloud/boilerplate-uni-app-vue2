@@ -88,10 +88,7 @@ instance.interceptors.response.use(
       message: '',
       code: '',
     };
-    if (
-      error.statusCode &&
-      (error.statusCode < 200 || error.statusCode >= 300)
-    ) {
+    if (error.statusCode && (error.statusCode < 200 || error.statusCode >= 300)) {
       // https://uniajax.ponjs.com/instance/interceptor.html#%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8
       try {
         response.code = constantCase(statuses(error.statusCode).toString());

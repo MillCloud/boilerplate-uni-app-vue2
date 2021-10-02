@@ -21,13 +21,8 @@ const handleAddPageMeta = (pagesDirPath) => {
     const axmlContent = fs.readFileSync(axmlPath, {
       encoding: 'utf-8',
     });
-    if (
-      !axmlContent.startsWith('<page-meta root-font-size="16px"></page-meta>')
-    ) {
-      fs.writeFileSync(
-        axmlPath,
-        `<page-meta root-font-size="16px"></page-meta>${axmlContent}`,
-      );
+    if (!axmlContent.startsWith('<page-meta root-font-size="16px"></page-meta>')) {
+      fs.writeFileSync(axmlPath, `<page-meta root-font-size="16px"></page-meta>${axmlContent}`);
     }
   });
 
