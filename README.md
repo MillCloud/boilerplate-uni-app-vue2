@@ -17,7 +17,6 @@
 - [vue2-helpers](https://github.com/ambit-tsai/vue2-helpers)
 - [uni-composition-api](https://github.com/TuiMao233/uni-composition-api)
 - [vue-use](https://vueuse.org/)
-- [vue-i18n](https://kazupon.github.io/vue-i18n/)
 - [typescript](https://www.typescriptlang.org/zh/)
 - [uni-ajax](https://uniajax.ponjs.com/)
 - [vue-query](https://vue-query.vercel.app/)
@@ -134,7 +133,6 @@ yarn install
 
 ### 特性
 
-- 国际化配置示例，支持 `en` 和 `zh-Hans`
 - 路由配置示例
 - 状态管理配置示例
 - 请求配置示例
@@ -165,10 +163,10 @@ yarn install
 |`yarn run build:mp-toutiao`|`production` 模式打包字节跳动小程序|
 |`yarn run build:mp-weixin`|`production` 模式打包微信小程序|
 |`yarn run build:quickapp-webview`|`production` 模式打包快应用|
-|`yarn run run clean`|清理 `dist` 目录|
-|`yarn run run check`|检查项目依赖版本|
+|`yarn run clean`|清理 `dist` 目录|
+|`yarn run check:deps`|检查项目依赖版本|
+|`yarn run check:types`|检查项目代码类型|
 |`yarn run commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
-|`yarn run i18n:report`|获取国际化信息|
 |`yarn run lint`|检查脚本文件，markdown 文件和样式文件|
 |`yarn run lint:eslint`|检查并自动修复脚本文件|
 |`yarn run lint:markdownlint`|格式化 markdown 文件|
@@ -187,7 +185,6 @@ yarn install
 │   ├── components              # 全局组件目录
 │   ├── composables             # 组合式 API 目录
 │   ├── data                    # 固定数据目录
-│   ├── i18n                    # 国际化目录
 │   ├── mocks                   # 接口模拟目录
 │   ├── pages                   # 页面视图目录
 │   ├── plugins                 # 插件目录
@@ -230,18 +227,6 @@ yarn install
 ├── vue.config.js               # vue-cli 配置文件
 └── yarn.lock
 ```
-
-### 国际化配置
-
-模板内置了两种语言配置，分别是简体中文和英语。
-
-简体中文文件是 [@/i18n/locales/zh-Hans.json](./src/i18n/locales/zh-Hans.json)，英语文件是 [@/i18n/locales/en.json](./src/i18n/locales/en.json)。
-
-你可以在上面两个文件里加入你需要的字段以支持翻译，务必注意字段需要保持一致，也请注意合理地划分字段。
-
-而要引入和 `vue2` 强绑定的 `npm` 库的语言包，你可以在 [@/i18n/index.js](./src/i18n/index.js) 内操作。
-
-引入和 `vue2` 不强绑定的 `npm` 库的语言包，请查看它们的文档说明。
 
 ### 路由配置
 

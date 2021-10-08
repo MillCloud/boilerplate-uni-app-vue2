@@ -6,7 +6,6 @@ import axiosRetry from 'axios-retry';
 import pkg from '@/../package.json';
 import { showModal } from '@/utils/modal';
 import { getToken } from '@/utils/storage';
-import i18n from '@/i18n';
 
 export const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
 
@@ -79,7 +78,7 @@ instance.interceptors.response.use(
     if (error.errMsg.includes('request:fail abort')) {
       return {
         success: false,
-        message: i18n.t('error.REQUEST_CANCELLED'),
+        message: '请求已取消',
         code: 'REQUEST_CANCELLED',
       };
     }
@@ -92,12 +91,10 @@ instance.interceptors.response.use(
       // https://uniajax.ponjs.com/instance/interceptor.html#%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8
       try {
         response.code = constantCase(statuses(error.statusCode).toString());
-        response.message = i18n.t(
-          `error.${constantCase(statuses(error.statusCode).toString())}`,
-        ) as string;
+        response.message = constantCase(statuses(error.statusCode).toString());
       } catch {
         response.code = 'ERROR_OCCURRED';
-        response.message = i18n.t(`error.ERROR_OCCURRED`) as string;
+        response.message = '发生了错误';
       }
     } else if (
       error.errMsg === 'request:fail abort statusCode:-1' ||
@@ -106,15 +103,15 @@ instance.interceptors.response.use(
       error.errMsg.toUpperCase().includes('CONNECTION_RESET')
     ) {
       // 超时
-      response.message = i18n.t('error.REQUEST_TIMEOUT') as string;
+      response.message = '请求超时';
       response.code = 'REQUEST_TIMEOUT';
     } else if (error.data && Object.keys(error.data).length === 0) {
       // 发送了请求，没有收到响应
-      response.message = i18n.t('error.NO_RESPONSE') as string;
+      response.message = '服务器无响应';
       response.code = 'NO_RESPONSE';
     } else {
       // 请求时发生错误
-      response.message = i18n.t('error.REQUEST_ERROR') as string;
+      response.message = '请求错误';
       response.code = 'REQUEST_ERROR';
     }
     // 处理错误
