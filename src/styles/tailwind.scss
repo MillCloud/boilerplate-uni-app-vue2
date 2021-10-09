@@ -17,35 +17,35 @@
 }
 
 .ordinal {
-  font-variant-numeric: ordinal !important;
+  font-variant-numeric: ordinal;
 }
 
 .slashed-zero {
-  font-variant-numeric: slashed-zero !important;
+  font-variant-numeric: slashed-zero;
 }
 
 .lining-nums {
-  font-variant-numeric: lining-nums !important;
+  font-variant-numeric: lining-nums;
 }
 
 .oldstyle-nums {
-  font-variant-numeric: oldstyle-nums !important;
+  font-variant-numeric: oldstyle-nums;
 }
 
 .proportional-nums {
-  font-variant-numeric: proportional-nums !important;
+  font-variant-numeric: proportional-nums;
 }
 
 .tabular-nums {
-  font-variant-numeric: tabular-nums !important;
+  font-variant-numeric: tabular-nums;
 }
 
 .diagonal-fractions {
-  font-variant-numeric: diagonal-fractions !important;
+  font-variant-numeric: diagonal-fractions;
 }
 
 .stacked-fractions {
-  font-variant-numeric: stacked-fractions !important;
+  font-variant-numeric: stacked-fractions;
 }
 
 @tailwind base;

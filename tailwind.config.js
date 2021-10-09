@@ -13,7 +13,7 @@ module.exports = {
   },
   target: 'relaxed',
   prefix: '',
-  important: true,
+  important: false,
   separator: '--',
   presets: [],
   theme: {
