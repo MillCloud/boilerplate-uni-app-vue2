@@ -51,12 +51,14 @@
 ```sh
 # 安装 nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-# 设置 nvm 镜像
+# 设置镜像，加快下载速度
 export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-# 安装 node@14
-nvm install 14
-# 设置 node@14 为默认版本
-nvm alias default 14
+# 安装 node@lts
+nvm install --lts
+# 使用 node@lts
+nvm use --lts
+# 设置默认版本
+nvm alias default node
 # 安装 yarn
 npm i -g yarn --registry=https://registry.npm.taobao.org
 # 安装 homebrew
@@ -97,12 +99,13 @@ scoop install git
 git config --global core.autocrlf false
 # 设置默认分支名为 main
 git config --global init.defaultBranch main
-# 设置 nvm 镜像
+# 设置镜像，加快下载速度
 nvm node_mirror https://npm.taobao.org/mirrors/node/
-# 安装 node@14
-nvm install 14.17.6
-# 使用 node@14
-nvm use 14.17.6
+nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+# 安装 node@lts
+nvm install lts
+# 使用 node@lts
+nvm use lts
 # 安装 yarn
 npm i -g yarn --registry=https://registry.npm.taobao.org
 
