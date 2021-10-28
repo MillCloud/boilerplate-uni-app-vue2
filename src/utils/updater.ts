@@ -16,8 +16,10 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
     updater.onUpdateReady(() => {
       showModal({
         content: '新版本应用已经准备完毕，请重启应用。',
-        success: () => {
-          updater.applyUpdate();
+        success: ({ confirm }) => {
+          if (confirm) {
+            updater.applyUpdate();
+          }
         },
       });
     });
@@ -65,8 +67,10 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
                         }
                         showModal({
                           content: '新版本应用已经准备完毕，请重启应用。',
-                          success: () => {
-                            plus.runtime.restart();
+                          success: ({ confirm }) => {
+                            if (confirm) {
+                              plus.runtime.restart();
+                            }
                           },
                         });
                       },
@@ -101,8 +105,10 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
                         }
                         showModal({
                           content: '新版本应用已经准备完毕，请重启应用。',
-                          success: () => {
-                            plus.runtime.restart();
+                          success: ({ confirm }) => {
+                            if (confirm) {
+                              plus.runtime.restart();
+                            }
                           },
                         });
                       },
@@ -132,8 +138,8 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
           showModal({
             content: `无法检查更新，错误代码：${response.code}，错误信息：${response.message}，是否重试？`,
             showCancel: true,
-            success: (result) => {
-              if (result.confirm) {
+            success: ({ confirm }) => {
+              if (confirm) {
                 getUpdate();
               }
             },
