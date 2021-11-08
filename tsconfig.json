@@ -34,7 +34,10 @@
     "lib": ["esnext", "dom", "scripthost"]
   },
   "vueCompilerOptions": {
-    "experimentalCompatMode": 2
+    "experimentalCompatMode": 2,
+    "experimentalTemplateCompilerOptions": {
+      "compatConfig": { "Mode": 2 }
+    }
   },
   "include": [
     "./**/*.js",
