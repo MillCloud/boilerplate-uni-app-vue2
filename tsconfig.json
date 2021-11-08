@@ -36,7 +36,7 @@
   "vueCompilerOptions": {
     "experimentalCompatMode": 2,
     "experimentalTemplateCompilerOptions": {
-      "compatConfig": { "Mode": 2 }
+      "compatConfig": { "MODE": 2 }
     }
   },
   "include": [
@@ -48,12 +48,5 @@
     "./**/*.tsx",
     "./**/*.vue"
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "dist-ssr",
-    "dist_electron",
-    "out",
-    "unpackage"
-  ]
+  "exclude": ["node_modules", "dist", "dist-ssr", "dist_electron", "out", "unpackage"]
 }
