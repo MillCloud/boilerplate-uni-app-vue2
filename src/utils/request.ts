@@ -1,4 +1,4 @@
-import ajax from 'uni-ajax';
+import Http from 'luch-request';
 import statuses from 'statuses';
 import { constantCase } from '@modyqyw/utils';
 import * as AxiosLogger from 'axios-logger';
@@ -29,7 +29,7 @@ export const handleShowError = (response: IResponse) => {
 };
 
 /** @desc 请求实例 */
-const instance = ajax.create({
+const instance = new Http({
   baseURL: process.env.VUE_APP_REQUEST_BASE_URL || '',
   header: {
     Accept: 'application/json',
@@ -52,6 +52,7 @@ if (process.env.NODE_ENV === 'development') {
   instance.interceptors.request.use(
     // @ts-ignore
     (request) => AxiosLogger.requestLogger(request, { prefixText: false }),
+    // @ts-ignore
     (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
   );
 }
@@ -62,19 +63,19 @@ if (process.env.NODE_ENV === 'development') {
   instance.interceptors.response.use(
     // @ts-ignore
     (response) => AxiosLogger.responseLogger(response, { prefixText: false }),
+    // @ts-ignore
     (error) => AxiosLogger.errorLogger(error, { prefixText: false }),
   );
 }
 instance.interceptors.response.use(
   (response) => {
     const { data, config } = response;
-    if (!data.success && config.showError !== false) {
+    if (!data.success && config.custom?.showError !== false) {
       handleShowError(data);
     }
     return data;
   },
   (error) => {
-    // https://github.com/ponjs/uni-ajax/blob/dev/src/lib/ajax.js#L66
     if (error.errMsg.includes('request:fail abort')) {
       return {
         success: false,
@@ -88,7 +89,6 @@ instance.interceptors.response.use(
       code: '',
     };
     if (error.statusCode && (error.statusCode < 200 || error.statusCode >= 300)) {
-      // https://uniajax.ponjs.com/instance/interceptor.html#%E5%93%8D%E5%BA%94%E6%8B%A6%E6%88%AA%E5%99%A8
       try {
         response.code = constantCase(statuses(error.statusCode).toString());
         response.message = constantCase(statuses(error.statusCode).toString());
@@ -115,11 +115,11 @@ instance.interceptors.response.use(
       response.code = 'REQUEST_ERROR';
     }
     // 处理错误
-    if (error.config.showError !== false) {
+    if (error.config.custom?.showError !== false) {
       handleShowError(response);
     }
     return response;
   },
 );
 
-export { instance as request };
+export const request = instance.middleware.bind(instance);
