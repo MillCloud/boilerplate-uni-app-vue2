@@ -18,7 +18,7 @@
 - [uni-composition-api](https://github.com/TuiMao233/uni-composition-api)
 - [vue-use](https://vueuse.org/)
 - [typescript](https://www.typescriptlang.org/zh/)
-- [uni-ajax](https://uniajax.ponjs.com/)
+- [luch-request](https://www.quanzhan.co/luch-request/)
 - [vue-query](https://vue-query.vercel.app/)
 - [statuses](https://github.com/jshttp/statuses)
 - [tailwindcss](https://v1.tailwindcss.com/) - 支持了大部分 v2 类值、支持大部分类渐进增强、`0.5` 将会被替换成 `0_5`、`1/2` 将会被替换成 `1-2`，但仍然不要使用高级特性，否则不能支持 Android 5 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
@@ -50,17 +50,13 @@
 
 ```sh
 # 安装 nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-# 设置镜像，加快下载速度
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+# 设置 nvm 镜像
+export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
 # 安装 node@lts
 nvm install --lts
-# 使用 node@lts
-nvm use --lts
 # 设置默认版本
 nvm alias default node
-# 安装 yarn
-npm i -g yarn --registry=https://registry.npm.taobao.org
 # 安装 homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # 安装 git
@@ -99,15 +95,12 @@ scoop install git
 git config --global core.autocrlf false
 # 设置默认分支名为 main
 git config --global init.defaultBranch main
-# 设置镜像，加快下载速度
-nvm node_mirror https://npm.taobao.org/mirrors/node/
-nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+# 设置 nvm 镜像
+nvm node_mirror https://npmmirror.com/mirrors/node
 # 安装 node@lts
 nvm install lts
 # 使用 node@lts
 nvm use lts
-# 安装 yarn
-npm i -g yarn --registry=https://registry.npm.taobao.org
 
 ```
 
@@ -124,7 +117,7 @@ git clone git@github.com:MillCloud/boilerplate-uni-app-vue2.git
 # 进入项目
 cd boilerplate-uni-app-vue2
 # 安装依赖
-yarn install
+npm install --legacy-peer-deps
 
 ```
 
@@ -149,32 +142,32 @@ yarn install
 
 |命令|含义|
 |-|-|
-|`yarn run dev:mp-360`|`development` 模式启动 360 小程序|
-|`yarn run dev:mp-alipay`|`development` 模式启动支付宝小程序，需要和 `yarn run watch:mp-alipay` 一起使用|
-|`yarn run watch:mp-alipay`|为生成的支付宝小程序 axml 文件添加 `<page-meta>` 指定根元素字体大小，需要和 `yarn run dev:mp-alipay` 一起使用|
-|`yarn run dev:mp-baidu`|`development` 模式启动百度小程序|
-|`yarn run dev:mp-kuaishou`|`development` 模式启动快手小程序|
-|`yarn run dev:mp-qq`|`development` 模式启动 QQ 小程序|
-|`yarn run dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
-|`yarn run dev:mp-weixin`|`development` 模式启动微信小程序|
-|`yarn run dev:quickapp-webview`|`development` 模式启动快应用|
-|`yarn run build:mp-360`|`production` 模式打包 360 小程序|
-|`yarn run build:mp-alipay`|`production` 模式打包支付宝小程序|
-|`yarn run build:mp-baidu`|`production` 模式打包百度小程序|
-|`yarn run build:mp-kuaishou`|`production` 模式打包快手小程序|
-|`yarn run build:mp-qq`|`production` 模式打包 QQ 小程序|
-|`yarn run build:mp-toutiao`|`production` 模式打包字节跳动小程序|
-|`yarn run build:mp-weixin`|`production` 模式打包微信小程序|
-|`yarn run build:quickapp-webview`|`production` 模式打包快应用|
-|`yarn run clean`|清理 `dist` 目录|
-|`yarn run check:deps`|检查项目依赖版本|
-|`yarn run check:types`|检查项目代码类型|
-|`yarn run commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
-|`yarn run lint`|检查脚本文件，markdown 文件和样式文件|
-|`yarn run lint:eslint`|检查并自动修复脚本文件|
-|`yarn run lint:markdownlint`|格式化 markdown 文件|
-|`yarn run lint:stylelint`|检查并自动修复样式文件|
-|`yarn run info`|列出环境信息|
+|`npm run dev:mp-360`|`development` 模式启动 360 小程序|
+|`npm run dev:mp-alipay`|`development` 模式启动支付宝小程序，需要和 `npm run watch:mp-alipay` 一起使用|
+|`npm run watch:mp-alipay`|为生成的支付宝小程序 axml 文件添加 `<page-meta>` 指定根元素字体大小，需要和 `npm run dev:mp-alipay` 一起使用|
+|`npm run dev:mp-baidu`|`development` 模式启动百度小程序|
+|`npm run dev:mp-kuaishou`|`development` 模式启动快手小程序|
+|`npm run dev:mp-qq`|`development` 模式启动 QQ 小程序|
+|`npm run dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
+|`npm run dev:mp-weixin`|`development` 模式启动微信小程序|
+|`npm run dev:quickapp-webview`|`development` 模式启动快应用|
+|`npm run build:mp-360`|`production` 模式打包 360 小程序|
+|`npm run build:mp-alipay`|`production` 模式打包支付宝小程序|
+|`npm run build:mp-baidu`|`production` 模式打包百度小程序|
+|`npm run build:mp-kuaishou`|`production` 模式打包快手小程序|
+|`npm run build:mp-qq`|`production` 模式打包 QQ 小程序|
+|`npm run build:mp-toutiao`|`production` 模式打包字节跳动小程序|
+|`npm run build:mp-weixin`|`production` 模式打包微信小程序|
+|`npm run build:quickapp-webview`|`production` 模式打包快应用|
+|`npm run clean`|清理 `dist` 目录|
+|`npm run check:deps`|检查项目依赖版本|
+|`npm run check:types`|检查项目代码类型|
+|`npm run commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
+|`npm run lint`|检查脚本文件，markdown 文件和样式文件|
+|`npm run lint:eslint`|检查并自动修复脚本文件|
+|`npm run lint:markdownlint`|格式化 markdown 文件|
+|`npm run lint:stylelint`|检查并自动修复样式文件|
+|`npm run info`|列出环境信息|
 
 注意；如果要开发移动应用，必须用 `HBuilderX` 运行到模拟器或真机。
 
@@ -201,8 +194,8 @@ yarn install
 │   ├── main.ts
 │   ├── manifest.json           # 信息配置文件
 │   ├── pages.json              # 页面配置文件
+│   ├── shims-luch-request.d.ts
 │   ├── shims-tsx.d.ts
-│   ├── shims-uni-ajax.d.ts
 │   └── shims-vue.d.ts
 ├── unpackage                   # 打包时使用的资产文件夹
 ├── .browserslistrc             # 浏览器支持列表文件
@@ -222,13 +215,13 @@ yarn install
 ├── .stylelintrc.js             # stylelint 配置文件
 ├── babel.config.js             # babel 配置文件
 ├── package.json
+├── package-lock.json
 ├── postcss.config.js           # postcss 配置文件
 ├── README.md
 ├── tailwind.config.js          # tailwindcss 配置文件
 ├── tsconfig.json               # typescript 配置文件
 ├── update-manifest.js          # 配置 release-it 自动更新 manifest.json 的文件
-├── vue.config.js               # vue-cli 配置文件
-└── yarn.lock
+└── vue.config.js               # vue-cli 配置文件
 ```
 
 ### 路由配置
@@ -249,15 +242,15 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](
 
 ### 请求配置
 
-#### uni-ajax 封装
+#### luch-request 封装
 
-模板把 `uni-ajax` 封装成 `request`，另外还添加了拦截器和适配器以实现自动日志、自动重试。你可以调整 [封装文件](./src/utils/request.js) 默认的配置以匹配业务。
+模板把 `luch-request` 封装成 `request`，另外还添加了拦截器和适配器以实现自动日志、自动重试。你可以调整 [封装文件](./src/utils/request.js) 默认的配置以匹配业务。
 
 #### proxy
 
 在 `development` 运行模式下请求服务器往往会出现跨域问题，因此模板内已经设置了只在 `development` 运行模式下生效的 `devServer.proxy`，见 [vue.config.js](./vue.config.js) L26。
 
-同时，需要设置 `uni-ajax` 的 `baseURL` 为空字符串，否则会导致代理失败，见 [@/plugins/request.js](./src/plugins/request.js) L72。
+同时，需要设置 `luch-request` 的 `baseURL` 为空字符串，否则会导致代理失败，见 [@/plugins/request.js](./src/plugins/request.js) L72。
 
 为了向其它 CLI 靠近，你可以调整 `devServer.proxy`，下面是一个示例。
 
@@ -295,7 +288,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [�
 ## 部署
 
 - 确认所有和 [模式和环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html) 相关的地方已经配置完成。
-- 运行 `yarn run release`，更新版本号。
+- 运行 `npm run release`，更新版本号。
 - 对于小程序，运行对应的命令构建，然后用开发者工具上传 `dist` 目录下对应平台的内容。
 - 对于移动端应用，用 `HBuilderX` 云打包或本地安心打包获取安装包。
 - 默认会生成报告。
