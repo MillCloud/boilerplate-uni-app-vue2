@@ -301,7 +301,7 @@ function judgeIOSRecordPermission() {
   // 1684369017 Denied
   // 1735552628 Granted
   // 1970168948 Undetermined
-  const result = status !== 1684369017;
+  const result = status !== 1_684_369_017;
   // 文件本身没有释放对象
   // plus.ios.deleteObject(instance);
   plus.ios.deleteObject(avAudioSession);
