@@ -65,38 +65,24 @@ $cl-color-disabled: #c0c4cc;
 
 /*
  * uview-ui theme.scss 内容，可直接修改
- * 参考 https://uviewui.com/guide/theme.html
+ * 参考 https://www.uviewui.com/components/color.html
  */
-// 主题色
-$u-type-primary: #2979ff;
-$u-type-primary-light: #ecf5ff;
-$u-type-primary-disabled: #a0cfff;
-$u-type-primary-dark: #2b85e4;
-$u-type-warning: #f90;
-$u-type-warning-disabled: #fcbd71;
-$u-type-warning-dark: #f29100;
-$u-type-warning-light: #fdf6ec;
-$u-type-success: #19be6b;
-$u-type-success-disabled: #71d5a1;
-$u-type-success-dark: #18b566;
-$u-type-success-light: #dbf1e1;
-$u-type-error: #fa3534;
-$u-type-error-disabled: #fab6b6;
-$u-type-error-dark: #dd6161;
-$u-type-error-light: #fef0f0;
-$u-type-info: #909399;
-$u-type-info-disabled: #c8c9cc;
-$u-type-info-dark: #82848a;
-$u-type-info-light: #f4f4f5;
-// 文字色
+$u-primary: #3c9cff;
+$u-warning: #f9ae3d;
+$u-success: #5ac725;
+$u-error: #f56c6c;
+$u-info: #909399;
 $u-main-color: #303133;
 $u-content-color: #606266;
-$u-tips-color: #909399;
+$u-tips-color: #909193;
 $u-light-color: #c0c4cc;
-// 边框色
-$u-border-color: #e4e7ed;
-// 背景色
+$u-border-color: #dadbde;
 $u-bg-color: #f3f4f6;
-// 表单项
-$u-form-item-height: 70rpx;
-$u-form-item-border-color: #dcdfe6;
+$u-disabled-color: #c8c9cc;
+
+@mixin flex($direction: row) {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  flex-direction: $direction;
+}
