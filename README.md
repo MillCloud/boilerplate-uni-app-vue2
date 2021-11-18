@@ -51,12 +51,16 @@
 ```sh
 # 安装 nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-# 设置 nvm 镜像
+# 设置镜像，加快下载速度
 export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
 # 安装 node@lts
 nvm install --lts
+# 使用 node@lts
+nvm use --lts
 # 设置默认版本
 nvm alias default node
+# 安装 pnpm
+npm i -g pnpm --registry=https://registry.npmmirror.com
 # 安装 homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # 安装 git
@@ -78,7 +82,9 @@ export NVM_DIR="$HOME/.nvm"
 
 对于 Windows 用户，请按照以下指引操作。
 
-首先安装 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip) 和 [Git](https://git-scm.com/downloads)。
+首先安装 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases/download/1.1.8/nvm-setup.zip) 和 [Git](https://git-scm.com/downloads)。
+
+然后使用 Windows Terminal 作为终端，Git Bash 作为 Shell，参考 [让 Win10 的终端更好用](https://sspai.com/post/63814) 和 [配置 Windows Terminal](https://sspai.com/post/62167)。
 
 如果你正在使用 [Chocolatey](https://chocolatey.org/) 或 [Scoop](https://scoop.sh/)，你也可以通过命令安装，然后配置。
 
@@ -95,14 +101,19 @@ scoop install git
 git config --global core.autocrlf false
 # 设置默认分支名为 main
 git config --global init.defaultBranch main
-# 设置 nvm 镜像
+# 设置镜像，加快下载速度
 nvm node_mirror https://npmmirror.com/mirrors/node
+nvm npm_mirror https://npmmirror.com/mirrors/npm
 # 安装 node@lts
 nvm install lts
 # 使用 node@lts
 nvm use lts
+# 安装 pnpm
+npm i -g pnpm --registry=https://registry.npmmirror.com
 
 ```
+
+你可能需要配置 `~/.huskyrc`。
 
 其它系统请根据以上指引自行调整。
 
@@ -140,34 +151,34 @@ npm install --legacy-peer-deps
 
 启动前请使用 `HBuilderX` 申请一个 appid（DCloud 应用标识）。
 
-|命令|含义|
-|-|-|
-|`npm run dev:mp-360`|`development` 模式启动 360 小程序|
-|`npm run dev:mp-alipay`|`development` 模式启动支付宝小程序，需要和 `npm run watch:mp-alipay` 一起使用|
-|`npm run watch:mp-alipay`|为生成的支付宝小程序 axml 文件添加 `<page-meta>` 指定根元素字体大小，需要和 `npm run dev:mp-alipay` 一起使用|
-|`npm run dev:mp-baidu`|`development` 模式启动百度小程序|
-|`npm run dev:mp-kuaishou`|`development` 模式启动快手小程序|
-|`npm run dev:mp-qq`|`development` 模式启动 QQ 小程序|
-|`npm run dev:mp-toutiao`|`development` 模式启动字节跳动小程序|
-|`npm run dev:mp-weixin`|`development` 模式启动微信小程序|
-|`npm run dev:quickapp-webview`|`development` 模式启动快应用|
-|`npm run build:mp-360`|`production` 模式打包 360 小程序|
-|`npm run build:mp-alipay`|`production` 模式打包支付宝小程序|
-|`npm run build:mp-baidu`|`production` 模式打包百度小程序|
-|`npm run build:mp-kuaishou`|`production` 模式打包快手小程序|
-|`npm run build:mp-qq`|`production` 模式打包 QQ 小程序|
-|`npm run build:mp-toutiao`|`production` 模式打包字节跳动小程序|
-|`npm run build:mp-weixin`|`production` 模式打包微信小程序|
-|`npm run build:quickapp-webview`|`production` 模式打包快应用|
-|`npm run clean`|清理 `dist` 目录|
-|`npm run check:deps`|检查项目依赖版本|
-|`npm run check:types`|检查项目代码类型|
-|`npm run commit`|引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令|
-|`npm run lint`|检查脚本文件，markdown 文件和样式文件|
-|`npm run lint:eslint`|检查并自动修复脚本文件|
-|`npm run lint:markdownlint`|格式化 markdown 文件|
-|`npm run lint:stylelint`|检查并自动修复样式文件|
-|`npm run info`|列出环境信息|
+| 命令                             | 含义                                                                                                         |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `npm run dev:mp-360`             | `development` 模式启动 360 小程序                                                                            |
+| `npm run dev:mp-alipay`          | `development` 模式启动支付宝小程序，需要和 `npm run watch:mp-alipay` 一起使用                                |
+| `npm run watch:mp-alipay`        | 为生成的支付宝小程序 axml 文件添加 `<page-meta>` 指定根元素字体大小，需要和 `npm run dev:mp-alipay` 一起使用 |
+| `npm run dev:mp-baidu`           | `development` 模式启动百度小程序                                                                             |
+| `npm run dev:mp-kuaishou`        | `development` 模式启动快手小程序                                                                             |
+| `npm run dev:mp-qq`              | `development` 模式启动 QQ 小程序                                                                             |
+| `npm run dev:mp-toutiao`         | `development` 模式启动字节跳动小程序                                                                         |
+| `npm run dev:mp-weixin`          | `development` 模式启动微信小程序                                                                             |
+| `npm run dev:quickapp-webview`   | `development` 模式启动快应用                                                                                 |
+| `npm run build:mp-360`           | `production` 模式打包 360 小程序                                                                             |
+| `npm run build:mp-alipay`        | `production` 模式打包支付宝小程序                                                                            |
+| `npm run build:mp-baidu`         | `production` 模式打包百度小程序                                                                              |
+| `npm run build:mp-kuaishou`      | `production` 模式打包快手小程序                                                                              |
+| `npm run build:mp-qq`            | `production` 模式打包 QQ 小程序                                                                              |
+| `npm run build:mp-toutiao`       | `production` 模式打包字节跳动小程序                                                                          |
+| `npm run build:mp-weixin`        | `production` 模式打包微信小程序                                                                              |
+| `npm run build:quickapp-webview` | `production` 模式打包快应用                                                                                  |
+| `npm run clean`                  | 清理 `dist` 目录                                                                                             |
+| `npm run check:deps`             | 检查项目依赖版本                                                                                             |
+| `npm run check:types`            | 检查项目代码类型                                                                                             |
+| `npm run commit`                 | 引导填写 git 提交信息并提交，你需要手动 `git add` 对应部分后执行该命令                                       |
+| `npm run lint`                   | 检查脚本文件，markdown 文件和样式文件                                                                        |
+| `npm run lint:eslint`            | 检查并自动修复脚本文件                                                                                       |
+| `npm run lint:markdownlint`      | 格式化 markdown 文件                                                                                         |
+| `npm run lint:stylelint`         | 检查并自动修复样式文件                                                                                       |
+| `npm run info`                   | 列出环境信息                                                                                                 |
 
 注意；如果要开发移动应用，必须用 `HBuilderX` 运行到模拟器或真机。
 
@@ -234,11 +245,17 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](
 
 #### 应用类状态
 
-应用类状态是应用本身的状态，包括应用当前语言等。
+应用类状态是应用本身的状态，包括应用语言、侧边栏是否展开等。
+
+不建议直接操作 Storage。建议在初始化时，读取 Storage 数据保存到状态仓库，随后从状态仓库读取相应的状态，写入 Storage 时同时更新状态仓库的状态。
+
+如果这些数据不会多页面同时使用，建议不要保存到状态仓库，而是直接保存到组件内。
 
 #### 业务类状态
 
-业务类状态是应用所承载的业务的状态，包括用户信息，页面通用数据等。模板建议把业务类状态分模块放置。
+业务类状态是应用所承载的业务的状态，包括用户信息，页面通用数据等。
+
+不建议保存过多的业务类状态，借助 vue-query，你可以很方便地做数据缓存，你只需要保留必需的业务类状态到状态仓库即可，比如用户信息。
 
 ### 请求配置
 
@@ -250,7 +267,7 @@ uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](
 
 在 `development` 运行模式下请求服务器往往会出现跨域问题，因此模板内已经设置了只在 `development` 运行模式下生效的 `devServer.proxy`，见 [vue.config.js](./vue.config.js) L26。
 
-同时，需要设置 `luch-request` 的 `baseURL` 为空字符串，否则会导致代理失败，见 [@/plugins/request.js](./src/plugins/request.js) L72。
+同时，需要设置 `luch-request` 的 `baseURL` 为空字符串，否则会导致代理失败，见 [@/utils/request.js](./src/utils/request.js) L33。
 
 为了向其它 CLI 靠近，你可以调整 `devServer.proxy`，下面是一个示例。
 
@@ -266,7 +283,6 @@ module.exports = {
     },
   },
 };
-
 ```
 
 一般情况下，`devServer.proxy` 应该与某个 `production` 运行模式下的 `VUE_APP_REQUEST_BASE_URL` 一致。
