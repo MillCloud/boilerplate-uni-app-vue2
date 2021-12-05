@@ -79,7 +79,7 @@
     "cl-uni": "~1.8.20",
     "core-js": "~3.19.2",
     "dayjs": "~1.10.7",
-    "pinia": "^2.0.6",
+    "pinia": "~2.0.6",
     "regenerator-runtime": "~0.12.1",
     "statuses": "~2.0.1",
     "tailwindcss": "~1.9.6",
