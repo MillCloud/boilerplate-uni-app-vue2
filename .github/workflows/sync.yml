@@ -2,10 +2,10 @@ name: sync
 
 on:
   push:
-    branches: [main, vue-cli, vite, nuxt]
+    branches: [main]
 
 jobs:
-  docs:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,6 +13,6 @@ jobs:
         uses: wearerequired/git-mirror-action@v1
         with:
           source-repo: git@github.com:MillCloud/boilerplate-uni-app-vue2.git
-          destination-repo: git@gitee.com:millcloud/boilerplate-uni-app-vue2.git
+          destination-repo: git@gitee.com:MillCloud/boilerplate-uni-app-vue2.git
         env:
           SSH_PRIVATE_KEY: ${{ secrets.RSA_PRIVATE_KEY }}
