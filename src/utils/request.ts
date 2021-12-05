@@ -3,9 +3,9 @@ import statuses from 'statuses';
 import { constantCase } from '@modyqyw/utils';
 import * as AxiosLogger from 'axios-logger';
 import axiosRetry from 'axios-retry';
-import pkg from '@/../package.json';
 import { showModal } from '@/utils/modal';
 import { getToken } from '@/utils/storage';
+import { DefaultHeaders } from '@/constants';
 
 export const reLaunchCodes = new Set(['TOKEN_OUTDATED']);
 
@@ -32,11 +32,7 @@ export const handleShowError = (response: IResponse) => {
 const instance = new Http({
   baseURL: process.env.VUE_APP_REQUEST_BASE_URL || '',
   header: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json; charset=utf-8',
-    'X-Version': `${pkg.name}-${process.env.VUE_APP_PLATFORM}-${
-      process.env.NODE_ENV
-    }/${pkg.version.replace('-', '')}`,
+    ...DefaultHeaders,
   },
   sslVerify: false,
 });
