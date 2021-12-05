@@ -1,10 +1,7 @@
 import Vue from 'vue';
-import { enableAllPlugins } from 'immer';
 import '@/plugins';
-import store from './store';
+import { createPinia } from 'pinia';
 import App from './App.vue';
-
-enableAllPlugins();
 
 Vue.config.productionTip = false;
 
@@ -12,7 +9,7 @@ Vue.config.productionTip = false;
 App.mpType = 'app';
 
 const app = new Vue({
-  store,
+  pinia: createPinia(),
   ...App,
 });
 
