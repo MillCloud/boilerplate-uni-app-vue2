@@ -55,9 +55,7 @@ module.exports = {
     '@dcloudio/uni-ui',
     'axios-logger',
     'axios-retry',
-    'cl-uni',
     'luch-request',
-    'thorui-uni',
     'uview-ui',
   ],
 };

@@ -3,9 +3,7 @@
     "autoscan": true,
     "custom": {
       "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
-      "^cl-(.*)": "cl-uni/components/cl-$1/cl-$1.vue",
-      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
-      "^tui-(.*)": "thorui/lib/thorui/tui-$1/tui-$1.vue"
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
     }
   },
   "pages": [
