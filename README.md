@@ -27,9 +27,7 @@
 - [statuses](https://github.com/jshttp/statuses)
 - [tailwindcss](https://v1.tailwindcss.com/) - 支持了大部分 v2 类值、支持大部分类渐进增强、`0.5` 将会被替换成 `0_5`、`1/2` 将会被替换成 `1-2`，但仍然不要使用高级特性，否则不能支持 Android 5 和 iOS 8，具体可以到 [caniuse](https://caniuse.com/) 查询
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui) - 如果想要使用，请先阅读文档并参考文档配置
-- [cl-uni](https://docs.cool-js.com/) - 如果想要使用，请先阅读文档并参考文档配置
 - [uview-ui](https://www.uviewui.com/) - 如果想要使用，请先阅读文档并参考文档配置
-- [thor-ui](https://www.thorui.cn/doc/) - 如果想要使用，请先阅读文档并参考文档配置
 - [remix-icon](https://remixicon.com/) - uni-app 不支持 SVG，所以不能使用 [iconify](https://iconify.design/)
 - [@modyqyw/utils](https://github.com/modyqyw/utils)
 - [dayjs](https://day.js.org)
@@ -201,7 +199,7 @@ uni-app 使用 [manifest.json](./src/manifest.json) 配置应用信息，请查�
 
 uni-app 使用 [pages.json](./src/pages.json) 配置页面信息，请查看 [文档](https://uniapp.dcloud.io/collocation/pages)。
 
-默认启用了 [easycom](https://uniapp.dcloud.io/component/README?id=easycom%e7%bb%84%e4%bb%b6%e8%a7%84%e8%8c%83)，支持 `uni-ui`，`cl-uni`，`uview-ui` 和 `thor-ui`。
+默认启用了 [easycom](https://uniapp.dcloud.io/component/README?id=easycom%e7%bb%84%e4%bb%b6%e8%a7%84%e8%8c%83)，支持 `uni-ui` 和 `uview-ui`。
 
 ## 部署
 
