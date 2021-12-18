@@ -72,7 +72,7 @@
     "@vue/composition-api": "~1.4.1",
     "@vue/shared": "~3.2.26",
     "@vueuse/core": "~7.3.0",
-    "@vueuse/integrations": "~7.3.0",
+    "@vueuse/integrations": "~7.4.0",
     "axios-cache-adapter": "~2.7.3",
     "axios-logger": "~2.6.0",
     "axios-retry": "~3.2.4",
