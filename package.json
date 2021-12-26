@@ -91,7 +91,7 @@
     "@babel/core": "~7.16.5",
     "@babel/eslint-parser": "~7.16.5",
     "@babel/runtime": "~7.16.5",
-    "@commitlint/cli": "~15.0.0",
+    "@commitlint/cli": "~16.0.0",
     "@dcloudio/types": "~2.5.14",
     "@dcloudio/uni-automator": "2.0.1-32920211122003",
     "@dcloudio/uni-cli-shared": "2.0.1-32920211122003",
