@@ -102,7 +102,7 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "2.0.1-32920211122003",
     "@dcloudio/webpack-uni-mp-loader": "2.0.1-32920211122003",
     "@dcloudio/webpack-uni-pages-loader": "2.0.1-32920211122003",
-    "@modyqyw/fabric": "~3.16.4",
+    "@modyqyw/fabric": "~3.18.0",
     "@types/statuses": "~2.0.0",
     "@typescript-eslint/eslint-plugin": "~5.8.0",
     "@typescript-eslint/parser": "~5.8.0",
