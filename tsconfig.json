@@ -1,37 +1,21 @@
 {
+  "extends": "./node_modules/@modyqyw/fabric/tsconfig.base.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
+    "baseUrl": "./",
     "jsx": "preserve",
-    "moduleResolution": "node",
-    "isolatedModules": true,
-    "useDefineForClassFields": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "noUnusedLocals": true,
-    "importHelpers": true,
-    "sourceMap": true,
-    "allowJs": true,
-    "checkJs": false,
-    "noEmit": true,
-    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "types": [
       "@dcloudio/types",
       "mini-types",
       "miniprogram-api-typings",
-      "webpack-env",
+      "type-fest",
       "unplugin-vue2-script-setup/types",
-      "unplugin-vue2-script-setup/ref-macros"
+      "unplugin-vue2-script-setup/ref-macros",
+      "webpack-env"
     ],
-    "typeRoots": ["./node_modules/@types", "./typings", "./src/typings"],
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "lib": ["esnext", "dom", "scripthost"]
+    "target": "ESNext"
   },
   "vueCompilerOptions": {
     "experimentalCompatMode": 2,
@@ -40,13 +24,14 @@
     }
   },
   "include": [
-    "./**/*.js",
     "./**/.*.js",
+    "./**/*.js",
     "./**/*.jsx",
-    "./**/*.ts",
     "./**/.*.ts",
+    "./**/*.ts",
     "./**/*.tsx",
-    "./**/*.vue"
+    "./**/*.vue",
+    "./**/*.svelte"
   ],
-  "exclude": ["node_modules", "dist", "dist-ssr", "dist_electron", "out", "unpackage"]
+  "exclude": [".cache", ".temp", ".tmp", "dist*", "node_modules"]
 }
