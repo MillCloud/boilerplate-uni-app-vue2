@@ -11,6 +11,11 @@ export const getUpdate = ({ hasLoading = false } = {}) => {
   const updater = uni.getUpdateManager();
   updater.onCheckForUpdate((result) => {
     if (!result.hasUpdate) {
+      if (hasLoading) {
+        showModal({
+          content: '已经是最新版本。',
+        });
+      }
       return;
     }
     updater.onUpdateReady(() => {
