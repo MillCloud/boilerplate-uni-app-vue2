@@ -1,8 +1,8 @@
 // 小程序更新见 https://uniapp.dcloud.io/api/other/update?id=getupdatemanager
 // 整包更新见 https://ask.dcloud.net.cn/article/34972
 // 热更新见 https://ask.dcloud.net.cn/article/35667
-import { request } from './request';
 import manifest from '@/manifest.json';
+import { request } from './request';
 import { hideLoading, showLoading } from './loading';
 import { showModal } from './modal';
 
