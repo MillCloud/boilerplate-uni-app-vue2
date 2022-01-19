@@ -19,7 +19,7 @@ module.exports = {
     // unplugin-vue2-script-setup
     config.plugin('unplugin-vue2-script-setup').use(
       UnpluginVue2ScriptSetupPlugin({
-        refTransform: true,
+        reactivityTransform: true,
       }),
     );
     // use process.env.VUE_APP_PLATFORM directly
