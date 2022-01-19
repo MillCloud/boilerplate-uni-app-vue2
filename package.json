@@ -67,7 +67,7 @@
     "@dcloudio/uni-quickapp-native": "2.0.1-32920211122003",
     "@dcloudio/uni-quickapp-webview": "2.0.1-32920211122003",
     "@dcloudio/uni-stat": "2.0.1-32920211122003",
-    "@dcloudio/uni-ui": "~1.4.9",
+    "@dcloudio/uni-ui": "~1.4.10",
     "@modyqyw/utils": "~2.1.2",
     "@vue/composition-api": "~1.4.4",
     "@vue/shared": "~3.2.27",
@@ -82,9 +82,9 @@
     "statuses": "~2.0.1",
     "tailwindcss": "~1.9.6",
     "uni-composition-api": "~0.6.1",
-    "uview-ui": "~2.0.20",
+    "uview-ui": "~2.0.21",
     "vue": "~2.6.14",
-    "vue2-helpers": "~1.1.6"
+    "vue2-helpers": "~1.1.7"
   },
   "devDependencies": {
     "@babel/core": "~7.16.7",
@@ -103,8 +103,8 @@
     "@dcloudio/webpack-uni-pages-loader": "2.0.1-32920211122003",
     "@modyqyw/fabric": "~3.20.0",
     "@types/statuses": "~2.0.0",
-    "@typescript-eslint/eslint-plugin": "~5.9.1",
-    "@typescript-eslint/parser": "~5.9.1",
+    "@typescript-eslint/eslint-plugin": "~5.10.0",
+    "@typescript-eslint/parser": "~5.10.0",
     "@vue/babel-preset-app": "~4.5.15",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
@@ -117,7 +117,7 @@
     "eslint": "~7.32.0",
     "husky": "~7.0.4",
     "is-ci": "~3.0.1",
-    "lint-staged": "~12.1.7",
+    "lint-staged": "~12.2.0",
     "markdownlint-cli": "~0.30.0",
     "mini-types": "~0.1.7",
     "miniprogram-api-typings": "~3.4.4",
@@ -129,15 +129,15 @@
     "prettier": "~2.5.1",
     "release-it": "~14.12.3",
     "rimraf": "~3.0.2",
-    "sass": "~1.48.0",
+    "sass": "~1.49.0",
     "sass-loader": "~10.2.0",
     "stylelint": "~13.13.1",
     "stylelint-webpack-plugin": "~2.3.1",
     "type-fest": "~2.9.0",
     "typescript": "~4.5.4",
-    "unplugin-vue2-script-setup": "~0.9.0",
+    "unplugin-vue2-script-setup": "~0.9.1",
     "vue-template-compiler": "~2.6.14",
-    "vue-tsc": "0.30.2"
+    "vue-tsc": "~0.30.6"
   },
   "uni-app": {
     "scripts": {}
