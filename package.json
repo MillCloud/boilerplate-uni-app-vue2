@@ -35,7 +35,7 @@
     "dev:quickapp-webview-huawei": "cross-env UNI_PLATFORM=quickapp-webview-huawei UNI_OUTPUT_DIR=dist/quickapp-webview-huawei vue-cli-service uni-build --mode development --watch",
     "dev:quickapp-webview-union": "cross-env UNI_PLATFORM=quickapp-webview-union UNI_OUTPUT_DIR=dist/quickapp-webview-union vue-cli-service uni-build --mode development --watch",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
-    "lint": "npm run lint:eslint && npm run lint:markdownlint && npm run lint:stylelint",
+    "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint && pnpm run lint:stylelint",
     "lint:eslint": "eslint . --fix --ext=.js,.cjs,.mjs,.jsx,.ts,.cts,.mts,.tsx,.vue,.svelte --ignore-path=.gitignore",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
     "lint:stylelint": "stylelint \"./**/*.{css,less,scss,sass,vue,svelte}\" --fix --allow-empty-input --ignore-path=.gitignore",

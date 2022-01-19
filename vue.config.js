@@ -9,6 +9,8 @@ const UnpluginVue2ScriptSetupPlugin = require('unplugin-vue2-script-setup/webpac
 /** @type {Options} */
 module.exports = {
   chainWebpack: (config) => {
+    // symlinks
+    config.resolve.symlinks = false;
     // stylelint
     config.plugin('stylelint').use(StylelintPlugin, [
       {
