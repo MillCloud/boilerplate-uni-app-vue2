@@ -1,15 +1,15 @@
 /* eslint-disable max-classes-per-file */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 declare module 'luch-request' {
-  type HttpTask = UniApp.RequestTask | UniApp.UploadTask | UniApp.DownloadTask;
+  export type HttpTask = UniApp.RequestTask | UniApp.UploadTask | UniApp.DownloadTask;
 
-  type HttpRequestTask = UniApp.RequestTask;
+  export type HttpRequestTask = UniApp.RequestTask;
 
-  type HttpUploadTask = UniApp.UploadTask;
+  export type HttpUploadTask = UniApp.UploadTask;
 
-  type HttpDownloadTask = UniApp.DownloadTask;
+  export type HttpDownloadTask = UniApp.DownloadTask;
 
-  type HttpMethod =
+  export type HttpMethod =
     | 'GET'
     | 'POST'
     | 'PUT'
@@ -21,25 +21,25 @@ declare module 'luch-request' {
     | 'UPLOAD'
     | 'DOWNLOAD';
 
-  type HttpRequestHeader = Record<string, string>;
+  export type HttpRequestHeader = Record<string, string>;
 
-  type HttpParams = Record<string, any>;
+  export type HttpParams = Record<string, any>;
 
-  type HttpData = Record<string, any>;
+  export type HttpData = Record<string, any>;
 
-  type HttpResponseType = 'arraybuffer' | 'text';
+  export type HttpResponseType = 'arraybuffer' | 'text';
 
-  type HttpCustom = Record<string, any>;
+  export type HttpCustom = Record<string, any>;
 
-  type HttpFileType = 'image' | 'video' | 'audio';
+  export type HttpFileType = 'image' | 'video' | 'audio';
 
-  type HttpFormData = Record<string, any>;
+  export type HttpFormData = Record<string, any>;
 
-  type HttpResponseHeader = Record<string, string> & {
+  export type HttpResponseHeader = Record<string, string> & {
     'set-cookie'?: string[];
   };
 
-  interface HttpRequestConfig<T = HttpTask> {
+  export interface HttpRequestConfig<T = HttpTask> {
     /** @desc 请求服务器接口地址 */
     url?: string;
     /** @desc 请求方式，默认为 GET */
@@ -88,7 +88,7 @@ declare module 'luch-request' {
     formData?: HttpFormData;
   }
 
-  interface HttpResponse<T = any, D = HttpTask> {
+  export interface HttpResponse<T = any, D = HttpTask> {
     data: T;
     statusCode: number;
     header: HttpResponseHeader;
@@ -97,18 +97,18 @@ declare module 'luch-request' {
     errMsg: string;
   }
 
-  interface HttpUploadResponse<T = any, D = HttpTask> {
+  export interface HttpUploadResponse<T = any, D = HttpTask> {
     data: T;
     statusCode: number;
     config: HttpRequestConfig<D>;
     errMsg: string;
   }
 
-  interface HttpDownloadResponse extends HttpResponse {
+  export interface HttpDownloadResponse extends HttpResponse {
     tempFilePath: string;
   }
 
-  interface HttpError<T = any, D = HttpTask> {
+  export interface HttpError<T = any, D = HttpTask> {
     data?: T;
     statusCode?: number;
     header?: HttpResponseHeader;
@@ -117,9 +117,9 @@ declare module 'luch-request' {
     errMsg: string;
   }
 
-  interface HttpPromise<T = any> extends Promise<HttpResponse<T>> {}
+  export interface HttpPromise<T = any> extends Promise<HttpResponse<T>> {}
 
-  interface HttpInterceptorManager<V, E = V> {
+  export interface HttpInterceptorManager<V, E = V> {
     use(
       onFulfilled?: (value: V) => V | Promise<V>,
       onRejected?: (error: E) => T | Promise<E>,
@@ -127,7 +127,7 @@ declare module 'luch-request' {
     eject(id: number): void;
   }
 
-  abstract class HttpRequestAbstract {
+  export abstract class HttpRequestAbstract {
     constructor(config?: HttpRequestConfig);
     interceptors: {
       request: HttpInterceptorManager<HttpRequestConfig>;
