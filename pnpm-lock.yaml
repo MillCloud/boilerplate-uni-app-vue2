@@ -10,7 +10,7 @@ specifiers:
   '@dcloudio/uni-app-plus': 2.0.1-32920211122003
   '@dcloudio/uni-automator': 2.0.1-32920211122003
   '@dcloudio/uni-cli-i18n': 2.0.1-32920211122003
-  '@dcloudio/uni-cli-shared': 2.0.1-32920211122003
+  '@dcloudio/uni-cli-shared': 2.0.1-33920220121003
   '@dcloudio/uni-h5': 2.0.1-32920211122003
   '@dcloudio/uni-helper-json': ~1.0.13
   '@dcloudio/uni-i18n': 2.0.1-32920211122003
@@ -132,7 +132,7 @@ devDependencies:
   '@commitlint/cli': 16.0.2
   '@dcloudio/types': 2.5.16
   '@dcloudio/uni-automator': 2.0.1-32920211122003
-  '@dcloudio/uni-cli-shared': 2.0.1-32920211122003
+  '@dcloudio/uni-cli-shared': 2.0.1-33920220121003
   '@dcloudio/uni-migration': 2.0.1-32920211122003
   '@dcloudio/uni-template-compiler': 2.0.1-32920211122003
   '@dcloudio/vue-cli-plugin-hbuilderx': 2.0.1-32920211122003
@@ -1573,8 +1573,8 @@ packages:
       - supports-color
     dev: false
 
-  /@dcloudio/uni-cli-shared/2.0.1-32920211122003:
-    resolution: {integrity: sha512-FL/mcgCVf4DULV4hZGAe+w7nuGOE+Pzsyatlu5niTVVX2hnI6hrr7tGqU54oxw31W6lLIIRpQdvMjzJCc6GaUw==}
+  /@dcloudio/uni-cli-shared/2.0.1-33920220121003:
+    resolution: {integrity: sha512-UIPD+B1tuhvw+6Mp0QvaxZvikPFS2O/C2caooM/MkChfzofeMaCSPZ5INZdAaAnplZ1U7rtTzAy4zc6JszTXCQ==}
     dependencies:
       hash-sum: 1.0.2
       postcss-urlrewrite: 0.2.2
@@ -4273,6 +4273,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     optional: true
@@ -7386,6 +7387,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     optional: true
 
   /filesize/3.6.1:
@@ -10586,6 +10588,7 @@ packages:
 
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
+    requiresBuild: true
     optional: true
 
   /nanoid/3.1.32:
