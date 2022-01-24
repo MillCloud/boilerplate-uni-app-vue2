@@ -14,7 +14,7 @@ specifiers:
   '@dcloudio/uni-h5': 2.0.1-32920211122003
   '@dcloudio/uni-helper-json': ~1.0.13
   '@dcloudio/uni-i18n': 2.0.1-32920211122003
-  '@dcloudio/uni-migration': 2.0.1-32920211122003
+  '@dcloudio/uni-migration': 2.0.1-33920220121003
   '@dcloudio/uni-mp-360': 2.0.1-32920211122003
   '@dcloudio/uni-mp-alipay': 2.0.1-32920211122003
   '@dcloudio/uni-mp-baidu': 2.0.1-32920211122003
@@ -133,7 +133,7 @@ devDependencies:
   '@dcloudio/types': 2.5.16
   '@dcloudio/uni-automator': 2.0.1-32920211122003
   '@dcloudio/uni-cli-shared': 2.0.1-32920211122003
-  '@dcloudio/uni-migration': 2.0.1-32920211122003
+  '@dcloudio/uni-migration': 2.0.1-33920220121003
   '@dcloudio/uni-template-compiler': 2.0.1-32920211122003
   '@dcloudio/vue-cli-plugin-hbuilderx': 2.0.1-32920211122003
   '@dcloudio/vue-cli-plugin-uni': 2.0.1-32920211122003
@@ -1598,8 +1598,8 @@ packages:
     resolution: {integrity: sha512-u6FrQUQiV59ZO/x8eoqhwjIWR8+XwtcX+EkKTdtkXoH0D1qWObPHdxV9J7Tqsa6MXq8lfS1JW7nL2P8aExil0w==}
     dev: false
 
-  /@dcloudio/uni-migration/2.0.1-32920211122003:
-    resolution: {integrity: sha512-Uqa7Tfmck4H6Jt0l9ljg0E78NrBDIweFjHrGcz/wATbPq1iKpUQmtFUuM850hmCnfO0Ym7uTQC3pnlBXP/EUxA==}
+  /@dcloudio/uni-migration/2.0.1-33920220121003:
+    resolution: {integrity: sha512-nZ+s3kruzbE+LeZrY7jqMFe9xMt+0GYuoZzoXBWvmva9NghNm+WEWVfWrwgd7tQ30Qnk2VSDN2odouEHh2OoUg==}
     hasBin: true
     dependencies:
       commander: 4.1.1
@@ -4273,6 +4273,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     optional: true
@@ -7386,6 +7387,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     optional: true
 
   /filesize/3.6.1:
@@ -10586,6 +10588,7 @@ packages:
 
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
+    requiresBuild: true
     optional: true
 
   /nanoid/3.1.32:
