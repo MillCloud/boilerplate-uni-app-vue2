@@ -6,7 +6,6 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "preserveSymlinks": true,
     "types": [
       "@dcloudio/types",
       "mini-types",
