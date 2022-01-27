@@ -78,7 +78,7 @@ specifiers:
   stylelint: ~13.13.1
   stylelint-webpack-plugin: ~2.3.1
   tailwindcss: ~1.9.6
-  type-fest: ~2.10.0
+  type-fest: ~2.11.0
   typescript: ~4.5.5
   uni-composition-api: ~0.6.1
   unplugin-vue2-script-setup: ~0.9.1
@@ -172,7 +172,7 @@ devDependencies:
   sass: 1.49.0
   stylelint: 13.13.1
   stylelint-webpack-plugin: 2.3.2_stylelint@13.13.1
-  type-fest: 2.10.0
+  type-fest: 2.11.0
   typescript: 4.5.5
   unplugin-vue2-script-setup: 0.9.1_f06a96ab5a76ea07c5a289b573c7afe1
   vue-template-compiler: 2.6.14
@@ -4185,6 +4185,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     optional: true
@@ -7286,6 +7287,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     optional: true
 
   /filesize/3.6.1:
@@ -10501,6 +10503,7 @@ packages:
 
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
+    requiresBuild: true
     optional: true
 
   /nanoid/3.1.32:
@@ -14748,7 +14751,7 @@ packages:
     resolution: {integrity: sha512-DdFZBrj+8w/1KB6sa12uucro676gipZ5ImcJIlO68VQANBi++TGOjdp6/UOuRMlbkeSpncCY1QS4bGtlYfBZFg==}
     engines: {node: '>=12.20'}
     dependencies:
-      type-fest: 2.10.0
+      type-fest: 2.11.0
     dev: false
 
   /ts-loader/6.2.2_typescript@4.5.5:
@@ -14955,8 +14958,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /type-fest/2.10.0:
-    resolution: {integrity: sha512-u2yreDMllFI3VCpWt0rKrGs/E2LO0YHBwiiOIj+ilQh9+ALMaa4lNBSdoDvuHN3cbKcYk9L1BXP49x9RT+o/SA==}
+  /type-fest/2.11.0:
+    resolution: {integrity: sha512-GwRKR1jZMAQP/hVR929DWB5Z2lwSIM/nNcHEfDj2E0vOMhcYbqFxGKE5JaSzMdzmEtWJiamEn6VwHs/YVXVhEQ==}
     engines: {node: '>=12.20'}
 
   /type-is/1.6.18:
