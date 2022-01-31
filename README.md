@@ -131,10 +131,11 @@ pnpm install
 
 ## 使用
 
-### 项目结构
+### 目录结构
 
 ```sh
 .
+├── .github                     # github 配置目录
 ├── .husky                      # husky 配置目录
 ├── public
 ├── src
@@ -190,6 +191,18 @@ pnpm install
 ### 路由
 
 uni-app 使用 [pages.json](./src/pages.json) 配置路由，请查看 [文档](https://uniapp.dcloud.io/collocation/pages)。
+
+### 状态
+
+使用 [pinia](https://pinia.vuejs.org/) 作为状态管理工具。
+
+### 请求
+
+使用 [luch-request](https://github.com/lei-mu/luch-request) 请求。
+
+查看 [@/utils/request.ts](./src/utils/request.ts) 了解预设配置。
+
+如果不喜欢 vue-query，也可以自行配置 [useFetch](https://vueuse.org/core/useFetch/) 或 [useAxios](https://vueuse.org/integrations/useAxios/) 使用。
 
 ### 应用信息配置
 
