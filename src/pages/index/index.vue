@@ -1,11 +1,11 @@
 <template>
-  <view class="absolute flex flex-col items-center justify-center w-full h-full">
-    <image class="w-12 h-12" src="/static/logo.png" />
+  <view class="absolute flex h-full w-full flex-col items-center justify-center">
+    <image class="h-12 w-12" src="/static/logo.png" />
     <text class="text-2xl">
       {{ title }}
     </text>
     <!-- #ifdef APP-PLUS -->
-    <button class="px-8 text-base leading-loose text-white bg-blue-6" @click="handleToPermission">
+    <button class="bg-blue-6 px-8 text-base leading-loose text-white" @click="handleToPermission">
       测试权限
     </button>
     <!-- #endif -->
