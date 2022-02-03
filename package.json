@@ -88,9 +88,9 @@
     "vue2-helpers": "~1.1.7"
   },
   "devDependencies": {
-    "@babel/core": "~7.16.12",
-    "@babel/eslint-parser": "~7.16.5",
-    "@babel/runtime": "~7.16.7",
+    "@babel/core": "~7.17.0",
+    "@babel/eslint-parser": "~7.17.0",
+    "@babel/runtime": "~7.17.0",
     "@commitlint/cli": "~16.1.0",
     "@dcloudio/types": "~2.5.16",
     "@dcloudio/uni-automator": "2.0.1-33920220121003",
