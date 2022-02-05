@@ -119,7 +119,7 @@
     "husky": "~7.0.4",
     "is-ci": "~3.0.1",
     "lint-staged": "~12.3.3",
-    "markdownlint-cli": "~0.30.0",
+    "markdownlint-cli": "~0.31.0",
     "mini-types": "~0.1.7",
     "miniprogram-api-typings": "~3.4.5",
     "nodemon": "~2.0.15",
