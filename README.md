@@ -32,7 +32,6 @@
 - [@modyqyw/utils](https://github.com/modyqyw/utils)
 - [dayjs](https://day.js.org)
 - [sass](https://sass-lang.com/)
-- [@modyqyw/fabric](https://github.com/MillCloud/fabric)
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 
 请先阅读上面的文档，并确保对 `node` 和 `npm` 有 [基本了解](http://nodejs.cn/learn)。
