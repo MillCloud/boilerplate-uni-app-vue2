@@ -1,11 +1,21 @@
 {
-  "extends": "./node_modules/@modyqyw/fabric/tsconfig.base.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "baseUrl": "./",
-    "jsx": "preserve",
+    // Type Checking
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+
+    // Modules
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "paths": {
       "@/*": ["./src/*"]
     },
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./src/types", "./src/typings", "./types", "./typings"],
     "types": [
       "@dcloudio/types",
       "mini-types",
@@ -15,7 +25,49 @@
       "unplugin-vue2-script-setup/ref-macros",
       "webpack-env"
     ],
-    "target": "ESNext"
+
+    // Emit
+    "declaration": true,
+    "declarationDir": "dist",
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "importsNotUsedAsValues": "error",
+    "newLine": "lf",
+    "noEmit": true,
+    "outDir": "dist",
+    "preserveValueImports": true,
+    "removeComments": true,
+    "sourceMap": true,
+
+    // JavaScript Support
+    "allowJs": true,
+
+    // Editor Support
+
+    // Interop Constraints
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    // Backwards Compatibility
+
+    // Language and Environment
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+
+    // Compiler Diagnostics
+
+    // Projects
+
+    // Output Formatting
+
+    // Completeness
+    "skipLibCheck": true
   },
   "vueCompilerOptions": {
     "experimentalCompatMode": 2,
