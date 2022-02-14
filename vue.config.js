@@ -4,7 +4,7 @@
 
 const path = require('path');
 const StylelintPlugin = require('stylelint-webpack-plugin');
-const UnpluginVue2ScriptSetupPlugin = require('unplugin-vue2-script-setup/webpack');
+const UnpluginVue2ScriptSetupPlugin = require('unplugin-vue2-script-setup/webpack').default;
 
 /** @type {Options} */
 module.exports = {
