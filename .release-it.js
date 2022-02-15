@@ -14,7 +14,7 @@ module.exports = {
     release: false,
   },
   hooks: {
-    'before:init': 'pnpm install && pnpm run lint',
+    'before:init': 'npm install --legacy-peer-deps && npm run lint',
     'after:bump': 'node update-manifest.js',
   },
 };

@@ -35,7 +35,7 @@
     "dev:quickapp-webview-huawei": "cross-env UNI_PLATFORM=quickapp-webview-huawei UNI_OUTPUT_DIR=dist/quickapp-webview-huawei vue-cli-service uni-build --mode development --watch",
     "dev:quickapp-webview-union": "cross-env UNI_PLATFORM=quickapp-webview-union UNI_OUTPUT_DIR=dist/quickapp-webview-union vue-cli-service uni-build --mode development --watch",
     "info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
-    "lint": "pnpm run lint:eslint && pnpm run lint:markdownlint && pnpm run lint:stylelint && vue-tsc",
+    "lint": "npm run lint:eslint && npm run lint:markdownlint && npm run lint:stylelint && vue-tsc",
     "lint:eslint": "eslint . --fix --ext=.js,.cjs,.mjs,.jsx,.ts,.cts,.mts,.tsx,.vue,.svelte --ignore-path=.gitignore",
     "lint:markdownlint": "markdownlint . --fix --ignore-path=.gitignore",
     "lint:stylelint": "stylelint \"./**/*.{css,less,scss,sass,vue,svelte}\" --fix --allow-empty-input --ignore-path=.gitignore",
@@ -104,10 +104,10 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "2.0.1-33920220208001",
     "@dcloudio/webpack-uni-mp-loader": "2.0.1-33920220208001",
     "@dcloudio/webpack-uni-pages-loader": "2.0.1-33920220208001",
-    "@types/node": "~17.0.17",
+    "@types/node": "~17.0.18",
     "@types/statuses": "~2.0.0",
-    "@typescript-eslint/eslint-plugin": "~5.11.0",
-    "@typescript-eslint/parser": "~5.11.0",
+    "@typescript-eslint/eslint-plugin": "~5.12.0",
+    "@typescript-eslint/parser": "~5.12.0",
     "@vue/babel-preset-app": "~4.5.15",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
@@ -134,7 +134,7 @@
     "eslint-plugin-you-dont-need-lodash-underscore": "~6.12.0",
     "husky": "~7.0.4",
     "is-ci": "~3.0.1",
-    "lint-staged": "~12.3.3",
+    "lint-staged": "~12.3.4",
     "markdownlint-cli": "~0.31.1",
     "mini-types": "~0.1.7",
     "miniprogram-api-typings": "~3.4.5",
@@ -162,7 +162,7 @@
     "typescript": "~4.5.5",
     "unplugin-vue2-script-setup": "~0.9.3",
     "vue-template-compiler": "~2.6.14",
-    "vue-tsc": "~0.31.3"
+    "vue-tsc": "~0.31.4"
   },
   "uni-app": {
     "scripts": {}
