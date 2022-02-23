@@ -113,6 +113,7 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from '@vue/composition-api';
 import {
   isIOS,
   judgeIOSPermission,
@@ -122,7 +123,7 @@ import {
   checkSystemEnableLocation,
 } from '@/utils';
 
-export default {
+export default defineComponent({
   data() {
     return {
       isIOS,
@@ -201,8 +202,9 @@ export default {
       });
     },
     handleCheckAndroidNotExistPermission() {
+      // @ts-ignore
       requestAndroidPermission('android.permission.NOT_EXIST').then((result) => {
-        if (result.message) {
+        if (typeof result === 'object' && result.message) {
           uni.showModal({
             title: '提示',
             content: `无法确认不存在权限，${result.code} ${result.message}`,
@@ -232,7 +234,7 @@ export default {
     },
     handleCheckAndroidCameraPermission() {
       requestAndroidPermission('android.permission.CAMERA').then((result) => {
-        if (result.message) {
+        if (typeof result === 'object' && result.message) {
           uni.showModal({
             title: '提示',
             content: `无法确认摄像头权限，${result.code} ${result.message}`,
@@ -266,10 +268,14 @@ export default {
         'android.permission.ACCESS_FINE_LOCATION',
         'android.permission.RECORD_AUDIO',
       ]).then((results) => {
-        if (results.message) {
+        if (results.some((result) => typeof result === 'object' && result.message)) {
+          const result = results.find((item) => typeof item === 'object') as {
+            code: string;
+            message: string;
+          };
           uni.showModal({
             title: '提示',
-            content: `无法确认权限，${results.code} ${results.message}`,
+            content: `无法确认权限，${result.code} ${result.message}`,
             showCancel: false,
           });
         } else {
@@ -324,7 +330,7 @@ export default {
       });
     },
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>

@@ -13,7 +13,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from '@vue/composition-api';
+
+export default defineComponent({
   data() {
     return {
       title: 'Hello, uni-app!',
@@ -28,5 +30,5 @@ export default {
     },
   },
   // #endif
-};
+});
 </script>
