@@ -1,6 +1,6 @@
 import Http from 'luch-request';
 import statuses from 'statuses';
-import { constantCase } from '@modyqyw/utils';
+import { constantCase } from 'change-case';
 import * as AxiosLogger from 'axios-logger';
 import axiosRetry from 'axios-retry';
 import { showModal } from '@/utils/modal';

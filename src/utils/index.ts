@@ -1,4 +1,3 @@
-export * from '@modyqyw/utils';
 export * from './action-sheet';
 export * from './loading';
 export * from './modal';
