@@ -29,7 +29,8 @@
 - [uni-ui](https://uniapp.dcloud.io/component/README?id=uniui) - 如果想要使用，请先阅读文档并参考文档配置
 - [uview-ui](https://www.uviewui.com/) - 如果想要使用，请先阅读文档并参考文档配置
 - [remix-icon](https://remixicon.com/) - uni-app 不支持 SVG，所以不能使用 [iconify](https://iconify.design/)
-- [@modyqyw/utils](https://github.com/modyqyw/utils)
+- [lodash](https://lodash.com/)
+- [ramda](https://ramdajs.com/)
 - [dayjs](https://day.js.org)
 - [sass](https://sass-lang.com/)
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
