@@ -84,7 +84,7 @@
     "ramda": "^0.28.0",
     "regenerator-runtime": "0.12.1",
     "statuses": "^2.0.1",
-    "tailwindcss": "^1.9.6",
+    "tailwindcss": "^3.0.0",
     "uni-composition-api": "^0.6.1",
     "uview-ui": "^2.0.29",
     "vue": "^2.6.14",
