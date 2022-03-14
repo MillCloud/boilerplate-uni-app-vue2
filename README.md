@@ -8,7 +8,7 @@
 
 `uni-app` 并不是一个尽善尽美的方案，在很多细节上还有待提高。如果你只是想要开发移动端应用，也可以考虑使用 [boilerplate-vue2](https://github.com/MillCloud/boilerplate-vue) 或 [boilerplate-vue3](https://github.com/MillCloud/boilerplate-vue3)，加入 [cordova](https://cordova.apache.org/)、[native-script](https://nativescript.org/)、[ionic](https://ionicframework.com/) 或 [capacitor](https://capacitorjs.com/)。
 
-**2022-02-07 Vue 3 成为新的默认版本。该模板只会支持 Vue 2 最新版本到 EOL，且不会频繁更新。Vue 3 模板请查看 [boilerplate-uni-app-vue3](https://github.com/MillCloud/boilerplate-uni-app-vue3)。**
+**2022-02-07 Vue 3 成为新的默认版本。Vue 3 模板请查看 [boilerplate-uni-app-vue3](https://github.com/MillCloud/boilerplate-uni-app-vue3)。**
 
 ### 主要依赖
 
