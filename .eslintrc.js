@@ -48,6 +48,30 @@ module.exports = {
   },
   rules: {
     'class-methods-use-this': 'off',
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal',
+          },
+          {
+            pattern: '@@/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~/**',
+            group: 'internal',
+          },
+          {
+            pattern: '~~/**',
+            group: 'internal',
+          },
+        ],
+      },
+    ],
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': [
       'error',
@@ -105,6 +129,8 @@ module.exports = {
           'event',
           'info',
           'information',
+          'inst',
+          'instance',
           'r',
           'req',
           'request',
@@ -194,6 +220,7 @@ module.exports = {
         mjs: 'never',
         js: 'never',
         jsx: 'never',
+        mts: 'never',
         ts: 'never',
         tsx: 'never',
       },
@@ -293,7 +320,7 @@ module.exports = {
     },
   ],
   settings: {
-    'import/extensions': ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx'],
+    'import/extensions': ['.mjs', '.js', '.jsx', '.mts', '.ts', '.tsx'],
     'import/resolver': {
       node: {},
       webpack: {},
